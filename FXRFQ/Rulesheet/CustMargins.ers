@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_lMH5AGylEeKWE_hEn4TJIw" externalChecksum="3054974779:507989954:132081283">
+  <languageCode>en_AU</languageCode>
+  <ruleset vocabularyUpdateStamp="_oPxYkHF5EeKThP7RdLTixA" vocabulary="../Vocabulary/FXRFQ.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Customer.tier = 'A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.tier = 'A'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tier" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.tier">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Customer.tier" rhs="'A'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.currency = 'AUD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency = 'AUD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency" rhs="'AUD'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.transType">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Margins.custMargin = 0.00005">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.custMargin = 0.00005" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="custMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.custMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="Customer.tier = 'B'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.tier = 'B'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tier" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.tier">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Customer.tier" rhs="'B'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.currency = 'AUD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency = 'AUD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency" rhs="'AUD'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.transType">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Margins.custMargin = 0.0001">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.custMargin = 0.0001" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="custMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.custMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="Customer.tier = 'A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.tier = 'A'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tier" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.tier">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Customer.tier" rhs="'A'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.currency = 'EUR'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency = 'EUR'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency" rhs="'EUR'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.transType">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Margins.custMargin = 0.0001">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.custMargin = 0.0001" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="custMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.custMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="Customer.tier = 'B'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.tier = 'B'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tier" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.tier">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Customer.tier" rhs="'B'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.currency = 'EUR'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency = 'EUR'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency" rhs="'EUR'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Margins.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.transType">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Margins.custMargin = 0.0002">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.custMargin = 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="custMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.custMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the Customer is Tier A, the currency is AUD and it's a SPOT RFQ, add a 1/2 pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier A, the currency is AUD and it's a SPOT RFQ, add a 1/2 pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the Customer is Tier B, the currency is AUD and it's a SPOT RFQ, add a pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier B, the currency is AUD and it's a SPOT RFQ, add a pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the Customer is Tier A, the currency is EUR and it's a SPOT RFQ, add a pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier A, the currency is EUR and it's a SPOT RFQ, add a pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the Customer is Tier B, the currency is EUR and it's a SPOT RFQ, add 2 pips.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier B, the currency is EUR and it's a SPOT RFQ, add 2 pips." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//Customer">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Customer/name"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Customer/tier"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//Margins" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/custMargin"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQ">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/isValid"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightAdvancedView="19" sashWeightConditionsIf="30">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Margins.custMargin">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.custMargin" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="custMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.custMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.2">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="49" columnWidthAlias="75" columnWidthID="30" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="If the Customer is Tier A, the currency is AUD and it's a SPOT RFQ, add a 1/2 pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier A, the currency is AUD and it's a SPOT RFQ, add a 1/2 pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="If the Customer is Tier B, the currency is AUD and it's a SPOT RFQ, add a pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier B, the currency is AUD and it's a SPOT RFQ, add a pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="If the Customer is Tier A, the currency is EUR and it's a SPOT RFQ, add a pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier A, the currency is EUR and it's a SPOT RFQ, add a pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="If the Customer is Tier B, the currency is EUR and it's a SPOT RFQ, add 2 pips.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Customer is Tier B, the currency is EUR and it's a SPOT RFQ, add 2 pips." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Customer.tier">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.tier" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tier" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.tier">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Margins.currency">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Margins.transType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.transType" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.transType">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Customer.name">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Customer.name" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="name" datatype="String" termtype="ATTRIBUTE" fulltext="Customer.name">
+                <parentTerm text="Customer" datatype="Customer" termtype="ENTITY" fulltext="Customer" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="19" scrollColumnLeft="1">
+      <ruleColumnList ruleId="0" columnWidth="143" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'A'"/>
+        <conditionValueSetCellList valueSet="'AUD'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="0.00005"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'B'"/>
+        <conditionValueSetCellList valueSet="'AUD'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="0.0001"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'A'"/>
+        <conditionValueSetCellList valueSet="'EUR'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="0.0001"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'B'"/>
+        <conditionValueSetCellList valueSet="'EUR'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="0.0002"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

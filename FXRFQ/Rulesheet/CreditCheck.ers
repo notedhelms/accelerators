@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_g_YLy2ylEeKWE_hEn4TJIw" externalChecksum="3054974779:507989954:132081283">
+  <languageCode>en_AU</languageCode>
+  <ruleset vocabularyUpdateStamp="_gPysgS7ZEeKAHbIS0_kqRA" vocabulary="../Vocabulary/FXRFQ.ecore#/">
+    <rule>
+      <condition/>
+      <action>
+        <opaqueExpression expression="RFQ.isValid = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="(RFQ.creditCheck)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RFQ.creditCheck ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="creditCheck" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.creditCheck">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQ.creditCheck" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="RFQ.isValid = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Do a callout to the credit systerm and if the check is approved, continue to process the order.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Do a callout to the credit systerm and if the check is approved, continue to process the order." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQ" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <extension explicit="true" association="true" entity="../Vocabulary/FXRFQ.ecore#//RFQitems" traversedAssocRole="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems">
+        <alias value="theseItems"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/creditCheck"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/isValid"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="23">
+    <actionSection rowCount="49" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQ.isValid">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Do a callout to the credit systerm and if the check is approved, continue to process the order.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Do a callout to the credit systerm and if the check is approved, continue to process the order." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="RFQ.creditCheck">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.creditCheck" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="creditCheck" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.creditCheck">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="17">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="F"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="177" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="T"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

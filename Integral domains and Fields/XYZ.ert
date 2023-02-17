@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_P4hewae-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_KFdVIUihEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java">
+    <testsheet ruleActivityUpdateStamp="_JNE7oEihEe2o6uvU8j8F7w" ruleActivity="XYZ.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="********************************** Problem Statement **********************************"/>
+        <PostedMessage severity="Info" text="Find values for height, length and depth of boxes such that H + L + D &lt; 50 and H * L * D > 1000 Where D > 15, L &lt; 5 and H > 26."/>
+        <PostedMessage severity="Info" text="If cost = 2*(H+D)+L find the dimensions of the least expensive box"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=2 depth=19"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=3 depth=19"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=2 depth=19"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=3 depth=18"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=2 depth=18"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=3 depth=18"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=4 depth=18"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=29 length=2 depth=18"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=30 length=3 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=3 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=4 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=3 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=4 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=29 length=3 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=29 length=4 depth=16"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=30 length=2 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=3 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=28 length=4 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=3 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=4 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=29 length=3 depth=17"/>
+        <PostedMessage severity="Info" text="Possible Solution Found height=27 length=2 depth=20"/>
+        <PostedMessage severity="Info" text="***************************** SOLUTION **********************************"/>
+        <PostedMessage severity="Info" text="Solution found h=27 l=3 d=16 cost=89 time=139"/>
+        <PostedMessage severity="Info" text="Solution found h=30 l=3 d=16 cost=95 time=136"/>
+        <PostedMessage severity="Info" text="Solution found h=28 l=3 d=16 cost=91 time=138"/>
+        <PostedMessage severity="Info" text="Solution found h=29 l=3 d=16 cost=93 time=137"/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="XYZ.ecore#//Problem">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30" eAttribute="XYZ.ecore#//Problem/endAt"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="XYZ.ecore#//Problem/howMany"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="XYZ.ecore#//Problem/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Problem/solved"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="XYZ.ecore#//Problem/startAt"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.3 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.4 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.5 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.6 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.7 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.8 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.9 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.10 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.11 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.12 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.13 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.14 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.15 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.16 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.17 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.18 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.19 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.20 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.21 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.22 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.23 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.24 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.25" eClass="XYZ.ecore#//Problem">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="30" eAttribute="XYZ.ecore#//Problem/endAt"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="XYZ.ecore#//Problem/howMany"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="31" eAttribute="XYZ.ecore#//Problem/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="false" eAttribute="XYZ.ecore#//Problem/solved"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="XYZ.ecore#//Problem/startAt"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="4" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="5" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="5" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="6" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="6" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="7" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="7" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="8" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="9" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="10" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="10" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="11" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="11" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="12" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="12" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="13" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="13" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="14" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="14" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="15" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="15" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="16" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="16" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="17" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="17" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="18" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="18" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="19" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="20" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="20" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="21" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="21" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="22" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="22" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="23" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="23" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="24" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="24" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="25" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="25" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="26" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="26" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="27" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="27" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="28" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="28" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="29" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="29" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="30" newOrModified="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="30" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.27" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="95" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="30" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="136" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="10" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.28" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="91" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="28" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="138" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="12" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.26" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="89" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="27" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="139" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="14" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.29" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="93" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="29" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="137" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.14" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.15" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.16" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.17" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.18" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.19" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.20" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.21" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.22" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.23" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.24" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.25" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.26" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.33"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.27" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.31"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.28" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.32"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.29" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.34"/>
+      </outputMessageSection>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="XYZ.ecore#//Problem">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30" eAttribute="XYZ.ecore#//Problem/endAt"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="XYZ.ecore#//Problem/howMany"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="31" eAttribute="XYZ.ecore#//Problem/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Problem/solved"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="XYZ.ecore#//Problem/startAt"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="5" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="6" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="7" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="7" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="8" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="9" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="10" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="11" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="12" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="13" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="14" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="14" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="15" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="16" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="16" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="17" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="17" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="18" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="18" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="19" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="19" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="20" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="20" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="21" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="22" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="23" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="24" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="24" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="25" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="25" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="26" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="26" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="27" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="27" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="28" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="29" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="29" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="30" manuallyCreated="true" eClass="XYZ.ecore#//FiniteIntegerDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30" eAttribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" manuallyCreated="true" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="95" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="136" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="10" manuallyCreated="true" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="91" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="138" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="12" manuallyCreated="true" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="89" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="27" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="139" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="14" manuallyCreated="true" eClass="XYZ.ecore#//Solution">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="93" eAttribute="XYZ.ecore#//Solution/cost"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="16" eAttribute="XYZ.ecore#//Solution/d"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="false" eAttribute="XYZ.ecore#//Solution/eliminated"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="29" eAttribute="XYZ.ecore#//Solution/h"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="XYZ.ecore#//Solution/l"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="137" eAttribute="XYZ.ecore#//Solution/time"/>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_ZGuKUEigEe2o6uvU8j8F7w" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="XYZ.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="XYZ"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_ge5FJGy2EeKWE_hEn4TJIw" externalChecksum="3054974779:507989954">
+  <testsheetAssets majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_CDqr0HSYEeK07JztDZBNYw" externalChecksum="3054974779:507989954">
+    <testsheet ruleActivityUpdateStamp="_-H72EHSXEeK07JztDZBNYw" ruleActivity="../Ruleflow/RFQflow.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="If currency or transaction type is contained in the sets, the request is not valid."/>
+        <PostedMessage severity="Info" text="If currency or transaction type is contained in the sets, the request is not valid."/>
+        <PostedMessage severity="Info" text="If currency or transaction type is contained in the sets, the request is not valid."/>
+        <PostedMessage severity="Info" text="If all fields of an requested item are exactly the same as another's, calculate the net value of the two"/>
+        <PostedMessage severity="Info" text="If all fields of an requested item are exactly the same as another's, calculate the net value of the two"/>
+        <PostedMessage severity="Info" text="If all fields of an requested item are exactly the same as another's, calculate the net value of the two"/>
+        <PostedMessage severity="Info" text="Do a callout to the credit systerm and if the check is approved, continue to process the order."/>
+        <PostedMessage severity="Info" text="If the Customer is Tier A, the currency is AUD and it's a SPOT RFQ, add a 1/2 pip."/>
+        <PostedMessage severity="Info" text="If currency is AUD and request is for between 100 and 200, then add a 1/2 pip"/>
+        <PostedMessage severity="Info" text="If the banks position in Aussie is longer than 1000 and customer is looking to sell, then subtract 1/2 pip from Bid"/>
+        <PostedMessage severity="Info" text="If vol on bid is greater than 5 on Aussie and customer is looking to Sell, subtract a 1/4 pip"/>
+        <PostedMessage severity="Info" text="If customer is Selling SPOT calcualate price"/>
+        <PostedMessage severity="Info" text="If customer is Selling SPOT calcualate price"/>
+        <PostedMessage severity="Info" text="If customer is Selling SPOT calcualate price"/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" expanded="false" eClass="../Vocabulary/FXRFQ.ecore#//Customer">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/tier"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//Customer/rFQ" eClass="../Vocabulary/FXRFQ.ecore#//RFQ">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="true" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQ/creditCheck"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="100" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="25" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+            </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="BHP" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/name"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabulary/FXRFQ.ecore#//Market">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1000.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/bnkPos"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktOffer"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolOffer"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="../Vocabulary/FXRFQ.ecore#//Market">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1000.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/bnkPos"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="EUR" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1.500000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1.500000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktOffer"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolOffer"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabulary/FXRFQ.ecore#//Report">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/timeBegin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/timeEnd"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/totalTime"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../Vocabulary/FXRFQ.ecore#//Customer">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/tier"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.6" eReference="../Vocabulary/FXRFQ.ecore#//Customer/rFQ" eClass="../Vocabulary/FXRFQ.ecore#//RFQ">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="true" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQ/creditCheck"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.12" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="100" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.999825" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/bid"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.11" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.999825" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/bid"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.13" eReference="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems" eClass="../Vocabulary/FXRFQ.ecore#//RFQitems">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="25" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/account"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.999825" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQitems/bid"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="true" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQ/isValid"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="BHP" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/name"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="../Vocabulary/FXRFQ.ecore#//Market">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1000.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/bnkPos"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktOffer"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolOffer"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="../Vocabulary/FXRFQ.ecore#//Market">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1000.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/bnkPos"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="EUR" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1.500000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1.500000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktOffer"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolBid"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="5.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Market/mktVolOffer"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../Vocabulary/FXRFQ.ecore#//Report">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1360278123015" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/timeBegin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1360278123015" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/timeEnd"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0" eAttribute="../Vocabulary/FXRFQ.ecore#//Report/totalTime"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.3 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.4 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.5" eClass="../Vocabulary/FXRFQ.ecore#//RFQtotals">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="135" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/amtTotal"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/side"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/transType"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.7 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.8 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.9 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.10" eClass="../Vocabulary/FXRFQ.ecore#//Margins">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000050" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/amtMargin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000050" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/custMargin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000000" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/posMargin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="SELL" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/side"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000025" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/volMargin"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="-0.000050" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/posMarginAsk"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000050" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/posMarginBid"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.3"/>
+      </outputMessageSection>
+      <expectedRoot/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_oPxYkHF5EeKThP7RdLTixA" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="../Vocabulary/FXRFQ.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="untitled_1"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

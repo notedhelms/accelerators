@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_MY4v06e-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZNReQEigEe2o6uvU8j8F7w" vocabulary="ProfSmart.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="(h&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( h &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="h&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(g&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="g&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(g&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="g&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ef&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ef&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ef&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ef&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ef&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ef&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(e&lt;>ef)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="e&lt;>ef" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(e&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="e&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(e&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="e&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(e&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="e&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d&lt;>e)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d&lt;>e" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d&lt;>ef)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d&lt;>ef" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>d)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>d" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>e)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>e" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>ef)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>ef" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(c&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="c&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>c)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> c ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>c" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>d)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>d" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>e)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>e" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>ef)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>ef" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>b)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> b ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>b" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>c)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> c ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>c" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>d)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>d" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>e)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>e" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>ef)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>ef" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>g)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>g" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>h)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>h" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a&lt;>i)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a&lt;>i" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(d.value - ef.value = g.value)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d.value - ef.value = g.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.value">
+                <parentTerm text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="d.value">
+                <parentTerm text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="d.value - ef.value = g.value" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a.value*b.value*c.value &lt; h.value * i.value)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value * b.value * c.value &lt; h.value * i.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a.value*b.value*c.value &lt; h.value * i.value" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(b.value+c.value+ef.value &lt; h.value)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b.value + c.value + ef.value &lt; h.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="b.value+c.value+ef.value &lt; h.value" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a.value= b.value + i.value)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value = b.value + i.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a.value= b.value + i.value" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(a.value = 4)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value = 4 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="a.value = 4" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(h.value > 6)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( h.value > 6 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="h.value > 6" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(i.value &lt; h.value)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( i.value &lt; h.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="i.value &lt; h.value" rhs="T"/>
+      </condition>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.9">
+      <text expression="Solution Found {a.value}{b.value}{c.value}{d.value}{e.value}{ef.value}{g.value}{h.value}{i.value}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Solution Found  + a.value + b.value + c.value + d.value + e.value + ef.value + g.value + h.value + i.value" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+              <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+              <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+              <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.value">
+              <parentTerm text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="e.value">
+              <parentTerm text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+              <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+              <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+              <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="d.value">
+              <parentTerm text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="a"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="b"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="c"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="d"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="e"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="ef"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="g"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="h"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="ProfSmart.ecore#//FiniteDomain">
+      <alias value="i"/>
+      <referencedAttributes attribute="ProfSmart.ecore#//FiniteDomain/value"/>
+    </logicalVariable>
+    <logicalVariable entity="ProfSmart.ecore#//Generator" ruleStatements="#//@ruleset/@ruleStatements.0"/>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5"/>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.2">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.3">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.3/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.4">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.4/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.5">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.5/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.6">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.6/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.7">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.7/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.8">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.8/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.9"/>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Solution Found {a.value}{b.value}{c.value}{d.value}{e.value}{ef.value}{g.value}{h.value}{i.value}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Solution Found  + a.value + b.value + c.value + d.value + e.value + ef.value + g.value + h.value + i.value" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.value">
+                <parentTerm text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="e.value">
+                <parentTerm text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="d.value">
+                <parentTerm text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="h&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="h &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="g&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="g&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="ef&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ef &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="ef&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ef &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="ef&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ef &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="e&lt;>ef">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="e &lt;> ef" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="e&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="e &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="e&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="e &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="e&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="e &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d&lt;>e">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d &lt;> e" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d&lt;>ef">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d &lt;> ef" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>d">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> d" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>e">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> e" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>ef">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> ef" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="c&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="c &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>c">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> c" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>d">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> d" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>e">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> e" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>ef">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> ef" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>b">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> b" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>c">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> c" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>d">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> d" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>e">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> e" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>ef">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> ef" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>g">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> g" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>h">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> h" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a&lt;>i">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a &lt;> i" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="d.value - ef.value = g.value">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="d.value - ef.value = g.value" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.value">
+                <parentTerm text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="d.value">
+                <parentTerm text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a.value*b.value*c.value &lt; h.value * i.value">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a.value * b.value * c.value &lt; h.value * i.value" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="b.value+c.value+ef.value &lt; h.value">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="b.value + c.value + ef.value &lt; h.value" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a.value= b.value + i.value">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a.value = b.value + i.value" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="a.value = 4">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="a.value = 4" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="h.value > 6">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="h.value > 6" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="i.value &lt; h.value">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="i.value &lt; h.value" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( h &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ef &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( e &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( c &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> c ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> b ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> c ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> d ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> e ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="e" datatype="FiniteDomain" termtype="ENTITY" fulltext="e" variable="#//@ruleset/@logicalVariables.4"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> ef ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> g ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> h ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a &lt;> i ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( d.value - ef.value = g.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.value">
+                <parentTerm text="g" datatype="FiniteDomain" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.6"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="d.value">
+                <parentTerm text="d" datatype="FiniteDomain" termtype="ENTITY" fulltext="d" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value * b.value * c.value &lt; h.value * i.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( b.value + c.value + ef.value &lt; h.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="c.value">
+                <parentTerm text="c" datatype="FiniteDomain" termtype="ENTITY" fulltext="c" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="ef.value">
+                <parentTerm text="ef" datatype="FiniteDomain" termtype="ENTITY" fulltext="ef" variable="#//@ruleset/@logicalVariables.5"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value = b.value + i.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="b.value">
+                <parentTerm text="b" datatype="FiniteDomain" termtype="ENTITY" fulltext="b" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( a.value = 4 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="a.value">
+                <parentTerm text="a" datatype="FiniteDomain" termtype="ENTITY" fulltext="a" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( h.value > 6 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( i.value &lt; h.value ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="i.value">
+                <parentTerm text="i" datatype="FiniteDomain" termtype="ENTITY" fulltext="i" variable="#//@ruleset/@logicalVariables.8"/>
+              </terms>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="h.value">
+                <parentTerm text="h" datatype="FiniteDomain" termtype="ENTITY" fulltext="h" variable="#//@ruleset/@logicalVariables.7"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

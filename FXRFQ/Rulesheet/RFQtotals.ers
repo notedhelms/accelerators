@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_o_HpimylEeKWE_hEn4TJIw" externalChecksum="3054974779:507989954:132081283">
+  <languageCode>en_AU</languageCode>
+  <ruleset vocabularyUpdateStamp="_gPysgS7ZEeKAHbIS0_kqRA" vocabulary="../Vocabulary/FXRFQ.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="(RFQtotals.currency=theseItems.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RFQtotals.currency = theseItems.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.currency">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency=theseItems.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(RFQtotals.transType = theseItems.transType)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RFQtotals.transType = theseItems.transType ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.transType">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType = theseItems.transType" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(RFQtotals.side =theseItems.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RFQtotals.side = theseItems.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.side">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.side =theseItems.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="RFQtotals.amtTotal+= theseItems.amount">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal = RFQtotals.amtTotal + theseItems.amount" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="amount" datatype="Integer" termtype="ATTRIBUTE" fulltext="theseItems.amount">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="If all fields of an requested item are exactly the same as another's, calculate the net value of the two">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If all fields of an requested item are exactly the same as another's, calculate the net value of the two" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQtotals" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/amtTotal"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/currency"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/transType"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/side"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQ">
+      <extension explicit="true" association="true" entity="../Vocabulary/FXRFQ.ecore#//RFQitems" traversedAssocRole="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems">
+        <alias value="theseItems"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/amount"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/side"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/creditCheck"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightConditionsIf="29">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="RFQtotals.amtTotal+= theseItems.amount">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal = RFQtotals.amtTotal + theseItems.amount" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="amount" datatype="Integer" termtype="ATTRIBUTE" fulltext="theseItems.amount">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@extension.0/@referencedAttributes.3"/>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="If all fields of an requested item are exactly the same as another's, calculate the net value of the two">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If all fields of an requested item are exactly the same as another's, calculate the net value of the two" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQtotals.currency=theseItems.currency">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = theseItems.currency" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.currency">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQtotals.transType = theseItems.transType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = theseItems.transType" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.transType">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQtotals.side =theseItems.side">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.side = theseItems.side" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.side">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.1/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="18" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

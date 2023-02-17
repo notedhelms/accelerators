@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_IKus26e-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_GB</languageCode>
+  <ruleset vocabularyUpdateStamp="_agNC8Fn9Ee2XAPiuELRq8A" vocabulary="../Vocabulary/InsuranceQuote.ecore#/">
+    <rule/>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="(RejectionReviews->isEmpty)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RejectionReviews->isEmpty" rhs="F"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Quotation.Status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="approvedEmployees->size = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size = 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="approvedEmployees->size" rhs="0"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Quotation.Status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="(RejectionReviews->isEmpty)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RejectionReviews->isEmpty" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="approvedEmployees->size > 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="approvedEmployees->size" rhs="> 0"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ManualReviews->isEmpty)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ManualReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ManualReviews" datatype="Boolean" termtype="COLLECTION" fulltext="ManualReviews->isEmpty">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ManualReviews->isEmpty" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Quotation.Status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="(RejectionReviews->isEmpty)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RejectionReviews->isEmpty" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="approvedEmployees->size > 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="approvedEmployees->size" rhs="> 0"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ManualReviews->isEmpty)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ManualReviews->isEmpty ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ManualReviews" datatype="Boolean" termtype="COLLECTION" fulltext="ManualReviews->isEmpty">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ManualReviews->isEmpty" rhs="F"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Quotation.Status = 'Review'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <opaqueExpression expression="approvedEmployees.Status = 'Approved'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees.Status = 'Approved'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="approvedEmployees.Status">
+              <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0/@extension.1">
+      <opaqueExpression expression="RejectionReviews.Status = 'Rejected'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RejectionReviews.Status = 'Rejected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="RejectionReviews.Status">
+              <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0/@extension.2">
+      <opaqueExpression expression="ManualReviews.Status = 'Review'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ManualReviews.Status = 'Review'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="ManualReviews.Status">
+              <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Quotation is rejected as one or multiple rejection reviews exist.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is rejected as one or multiple rejection reviews exist." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Quotation is rejected as no employees are approved for group life insurance.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is rejected as no employees are approved for group life insurance." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Quotation is accepted. No particularities or irregularities have been registered.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is accepted. No particularities or irregularities have been registered." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Quotation needs review. One or multiple reasons have been noted which raises cause for concerns.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation needs review. One or multiple reasons have been noted which raises cause for concerns." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//Quotation" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.1">
+      <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Employer" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Quotation/employer">
+        <alias value="employer"/>
+        <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Employee" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Employer/employee" filters="#//@ruleset/@filters.0">
+          <alias value="approvedEmployees"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Status"/>
+        </extension>
+      </extension>
+      <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Review" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Quotation/review" filters="#//@ruleset/@filters.1">
+        <alias value="RejectionReviews"/>
+        <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Review/Status"/>
+      </extension>
+      <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Review" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Quotation/review" filters="#//@ruleset/@filters.2">
+        <alias value="ManualReviews"/>
+        <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Review/Status"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Quotation/Status"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="29" sashWeightScope="59" sashWeightConditionsIf="26">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Quotation.Status">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="approvedEmployees.Status = 'Approved'" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="RejectionReviews.Status = 'Rejected'" filter="#//@ruleset/@filters.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ManualReviews.Status = 'Review'" filter="#//@ruleset/@filters.2"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder" expanded="true">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="approvedEmployees.Status = 'Approved'" filter="#//@ruleset/@filters.0"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="approvedEmployees.Status = 'Approved'" filter="#//@ruleset/@filters.0"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+            </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="RejectionReviews.Status = 'Rejected'" filter="#//@ruleset/@filters.1"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ManualReviews.Status = 'Review'" filter="#//@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.0"/>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="approvedEmployees.Status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees.Status = 'Approved'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="approvedEmployees.Status">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="RejectionReviews.Status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RejectionReviews.Status = 'Rejected'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="RejectionReviews.Status">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.2">
+        <expressionCell external="ManualReviews.Status = 'Review'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ManualReviews.Status = 'Review'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="ManualReviews.Status">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="51" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="696" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Quotation is rejected as one or multiple rejection reviews exist.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is rejected as one or multiple rejection reviews exist." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Quotation is rejected as no employees are approved for group life insurance.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is rejected as no employees are approved for group life insurance." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="Quotation is accepted. No particularities or irregularities have been registered.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation is accepted. No particularities or irregularities have been registered." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="Quotation needs review. One or multiple reasons have been noted which raises cause for concerns.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation needs review. One or multiple reasons have been noted which raises cause for concerns." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="49" columnWidthFactor="0.5">
+      <conditionItemList rowHeight="30">
+        <valueSetCell/>
+        <expressionCell external="RejectionReviews->isEmpty">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RejectionReviews->isEmpty" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="32">
+        <valueSetCell/>
+        <expressionCell external="approvedEmployees->size">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="22">
+        <valueSetCell/>
+        <expressionCell external="ManualReviews->isEmpty">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ManualReviews->isEmpty" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ManualReviews" datatype="Boolean" termtype="COLLECTION" fulltext="ManualReviews->isEmpty">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="19">
+      <ruleColumnList ruleId="0" columnWidth="48" pRule="#//@ruleset/@rules.0"/>
+      <ruleColumnList ruleId="1" columnWidth="110" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size = 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="> 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ManualReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ManualReviews" datatype="Boolean" termtype="COLLECTION" fulltext="ManualReviews->isEmpty">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( RejectionReviews->isEmpty ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="RejectionReviews" datatype="Boolean" termtype="COLLECTION" fulltext="RejectionReviews->isEmpty">
+                <parentTerm text="RejectionReviews" datatype="Review" termtype="ENTITY" fulltext="RejectionReviews" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="> 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="approvedEmployees->size > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="approvedEmployees" datatype="Integer" termtype="COLLECTION" fulltext="approvedEmployees->size">
+                <parentTerm text="approvedEmployees" datatype="Employee" termtype="ENTITY" fulltext="approvedEmployees" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ManualReviews->isEmpty ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ManualReviews" datatype="Boolean" termtype="COLLECTION" fulltext="ManualReviews->isEmpty">
+                <parentTerm text="ManualReviews" datatype="Review" termtype="ENTITY" fulltext="ManualReviews" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'Review'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.Status = 'Review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Quotation.Status">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

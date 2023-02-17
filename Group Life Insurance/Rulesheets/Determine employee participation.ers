@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_IF86nKe-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_GB</languageCode>
+  <ruleset vocabularyUpdateStamp="_agNC8Fn9Ee2XAPiuELRq8A" vocabulary="../Vocabulary/InsuranceQuote.ecore#/">
+    <rule>
+      <action>
+        <opaqueExpression expression="Employee.Age = Employee.DateOfBirth.yearsBetween(now)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age = Employee.DateOfBirth.yearsBetween ( now )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="yearsBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfBirth.yearsBetween">
+                <parentTerm text="DateOfBirth" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfBirth">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0" overrides="#//@ruleset/@rules.3">
+      <condition>
+        <opaqueExpression expression="Employee.Age &lt; 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age &lt; 25" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.Age" rhs="&lt; 25"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Employee.Status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1" overrides="#//@ruleset/@rules.3">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Employee.DateOfEmployment.daysBetween(Quotation.StartDateFrom) &lt; 365">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.DateOfEmployment.daysBetween ( Quotation.StartDateFrom ) &lt; 365" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="daysBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfEmployment.daysBetween">
+                <parentTerm text="DateOfEmployment" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfEmployment">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="StartDateFrom" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Quotation.StartDateFrom">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.DateOfEmployment.daysBetween(Quotation.StartDateFrom)" rhs="&lt; 365"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Employee.Status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2" overriddenBy="#//@ruleset/@rules.1 #//@ruleset/@rules.2">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Employee.AnnualGrossSalary > 100000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.AnnualGrossSalary > 100000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.AnnualGrossSalary" rhs="> 100000"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Employee.Status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min(100000)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min ( 100000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="MaxAnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.MaxAnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="min" datatype="Decimal" termtype="METHOD" fulltext="Employee.AnnualGrossSalary.min">
+                <parentTerm text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="Employee.Age >= 25 or Employee.Age = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age >= 25 or Employee.Age = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.Age" rhs="{>= 25, null}"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Employee.DateOfEmployment.daysBetween(Quotation.StartDateFrom) >= 365">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.DateOfEmployment.daysBetween ( Quotation.StartDateFrom ) >= 365" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="daysBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfEmployment.daysBetween">
+                <parentTerm text="DateOfEmployment" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfEmployment">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="StartDateFrom" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Quotation.StartDateFrom">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.DateOfEmployment.daysBetween(Quotation.StartDateFrom)" rhs=">= 365"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="Employee.AnnualGrossSalary &lt;= 100000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.AnnualGrossSalary &lt;= 100000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Employee.AnnualGrossSalary" rhs="&lt;= 100000"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Employee.Status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min(100000)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min ( 100000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="MaxAnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.MaxAnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="min" datatype="Decimal" termtype="METHOD" fulltext="Employee.AnnualGrossSalary.min">
+                <parentTerm text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Young employees [{Employee.Name}] under 25 years are excluded from the group life insurance policy.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Young employees [ + Employee.Name + ] under 25 years are excluded from the group life insurance policy." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+              <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Employees [{Employee.Name}] less than 1 year in service are excluded from the group life insurance policy.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employees [ + Employee.Name + ] less than 1 year in service are excluded from the group life insurance policy." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+              <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Employees [{Employee.Name}] with salaries above 100K are approved, but pension premium will be based on capped gross salary.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employees [ + Employee.Name + ] with salaries above 100K are approved, but pension premium will be based on capped gross salary." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+              <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Employee  [{Employee.Name}] participation is approved.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee  [ + Employee.Name + ] participation is approved." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+              <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//Employee" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Age"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/DateOfBirth"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Status"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/DateOfEmployment"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/AnnualGrossSalary"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/MaxAnnualGrossSalary"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Name"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//Quotation">
+      <extension association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Review" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Quotation/review"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Quotation/StartDateFrom"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//Review"/>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsIf="38">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList rowHeight="25">
+        <naturalLanguageText value="Calculate the age of the employee based on birthdate"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.Age = Employee.DateOfBirth.yearsBetween(now)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age = Employee.DateOfBirth.yearsBetween ( now )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="yearsBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfBirth.yearsBetween">
+                <parentTerm text="DateOfBirth" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfBirth">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="23">
+        <naturalLanguageText value="The status of the employee is set at"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.Status">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="25">
+        <naturalLanguageText value="The annual maximum salary as the basis for all pension calculations is capped at 100,000"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min(100000)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min ( 100000 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="MaxAnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.MaxAnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="min" datatype="Decimal" termtype="METHOD" fulltext="Employee.AnnualGrossSalary.min">
+                <parentTerm text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.1/@extension.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.2"/>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="918" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Young employees [{Employee.Name}] under 25 years are excluded from the group life insurance policy.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Young employees [ + Employee.Name + ] under 25 years are excluded from the group life insurance policy." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Employees [{Employee.Name}] less than 1 year in service are excluded from the group life insurance policy.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employees [ + Employee.Name + ] less than 1 year in service are excluded from the group life insurance policy." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="Employees [{Employee.Name}] with salaries above 100K are approved, but pension premium will be based on capped gross salary.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employees [ + Employee.Name + ] with salaries above 100K are approved, but pension premium will be based on capped gross salary." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="Employee  [{Employee.Name}] participation is approved.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee  [ + Employee.Name + ] participation is approved." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Name">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList rowHeight="24">
+        <naturalLanguageText value="If the employee age is"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.Age">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="27">
+        <naturalLanguageText value="The number of days between the employee start date and the start date of this quotation is"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.DateOfEmployment.daysBetween(Quotation.StartDateFrom)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.DateOfEmployment.daysBetween ( Quotation.StartDateFrom )" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="daysBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfEmployment.daysBetween">
+                <parentTerm text="DateOfEmployment" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfEmployment">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="StartDateFrom" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Quotation.StartDateFrom">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="24">
+        <naturalLanguageText value="The annual gross salary of this employee is"/>
+        <valueSetCell/>
+        <expressionCell external="Employee.AnnualGrossSalary">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.AnnualGrossSalary" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="94" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="79" pRule="#//@ruleset/@rules.1">
+        <overrideValueSetCell valueSet="3"/>
+        <conditionValueSetCellList valueSet="&lt; 25">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age &lt; 25" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="88" pRule="#//@ruleset/@rules.2">
+        <overrideValueSetCell valueSet="3"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="&lt; 365">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.DateOfEmployment.daysBetween ( Quotation.StartDateFrom ) &lt; 365" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="daysBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfEmployment.daysBetween">
+                <parentTerm text="DateOfEmployment" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfEmployment">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="StartDateFrom" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Quotation.StartDateFrom">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="92" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 100000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.AnnualGrossSalary > 100000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="{>= 25, null}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Age >= 25 or Employee.Age = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="Employee.Age">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet=">= 365">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.DateOfEmployment.daysBetween ( Quotation.StartDateFrom ) >= 365" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="daysBetween" datatype="Integer" termtype="METHOD" fulltext="Employee.DateOfEmployment.daysBetween">
+                <parentTerm text="DateOfEmployment" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Employee.DateOfEmployment">
+                  <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="StartDateFrom" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Quotation.StartDateFrom">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="&lt;= 100000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.AnnualGrossSalary &lt;= 100000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Employee.AnnualGrossSalary">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employee.Status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="Employee.Status">
+                <parentTerm text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Employee" datatype="Employee" termtype="ENTITY" fulltext="Employee"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

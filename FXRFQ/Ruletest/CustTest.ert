@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_QOR9ZGy2EeKWE_hEn4TJIw" externalChecksum="3054974779:507989954">
+  <testsheetAssets majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_QOR9Ymy2EeKWE_hEn4TJIw" externalChecksum="3054974779:507989954">
+    <testsheet ruleActivity="../Rulesheet/CustMargins.ers#//@ruleset">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="If the Customer is Tier B, the currency is AUD and it's a SPOT RFQ, add a pip."/>
+        <PostedMessage severity="Info" text="If the Customer is Tier B, the currency is EUR and it's a SPOT RFQ, add 2 pips."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabulary/FXRFQ.ecore#//Customer">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/tier"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//Customer/margins" eClass="../Vocabulary/FXRFQ.ecore#//Margins">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="EUR" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabulary/FXRFQ.ecore#//Customer/margins" eClass="../Vocabulary/FXRFQ.ecore#//Margins">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+          </children>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../Vocabulary/FXRFQ.ecore#//Customer">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="../Vocabulary/FXRFQ.ecore#//Customer/tier"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1" eReference="../Vocabulary/FXRFQ.ecore#//Customer/margins" eClass="../Vocabulary/FXRFQ.ecore#//Margins">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="EUR" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000200" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/custMargin"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eReference="../Vocabulary/FXRFQ.ecore#//Customer/margins" eClass="../Vocabulary/FXRFQ.ecore#//Margins">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="AUD" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="SPOT" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/transType"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="0.000100" eAttribute="../Vocabulary/FXRFQ.ecore#//Margins/custMargin"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+      </outputMessageSection>
+      <expectedRoot/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_gPysgS7ZEeKAHbIS0_kqRA" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="../Vocabulary/FXRFQ.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="untitled_1"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

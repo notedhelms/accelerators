@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_MZz8Mae-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_KrvSAUihEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java">
+    <testsheet ruleActivityUpdateStamp="_JrUW0EihEe2o6uvU8j8F7w" ruleActivity="ProfSmart.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="Solution Found 415872693"/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="ProfSmart.ecore#//Generator">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" eAttribute="ProfSmart.ecore#//Generator/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="ProfSmart.ecore#//Generator/startAt"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eClass="ProfSmart.ecore#//Generator">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="10" eAttribute="ProfSmart.ecore#//Generator/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="ProfSmart.ecore#//Generator/startAt"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="4" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="5" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="5" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="6" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="6" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="7" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="7" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="8" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" newOrModified="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="9" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+      </outputMessageSection>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="ProfSmart.ecore#//Generator">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="ProfSmart.ecore#//Generator/n"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="ProfSmart.ecore#//Generator/startAt"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="5" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="6" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="7" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="7" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="8" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="9" manuallyCreated="true" eClass="ProfSmart.ecore#//FiniteDomain">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="9" eAttribute="ProfSmart.ecore#//FiniteDomain/value"/>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_ZNReQEigEe2o6uvU8j8F7w" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="ProfSmart.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="ProfSmart"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
+  <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_ZOniEEigEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java" customDataTypeDisplayCount="50">
+      <languageCode>en_US</languageCode>
+      <databaseAccess databasePropertyDisplayCount="50"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//ageType">
+        <dataTypeName manuallyCreated="true" value="ageType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'UC'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'29'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'59'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'89'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'119'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'149'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'999'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//dependantsType">
+        <dataTypeName manuallyCreated="true" value="dependantsType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'0'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'1'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'3'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'99'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//employmentTypeType">
+        <dataTypeName manuallyCreated="true" value="employmentTypeType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'EM'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'SE'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NE'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'CE'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'FL'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'RE'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'CO'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//existingCustomerType">
+        <dataTypeName manuallyCreated="true" value="existingCustomerType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Y'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'N'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'P'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//genderType">
+        <dataTypeName manuallyCreated="true" value="genderType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'F'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//highestAcademicType">
+        <dataTypeName manuallyCreated="true" value="highestAcademicType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'G'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'S'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'D'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'N'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'E'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'C'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'O'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'P'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'0ther'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//maritalStatusType">
+        <dataTypeName manuallyCreated="true" value="maritalStatusType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'S'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'D'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//monthsCashAdvanceType">
+        <dataTypeName manuallyCreated="true" value="monthsCashAdvanceType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NA'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'0'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'1'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'5'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'99'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//nationalityType">
+        <dataTypeName manuallyCreated="true" value="nationalityType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'SG'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'SG PR'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'FO'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//resultType">
+        <dataTypeName manuallyCreated="true" value="resultType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//totalAssetsType">
+        <dataTypeName manuallyCreated="true" value="totalAssetsType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'NA'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'-999'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'0'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'5'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'999'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//product_typeType">
+        <dataTypeName manuallyCreated="true" value="product_typeType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'CC'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'EC'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//worst_status_LMType">
+        <dataTypeName manuallyCreated="true" value="worst_status_LMType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'&lt;90dpd'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//employment_verificationType">
+        <dataTypeName manuallyCreated="true" value="employment_verificationType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//cb_prescreen_checkType">
+        <dataTypeName manuallyCreated="true" value="cb_prescreen_checkType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//statusType">
+        <dataTypeName manuallyCreated="true" value="statusType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'approve'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'reject'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'CCA Review'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//second_credit_bureau_checkType">
+        <dataTypeName manuallyCreated="true" value="second_credit_bureau_checkType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//caution_checkType">
+        <dataTypeName manuallyCreated="true" value="caution_checkType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//bank_relationship_checkType">
+        <dataTypeName manuallyCreated="true" value="bank_relationship_checkType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'pass'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+    </contents>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Scorecard">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Scorecard"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="#//ageType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.0">
+          <name manuallyCreated="true" value="age"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dependants" eType="#//dependantsType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
+          <name manuallyCreated="true" value="dependants"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="employmentType" eType="#//employmentTypeType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="employmentType"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="existingCustomer" eType="#//existingCustomerType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.3">
+          <name manuallyCreated="true" value="existingCustomer"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="#//genderType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.4">
+          <name manuallyCreated="true" value="gender"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highestAcademic" eType="#//highestAcademicType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.5">
+          <name manuallyCreated="true" value="highestAcademic"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maritalStatus" eType="#//maritalStatusType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.6">
+          <name manuallyCreated="true" value="maritalStatus"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="monthsCashAdvance" eType="#//monthsCashAdvanceType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.7">
+          <name manuallyCreated="true" value="monthsCashAdvance"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationality" eType="#//nationalityType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.8">
+          <name manuallyCreated="true" value="nationality"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="#//resultType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.9">
+          <name manuallyCreated="true" value="result"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAssets" eType="#//totalAssetsType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.10">
+          <name manuallyCreated="true" value="totalAssets"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="score" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="score"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Application"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scorecard" eType="#//Scorecard">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="scorecard"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="product_type" eType="#//product_typeType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.11">
+          <name manuallyCreated="true" value="product_type"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="income" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="income"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="worst_status_LM" eType="#//worst_status_LMType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.12">
+          <name manuallyCreated="true" value="worst_status_LM"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count_30dpd_L12M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="count_30dpd_L12M"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="years_since_caution_record" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="years_since_caution_record"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="less_than_3B_within_L6M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="less_than_3B_within_L6M"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="less_than_3_unsecured_in_L6M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="less_than_3_unsecured_in_L6M"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="less_than_3_new_enquiries_in_L3M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="less_than_3_new_enquiries_in_L3M"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="average_balance_L6M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="average_balance_L6M"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="employment_verification" eType="#//employment_verificationType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.13">
+          <name manuallyCreated="true" value="employment_verification"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cb_prescreen_check" eType="#//cb_prescreen_checkType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.14">
+          <name manuallyCreated="true" value="cb_prescreen_check"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//statusType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.15">
+          <name manuallyCreated="true" value="status"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="second_credit_bureau_check" eType="#//second_credit_bureau_checkType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.16">
+          <name manuallyCreated="true" value="second_credit_bureau_check"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="caution_check" eType="#//caution_checkType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.17">
+          <name manuallyCreated="true" value="caution_check"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bank_relationship_check" eType="#//bank_relationship_checkType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.18">
+          <name manuallyCreated="true" value="bank_relationship_check"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ageType">
+    <eLiterals name="V0" literal="'UC'"/>
+    <eLiterals name="V1" value="1" literal="'29'"/>
+    <eLiterals name="V2" value="2" literal="'59'"/>
+    <eLiterals name="V3" value="3" literal="'89'"/>
+    <eLiterals name="V4" value="4" literal="'119'"/>
+    <eLiterals name="V5" value="5" literal="'149'"/>
+    <eLiterals name="V6" value="6" literal="'999'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="dependantsType">
+    <eLiterals name="V0" literal="'0'"/>
+    <eLiterals name="V1" value="1" literal="'1'"/>
+    <eLiterals name="V2" value="2" literal="'2'"/>
+    <eLiterals name="V3" value="3" literal="'3'"/>
+    <eLiterals name="V4" value="4" literal="'99'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="employmentTypeType">
+    <eLiterals name="V0" literal="'EM'"/>
+    <eLiterals name="V1" value="1" literal="'SE'"/>
+    <eLiterals name="V2" value="2" literal="'NE'"/>
+    <eLiterals name="V3" value="3" literal="'CE'"/>
+    <eLiterals name="V4" value="4" literal="'FL'"/>
+    <eLiterals name="V5" value="5" literal="'RE'"/>
+    <eLiterals name="V6" value="6" literal="'CO'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="existingCustomerType">
+    <eLiterals name="V0" literal="'Y'"/>
+    <eLiterals name="V1" value="1" literal="'N'"/>
+    <eLiterals name="V2" value="2" literal="'P'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="genderType">
+    <eLiterals name="V0" literal="'M'"/>
+    <eLiterals name="V1" value="1" literal="'F'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="highestAcademicType">
+    <eLiterals name="V0" literal="'G'"/>
+    <eLiterals name="V1" value="1" literal="'S'"/>
+    <eLiterals name="V2" value="2" literal="'D'"/>
+    <eLiterals name="V3" value="3" literal="'N'"/>
+    <eLiterals name="V4" value="4" literal="'M'"/>
+    <eLiterals name="V5" value="5" literal="'E'"/>
+    <eLiterals name="V6" value="6" literal="'C'"/>
+    <eLiterals name="V7" value="7" literal="'O'"/>
+    <eLiterals name="V8" value="8" literal="'P'"/>
+    <eLiterals name="V9" value="9" literal="'0ther'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="maritalStatusType">
+    <eLiterals name="V0" literal="'M'"/>
+    <eLiterals name="V1" value="1" literal="'S'"/>
+    <eLiterals name="V2" value="2" literal="'D'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="monthsCashAdvanceType">
+    <eLiterals name="V0" literal="'NA'"/>
+    <eLiterals name="V1" value="1" literal="'0'"/>
+    <eLiterals name="V2" value="2" literal="'1'"/>
+    <eLiterals name="V3" value="3" literal="'2'"/>
+    <eLiterals name="V4" value="4" literal="'5'"/>
+    <eLiterals name="V5" value="5" literal="'99'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="nationalityType">
+    <eLiterals name="V0" literal="'SG'"/>
+    <eLiterals name="V1" value="1" literal="'SG PR'"/>
+    <eLiterals name="V2" value="2" literal="'FO'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="resultType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="totalAssetsType">
+    <eLiterals name="V0" literal="'NA'"/>
+    <eLiterals name="V1" value="1" literal="'-999'"/>
+    <eLiterals name="V2" value="2" literal="'0'"/>
+    <eLiterals name="V3" value="3" literal="'5'"/>
+    <eLiterals name="V4" value="4" literal="'999'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="product_typeType">
+    <eLiterals name="V0" literal="'CC'"/>
+    <eLiterals name="V1" value="1" literal="'EC'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="worst_status_LMType">
+    <eLiterals name="V0" literal="'&lt;90dpd'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="employment_verificationType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="cb_prescreen_checkType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="statusType">
+    <eLiterals name="V0" literal="'approve'"/>
+    <eLiterals name="V1" value="1" literal="'reject'"/>
+    <eLiterals name="V2" value="2" literal="'CCA Review'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="second_credit_bureau_checkType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="caution_checkType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="bank_relationship_checkType">
+    <eLiterals name="V0" literal="'pass'"/>
+    <eLiterals name="V1" value="1" literal="'fail'"/>
+  </eClassifiers>
+</ecore:EPackage>

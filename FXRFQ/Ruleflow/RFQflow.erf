@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="5" minorVersionNumber="3" minorServiceNumber="2" buildNumber="2872" updateStamp="_gafaAZhrEeKjkMXDZ0x1lw" externalChecksum="3054974779:507989954:620929572" rulesheetAssets="../Rulesheet/ApplyMargins.ers#/ ../Rulesheet/BrokenDateInterpolations.ers#/ ../Rulesheet/CreditCheck.ers#/ ../Rulesheet/RFQtotals.ers#/ ../Rulesheet/Validate.ers#/ ../Rulesheet/Currencies.ers#/ ../Rulesheet/CustMargins.ers#/ ../Rulesheet/PosMargins.ers#/ ../Rulesheet/VolMargins.ers#/ ../Rulesheet/AmtMargins.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_oPxYkHF5EeKThP7RdLTixA" vocabulary="../Vocabulary/FXRFQ.ecore#/" workDocumentEntity="../Vocabulary/FXRFQ.ecore#//RFQ">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="ApplyMargins" order="12" ruleActivityUpdateStamp="_csJcAGylEeKWE_hEn4TJIw" invokes="../Rulesheet/ApplyMargins.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="BrokenDateInterpolations" order="6" ruleActivityUpdateStamp="_e0zxoGylEeKWE_hEn4TJIw" invokes="../Rulesheet/BrokenDateInterpolations.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="1" ruleActivityUpdateStamp="_gacWtZhrEeKjkMXDZ0x1lw" invokes="#//@ruleflow/@subflowList.0"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" order="7" ruleActivityUpdateStamp="_gacWtZhrEeKjkMXDZ0x1lw" invokes="#//@ruleflow/@subflowList.1"/>
+    <subflowList name="Verification">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="CreditCheck" order="5" ruleActivityUpdateStamp="_g_YLy2ylEeKWE_hEn4TJIw" invokes="../Rulesheet/CreditCheck.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="RFQtotals" order="4" ruleActivityUpdateStamp="_o_HpimylEeKWE_hEn4TJIw" invokes="../Rulesheet/RFQtotals.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Validate" order="2" ruleActivityUpdateStamp="_rN4nIGylEeKWE_hEn4TJIw" invokes="../Rulesheet/Validate.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Currencies" order="3" ruleActivityUpdateStamp="_jVGtAGylEeKWE_hEn4TJIw" invokes="../Rulesheet/Currencies.ers#//@ruleset"/>
+    </subflowList>
+    <subflowList name="Spread Calculation">
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="CustMargins" order="8" ruleActivityUpdateStamp="_lMH5AGylEeKWE_hEn4TJIw" invokes="../Rulesheet/CustMargins.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="PosMargins" order="10" ruleActivityUpdateStamp="_nFPWwGylEeKWE_hEn4TJIw" invokes="../Rulesheet/PosMargins.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="VolMargins" order="11" ruleActivityUpdateStamp="_tSKMAGylEeKWE_hEn4TJIw" invokes="../Rulesheet/VolMargins.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="AmtMargins" order="9" ruleActivityUpdateStamp="_ZpN2pWylEeKWE_hEn4TJIw" invokes="../Rulesheet/AmtMargins.ers#//@ruleset"/>
+    </subflowList>
+  </ruleflow>
+  <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="600" y="300" width="100" height="60" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.5" activityNode="#//@ruleflow/@flowControlList.0"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="204" y="168" width="157" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.1"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="12" y="24" width="577" height="109" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.2"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="427" y="15" width="109" height="60" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.0"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="289" y="15" width="100" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.4" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.1"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="7" y="15" width="100" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.3" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.2"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="145" y="15" width="100" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.4" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.3" activityNode="#//@ruleflow/@subflowList.0/@flowControlList.3"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="24" y="264" width="553" height="121" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.5" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.3"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="12" y="15" width="116" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.6" activityNode="#//@ruleflow/@subflowList.1/@flowControlList.0"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="283" y="15" width="109" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.7" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.8" activityNode="#//@ruleflow/@subflowList.1/@flowControlList.1"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="415" y="15" width="109" height="60" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.7" activityNode="#//@ruleflow/@subflowList.1/@flowControlList.2"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="151" y="15" width="109" height="60" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.8" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.6" activityNode="#//@ruleflow/@subflowList.1/@flowControlList.3"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.1" targetShape="#//@ruleflowViewList.0/@flowShapeList.7"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.2" targetShape="#//@ruleflowViewList.0/@flowShapeList.1"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.4" targetShape="#//@ruleflowViewList.0/@flowShapeList.3"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.5" targetShape="#//@ruleflowViewList.0/@flowShapeList.6"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.6" targetShape="#//@ruleflowViewList.0/@flowShapeList.4"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.7" targetShape="#//@ruleflowViewList.0/@flowShapeList.0"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.8" targetShape="#//@ruleflowViewList.0/@flowShapeList.11"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.9" targetShape="#//@ruleflowViewList.0/@flowShapeList.10"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.11" targetShape="#//@ruleflowViewList.0/@flowShapeList.9"/>
+  </ruleflowViewList>
+</com.corticon.rulesemf.assetmodel:RuleflowAsset>

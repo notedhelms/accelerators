@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_RxNfI6e-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZLU9gEigEe2o6uvU8j8F7w" vocabulary="LeapYear.ecore#/">
+    <rule>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dateString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.dateString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.dateMonth.toString">
+                <parentTerm text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.lastDayofMonthNumber.toString">
+                <parentTerm text="lastDayofMonthNumber" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthNumber">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.dateYear.toString">
+                <parentTerm text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Calculation.date = Calculation.dateString.toDateTime">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.date = Calculation.dateString.toDateTime" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Calculation.date">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="toDateTime" datatype="DateTime" termtype="METHOD" fulltext="Calculation.dateString.toDateTime">
+                <parentTerm text="dateString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.dateString">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Calculation.dayOfWeek = Calculation.date.dayOfWeek">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = Calculation.date.dayOfWeek" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="dayOfWeek" datatype="Integer" termtype="METHOD" fulltext="Calculation.date.dayOfWeek">
+                <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Calculation.date">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="1"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Sunday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Sunday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 2">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 2" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="2"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Monday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Monday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 3">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 3" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="3"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Tuesday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Tuesday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 4">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 4" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="4"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Wednesday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Wednesday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="5"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Thursday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Thursday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 6">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 6" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="6"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Friday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Friday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.6">
+      <condition>
+        <opaqueExpression expression="Calculation.dayOfWeek = 7">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 7" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Calculation.dayOfWeek" rhs="7"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Calculation.lastDayofMonthString = 'Saturday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Saturday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.7" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+              <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="LeapYear.ecore#//Calculation" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.5 #//@ruleset/@ruleStatements.6">
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/dateYear"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/lastDayofMonthNumber"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/dateMonth"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/dateString"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/date"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/dayOfWeek"/>
+      <referencedAttributes attribute="LeapYear.ecore#//Calculation/lastDayofMonthString"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dateString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.dateString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.dateMonth.toString">
+                <parentTerm text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.lastDayofMonthNumber.toString">
+                <parentTerm text="lastDayofMonthNumber" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthNumber">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toString" datatype="String" termtype="METHOD" fulltext="Calculation.dateYear.toString">
+                <parentTerm text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Calculation.date = Calculation.dateString.toDateTime">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.date = Calculation.dateString.toDateTime" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Calculation.date">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="toDateTime" datatype="DateTime" termtype="METHOD" fulltext="Calculation.dateString.toDateTime">
+                <parentTerm text="dateString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.dateString">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Calculation.dayOfWeek = Calculation.date.dayOfWeek">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = Calculation.date.dayOfWeek" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="dayOfWeek" datatype="Integer" termtype="METHOD" fulltext="Calculation.date.dayOfWeek">
+                <parentTerm text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Calculation.date">
+                  <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet="{'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'}"/>
+        <expressionCell external="Calculation.lastDayofMonthString">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="5"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference external="6"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.6">
+        <reference external="7"/>
+        <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The last day of  + Calculation.dateMonth + / + Calculation.dateYear +  is a  + Calculation.lastDayofMonthString" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateMonth" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateMonth">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="dateYear" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dateYear">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{1, 2, 3, 4, 5, 6, 7}"/>
+        <expressionCell external="Calculation.dayOfWeek">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Sunday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Sunday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="2">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 2" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Monday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Monday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="3">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 3" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Tuesday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Tuesday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="4">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 4" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Wednesday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Wednesday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Thursday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Thursday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="6">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 6" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Friday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Friday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="7">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dayOfWeek = 7" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dayOfWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="Calculation.dayOfWeek">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Saturday'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.lastDayofMonthString = 'Saturday'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastDayofMonthString" datatype="String" termtype="ATTRIBUTE" fulltext="Calculation.lastDayofMonthString">
+                <parentTerm text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Calculation" datatype="Calculation" termtype="ENTITY" fulltext="Calculation"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

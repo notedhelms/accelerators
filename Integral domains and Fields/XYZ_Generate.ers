@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_P3XoTKe-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset operationMode="ProcessAllLogicalLoops" vocabularyUpdateStamp="_ZGuKUEigEe2o6uvU8j8F7w" vocabulary="XYZ.ecore#/">
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition/>
+      <action>
+        <opaqueExpression expression="g.n = g.startAt">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.n = g.startAt" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action disabled="true">
+        <opaqueExpression expression="g.howMany = g.endAt - g.startAt">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.howMany = g.endAt - g.startAt" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="howMany" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.howMany">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="endAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.endAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="(g.n &lt; g.startAt+g.endAt)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g.n &lt; g.startAt + g.endAt ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="endAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.endAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="g.n &lt; g.startAt+g.endAt" rhs="T"/>
+      </condition>
+      <action/>
+      <action disabled="true"/>
+      <action>
+        <opaqueExpression expression="FiniteIntegerDomain.new[value=g.n]">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="FiniteIntegerDomain.new [ FiniteIntegerDomain.value = g.n ]" datatype="FiniteIntegerDomain" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="FiniteIntegerDomain.value">
+                <parentTerm text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="new" datatype="FiniteIntegerDomain" termtype="NEW" fulltext="FiniteIntegerDomain.new">
+                <parentTerm text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="g.n+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.n = g.n + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement ruleModelElements="#//@ruleset/@rules.0">
+      <text expression="GEN: Instead of a single Finite Domain we could have a separate domain for each of the variables - that way each could be populated with values specific to that variable">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="GEN: Instead of a single Finite Domain we could have a separate domain for each of the variables - that way each could be populated with values specific to that variable" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement ruleModelElements="#//@ruleset/@rules.1">
+      <text expression="GEN: Generate {g.howMany} digits starting from {g.startAt}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="GEN: Generate  + g.howMany +  digits starting from  + g.startAt" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+              <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="howMany" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.howMany">
+              <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="XYZ.ecore#//Problem">
+      <alias value="g"/>
+      <referencedAttributes attribute="XYZ.ecore#//Problem/startAt"/>
+      <referencedAttributes attribute="XYZ.ecore#//Problem/n"/>
+      <referencedAttributes attribute="XYZ.ecore#//Problem/endAt"/>
+      <referencedAttributes attribute="XYZ.ecore#//Problem/howMany"/>
+    </logicalVariable>
+    <logicalVariable entity="XYZ.ecore#//FiniteIntegerDomain">
+      <referencedAttributes attribute="XYZ.ecore#//FiniteIntegerDomain/value"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="g.n = g.startAt">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.n = g.startAt" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList disabled="true">
+        <valueSetCell/>
+        <expressionCell external="g.howMany = g.endAt - g.startAt">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.howMany = g.endAt - g.startAt" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="howMany" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.howMany">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="endAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.endAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="FiniteIntegerDomain.new[value=g.n]">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="FiniteIntegerDomain.new [ FiniteIntegerDomain.value = g.n ]" datatype="FiniteIntegerDomain" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="value" datatype="Integer" termtype="ATTRIBUTE" fulltext="FiniteIntegerDomain.value">
+                <parentTerm text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="new" datatype="FiniteIntegerDomain" termtype="NEW" fulltext="FiniteIntegerDomain.new">
+                <parentTerm text="FiniteIntegerDomain" datatype="FiniteIntegerDomain" termtype="ENTITY" fulltext="FiniteIntegerDomain" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="g.n+=1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.n = g.n + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="0"/>
+        <text external="GEN: Instead of a single Finite Domain we could have a separate domain for each of the variables - that way each could be populated with values specific to that variable">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="GEN: Instead of a single Finite Domain we could have a separate domain for each of the variables - that way each could be populated with values specific to that variable" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="1"/>
+        <text external="GEN: Generate {g.howMany} digits starting from {g.startAt}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="GEN: Generate  + g.howMany +  digits starting from  + g.startAt" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="howMany" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.howMany">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="g.n &lt; g.startAt+g.endAt">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="g.n &lt; g.startAt + g.endAt" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="endAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.endAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( g.n &lt; g.startAt + g.endAt ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="endAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.endAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="n" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.n">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="startAt" datatype="Integer" termtype="ATTRIBUTE" fulltext="g.startAt">
+                <parentTerm text="g" datatype="Problem" termtype="ENTITY" fulltext="g" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

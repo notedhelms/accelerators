@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_7Yd7J6e9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZOniEEigEe2o6uvU8j8F7w" vocabulary="Simulation.ecore#/">
+    <rule>
+      <condition/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="app.average_balance_L6M > 10000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.average_balance_L6M > 10000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="average_balance_L6M" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.average_balance_L6M">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.average_balance_L6M" rhs="> 10000"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="app.bank_relationship_check = 'pass'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.bank_relationship_check = 'pass'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bank_relationship_check" datatype="String" termtype="ATTRIBUTE" fulltext="app.bank_relationship_check">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="app.average_balance_L6M &lt;= 10000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.average_balance_L6M &lt;= 10000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="average_balance_L6M" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.average_balance_L6M">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.average_balance_L6M" rhs="&lt;= 10000"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="app.bank_relationship_check = 'fail'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.bank_relationship_check = 'fail'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bank_relationship_check" datatype="String" termtype="ATTRIBUTE" fulltext="app.bank_relationship_check">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicant passed the Bank Relationship Check">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant passed the Bank Relationship Check" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicant failed the Bank Relationship Check">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant failed the Bank Relationship Check" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="Simulation.ecore#//Application" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1">
+      <alias value="app"/>
+      <referencedAttributes attribute="Simulation.ecore#//Application/average_balance_L6M"/>
+      <referencedAttributes attribute="Simulation.ecore#//Application/bank_relationship_check"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet="{'pass', 'fail'}"/>
+        <expressionCell external="app.bank_relationship_check">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.bank_relationship_check" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="bank_relationship_check" datatype="String" termtype="ATTRIBUTE" fulltext="app.bank_relationship_check">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Applicant passed the Bank Relationship Check">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant passed the Bank Relationship Check" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Applicant failed the Bank Relationship Check">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant failed the Bank Relationship Check" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{> 10000, &lt;= 10000}"/>
+        <expressionCell external="app.average_balance_L6M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.average_balance_L6M" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="average_balance_L6M" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.average_balance_L6M">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="> 10000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.average_balance_L6M > 10000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="average_balance_L6M" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.average_balance_L6M">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'pass'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.bank_relationship_check = 'pass'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bank_relationship_check" datatype="String" termtype="ATTRIBUTE" fulltext="app.bank_relationship_check">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="&lt;= 10000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.average_balance_L6M &lt;= 10000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="average_balance_L6M" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.average_balance_L6M">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'fail'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.bank_relationship_check = 'fail'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bank_relationship_check" datatype="String" termtype="ATTRIBUTE" fulltext="app.bank_relationship_check">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

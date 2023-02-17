@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_ktAPyae9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_UcnJgN55EeuALK9kSny1Mw" vocabulary="wages.ecore#/">
+    <rule>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="timecard.grossPay = timecard.wages + timecard.bilingualPremium">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.grossPay = timecard.wages + timecard.bilingualPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+        <opaqueExpression expression="timecard.wages = timecard.hourlyRate * timecard.totalHours">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.wages = timecard.hourlyRate * timecard.totalHours" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="hourlyRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.hourlyRate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+        <opaqueExpression expression="employee.cummalativeGrossWages=timecard.grossPay->sum">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.cummalativeGrossWages = timecard.grossPay->sum" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="cummalativeGrossWages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.cummalativeGrossWages">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_grossPay" datatype="Decimal" termtype="COLLECTION" fulltext="timecard.grossPay->sum">
+                <parentTerm text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="employee.firstWeekDate=timecard.weekEndingDate->sortedBy(weekEndingDate)->first">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.firstWeekDate = timecard.weekEndingDate->sortedBy ( timecard.weekEndingDate )->first" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="firstWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.firstWeekDate">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_weekEndingDate" datatype="DateTime" termtype="COLLECTION" fulltext="timecard.weekEndingDate->asSequence->first">
+                <parentTerm text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="employee.lastWeekDate=timecard.weekEndingDate->sortedBy(weekEndingDate)->last">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.lastWeekDate = timecard.weekEndingDate->sortedBy ( timecard.weekEndingDate )->last" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.lastWeekDate">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_weekEndingDate" datatype="DateTime" termtype="COLLECTION" fulltext="timecard.weekEndingDate->asSequence->last">
+                <parentTerm text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="employee.startWeek=employee.firstWeekDate.weekOfYear">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.startWeek = employee.firstWeekDate.weekOfYear" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="startWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.startWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="weekOfYear" datatype="Integer" termtype="METHOD" fulltext="employee.firstWeekDate.weekOfYear">
+                <parentTerm text="firstWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.firstWeekDate">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="employee.endWeek=employee.lastWeekDate.weekOfYear">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.endWeek = employee.lastWeekDate.weekOfYear" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="endWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.endWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="weekOfYear" datatype="Integer" termtype="METHOD" fulltext="employee.lastWeekDate.weekOfYear">
+                <parentTerm text="lastWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.lastWeekDate">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="(employee.bilingual)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( employee.bilingual ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingual" datatype="Boolean" termtype="ATTRIBUTE" fulltext="employee.bilingual">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="employee.bilingual" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="timecard.bilingualPremium = timecard.totalHours * 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.bilingualPremium = timecard.totalHours * 0.5" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition>
+        <opaqueExpression expression="(employee.bilingual)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( employee.bilingual ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingual" datatype="Boolean" termtype="ATTRIBUTE" fulltext="employee.bilingual">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="employee.bilingual" rhs="F"/>
+      </condition>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="timecard.bilingualPremium = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.bilingualPremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Gross pay for the week ending {timecard.weekEndingDate} is €{timecard.grossPay} = wages (€{timecard.wages}) + bilingual premium (€{timecard.bilingualPremium}).">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Gross pay for the week ending  + timecard.weekEndingDate +  is € + timecard.grossPay +  = wages (€ + timecard.wages + ) + bilingual premium (€ + timecard.bilingualPremium + )." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Wages for the week ending {timecard.weekEndingDate} is €{timecard.wages} = hours (€{timecard.totalHours}) * rate (€{timecard.hourlyRate}).">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Wages for the week ending  + timecard.weekEndingDate +  is € + timecard.wages +  = hours (€ + timecard.totalHours + ) * rate (€ + timecard.hourlyRate + )." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="hourlyRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.hourlyRate">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Cummulative wages for timecards covering week {employee.startWeek} to {employee.endWeek} week are €{employee.cummalativeGrossWages}.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cummulative wages for timecards covering week  + employee.startWeek +  to  + employee.endWeek +  week are € + employee.cummalativeGrossWages + ." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="startWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.startWeek">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="endWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.endWeek">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="cummalativeGrossWages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.cummalativeGrossWages">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Bilingual bonus for the week ending {timecard.weekEndingDate} is €{timecard.bilingualPremium} = 0.50 * total hours ({timecard.totalHours}).">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Bilingual bonus for the week ending  + timecard.weekEndingDate +  is € + timecard.bilingualPremium +  = 0.50 * total hours ( + timecard.totalHours + )." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+              <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="No bilingual bonus.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="No bilingual bonus." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="wages.ecore#//Employee" ruleStatements="#//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.2">
+      <alias value="employee"/>
+      <extension explicit="true" association="true" entity="wages.ecore#//Timecard" traversedAssocRole="wages.ecore#//Employee/timecards" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1">
+        <alias value="timecard"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/wages"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/bilingualPremium"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/grossPay"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/totalHours"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/weekEndingDate"/>
+        <referencedAttributes attribute="wages.ecore#//Timecard/hourlyRate"/>
+      </extension>
+      <referencedAttributes attribute="wages.ecore#//Employee/bilingual"/>
+      <referencedAttributes attribute="wages.ecore#//Employee/cummalativeGrossWages"/>
+      <referencedAttributes attribute="wages.ecore#//Employee/startWeek"/>
+      <referencedAttributes attribute="wages.ecore#//Employee/endWeek"/>
+      <referencedAttributes attribute="wages.ecore#//Employee/lastWeekDate"/>
+      <referencedAttributes attribute="wages.ecore#//Employee/firstWeekDate"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="39" sashWeightScope="63" sashWeightConditionsActions="30" sashWeightConditionsIf="81">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="timecard.grossPay = timecard.wages + timecard.bilingualPremium">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.grossPay = timecard.wages + timecard.bilingualPremium" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="timecard.wages = timecard.hourlyRate * timecard.totalHours">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.wages = timecard.hourlyRate * timecard.totalHours" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="hourlyRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.hourlyRate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="33">
+        <valueSetCell valueSet="{tc.totalHours * 0.5, 0}"/>
+        <expressionCell external="timecard.bilingualPremium">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.bilingualPremium" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="employee.cummalativeGrossWages=timecard.grossPay->sum">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.cummalativeGrossWages = timecard.grossPay->sum" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="cummalativeGrossWages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.cummalativeGrossWages">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_grossPay" datatype="Decimal" termtype="COLLECTION" fulltext="timecard.grossPay->sum">
+                <parentTerm text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="employee.firstWeekDate=timecard.weekEndingDate->sortedBy(weekEndingDate)->first">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.firstWeekDate = timecard.weekEndingDate->sortedBy ( timecard.weekEndingDate )->first" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="firstWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.firstWeekDate">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_weekEndingDate" datatype="DateTime" termtype="COLLECTION" fulltext="timecard.weekEndingDate->asSequence->first">
+                <parentTerm text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="employee.lastWeekDate=timecard.weekEndingDate->sortedBy(weekEndingDate)->last">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.lastWeekDate = timecard.weekEndingDate->sortedBy ( timecard.weekEndingDate )->last" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="lastWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.lastWeekDate">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard_weekEndingDate" datatype="DateTime" termtype="COLLECTION" fulltext="timecard.weekEndingDate->asSequence->last">
+                <parentTerm text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                  <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="employee.startWeek=employee.firstWeekDate.weekOfYear">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.startWeek = employee.firstWeekDate.weekOfYear" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="startWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.startWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="weekOfYear" datatype="Integer" termtype="METHOD" fulltext="employee.firstWeekDate.weekOfYear">
+                <parentTerm text="firstWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.firstWeekDate">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="employee.endWeek=employee.lastWeekDate.weekOfYear">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.endWeek = employee.lastWeekDate.weekOfYear" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="endWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.endWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="weekOfYear" datatype="Integer" termtype="METHOD" fulltext="employee.lastWeekDate.weekOfYear">
+                <parentTerm text="lastWeekDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="employee.lastWeekDate">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="51" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="662" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList rowHeight="38" ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A0"/>
+        <text external="Gross pay for the week ending {timecard.weekEndingDate} is €{timecard.grossPay} = wages (€{timecard.wages}) + bilingual premium (€{timecard.bilingualPremium}).">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Gross pay for the week ending  + timecard.weekEndingDate +  is € + timecard.grossPay +  = wages (€ + timecard.wages + ) + bilingual premium (€ + timecard.bilingualPremium + )." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="grossPay" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.grossPay">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="40" ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="B0"/>
+        <text external="Wages for the week ending {timecard.weekEndingDate} is €{timecard.wages} = hours (€{timecard.totalHours}) * rate (€{timecard.hourlyRate}).">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Wages for the week ending  + timecard.weekEndingDate +  is € + timecard.wages +  = hours (€ + timecard.totalHours + ) * rate (€ + timecard.hourlyRate + )." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="hourlyRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.hourlyRate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="wages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.wages">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="41" ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="D0"/>
+        <text external="Cummulative wages for timecards covering week {employee.startWeek} to {employee.endWeek} week are €{employee.cummalativeGrossWages}.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Cummulative wages for timecards covering week  + employee.startWeek +  to  + employee.endWeek +  week are € + employee.cummalativeGrossWages + ." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="startWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.startWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="endWeek" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.endWeek">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="cummalativeGrossWages" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.cummalativeGrossWages">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="36" ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="1"/>
+        <text external="Bilingual bonus for the week ending {timecard.weekEndingDate} is €{timecard.bilingualPremium} = 0.50 * total hours ({timecard.totalHours}).">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Bilingual bonus for the week ending  + timecard.weekEndingDate +  is € + timecard.bilingualPremium +  = 0.50 * total hours ( + timecard.totalHours + )." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="weekEndingDate" datatype="DateTime" termtype="ATTRIBUTE" fulltext="timecard.weekEndingDate">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="20" ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="2"/>
+        <text external="No bilingual bonus.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="No bilingual bonus." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="employee.bilingual">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.bilingual" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingual" datatype="Boolean" termtype="ATTRIBUTE" fulltext="employee.bilingual">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="129" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( employee.bilingual ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingual" datatype="Boolean" termtype="ATTRIBUTE" fulltext="employee.bilingual">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="timecard.totalHours * 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.bilingualPremium = timecard.totalHours * 0.5" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee"/>
+              </terms>
+              <terms text="totalHours" datatype="Integer" termtype="ATTRIBUTE" fulltext="timecard.totalHours">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( employee.bilingual ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="bilingual" datatype="Boolean" termtype="ATTRIBUTE" fulltext="employee.bilingual">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="timecard.bilingualPremium = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="bilingualPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="timecard.bilingualPremium">
+                <parentTerm text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="timecard" datatype="Timecard" termtype="ENTITY" fulltext="timecard">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

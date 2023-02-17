@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" minorServiceNumber="2" buildNumber="2872" updateStamp="_ZpN2pWylEeKWE_hEn4TJIw" externalChecksum="3054974779:507989954:620929572">
+  <languageCode>en_AU</languageCode>
+  <ruleset vocabularyUpdateStamp="_oPxYkHF5EeKThP7RdLTixA" vocabulary="../Vocabulary/FXRFQ.ecore#/">
+    <rule>
+      <condition/>
+      <condition disabled="true"/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'AUD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'AUD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'AUD'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal &lt; 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal &lt; 100" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="&lt; 100"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.0001">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.0001" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'AUD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'AUD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'AUD'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal in [100..200]">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal in 100 .. 200" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="[100..200]"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.00005">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.00005" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'AUD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'AUD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'AUD'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal > 200">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal > 200" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="> 200"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.0001">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.0001" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'EUR'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'EUR'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'EUR'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal &lt; 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal &lt; 100" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="&lt; 100"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.0002">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'EUR'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'EUR'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'EUR'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal in [100..200]">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal in 100 .. 200" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="[100..200]"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.000075">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.000075" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <condition>
+        <opaqueExpression expression="RFQtotals.currency = 'EUR'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency = 'EUR'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.currency" rhs="'EUR'"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="RFQtotals.transType = 'SPOT'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType = 'SPOT'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.transType" rhs="'SPOT'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="RFQtotals.amtTotal > 200">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal > 200" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQtotals.amtTotal" rhs="> 200"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.currency =RFQtotals.currency)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.currency = RFQtotals.currency ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.currency =RFQtotals.currency" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(Margins.side =RFQtotals.side)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Margins.side = RFQtotals.side ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Margins.side =RFQtotals.side" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Margins.amtMargin = 0.0002">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin = 0.0002" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is AUD and request is for less than 100, add a pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and request is for less than 100, add a pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is AUD and request is for between 100 and 200, then add a 1/2 pip">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and request is for between 100 and 200, then add a 1/2 pip" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is AUD and is for more than 200, then add a pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and is for more than 200, then add a pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is EUR and request is for less than 100, add 2 pips.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and request is for less than 100, add 2 pips." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is EUR and request is for between 100 and 200, then add a .75 of a pip.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and request is for between 100 and 200, then add a .75 of a pip." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If currency is EUR and is for more than 200, then add a 2 pips.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and is for more than 200, then add a 2 pips." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQtotals">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/currency"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/amtTotal"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/transType"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQtotals/side"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//Margins" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.5">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/currency"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/amtMargin"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//Margins/side"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsIf="30">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Margins.amtMargin">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.amtMargin" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtMargin" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Margins.amtMargin">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="51" scrollRowTop="3" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="If currency is AUD and request is for less than 100, add a pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and request is for less than 100, add a pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="If currency is AUD and request is for between 100 and 200, then add a 1/2 pip">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and request is for between 100 and 200, then add a 1/2 pip" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="If currency is AUD and is for more than 200, then add a pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is AUD and is for more than 200, then add a pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="If currency is EUR and request is for less than 100, add 2 pips.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and request is for less than 100, add 2 pips." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="5"/>
+        <text external="If currency is EUR and request is for between 100 and 200, then add a .75 of a pip.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and request is for between 100 and 200, then add a .75 of a pip." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference external="6"/>
+        <text external="If currency is EUR and is for more than 200, then add a 2 pips.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency is EUR and is for more than 200, then add a 2 pips." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="51" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="RFQtotals.currency">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.currency" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList disabled="true" variableMode="Literal">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="RFQtotals.transType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.transType" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.transType">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="RFQtotals.amtTotal">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQtotals.amtTotal" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="amtTotal" datatype="Integer" termtype="ATTRIBUTE" fulltext="RFQtotals.amtTotal">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="Margins.currency =RFQtotals.currency">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.currency = RFQtotals.currency" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.currency">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.currency">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="Margins.side =RFQtotals.side">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Margins.side = RFQtotals.side" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="RFQtotals.side">
+                <parentTerm text="RFQtotals" datatype="RFQtotals" termtype="ENTITY" fulltext="RFQtotals" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="side" datatype="String" termtype="ATTRIBUTE" fulltext="Margins.side">
+                <parentTerm text="Margins" datatype="Margins" termtype="ENTITY" fulltext="Margins" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="21">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="0"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="79" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'AUD'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="&lt; 100"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.0001"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="87" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'AUD'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="[100..200]"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.00005"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="82" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'AUD'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="> 200"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.0001"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="74" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'EUR'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="&lt; 100"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.0002"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="'EUR'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="[100..200]"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.000075"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="80" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="'EUR'"/>
+        <conditionValueSetCellList valueSet="'SPOT'"/>
+        <conditionValueSetCellList valueSet="> 200"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <conditionValueSetCellList valueSet="T"/>
+        <actionValueSetCellList valueSet="0.0002"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

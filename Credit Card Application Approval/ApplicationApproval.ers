@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_rRG2NKe9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_aAu7UMDQEeiBB6oyuDqjEA" vocabulary="CreditCard.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="app.age = app.dateOfBirth.yearsBetween(today)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age = app.dateOfBirth.yearsBetween ( today )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="yearsBetween" datatype="Integer" termtype="METHOD" fulltext="app.dateOfBirth.yearsBetween">
+                <parentTerm text="dateOfBirth" datatype="DateTime" termtype="ATTRIBUTE" fulltext="app.dateOfBirth">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+        <opaqueExpression expression="app.dti = app.monthlyExpenses / (app.annualIncome /12)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti = app.monthlyExpenses / ( app.annualIncome / 12 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="monthlyExpenses" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.monthlyExpenses">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+        <opaqueExpression expression="app.averageCreditScore = reports.score->avg">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore = reports.score->avg" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="reports_score" datatype="Decimal" termtype="COLLECTION" fulltext="reports.score->avg">
+                <parentTerm text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="reports.score">
+                  <parentTerm text="reports" datatype="CreditReport" termtype="ENTITY" fulltext="reports" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3" overriddenBy="#//@ruleset/@rules.8">
+      <condition>
+        <opaqueExpression expression="app.age &lt; 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age &lt; 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.age" rhs="&lt; 18"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4" overriddenBy="#//@ruleset/@rules.8">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="app.annualIncome &lt; 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome &lt; 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.annualIncome" rhs="&lt; 5000"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.5" overriddenBy="#//@ruleset/@rules.8">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="app.dti > 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti > 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.dti" rhs="> 0.5"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.6" overrides="#//@ruleset/@rules.8">
+      <condition>
+        <opaqueExpression expression="app.age >= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.age" rhs=">= 18"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.annualIncome >= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.annualIncome" rhs=">= 5000"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.dti &lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.dti" rhs="&lt;= 0.5"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.averageCreditScore > 650">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore > 650" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.averageCreditScore" rhs="> 650"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#approved">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.7" overriddenBy="#//@ruleset/@rules.7 #//@ruleset/@rules.8">
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="app.averageCreditScore &lt; 500">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore &lt; 500" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.averageCreditScore" rhs="&lt; 500"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.8">
+      <condition>
+        <opaqueExpression expression="app.age >= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.age" rhs=">= 18"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.annualIncome >= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.annualIncome" rhs=">= 5000"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.dti &lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.dti" rhs="&lt;= 0.5"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.averageCreditScore in 500..650">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore in 500 .. 650" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.averageCreditScore" rhs="500..650"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.9" overrides="#//@ruleset/@rules.5">
+      <condition>
+        <opaqueExpression expression="app.age >= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.age" rhs=">= 18"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.annualIncome >= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.annualIncome" rhs=">= 5000"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.dti &lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.dti" rhs="&lt;= 0.5"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="app.averageCreditScore = 0 or app.averageCreditScore = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore = 0 or app.averageCreditScore = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.averageCreditScore" rhs="{0, null}"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.10" overrides="#//@ruleset/@rules.1 #//@ruleset/@rules.2 #//@ruleset/@rules.3 #//@ruleset/@rules.5" overriddenBy="#//@ruleset/@rules.4">
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(app.existingCustomer)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( app.existingCustomer ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.existingCustomer">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.existingCustomer" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(app.inGoodStanding)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( app.inGoodStanding ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="inGoodStanding" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.inGoodStanding">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="app.inGoodStanding" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="app.decisionResult = DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicant's age is determined by calculating the years between the date of birth and today.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant's age is determined by calculating the years between the date of birth and today." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="DTI is calculated by taking the monthly expenses related to housing and debt and dividing it by monthly income, i.e. annual income divided by 12.)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="DTI is calculated by taking the monthly expenses related to housing and debt and dividing it by monthly income, i.e. annual income divided by 12.)" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="The average credit score is equal to the average of the credit report scores from the credit report collection.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The average credit score is equal to the average of the credit report scores from the credit report collection." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicants under the age of 18 must be declined.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants under the age of 18 must be declined." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicants with an annual income of less than $5000 must be declined.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants with an annual income of less than $5000 must be declined." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Applicants with a DTI over 0.5 must be declined.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants with a DTI over 0.5 must be declined." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="An applicant must be at least 18, have an annual income of at least $5000, have a DTI of 0.5 or lower, and have an average credit score (of all available scores) of greater than 650 to be approved.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant must be at least 18, have an annual income of at least $5000, have a DTI of 0.5 or lower, and have an average credit score (of all available scores) of greater than 650 to be approved." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="An applicant with an average credit score (of all available scores) of less than 500 must be declined.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant with an average credit score (of all available scores) of less than 500 must be declined." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="An applicant who meets all other critereria for approval but whose average credit score is between 500 and 650 will be sent for manual review.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant who meets all other critereria for approval but whose average credit score is between 500 and 650 will be sent for manual review." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.7" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="An applicant who meets all other critereria for approval but for whom there are no credit scores available will be sent for manual review.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant who meets all other critereria for approval but for whom there are no credit scores available will be sent for manual review." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.8" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="An application for a base-level card whose applicant is an existing customer in good standing but does not meet all criteria will be sent for manual review.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An application for a base-level card whose applicant is an existing customer in good standing but does not meet all criteria will be sent for manual review." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="CreditCard.ecore#//Application" ruleStatements="#//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.5 #//@ruleset/@ruleStatements.6 #//@ruleset/@ruleStatements.7 #//@ruleset/@ruleStatements.8 #//@ruleset/@ruleStatements.9 #//@ruleset/@ruleStatements.10 #//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2">
+      <alias value="app"/>
+      <extension explicit="true" association="true" entity="CreditCard.ecore#//CreditReport" traversedAssocRole="CreditCard.ecore#//Application/creditReport">
+        <alias value="reports"/>
+        <referencedAttributes attribute="CreditCard.ecore#//CreditReport/score"/>
+      </extension>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/dateOfBirth"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/age"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/dti"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/annualIncome"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/monthlyExpenses"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/averageCreditScore"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/decisionResult"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/existingCustomer"/>
+      <referencedAttributes attribute="CreditCard.ecore#//Application/inGoodStanding"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="22" sashWeightConditionsActions="36" sashWeightConditionsIf="39">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList rowHeight="26">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="app.age = app.dateOfBirth.yearsBetween(today)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age = app.dateOfBirth.yearsBetween ( today )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="yearsBetween" datatype="Integer" termtype="METHOD" fulltext="app.dateOfBirth.yearsBetween">
+                <parentTerm text="dateOfBirth" datatype="DateTime" termtype="ATTRIBUTE" fulltext="app.dateOfBirth">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="26">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="app.dti = app.monthlyExpenses / (app.annualIncome /12)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti = app.monthlyExpenses / ( app.annualIncome / 12 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="monthlyExpenses" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.monthlyExpenses">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="app.averageCreditScore = reports.score->avg">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore = reports.score->avg" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="reports_score" datatype="Decimal" termtype="COLLECTION" fulltext="reports.score->avg">
+                <parentTerm text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="reports.score">
+                  <parentTerm text="reports" datatype="CreditReport" termtype="ENTITY" fulltext="reports" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="app.decisionResult">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.7"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.8"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="110" columnWidthAlias="55" columnWidthID="50" columnWidthText="1184" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A0"/>
+        <text external="Applicant's age is determined by calculating the years between the date of birth and today.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant's age is determined by calculating the years between the date of birth and today." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="B0"/>
+        <text external="DTI is calculated by taking the monthly expenses related to housing and debt and dividing it by monthly income, i.e. annual income divided by 12.)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="DTI is calculated by taking the monthly expenses related to housing and debt and dividing it by monthly income, i.e. annual income divided by 12.)" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="C0"/>
+        <text external="The average credit score is equal to the average of the credit report scores from the credit report collection.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The average credit score is equal to the average of the credit report scores from the credit report collection." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="1"/>
+        <text external="Applicants under the age of 18 must be declined.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants under the age of 18 must be declined." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="2"/>
+        <text external="Applicants with an annual income of less than $5000 must be declined.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants with an annual income of less than $5000 must be declined." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference external="3"/>
+        <text external="Applicants with a DTI over 0.5 must be declined.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicants with a DTI over 0.5 must be declined." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="54" ruleStatement="#//@ruleset/@ruleStatements.6">
+        <reference external="4"/>
+        <text external="An applicant must be at least 18, have an annual income of at least $5000, have a DTI of 0.5 or lower, and have an average credit score (of all available scores) of greater than 650 to be approved.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant must be at least 18, have an annual income of at least $5000, have a DTI of 0.5 or lower, and have an average credit score (of all available scores) of greater than 650 to be approved." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.7">
+        <reference external="5"/>
+        <text external="An applicant with an average credit score (of all available scores) of less than 500 must be declined.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant with an average credit score (of all available scores) of less than 500 must be declined." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.8">
+        <reference external="6"/>
+        <text external="An applicant who meets all other critereria for approval but whose average credit score is between 500 and 650 will be sent for manual review.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant who meets all other critereria for approval but whose average credit score is between 500 and 650 will be sent for manual review." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.9">
+        <reference external="7"/>
+        <text external="An applicant who meets all other critereria for approval but for whom there are no credit scores available will be sent for manual review.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An applicant who meets all other critereria for approval but for whom there are no credit scores available will be sent for manual review." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="26" ruleStatement="#//@ruleset/@ruleStatements.10">
+        <reference external="8"/>
+        <text external="An application for a base-level card whose applicant is an existing customer in good standing but does not meet all criteria will be sent for manual review.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="An application for a base-level card whose applicant is an existing customer in good standing but does not meet all criteria will be sent for manual review." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="49" columnWidthFactor="0.6933638443935927">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.age">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.annualIncome">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.dti">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.averageCreditScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.existingCustomer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.existingCustomer" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.existingCustomer">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="app.inGoodStanding">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.inGoodStanding" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="inGoodStanding" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.inGoodStanding">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="980">
+      <ruleColumnList ruleId="0" columnWidth="35" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="94" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="&lt; 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age &lt; 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="94" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="&lt; 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome &lt; 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="91" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti > 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="102" pRule="#//@ruleset/@rules.4">
+        <overrideValueSetCell valueSet="8"/>
+        <conditionValueSetCellList valueSet=">= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet=">= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="&lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="> 650">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore > 650" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#approved">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="93" pRule="#//@ruleset/@rules.5">
+        <overrideValueSetCell valueSet=""/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="&lt; 500">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore &lt; 500" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#declined">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'declined'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="136" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet=">= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet=">= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="&lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="500..650">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore in 500 .. 650" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="143" pRule="#//@ruleset/@rules.7">
+        <overrideValueSetCell valueSet="5"/>
+        <conditionValueSetCellList valueSet=">= 18">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.age >= 18" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="age" datatype="Integer" termtype="ATTRIBUTE" fulltext="app.age">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet=">= 5000">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.annualIncome >= 5000" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="annualIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.annualIncome">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="&lt;= 0.5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.dti &lt;= 0.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="dti" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.dti">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{0, null}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.averageCreditScore = 0 or app.averageCreditScore = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="averageCreditScore" datatype="Decimal" termtype="ATTRIBUTE" fulltext="app.averageCreditScore">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="128" pRule="#//@ruleset/@rules.8">
+        <overrideValueSetCell valueSet="{1, 2, 3, 5}"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( app.existingCustomer ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.existingCustomer">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( app.inGoodStanding ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="inGoodStanding" datatype="Boolean" termtype="ATTRIBUTE" fulltext="app.inGoodStanding">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="DecisionResultType#manualReview">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="app.decisionResult = 'manual review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="decisionResult" datatype="String" termtype="ATTRIBUTE" fulltext="app.decisionResult">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

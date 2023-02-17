@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_cpQmUae-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_KpLtQkihEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java">
+    <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_KpLGMUihEe2o6uvU8j8F7w" key="2" type="Validation" severity="Warning" invalidObjects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.3/@children.2" textKey="TestsheetTreeSetModelAPIImpl.Validation.Attribute.CustomDataType.Value.NotInList" locationKey="TestsheetTreeSetModelAPIImpl.Validation.NullTemplate">
+      <textVariables>London</textVariables>
+      <textVariables>US, Puerto Rico, Canada</textVariables>
+      <locationVariables>Package [4].destination</locationVariables>
+    </validationMessages>
+    <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_KpLtQEihEe2o6uvU8j8F7w" key="2" type="Validation" severity="Warning" invalidObjects="#//@testsheetAssets.0/@testsheetViewList.0/@expectedRoot/@children.3/@children.3" textKey="TestsheetTreeSetModelAPIImpl.Validation.Attribute.CustomDataType.Value.NotInList" locationKey="TestsheetTreeSetModelAPIImpl.Validation.NullTemplate">
+      <textVariables>London</textVariables>
+      <textVariables>US, Puerto Rico, Canada</textVariables>
+      <locationVariables>Package [4].destination</locationVariables>
+    </validationMessages>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.0" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.1" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.2" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.3" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@expectedRoot/@children.0" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@expectedRoot/@children.1" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@expectedRoot/@children.2" type="Note"/>
+    <comments timestamp="2022-10-10T09:40:55.954-0400" username="smeldon" text="Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)" objects="#//@testsheetAssets.0/@testsheetViewList.0/@expectedRoot/@children.3" type="Note"/>
+    <testsheet ruleActivityUpdateStamp="_JpdVoEihEe2o6uvU8j8F7w" ruleActivity="Package.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="Package cubicSize = Package length*Package height*Package depth"/>
+        <PostedMessage severity="Info" text="Package cubicSize = Package length*Package height*Package depth"/>
+        <PostedMessage severity="Info" text="Package cubicSize = Package length*Package height*Package depth"/>
+        <PostedMessage severity="Info" text="Package cubicSize = Package length*Package height*Package depth"/>
+        <PostedMessage severity="Info" text="If the cubic size is less than 5,184, use the actual weight of the package as the dimensional weight"/>
+        <PostedMessage severity="Info" text="If the cubic size is less than 5,184, use the actual weight of the package as the dimensional weight"/>
+        <PostedMessage severity="Info" text="For US and Puerto Rico - if the cubic size of the package is 5,184 or larger divide by the dimensional weight factor of 194 to get dimensional weight"/>
+        <PostedMessage severity="Info" text="R4"/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Canada" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" validationMessages="#//@testsheetAssets.0/@validationMessages.0" manuallyCreated="true" value="London" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)</comments>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.3 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.6" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="6750.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="34.793800" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.4" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="4200.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="28.000000" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.5" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="4200.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Canada" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="28.000000" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.7" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="6750.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="London" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="40.662700" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)</comments>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.1"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.3"/>
+      </outputMessageSection>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6750.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="34.793800" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750 is more than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4200.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="US" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200  is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4200.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Canada" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="35.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 28 lbs (cubic size 4200 is less than 5,184)</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="4" manuallyCreated="true" eClass="Package.ecore#//Package">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="28.000000" eAttribute="Package.ecore#//Package/actualWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6750.000000" eAttribute="Package.ecore#//Package/cubicSize"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/depth"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" validationMessages="#//@testsheetAssets.0/@validationMessages.1" manuallyCreated="true" value="London" eAttribute="Package.ecore#//Package/destination"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="40.662700" eAttribute="Package.ecore#//Package/dimensionalWeight"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="15.000000" eAttribute="Package.ecore#//Package/height"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="30.000000" eAttribute="Package.ecore#//Package/length"/>
+          <comments>Expected billable weight = 35Lbs (cubic size 6750  is more than 5,184)</comments>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_deYNckioEe2Zg-UFYAaT4Q" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="Package.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="Package"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

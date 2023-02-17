@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_7enmi6e9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZOniEEigEe2o6uvU8j8F7w" vocabulary="Simulation.ecore#/">
+    <rule>
+      <condition/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="card.existingCustomer = 'Y'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'Y'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="card.existingCustomer" rhs="'Y'"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="card.score+=12">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 12" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="card.existingCustomer = 'N'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'N'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="card.existingCustomer" rhs="'N'"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="card.score+=19">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 19" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="card.existingCustomer = 'P'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'P'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="card.existingCustomer" rhs="'P'"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="card.score+=28">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 28" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="card.existingCustomer = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="card.existingCustomer" rhs="other"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="card.score+=10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 10" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Not a customer 12 points giving {card.score}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Not a customer 12 points giving  + card.score" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+              <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Is a customer 19 giving {card.score}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Is a customer 19 giving  + card.score" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+              <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Previous customer 28 points giving {card.score}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Previous customer 28 points giving  + card.score" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+              <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Invalid existing customer code {card.existingCustomer} - must be N, Y, P. Defaulting to 10 giving {Scorecard.score}">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Invalid existing customer code  + card.existingCustomer +  - must be N, Y, P. Defaulting to 10 giving  + Scorecard.score" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+              <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Scorecard.score">
+              <parentTerm text="Scorecard" datatype="Scorecard" termtype="ENTITY" fulltext="Scorecard" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="Simulation.ecore#//Application">
+      <alias value="app"/>
+      <extension explicit="true" association="true" entity="Simulation.ecore#//Scorecard" traversedAssocRole="Simulation.ecore#//Application/scorecard" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
+        <alias value="card"/>
+        <referencedAttributes attribute="Simulation.ecore#//Scorecard/existingCustomer"/>
+        <referencedAttributes attribute="Simulation.ecore#//Scorecard/score"/>
+      </extension>
+    </logicalVariable>
+    <logicalVariable entity="Simulation.ecore#//Scorecard">
+      <referencedAttributes attribute="Simulation.ecore#//Scorecard/score"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet="{12, 19, 28, 10}"/>
+        <expressionCell external="card.score+=cellValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + cellValue" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Not a customer 12 points giving {card.score}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Not a customer 12 points giving  + card.score" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Is a customer 19 giving {card.score}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Is a customer 19 giving  + card.score" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="Previous customer 28 points giving {card.score}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Previous customer 28 points giving  + card.score" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="Invalid existing customer code {card.existingCustomer} - must be N, Y, P. Defaulting to 10 giving {Scorecard.score}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Invalid existing customer code  + card.existingCustomer +  - must be N, Y, P. Defaulting to 10 giving  + Scorecard.score" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Scorecard.score">
+                <parentTerm text="Scorecard" datatype="Scorecard" termtype="ENTITY" fulltext="Scorecard" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{'Y', 'N', 'P', other}"/>
+        <expressionCell external="card.existingCustomer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'Y'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'Y'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="12">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 12" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'N'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'N'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="19">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 19" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'P'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = 'P'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="28">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 28" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="other">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.existingCustomer = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="existingCustomer" datatype="String" termtype="ATTRIBUTE" fulltext="card.existingCustomer">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="card.score = card.score + 10" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="card.score">
+                <parentTerm text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                  <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+                </parentTerm>
+              </terms>
+              <terms text="card" datatype="Scorecard" termtype="ENTITY" fulltext="card">
+                <parentTerm text="app" datatype="Application" termtype="ENTITY" fulltext="app"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
+  <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="5" minorVersionNumber="7" majorServiceNumber="2" minorServiceNumber="6" buildNumber="8015" updateStamp="_gE_dkC-OEemVTf_8_0XYuA" externalChecksum="7824986:201531363" customDataTypeDisplayCount="50">
+      <languageCode>en_GB</languageCode>
+      <databaseAccess databasePropertyDisplayCount="50"/>
+    </contents>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Book">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Book"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="Title"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CountOfInputWord" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="CountOfInputWord"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Parameter"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="InputWord" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="InputWord"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="BeginPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="BeginPosition"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EndPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="EndPosition"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RemainingString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="RemainingString"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

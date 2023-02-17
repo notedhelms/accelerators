@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_kvIWsae9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="5" minorVersionNumber="7" majorServiceNumber="2" buildNumber="8015" updateStamp="_8NahcCMEEemYF4W1hGYzfw" externalChecksum="7824986:507989954">
+    <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_8NZTUCMEEemYF4W1hGYzfw" key="2" type="Validation" severity="Warning" invalidObjects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.0/@children.4/@children.7" textKey="TestsheetTreeSetModelAPIImpl.Validation.Attribute.Datatype.Value" locationKey="TestsheetTreeSetModelAPIImpl.Validation.NullTemplate">
+      <textVariables>17/1/2014</textVariables>
+      <textVariables>Date</textVariables>
+      <locationVariables>Employee [1].timecards (Timecard) [3].weekEndingDate</locationVariables>
+    </validationMessages>
+    <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_8NZ6YCMEEemYF4W1hGYzfw" key="2" type="Validation" severity="Warning" invalidObjects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.0/@children.5/@children.7" textKey="TestsheetTreeSetModelAPIImpl.Validation.Attribute.Datatype.Value" locationKey="TestsheetTreeSetModelAPIImpl.Validation.NullTemplate">
+      <textVariables>24/1/2014</textVariables>
+      <textVariables>Date</textVariables>
+      <locationVariables>Employee [1].timecards (Timecard) [4].weekEndingDate</locationVariables>
+    </validationMessages>
+    <testsheet ruleActivityUpdateStamp="_qNuE8MfvEeiJofM--tQM3Q" ruleActivity="wages.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="Total hours for the week ending  is 39 = 8+8+9+5+9+0+0"/>
+        <PostedMessage severity="Info" text="Total hours for the week ending  is 40 = 8+8+8+8+8+0+0"/>
+        <PostedMessage severity="Info" text="Total hours for the week ending  is 48 = 8+10+8+10+8+4+0"/>
+        <PostedMessage severity="Info" text="Total hours for the week ending  is 40 = 8+10+0+10+8+4+0"/>
+        <PostedMessage severity="Info" text="Hourly rate for 2014 is €19.40"/>
+        <PostedMessage severity="Info" text="Hourly rate for 2014 is €19.40"/>
+        <PostedMessage severity="Info" text="Hourly rate for 2014 is €19.40"/>
+        <PostedMessage severity="Info" text="Hourly rate for 2014 is €19.40"/>
+        <PostedMessage severity="Info" text="Wages for the week ending 24/1/2014 is €756.600000 = hours (€39) * rate (€19.400000)."/>
+        <PostedMessage severity="Info" text="Wages for the week ending 17/1/2014 is €776.000000 = hours (€40) * rate (€19.400000)."/>
+        <PostedMessage severity="Info" text="Wages for the week ending 10/1/2014 is €931.200000 = hours (€48) * rate (€19.400000)."/>
+        <PostedMessage severity="Info" text="Wages for the week ending 3/1/2014 is €776.000000 = hours (€40) * rate (€19.400000)."/>
+        <PostedMessage severity="Info" text="Bilingual bonus for the week ending 24/1/2014 is €19.500000 = 0.50 * total hours (39)."/>
+        <PostedMessage severity="Info" text="Bilingual bonus for the week ending 17/1/2014 is €20.000000 = 0.50 * total hours (40)."/>
+        <PostedMessage severity="Info" text="Bilingual bonus for the week ending 10/1/2014 is €24.000000 = 0.50 * total hours (48)."/>
+        <PostedMessage severity="Info" text="Bilingual bonus for the week ending 3/1/2014 is €20.000000 = 0.50 * total hours (40)."/>
+        <PostedMessage severity="Info" text="Gross pay for the week ending 24/1/2014 is €776.100000 = wages (€756.600000) + bilingual premium (€19.500000)."/>
+        <PostedMessage severity="Info" text="Gross pay for the week ending 17/1/2014 is €796.000000 = wages (€776.000000) + bilingual premium (€20.000000)."/>
+        <PostedMessage severity="Info" text="Gross pay for the week ending 10/1/2014 is €955.200000 = wages (€931.200000) + bilingual premium (€24.000000)."/>
+        <PostedMessage severity="Info" text="Gross pay for the week ending 3/1/2014 is €796.000000 = wages (€776.000000) + bilingual premium (€20.000000)."/>
+        <PostedMessage severity="Info" text="Cummulative wages for timecards covering week 1 to 4 week are €3323.300000."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="wages.ecore#//Employee">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="true" eAttribute="wages.ecore#//Employee/bilingual"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Cahill" eAttribute="wages.ecore#//Employee/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="10/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" validationMessages="#//@testsheetAssets.0/@validationMessages.0" manuallyCreated="true" value="17/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="9" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="5" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="9" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" validationMessages="#//@testsheetAssets.0/@validationMessages.1" manuallyCreated="true" value="24/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+          </children>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.1 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.3 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.4 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.5 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.6 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.7 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.8" eClass="wages.ecore#//Employee">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="true" eAttribute="wages.ecore#//Employee/bilingual"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Cahill" eAttribute="wages.ecore#//Employee/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.9 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.10 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.11" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="4" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="5" eAttribute="wages.ecore#//Timecard/daysWorked"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="40" eAttribute="wages.ecore#//Timecard/totalHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8.000000" eAttribute="wages.ecore#//Timecard/averageDailyHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19.400000" eAttribute="wages.ecore#//Timecard/hourlyRate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="776.000000" eAttribute="wages.ecore#//Timecard/wages"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="20.000000" eAttribute="wages.ecore#//Timecard/bilingualPremium"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="796.000000" eAttribute="wages.ecore#//Timecard/grossPay"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.12 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.13 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.14" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="4" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="10/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="6" eAttribute="wages.ecore#//Timecard/daysWorked"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="48" eAttribute="wages.ecore#//Timecard/totalHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8.000000" eAttribute="wages.ecore#//Timecard/averageDailyHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19.400000" eAttribute="wages.ecore#//Timecard/hourlyRate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="931.200000" eAttribute="wages.ecore#//Timecard/wages"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="24.000000" eAttribute="wages.ecore#//Timecard/bilingualPremium"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="955.200000" eAttribute="wages.ecore#//Timecard/grossPay"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.15 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.16 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.17" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="17/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="5" eAttribute="wages.ecore#//Timecard/daysWorked"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="40" eAttribute="wages.ecore#//Timecard/totalHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8.000000" eAttribute="wages.ecore#//Timecard/averageDailyHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19.400000" eAttribute="wages.ecore#//Timecard/hourlyRate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="776.000000" eAttribute="wages.ecore#//Timecard/wages"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="20.000000" eAttribute="wages.ecore#//Timecard/bilingualPremium"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="796.000000" eAttribute="wages.ecore#//Timecard/grossPay"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.18 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.19 #//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.20" eReference="wages.ecore#//Employee/timecards" eClass="wages.ecore#//Timecard">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="9" eAttribute="wages.ecore#//Timecard/friday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/monday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/saturday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="wages.ecore#//Timecard/sunday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="5" eAttribute="wages.ecore#//Timecard/thursday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="8" eAttribute="wages.ecore#//Timecard/tuesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="9" eAttribute="wages.ecore#//Timecard/wednesday"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="24/1/2014" eAttribute="wages.ecore#//Timecard/weekEndingDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="5" eAttribute="wages.ecore#//Timecard/daysWorked"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="39" eAttribute="wages.ecore#//Timecard/totalHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="7.800000" eAttribute="wages.ecore#//Timecard/averageDailyHours"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19.400000" eAttribute="wages.ecore#//Timecard/hourlyRate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="756.600000" eAttribute="wages.ecore#//Timecard/wages"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="19.500000" eAttribute="wages.ecore#//Timecard/bilingualPremium"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="776.100000" eAttribute="wages.ecore#//Timecard/grossPay"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3/1/2014" eAttribute="wages.ecore#//Employee/firstWeekDate"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="24/1/2014" eAttribute="wages.ecore#//Employee/lastWeekDate"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="wages.ecore#//Employee/startWeek"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="4" eAttribute="wages.ecore#//Employee/endWeek"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3323.300000" eAttribute="wages.ecore#//Employee/cummalativeGrossWages"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.4" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.5" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.6" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.7" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.12" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.13" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.14" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.15" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.20" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.11" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.19" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.2"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.10" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.18" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.3"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.9" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.17" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.4"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.8" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.16" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.5"/>
+      </outputMessageSection>
+      <expectedRoot passed="false"/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_UcnJgN55EeuALK9kSny1Mw" testsheets="#//@testsheetAssets.0/@testsheet" vocabulary="wages.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="EmployeeWageCalc"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_IIPZrqe-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_GB</languageCode>
+  <ruleset vocabularyUpdateStamp="_agNC8Fn9Ee2XAPiuELRq8A" vocabulary="../Vocabulary/InsuranceQuote.ecore#/">
+    <rule>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="employee.YearlyPensionContributionPremium = &#xD;&#xA;employee.MaxAnnualGrossSalary.min(employee.AnnualGrossSalary) * employee.SalaryContributionPercentage">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.YearlyPensionContributionPremium = employee.MaxAnnualGrossSalary.min ( employee.AnnualGrossSalary ) * employee.SalaryContributionPercentage" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SalaryContributionPercentage" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.SalaryContributionPercentage">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="min" datatype="Decimal" termtype="METHOD" fulltext="employee.MaxAnnualGrossSalary.min">
+                <parentTerm text="MaxAnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.MaxAnnualGrossSalary">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.AnnualGrossSalary">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+        <opaqueExpression expression="employer.AdjustmentFactor = BranchPolicyRiskAdjustmentFactor.AdjustmentFactor">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employer.AdjustmentFactor = BranchPolicyRiskAdjustmentFactor.AdjustmentFactor" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.AdjustmentFactor">
+                <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="AdjustmentFactor += BranchPolicyRiskAdjustmentFactor">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="AdjustmentFactor += BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="AdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="AdjustmentFactor" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+        <opaqueExpression expression="Quotation.YearlyPremium = ((employee.YearlyPensionContributionPremium ->sum) * employer.AdjustmentFactor).round(2)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.YearlyPremium = ( ( employee.YearlyPensionContributionPremium->sum ) * employer.AdjustmentFactor ).round ( 2 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="YearlyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Quotation.YearlyPremium">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employee_YearlyPensionContributionPremium" datatype="Decimal" termtype="COLLECTION" fulltext="employee.YearlyPensionContributionPremium->sum">
+                <parentTerm text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0 #//@ruleset/@logicalVariables.1">
+      <opaqueExpression expression="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="IndustryBranch" datatype="String" termtype="ATTRIBUTE" fulltext="employer.IndustryBranch">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="Branch" datatype="String" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.Branch">
+              <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.1">
+      <opaqueExpression expression="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="TurnoverFrom" datatype="Integer" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.TurnoverFrom">
+              <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.1">
+      <opaqueExpression expression="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="TurnoverTo" datatype="Integer" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.TurnoverTo">
+              <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <opaqueExpression expression="employee.Status = 'Approved'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.Status = 'Approved'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="employee.Status">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Yearly pension contribution for employee [{employee.Name}] age [{employee.Age}] is [{employee.YearlyPensionContributionPremium}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Yearly pension contribution for employee [ + employee.Name + ] age [ + employee.Age + ] is [ + employee.YearlyPensionContributionPremium + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.Age">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+            <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="employee.Name">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+            <terms text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+              <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+      <text expression="Employer premium adjustment factor for industry branch [{employer.IndustryBranch}] and annual turnover of [{employer.AnnualTurnover}] is [{employer.AdjustmentFactor}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employer premium adjustment factor for industry branch [ + employer.IndustryBranch + ] and annual turnover of [ + employer.AnnualTurnover + ] is [ + employer.AdjustmentFactor + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="IndustryBranch" datatype="String" termtype="ATTRIBUTE" fulltext="employer.IndustryBranch">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+              <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Yearly premium based on all employee pension contributions equals [{Quotation.YearlyPremium}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Yearly premium based on all employee pension contributions equals [ + Quotation.YearlyPremium + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="YearlyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Quotation.YearlyPremium">
+              <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//Quotation" ruleStatements="#//@ruleset/@ruleStatements.2" filters="#//@ruleset/@filters.0">
+      <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Employer" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Quotation/employer" ruleStatements="#//@ruleset/@ruleStatements.1" filters="#//@ruleset/@filters.0">
+        <alias value="employer"/>
+        <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//Employee" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Employer/employee" ruleStatements="#//@ruleset/@ruleStatements.0" filters="#//@ruleset/@filters.3">
+          <alias value="employee"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/YearlyPensionContributionPremium"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Status"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/MaxAnnualGrossSalary"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/SalaryContributionPercentage"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Name"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/AnnualGrossSalary"/>
+          <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employee/Age"/>
+        </extension>
+        <extension explicit="true" association="true" entity="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor" traversedAssocRole="../Vocabulary/InsuranceQuote.ecore#//Employer/branchPolicyRiskAdjustmentFactor">
+          <alias value="AdjustmentFactor"/>
+        </extension>
+        <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employer/AdjustmentFactor"/>
+        <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employer/AnnualTurnover"/>
+        <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Employer/IndustryBranch"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//Quotation/YearlyPremium"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor/Branch"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor/TurnoverFrom"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor/TurnoverTo"/>
+      <referencedAttributes attribute="../Vocabulary/InsuranceQuote.ecore#//BranchPolicyRiskAdjustmentFactor/AdjustmentFactor"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="33" sashWeightScope="65" sashWeightConditionsActions="43" sashWeightConditionsIf="77">
+    <actionSection rowCount="51" columnWidthFactor="0.5">
+      <actionItemList rowHeight="70">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="employee.YearlyPensionContributionPremium = &#xD;&#xA;employee.MaxAnnualGrossSalary.min(employee.AnnualGrossSalary) * employee.SalaryContributionPercentage">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.YearlyPensionContributionPremium = employee.MaxAnnualGrossSalary.min ( employee.AnnualGrossSalary ) * employee.SalaryContributionPercentage" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SalaryContributionPercentage" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.SalaryContributionPercentage">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="min" datatype="Decimal" termtype="METHOD" fulltext="employee.MaxAnnualGrossSalary.min">
+                <parentTerm text="MaxAnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.MaxAnnualGrossSalary">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="AnnualGrossSalary" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.AnnualGrossSalary">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="38">
+        <valueSetCell/>
+        <expressionCell external="employer.AdjustmentFactor = BranchPolicyRiskAdjustmentFactor.AdjustmentFactor">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employer.AdjustmentFactor = BranchPolicyRiskAdjustmentFactor.AdjustmentFactor" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.AdjustmentFactor">
+                <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="34">
+        <valueSetCell/>
+        <expressionCell external="AdjustmentFactor += BranchPolicyRiskAdjustmentFactor">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="AdjustmentFactor += BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="AdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="AdjustmentFactor" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="51">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Quotation.YearlyPremium = ((employee.YearlyPensionContributionPremium ->sum) * employer.AdjustmentFactor).round(2)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quotation.YearlyPremium = ( ( employee.YearlyPensionContributionPremium->sum ) * employer.AdjustmentFactor ).round ( 2 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="YearlyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Quotation.YearlyPremium">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="employee_YearlyPensionContributionPremium" datatype="Decimal" termtype="COLLECTION" fulltext="employee.YearlyPensionContributionPremium->sum">
+                <parentTerm text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+                  <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover" filter="#//@ruleset/@filters.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover" filter="#//@ruleset/@filters.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="employee.Status = 'Approved'" filter="#//@ruleset/@filters.3"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover" filter="#//@ruleset/@filters.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover" filter="#//@ruleset/@filters.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="employee.Status = 'Approved'" filter="#//@ruleset/@filters.3"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder" expanded="true">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="employee.Status = 'Approved'" filter="#//@ruleset/@filters.3"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.6"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover" filter="#//@ruleset/@filters.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover" filter="#//@ruleset/@filters.2"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.3"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.Branch = employer.IndustryBranch" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="IndustryBranch" datatype="String" termtype="ATTRIBUTE" fulltext="employer.IndustryBranch">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Branch" datatype="String" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.Branch">
+                <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.TurnoverFrom &lt;= employer.AnnualTurnover" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="TurnoverFrom" datatype="Integer" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.TurnoverFrom">
+                <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.2">
+        <expressionCell external="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="BranchPolicyRiskAdjustmentFactor.TurnoverTo >= employer.AnnualTurnover" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="TurnoverTo" datatype="Integer" termtype="ATTRIBUTE" fulltext="BranchPolicyRiskAdjustmentFactor.TurnoverTo">
+                <parentTerm text="BranchPolicyRiskAdjustmentFactor" datatype="BranchPolicyRiskAdjustmentFactor" termtype="ENTITY" fulltext="BranchPolicyRiskAdjustmentFactor" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.3">
+        <expressionCell external="employee.Status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="employee.Status = 'Approved'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="Status" datatype="String" termtype="ATTRIBUTE" fulltext="employee.Status">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="1019" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList rowHeight="34" ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A0"/>
+        <text external="Yearly pension contribution for employee [{employee.Name}] age [{employee.Age}] is [{employee.YearlyPensionContributionPremium}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Yearly pension contribution for employee [ + employee.Name + ] age [ + employee.Age + ] is [ + employee.YearlyPensionContributionPremium + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="Age" datatype="Integer" termtype="ATTRIBUTE" fulltext="employee.Age">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="Name" datatype="String" termtype="ATTRIBUTE" fulltext="employee.Name">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="YearlyPensionContributionPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employee.YearlyPensionContributionPremium">
+                <parentTerm text="employee" datatype="Employee" termtype="ENTITY" fulltext="employee" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="32" ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="B0"/>
+        <text external="Employer premium adjustment factor for industry branch [{employer.IndustryBranch}] and annual turnover of [{employer.AnnualTurnover}] is [{employer.AdjustmentFactor}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Employer premium adjustment factor for industry branch [ + employer.IndustryBranch + ] and annual turnover of [ + employer.AnnualTurnover + ] is [ + employer.AdjustmentFactor + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="IndustryBranch" datatype="String" termtype="ATTRIBUTE" fulltext="employer.IndustryBranch">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="AnnualTurnover" datatype="Integer" termtype="ATTRIBUTE" fulltext="employer.AnnualTurnover">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="AdjustmentFactor" datatype="Decimal" termtype="ATTRIBUTE" fulltext="employer.AdjustmentFactor">
+                <parentTerm text="employer" datatype="Employer" termtype="ENTITY" fulltext="employer" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="27" ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="D0"/>
+        <text external="Yearly premium based on all employee pension contributions equals [{Quotation.YearlyPremium}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Yearly premium based on all employee pension contributions equals [ + Quotation.YearlyPremium + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="YearlyPremium" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Quotation.YearlyPremium">
+                <parentTerm text="Quotation" datatype="Quotation" termtype="ENTITY" fulltext="Quotation" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5"/>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

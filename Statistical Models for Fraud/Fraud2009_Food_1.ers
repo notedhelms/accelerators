@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_sN1IAqe-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZQM2cEigEe2o6uvU8j8F7w" vocabulary="Fraud.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Heading.date = now">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Heading.date = now" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="(watch->exists(watch.merchantID=merchant.merchantID))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( watch ->exists( watch.merchantID = merchant.merchantID ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="watch" datatype="Boolean" termtype="COLLECTION" fulltext="watch->notEmpty">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="watch.merchantID">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantID">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="watch->exists(watch.merchantID=merchant.merchantID)" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="merchant.duplicateDollarRatio in 0.01 .. 0.05">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateDollarRatio in 0.01 .. 0.05" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateDollarRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateDollarRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="merchant.duplicateDollarRatio" rhs="0.01 .. 0.05"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="merchant.duplicateDollarRatio > 0.05">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateDollarRatio > 0.05" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateDollarRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateDollarRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="merchant.duplicateDollarRatio" rhs="> 0.05"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 10" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(merchant.duplicateCardRatio >0.01)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.duplicateCardRatio > 0.01 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateCardRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateCardRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="merchant.duplicateCardRatio >0.01" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.5">
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="threshold.keyedSwipedRatio">
+                <parentTerm text="threshold" datatype="Thresholds" termtype="ENTITY" fulltext="threshold" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.keyedSwipedRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio" rhs="T"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.6">
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(merchant.totalChargeBacks/merchant.totalAmount > 0.02)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.totalChargeBacks / merchant.totalAmount > 0.02 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="totalChargeBacks" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalChargeBacks">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalAmount">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="merchant.totalChargeBacks/merchant.totalAmount > 0.02" rhs="T"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="merchant.riskLevel+= 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0">
+      <opaqueExpression expression="merchant.merchantType = 'F - Food'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.merchantType = 'F - Food'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.2 #//@ruleset/@logicalVariables.0">
+      <opaqueExpression expression="threshold.merchantType = merchant.merchantType">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="threshold.merchantType = merchant.merchantType" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="threshold.merchantType">
+              <parentTerm text="threshold" datatype="Thresholds" termtype="ENTITY" fulltext="threshold" variable="#//@ruleset/@logicalVariables.2"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.3">
+      <text expression="****************** Merchant Type = F - Food; Date = {Heading.date} ******************************************">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="****************** Merchant Type = F - Food; Date =  + Heading.date +  ******************************************" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+              <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R1: Merchant {merchant.merchantID} is on the merchant watch list. Risk score is 100">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R1: Merchant  + merchant.merchantID +  is on the merchant watch list. Risk score is 100" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantID">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R2: If the number of duplicate dollar amounts is between 1% and 5% of the number of transactions then risk score is 1. ({merchant.merchantType} merchant)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R2: If the number of duplicate dollar amounts is between 1% and 5% of the number of transactions then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R3: If the number of duplicate dollar amounts exceeds 5% of the number of transactions then risk score is 10. ({merchant.merchantType} merchant)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3: If the number of duplicate dollar amounts exceeds 5% of the number of transactions then risk score is 10. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R4: If the number of duplicate card numbers exceeds 1% of the number of transactions then risk score is 1. ({merchant.merchantType} merchant)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R4: If the number of duplicate card numbers exceeds 1% of the number of transactions then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R5: If the ratio of key swipes to keyed transactions ({merchant.keyedSwipedRatio}) drops below the threshold ({Thresholds.keyedSwipedRatio}) then risk score is 1 ({merchant.merchantType} merchant)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R5: If the ratio of key swipes to keyed transactions ( + merchant.keyedSwipedRatio + ) drops below the threshold ( + Thresholds.keyedSwipedRatio + ) then risk score is 1 ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Thresholds.keyedSwipedRatio">
+              <parentTerm text="Thresholds" datatype="Thresholds" termtype="ENTITY" fulltext="Thresholds" variable="#//@ruleset/@logicalVariables.4"/>
+            </terms>
+            <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.keyedSwipedRatio">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.6" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="R6: If the chargebacks exceed 2% of the total amount then then risk score is 1. ({merchant.merchantType} merchant)">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R6: If the chargebacks exceed 2% of the total amount then then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+              <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="Fraud.ecore#//Merchant" ruleStatements="#//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.5 #//@ruleset/@ruleStatements.6" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
+      <alias value="merchant"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/merchantType"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/merchantID"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/duplicateDollarRatio"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/duplicateCardRatio"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/keyedSwipedRatio"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/totalAmount"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/totalChargeBacks"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/riskLevel"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="Fraud.ecore#//MerchantWatchList">
+      <alias value="watch"/>
+      <referencedAttributes attribute="Fraud.ecore#//MerchantWatchList/merchantID"/>
+    </logicalVariable>
+    <logicalVariable explicit="true" entity="Fraud.ecore#//Thresholds" filters="#//@ruleset/@filters.1">
+      <alias value="threshold"/>
+      <referencedAttributes attribute="Fraud.ecore#//Thresholds/merchantType"/>
+      <referencedAttributes attribute="Fraud.ecore#//Thresholds/keyedSwipedRatio"/>
+    </logicalVariable>
+    <logicalVariable entity="Fraud.ecore#//Heading" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <referencedAttributes attribute="Fraud.ecore#//Heading/date"/>
+    </logicalVariable>
+    <logicalVariable entity="Fraud.ecore#//Thresholds">
+      <referencedAttributes attribute="Fraud.ecore#//Thresholds/keyedSwipedRatio"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="49" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Heading.date = now">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Heading.date = now" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet="{100, 10, 1}"/>
+        <expressionCell external="merchant.riskLevel+= cellValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + cellValue" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="merchant.merchantType = 'F - Food'" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="threshold.merchantType = merchant.merchantType" filter="#//@ruleset/@filters.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.7"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.2">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="threshold.merchantType = merchant.merchantType" filter="#//@ruleset/@filters.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.1"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.3">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.3/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.4">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.4/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="merchant.merchantType = 'F - Food'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.merchantType = 'F - Food'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="threshold.merchantType = merchant.merchantType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="threshold.merchantType = merchant.merchantType" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="threshold.merchantType">
+                <parentTerm text="threshold" datatype="Thresholds" termtype="ENTITY" fulltext="threshold" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A0"/>
+        <text external="****************** Merchant Type = F - Food; Date = {Heading.date} ******************************************">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="****************** Merchant Type = F - Food; Date =  + Heading.date +  ******************************************" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.3"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="1"/>
+        <text external="R1: Merchant {merchant.merchantID} is on the merchant watch list. Risk score is 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R1: Merchant  + merchant.merchantID +  is on the merchant watch list. Risk score is 100" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantID">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="2"/>
+        <text external="R2: If the number of duplicate dollar amounts is between 1% and 5% of the number of transactions then risk score is 1. ({merchant.merchantType} merchant)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R2: If the number of duplicate dollar amounts is between 1% and 5% of the number of transactions then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="3"/>
+        <text external="R3: If the number of duplicate dollar amounts exceeds 5% of the number of transactions then risk score is 10. ({merchant.merchantType} merchant)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R3: If the number of duplicate dollar amounts exceeds 5% of the number of transactions then risk score is 10. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="4"/>
+        <text external="R4: If the number of duplicate card numbers exceeds 1% of the number of transactions then risk score is 1. ({merchant.merchantType} merchant)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R4: If the number of duplicate card numbers exceeds 1% of the number of transactions then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference external="5"/>
+        <text external="R5: If the ratio of key swipes to keyed transactions ({merchant.keyedSwipedRatio}) drops below the threshold ({Thresholds.keyedSwipedRatio}) then risk score is 1 ({merchant.merchantType} merchant)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R5: If the ratio of key swipes to keyed transactions ( + merchant.keyedSwipedRatio + ) drops below the threshold ( + Thresholds.keyedSwipedRatio + ) then risk score is 1 ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Thresholds.keyedSwipedRatio">
+                <parentTerm text="Thresholds" datatype="Thresholds" termtype="ENTITY" fulltext="Thresholds" variable="#//@ruleset/@logicalVariables.4"/>
+              </terms>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.keyedSwipedRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.6">
+        <reference external="6"/>
+        <text external="R6: If the chargebacks exceed 2% of the total amount then then risk score is 1. ({merchant.merchantType} merchant)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="R6: If the chargebacks exceed 2% of the total amount then then risk score is 1. ( + merchant.merchantType +  merchant)" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantType" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantType">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="watch->exists(watch.merchantID=merchant.merchantID)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="watch ->exists( watch.merchantID = merchant.merchantID )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="watch" datatype="Boolean" termtype="COLLECTION" fulltext="watch->notEmpty">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="watch.merchantID">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantID">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{&lt; 0.01, 0.01 .. 0.05, > 0.05}"/>
+        <expressionCell external="merchant.duplicateDollarRatio">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateDollarRatio" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateDollarRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateDollarRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="merchant.duplicateCardRatio >0.01">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateCardRatio > 0.01" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateCardRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateCardRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="threshold.keyedSwipedRatio">
+                <parentTerm text="threshold" datatype="Thresholds" termtype="ENTITY" fulltext="threshold" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.keyedSwipedRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell valueSet="{T, F}"/>
+        <expressionCell external="merchant.totalChargeBacks/merchant.totalAmount > 0.02">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.totalChargeBacks / merchant.totalAmount > 0.02" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="totalChargeBacks" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalChargeBacks">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalAmount">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( watch ->exists( watch.merchantID = merchant.merchantID ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="watch" datatype="Boolean" termtype="COLLECTION" fulltext="watch->notEmpty">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="watch.merchantID">
+                <parentTerm text="watch" datatype="MerchantWatchList" termtype="ENTITY" fulltext="watch" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="merchant.merchantID">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 100" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="0.01 .. 0.05">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateDollarRatio in 0.01 .. 0.05" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateDollarRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateDollarRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="> 0.05">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.duplicateDollarRatio > 0.05" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateDollarRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateDollarRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 10" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.duplicateCardRatio > 0.01 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="duplicateCardRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.duplicateCardRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.keyedSwipedRatio &lt; threshold.keyedSwipedRatio ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="threshold.keyedSwipedRatio">
+                <parentTerm text="threshold" datatype="Thresholds" termtype="ENTITY" fulltext="threshold" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+              <terms text="keyedSwipedRatio" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.keyedSwipedRatio">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( merchant.totalChargeBacks / merchant.totalAmount > 0.02 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="totalChargeBacks" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalChargeBacks">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="totalAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="merchant.totalAmount">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="merchant.riskLevel = merchant.riskLevel + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="merchant.riskLevel">
+                <parentTerm text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+              </terms>
+              <terms text="merchant" datatype="Merchant" termtype="ENTITY" fulltext="merchant"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

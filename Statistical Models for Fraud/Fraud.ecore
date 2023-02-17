@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
+  <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_ZQM2cEigEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java" customDataTypeDisplayCount="50">
+      <languageCode>en_US</languageCode>
+      <databaseAccess databasePropertyDisplayCount="50"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//merchantTypeType">
+        <dataTypeName manuallyCreated="true" value="merchantTypeType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'A - Auto Rental'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'E - eCommerce'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'F - Food'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'H - Hotel'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M - Mail Order/Telephone Order'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'R - Retail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//merchantTypeType_1">
+        <dataTypeName manuallyCreated="true" value="merchantTypeType_1"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'A - Auto Rental'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'E - eCommerce'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'F - Food'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'H - Hotel'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M - Mail Order/Telephone Order'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'R - Retail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//merchantTypeType_2">
+        <dataTypeName manuallyCreated="true" value="merchantTypeType_2"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'A - Auto Rental'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'E - eCommerce'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'F - Food'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'H - Hotel'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'M - Mail Order/Telephone Order'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'R - Retail'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//methodType">
+        <dataTypeName manuallyCreated="true" value="methodType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'swiped'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'keyed'"/>
+        </enumerationElements>
+      </customDataTypeList>
+    </contents>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="MerchantHistory">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="MerchantHistory"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="meanAmount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanChargeBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="meanChargeBack"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="meanVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stdVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="stdVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stdAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="stdAmount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stdChargeBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="stdChargeBack"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="maxAmount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxChargeBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="maxChargeBack"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="maxVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="minVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lower" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="lower"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upper" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="upper"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Message"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="text"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Merchant">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Merchant"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="merchantHistory" eType="#//MerchantHistory">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="merchantHistory"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" upperBound="-1" eType="#//Message">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="message"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" upperBound="-1" eType="#//Transaction">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="transaction"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantType" eType="#//merchantTypeType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.0">
+          <name manuallyCreated="true" value="merchantType"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalAmount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duplicateDollarRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="duplicateDollarRatio"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duplicateCardRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="duplicateCardRatio"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyedSwipedRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="keyedSwipedRatio"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalChargeBacks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalChargeBacks"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="merchantName"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="merchantID"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="date"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="status"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="riskLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="riskLevel"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statisticalVariance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="statisticalVariance"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MerchantWatchList">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="MerchantWatchList"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="merchantID"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantType" eType="#//merchantTypeType_1">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
+          <name manuallyCreated="true" value="merchantType"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Thresholds">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Thresholds"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="merchantID"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merchantType" eType="#//merchantTypeType_2">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="merchantType"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duplicateCardUsePercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="duplicateCardUsePercent"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duplicateDollarAmountsPercent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="duplicateDollarAmountsPercent"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keyedSwipedRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="keyedSwipedRatio"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalAmount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalAmount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalChargeBacks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalChargeBacks"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalVolume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="totalVolume"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Limits">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Limits"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transaction">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Transaction"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="cardNumber"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="date"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="amount"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chargeback" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="chargeback"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//methodType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.3">
+          <name manuallyCreated="true" value="method"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="tid"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Heading"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="date"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nGood" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="nGood"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nBad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="nBad"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="nTotal"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentBad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="percentBad"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="merchantTypeType">
+    <eLiterals name="V0" literal="'A - Auto Rental'"/>
+    <eLiterals name="V1" value="1" literal="'E - eCommerce'"/>
+    <eLiterals name="V2" value="2" literal="'F - Food'"/>
+    <eLiterals name="V3" value="3" literal="'H - Hotel'"/>
+    <eLiterals name="V4" value="4" literal="'M - Mail Order/Telephone Order'"/>
+    <eLiterals name="V5" value="5" literal="'R - Retail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="merchantTypeType_1">
+    <eLiterals name="V0" literal="'A - Auto Rental'"/>
+    <eLiterals name="V1" value="1" literal="'E - eCommerce'"/>
+    <eLiterals name="V2" value="2" literal="'F - Food'"/>
+    <eLiterals name="V3" value="3" literal="'H - Hotel'"/>
+    <eLiterals name="V4" value="4" literal="'M - Mail Order/Telephone Order'"/>
+    <eLiterals name="V5" value="5" literal="'R - Retail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="merchantTypeType_2">
+    <eLiterals name="V0" literal="'A - Auto Rental'"/>
+    <eLiterals name="V1" value="1" literal="'E - eCommerce'"/>
+    <eLiterals name="V2" value="2" literal="'F - Food'"/>
+    <eLiterals name="V3" value="3" literal="'H - Hotel'"/>
+    <eLiterals name="V4" value="4" literal="'M - Mail Order/Telephone Order'"/>
+    <eLiterals name="V5" value="5" literal="'R - Retail'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="methodType">
+    <eLiterals name="V0" literal="'swiped'"/>
+    <eLiterals name="V1" value="1" literal="'keyed'"/>
+  </eClassifiers>
+</ecore:EPackage>

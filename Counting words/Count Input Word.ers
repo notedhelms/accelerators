@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_pMy086e9Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_GB</languageCode>
+  <ruleset operationMode="ProcessAllLogicalLoops" vocabularyUpdateStamp="_gE_dkC-OEemVTf_8_0XYuA" vocabulary="Words.ecore#/">
+    <rule>
+      <action>
+        <opaqueExpression expression="Book.CountOfInputWord = 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Book.CountOfInputWord = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Parameter.RemainingString = Book.Title">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.RemainingString = Book.Title" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="Title" datatype="String" termtype="ATTRIBUTE" fulltext="Book.Title">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(Parameter.RemainingString.contains(Parameter.InputWord))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Parameter.RemainingString.contains ( Parameter.InputWord ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="Parameter.RemainingString.contains">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Parameter.RemainingString.contains(Parameter.InputWord)" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Parameter.BeginPosition = Parameter.RemainingString.indexOf(Parameter.InputWord)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.BeginPosition = Parameter.RemainingString.indexOf ( Parameter.InputWord )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="BeginPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.BeginPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="indexOf" datatype="Integer" termtype="METHOD" fulltext="Parameter.RemainingString.indexOf">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Parameter.EndPosition = Parameter.BeginPosition + Parameter.InputWord.size">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.EndPosition = Parameter.BeginPosition + Parameter.InputWord.size" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="EndPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.EndPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="BeginPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.BeginPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="size" datatype="Integer" termtype="METHOD" fulltext="Parameter.InputWord.size">
+                <parentTerm text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Parameter.RemainingString = Parameter.RemainingString.substring(Parameter.EndPosition, Parameter.RemainingString.size)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.RemainingString = Parameter.RemainingString.substring ( Parameter.EndPosition , Parameter.RemainingString.size )" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="substring" datatype="String" termtype="METHOD" fulltext="Parameter.RemainingString.substring">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="EndPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.EndPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="size" datatype="Integer" termtype="METHOD" fulltext="Parameter.RemainingString.size">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Book.CountOfInputWord += 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Book.CountOfInputWord = Book.CountOfInputWord + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="(Parameter.RemainingString.contains(Parameter.InputWord))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Parameter.RemainingString.contains ( Parameter.InputWord ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="Parameter.RemainingString.contains">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Parameter.RemainingString.contains(Parameter.InputWord)" rhs="F"/>
+      </condition>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="Corticon found [{Book.CountOfInputWord}] occurances of word [{Parameter.InputWord}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Corticon found [ + Book.CountOfInputWord + ] occurances of word [ + Parameter.InputWord + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+              <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+              <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="Words.ecore#//Book">
+      <referencedAttributes attribute="Words.ecore#//Book/Title"/>
+      <referencedAttributes attribute="Words.ecore#//Book/CountOfInputWord"/>
+    </logicalVariable>
+    <logicalVariable entity="Words.ecore#//Parameter" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <referencedAttributes attribute="Words.ecore#//Parameter/InputWord"/>
+      <referencedAttributes attribute="Words.ecore#//Parameter/BeginPosition"/>
+      <referencedAttributes attribute="Words.ecore#//Parameter/RemainingString"/>
+      <referencedAttributes attribute="Words.ecore#//Parameter/EndPosition"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsIf="53">
+    <actionSection rowCount="50" scrollRowTop="3" columnWidthFactor="0.5">
+      <actionItemList rowHeight="19">
+        <valueSetCell/>
+        <expressionCell external="Book.CountOfInputWord">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Book.CountOfInputWord" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Parameter.RemainingString = Book.Title">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.RemainingString = Book.Title" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="Title" datatype="String" termtype="ATTRIBUTE" fulltext="Book.Title">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell/>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Parameter.BeginPosition = Parameter.RemainingString.indexOf(Parameter.InputWord)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.BeginPosition = Parameter.RemainingString.indexOf ( Parameter.InputWord )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="BeginPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.BeginPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="indexOf" datatype="Integer" termtype="METHOD" fulltext="Parameter.RemainingString.indexOf">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Parameter.EndPosition = Parameter.BeginPosition + Parameter.InputWord.size">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.EndPosition = Parameter.BeginPosition + Parameter.InputWord.size" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="EndPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.EndPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="BeginPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.BeginPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="size" datatype="Integer" termtype="METHOD" fulltext="Parameter.InputWord.size">
+                <parentTerm text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="80">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Parameter.RemainingString = Parameter.RemainingString.substring(Parameter.EndPosition, Parameter.RemainingString.size)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.RemainingString = Parameter.RemainingString.substring ( Parameter.EndPosition , Parameter.RemainingString.size )" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="substring" datatype="String" termtype="METHOD" fulltext="Parameter.RemainingString.substring">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+              <terms text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="EndPosition" datatype="Integer" termtype="ATTRIBUTE" fulltext="Parameter.EndPosition">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="size" datatype="Integer" termtype="METHOD" fulltext="Parameter.RemainingString.size">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Book.CountOfInputWord += 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Book.CountOfInputWord = Book.CountOfInputWord + 1" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.3"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList rowHeight="124" ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="2"/>
+        <text external="Corticon found [{Book.CountOfInputWord}] occurances of word [{Parameter.InputWord}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Corticon found [ + Book.CountOfInputWord + ] occurances of word [ + Parameter.InputWord + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.42740841248303935">
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="Parameter.RemainingString.contains(Parameter.InputWord)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Parameter.RemainingString.contains ( Parameter.InputWord )" datatype="boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="Parameter.RemainingString.contains">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Book.CountOfInputWord = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="CountOfInputWord" datatype="Integer" termtype="ATTRIBUTE" fulltext="Book.CountOfInputWord">
+                <parentTerm text="Book" datatype="Book" termtype="ENTITY" fulltext="Book"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Book" datatype="Book" termtype="ENTITY" fulltext="Book"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Parameter.RemainingString.contains ( Parameter.InputWord ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="Parameter.RemainingString.contains">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( Parameter.RemainingString.contains ( Parameter.InputWord ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="InputWord" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.InputWord">
+                <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="contains" datatype="boolean" termtype="METHOD" fulltext="Parameter.RemainingString.contains">
+                <parentTerm text="RemainingString" datatype="String" termtype="ATTRIBUTE" fulltext="Parameter.RemainingString">
+                  <parentTerm text="Parameter" datatype="Parameter" termtype="ENTITY" fulltext="Parameter" variable="#//@ruleset/@logicalVariables.1"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

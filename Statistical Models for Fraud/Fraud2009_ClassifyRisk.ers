@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_sjrbt6e-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_ZQM2cEigEe2o6uvU8j8F7w" vocabulary="Fraud.ecore#/">
+    <rule>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="Heading.date = now">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Heading.date = now" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="m.riskLevel in 0 .. 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel in 0 .. 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="m.riskLevel" rhs="0 .. 1"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="m.status = 'ok'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'ok'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="m.riskLevel in 2 .. 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel in 2 .. 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="m.riskLevel" rhs="2 .. 5"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="m.status = 'warn'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'warn'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition>
+        <opaqueExpression expression="m.riskLevel > 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel > 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="m.riskLevel" rhs="> 5"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="m.status = 'violation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'violation'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="****************** Summary; Date = {Heading.date} ******************************************">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="****************** Summary; Date =  + Heading.date +  ******************************************" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+              <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Merchant {m.merchantID} ({m.merchantName}): Risk level 0 or 1 is not considered a problem">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level 0 or 1 is not considered a problem" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Merchant {m.merchantID} ({m.merchantName}): Risk level 2..5 is a warning">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level 2..5 is a warning" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Merchant {m.merchantID} ({m.merchantName}): Risk level above 5 indicates possible fraud and should be investigated">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level above 5 indicates possible fraud and should be investigated" expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+            <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+              <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable explicit="true" entity="Fraud.ecore#//Merchant" ruleStatements="#//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
+      <alias value="m"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/riskLevel"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/status"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/merchantName"/>
+      <referencedAttributes attribute="Fraud.ecore#//Merchant/merchantID"/>
+    </logicalVariable>
+    <logicalVariable entity="Fraud.ecore#//Heading" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <referencedAttributes attribute="Fraud.ecore#//Heading/date"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Heading.date = now">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Heading.date = now" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet="{'ok', 'warn', 'violation'}"/>
+        <expressionCell external="m.status">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A0"/>
+        <text external="****************** Summary; Date = {Heading.date} ******************************************">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="****************** Summary; Date =  + Heading.date +  ******************************************" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="date" datatype="DateTime" termtype="ATTRIBUTE" fulltext="Heading.date">
+                <parentTerm text="Heading" datatype="Heading" termtype="ENTITY" fulltext="Heading" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="1"/>
+        <text external="Merchant {m.merchantID} ({m.merchantName}): Risk level 0 or 1 is not considered a problem">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level 0 or 1 is not considered a problem" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="2"/>
+        <text external="Merchant {m.merchantID} ({m.merchantName}): Risk level 2..5 is a warning">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level 2..5 is a warning" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="3"/>
+        <text external="Merchant {m.merchantID} ({m.merchantName}): Risk level above 5 indicates possible fraud and should be investigated">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Merchant  + m.merchantID +  ( + m.merchantName + ): Risk level above 5 indicates possible fraud and should be investigated" expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="merchantName" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantName">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="merchantID" datatype="String" termtype="ATTRIBUTE" fulltext="m.merchantID">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{0 .. 1, 2 .. 5, > 5}"/>
+        <expressionCell external="m.riskLevel">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="0 .. 1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel in 0 .. 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'ok'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'ok'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="2 .. 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel in 2 .. 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'warn'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'warn'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="> 5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.riskLevel > 5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="riskLevel" datatype="Integer" termtype="ATTRIBUTE" fulltext="m.riskLevel">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'violation'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="m.status = 'violation'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="m.status">
+                <parentTerm text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="m" datatype="Merchant" termtype="ENTITY" fulltext="m"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

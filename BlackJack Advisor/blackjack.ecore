@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
+  <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="3" minorServiceNumber="3" buildNumber="8020" updateStamp="_ZFn-IEigEe2o6uvU8j8F7w" externalChecksum="2722078124:507989954" studioType="Java" customDataTypeDisplayCount="50">
+      <languageCode>en_US</languageCode>
+      <databaseAccess databasePropertyDisplayCount="50"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//card1Type">
+        <dataTypeName manuallyCreated="true" value="card1Type"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Ace'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'3'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'4'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'5'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'6'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'7'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'8'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'9'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'10'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Jack'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Queen'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'King'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//card2Type">
+        <dataTypeName manuallyCreated="true" value="card2Type"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Ace'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'3'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'4'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'5'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'6'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'7'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'8'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'9'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'10'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Jack'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Queen'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'King'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//dealer_face_cardType">
+        <dataTypeName manuallyCreated="true" value="dealer_face_cardType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Ace'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'2'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'3'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'4'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'5'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'6'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'7'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'8'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'9'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'10'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Jack'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Queen'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'King'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//playType">
+        <dataTypeName manuallyCreated="true" value="playType"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration manuallyCreated="true" value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'hit'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'stand'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'fold'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'double'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'split'"/>
+        </enumerationElements>
+      </customDataTypeList>
+    </contents>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Hand">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Hand"/>
+        <datastorePersistent manuallyCreated="true" value="true"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="card1" eType="#//card1Type">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.0">
+          <name manuallyCreated="true" value="card1"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="card2" eType="#//card2Type">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
+          <name manuallyCreated="true" value="card2"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dealer_face_card" eType="#//dealer_face_cardType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="dealer_face_card"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="play" eType="#//playType">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.3">
+          <name manuallyCreated="true" value="play"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="total" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="total"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="card1Type">
+    <eLiterals name="V0" literal="'Ace'"/>
+    <eLiterals name="V1" value="1" literal="'2'"/>
+    <eLiterals name="V2" value="2" literal="'3'"/>
+    <eLiterals name="V3" value="3" literal="'4'"/>
+    <eLiterals name="V4" value="4" literal="'5'"/>
+    <eLiterals name="V5" value="5" literal="'6'"/>
+    <eLiterals name="V6" value="6" literal="'7'"/>
+    <eLiterals name="V7" value="7" literal="'8'"/>
+    <eLiterals name="V8" value="8" literal="'9'"/>
+    <eLiterals name="V9" value="9" literal="'10'"/>
+    <eLiterals name="V10" value="10" literal="'Jack'"/>
+    <eLiterals name="V11" value="11" literal="'Queen'"/>
+    <eLiterals name="V12" value="12" literal="'King'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="card2Type">
+    <eLiterals name="V0" literal="'Ace'"/>
+    <eLiterals name="V1" value="1" literal="'2'"/>
+    <eLiterals name="V2" value="2" literal="'3'"/>
+    <eLiterals name="V3" value="3" literal="'4'"/>
+    <eLiterals name="V4" value="4" literal="'5'"/>
+    <eLiterals name="V5" value="5" literal="'6'"/>
+    <eLiterals name="V6" value="6" literal="'7'"/>
+    <eLiterals name="V7" value="7" literal="'8'"/>
+    <eLiterals name="V8" value="8" literal="'9'"/>
+    <eLiterals name="V9" value="9" literal="'10'"/>
+    <eLiterals name="V10" value="10" literal="'Jack'"/>
+    <eLiterals name="V11" value="11" literal="'Queen'"/>
+    <eLiterals name="V12" value="12" literal="'King'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="dealer_face_cardType">
+    <eLiterals name="V0" literal="'Ace'"/>
+    <eLiterals name="V1" value="1" literal="'2'"/>
+    <eLiterals name="V2" value="2" literal="'3'"/>
+    <eLiterals name="V3" value="3" literal="'4'"/>
+    <eLiterals name="V4" value="4" literal="'5'"/>
+    <eLiterals name="V5" value="5" literal="'6'"/>
+    <eLiterals name="V6" value="6" literal="'7'"/>
+    <eLiterals name="V7" value="7" literal="'8'"/>
+    <eLiterals name="V8" value="8" literal="'9'"/>
+    <eLiterals name="V9" value="9" literal="'10'"/>
+    <eLiterals name="V10" value="10" literal="'Jack'"/>
+    <eLiterals name="V11" value="11" literal="'Queen'"/>
+    <eLiterals name="V12" value="12" literal="'King'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="playType">
+    <eLiterals name="V0" literal="'hit'"/>
+    <eLiterals name="V1" value="1" literal="'stand'"/>
+    <eLiterals name="V2" value="2" literal="'fold'"/>
+    <eLiterals name="V3" value="3" literal="'double'"/>
+    <eLiterals name="V4" value="4" literal="'split'"/>
+  </eClassifiers>
+</ecore:EPackage>

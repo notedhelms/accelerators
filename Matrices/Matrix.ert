@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_TnuUYae-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPEe4bydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPCCoLydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPCpsLydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="6" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPDQwLydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2 * 1 + 2 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="4" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="6" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="12" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="15" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="8" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2 * 1 + 2 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="4" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="6" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="12" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2 * 1 + 1 * 1" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="15" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2 * 2 + 2 * 2" eAttribute="Matrix.ecore#//Cell/comment"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="8" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPD30LydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="C" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPD30bydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="T" eAttribute="Matrix.ecore#//Array/name"/>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" newOrModified="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="T" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="11" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="12" newOrModified="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="10" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="T" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="23" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="13" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="11" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="12" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" majorServiceNumber="1" buildNumber="8015" updateStamp="_JPEe4LydEem4hK0pjpfpdQ" externalChecksum="7824986:507989954">
+    <testsheet ruleActivityUpdateStamp="_HVkmoLydEem4hK0pjpfpdQ" ruleActivity="Matrix.erf#//@ruleflow">
+      <input/>
+      <output>
+        <PostedMessage severity="Warning" text="Matrix A [2,1] = 21 but Matrix B [2,1] = 33"/>
+        <PostedMessage severity="Warning" text="Matrix A [2,2] = 0 but Matrix B [2,2] = 22"/>
+        <PostedMessage severity="Violation" text="The two matrices have different numbers of columns. A has 2 columns but B has 3 columns."/>
+        <PostedMessage severity="Violation" text="The two matrices have different numbers of rows. A has 2 rows but B has 3 rows."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="33" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </inputRoot>
+      <outputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" messageItem="#//@testsheetAssets.6/@testsheetViewList.0/@outputMessageSection/@messageItemList.2 #//@testsheetAssets.6/@testsheetViewList.0/@outputMessageSection/@messageItemList.3" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" messageItem="#//@testsheetAssets.6/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" messageItem="#//@testsheetAssets.6/@testsheetViewList.0/@outputMessageSection/@messageItemList.1" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="0" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="33" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.6/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.6/@testsheetViewList.0/@outputRoot/@children.0/@children.5"/>
+        <messageItemList postedMessage="#//@testsheetAssets.6/@testsheet/@output/@PostedMessage.1" testNode="#//@testsheetAssets.6/@testsheetViewList.0/@outputRoot/@children.0/@children.6"/>
+        <messageItemList postedMessage="#//@testsheetAssets.6/@testsheet/@output/@PostedMessage.2" testNode="#//@testsheetAssets.6/@testsheetViewList.0/@outputRoot/@children.0"/>
+        <messageItemList postedMessage="#//@testsheetAssets.6/@testsheet/@output/@PostedMessage.3" testNode="#//@testsheetAssets.6/@testsheetViewList.0/@outputRoot/@children.0"/>
+      </outputMessageSection>
+      <expectedRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="A" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="7" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="21" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="8" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="Matrix.ecore#//Array">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Array/colCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="B" eAttribute="Matrix.ecore#//Array/name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Array/rowCount"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="11" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="4" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="12" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="5" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="33" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="6" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="9" manuallyCreated="true" eReference="Matrix.ecore#//Array/cell" eClass="Matrix.ecore#//Cell">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/col"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="3" eAttribute="Matrix.ecore#//Cell/row"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="22" eAttribute="Matrix.ecore#//Cell/value"/>
+          </children>
+        </children>
+      </expectedRoot>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_zmjowIX-EemQjqsc1Wb-Ng" testsheets="#//@testsheetAssets.0/@testsheet #//@testsheetAssets.1/@testsheet #//@testsheetAssets.2/@testsheet #//@testsheetAssets.3/@testsheet #//@testsheetAssets.4/@testsheet #//@testsheetAssets.5/@testsheet #//@testsheetAssets.6/@testsheet" vocabulary="Matrix.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="Matrix"/>
+    <testTabList name="Matrix_1"/>
+    <testTabList name="Matrix_2"/>
+    <testTabList name="Matrix_3"/>
+    <testTabList name="Matrix_4"/>
+    <testTabList name="Transpose"/>
+    <testTabList name="Compare"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

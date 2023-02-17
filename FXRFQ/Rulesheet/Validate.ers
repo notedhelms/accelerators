@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" buildNumber="2822" updateStamp="_rN4nIGylEeKWE_hEn4TJIw" externalChecksum="3054974779:507989954:132081283">
+  <languageCode>en_AU</languageCode>
+  <ruleset vocabularyUpdateStamp="_gPysgS7ZEeKAHbIS0_kqRA" vocabulary="../Vocabulary/FXRFQ.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="RFQ.isValid = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+        <opaqueExpression expression="SwapPoints.expiry1M = today.addMonths(1)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry1M = today.addMonths ( 1 )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry1M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="SwapPoints.expiry2M = today.addMonths(2)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry2M = today.addMonths ( 2 )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry2M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="SwapPoints.expiry3M = today.addMonths(3)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry3M = today.addMonths ( 3 )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry3M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="SwapPoints.days1M = today.daysBetween(SwapPoints.expiry1M)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days1M = today.daysBetween ( SwapPoints.expiry1M )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="days1M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="expiry1M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="SwapPoints.days2M = today.daysBetween(SwapPoints.expiry2M)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days2M = today.daysBetween ( SwapPoints.expiry2M )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="days2M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="expiry2M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="SwapPoints.days3M = today.daysBetween(SwapPoints.expiry3M)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days3M = today.daysBetween ( SwapPoints.expiry3M )" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="days3M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="expiry3M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="theseItems.currency = 'AUD' or theseItems.currency = 'EUR' or theseItems.currency = 'GBP'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theseItems.currency = 'AUD' or theseItems.currency = 'EUR' or theseItems.currency = 'GBP'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.currency">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="theseItems.currency" rhs="{'AUD', 'EUR', 'GBP'}"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="theseItems.transType = 'SPOT' or theseItems.transType = 'FORWARD'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theseItems.transType = 'SPOT' or theseItems.transType = 'FORWARD'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.transType">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="theseItems.transType" rhs="{'SPOT', 'FORWARD'}"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="RFQ.isValid = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="RFQitems.tenor = '1M'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.tenor = '1M'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="tenor" datatype="String" termtype="ATTRIBUTE" fulltext="RFQitems.tenor">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQitems.tenor" rhs="'1M'"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="RFQitems.expiry = SwapPoints.expiry1M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.expiry = SwapPoints.expiry1M" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry" datatype="DateTime" termtype="ATTRIBUTE" fulltext="RFQitems.expiry">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="expiry1M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="RFQitems.tenor = '2M'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.tenor = '2M'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="tenor" datatype="String" termtype="ATTRIBUTE" fulltext="RFQitems.tenor">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQitems.tenor" rhs="'2M'"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="RFQitems.expiry = SwapPoints.expiry2M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.expiry = SwapPoints.expiry2M" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry" datatype="DateTime" termtype="ATTRIBUTE" fulltext="RFQitems.expiry">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="expiry2M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="RFQitems.tenor = '3M'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.tenor = '3M'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="tenor" datatype="String" termtype="ATTRIBUTE" fulltext="RFQitems.tenor">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="RFQitems.tenor" rhs="'3M'"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="RFQitems.expiry = SwapPoints.expiry3M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.expiry = SwapPoints.expiry3M" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="expiry" datatype="DateTime" termtype="ATTRIBUTE" fulltext="RFQitems.expiry">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="expiry3M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="If currency or transaction type is contained in the sets, the request is not valid.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency or transaction type is contained in the sets, the request is not valid." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.1" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="Generating settlement dates and days counts between forward points">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Generating settlement dates and days counts between forward points" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQ" ruleStatements="#//@ruleset/@ruleStatements.0">
+      <extension explicit="true" association="true" entity="../Vocabulary/FXRFQ.ecore#//RFQitems" traversedAssocRole="../Vocabulary/FXRFQ.ecore#//RFQ/rFQitems">
+        <alias value="theseItems"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/currency"/>
+        <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/transType"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/creditCheck"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQ/isValid"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//SwapPoints" ruleStatements="#//@ruleset/@ruleStatements.1">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/expiry1M"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/expiry2M"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/expiry3M"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/days1M"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/days2M"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//SwapPoints/days3M"/>
+    </logicalVariable>
+    <logicalVariable entity="../Vocabulary/FXRFQ.ecore#//RFQitems">
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/tenor"/>
+      <referencedAttributes attribute="../Vocabulary/FXRFQ.ecore#//RFQitems/expiry"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightAdvancedView="26" sashWeightConditionsActions="40" sashWeightConditionsIf="25">
+    <actionSection rowCount="49" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQ.isValid">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQ.isValid" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="isValid" datatype="Boolean" termtype="ATTRIBUTE" fulltext="RFQ.isValid">
+                <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.expiry1M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry1M" datatype="DateTime" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="expiry1M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.expiry2M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry2M" datatype="DateTime" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="expiry2M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.expiry3M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.expiry3M" datatype="DateTime" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="expiry3M" datatype="DateTime" termtype="ATTRIBUTE" fulltext="SwapPoints.expiry3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.days1M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days1M" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="days1M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days1M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.days2M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days2M" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="days2M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days2M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="SwapPoints.days3M">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="SwapPoints.days3M" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="days3M" datatype="Integer" termtype="ATTRIBUTE" fulltext="SwapPoints.days3M">
+                <parentTerm text="SwapPoints" datatype="SwapPoints" termtype="ENTITY" fulltext="SwapPoints" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="RFQitems.expiry">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.expiry" datatype="DateTime" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="expiry" datatype="DateTime" termtype="ATTRIBUTE" fulltext="RFQitems.expiry">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.5"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.2">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.2/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="49" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="If currency or transaction type is contained in the sets, the request is not valid.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If currency or transaction type is contained in the sets, the request is not valid." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="B0"/>
+        <text external="Generating settlement dates and days counts between forward points">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Generating settlement dates and days counts between forward points" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="49" columnWidthFactor="0.6779661016949152">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="theseItems.currency">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theseItems.currency" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="currency" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.currency">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="theseItems.transType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theseItems.transType" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="transType" datatype="String" termtype="ATTRIBUTE" fulltext="theseItems.transType">
+                <parentTerm text="theseItems" datatype="RFQitems" termtype="ENTITY" fulltext="theseItems" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="RFQ" datatype="RFQ" termtype="ENTITY" fulltext="RFQ" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="RFQitems.tenor">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="RFQitems.tenor" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="tenor" datatype="String" termtype="ATTRIBUTE" fulltext="RFQitems.tenor">
+                <parentTerm text="RFQitems" datatype="RFQitems" termtype="ENTITY" fulltext="RFQitems" variable="#//@ruleset/@logicalVariables.2"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="17">
+      <ruleColumnList ruleId="0" columnWidth="145" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="F"/>
+        <actionValueSetCellList valueSet="today.addMonths(1)"/>
+        <actionValueSetCellList valueSet="today.addMonths(2)"/>
+        <actionValueSetCellList valueSet="today.addMonths(3)"/>
+        <actionValueSetCellList valueSet="today.daysBetween(SwapPoints.expiry1M)"/>
+        <actionValueSetCellList valueSet="today.daysBetween(SwapPoints.expiry2M)"/>
+        <actionValueSetCellList valueSet="today.daysBetween(SwapPoints.expiry3M)"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="145" pRule="#//@ruleset/@rules.1">
+        <overrideValueSetCell valueSet=""/>
+        <conditionValueSetCellList valueSet="{'AUD', 'EUR', 'GBP'}"/>
+        <conditionValueSetCellList valueSet="{'SPOT', 'FORWARD'}"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="157" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'1M'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="SwapPoints.expiry1M"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="147" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'2M'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="SwapPoints.expiry2M"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="179" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'3M'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="SwapPoints.expiry3M"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

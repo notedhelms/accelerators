@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.canonicalvocabularymodel="http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="root" nsURI="http://root/1.0" nsPrefix="root">
+  <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+    <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:RootExtension" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_agNC8Fn9Ee2XAPiuELRq8A" externalChecksum="2722078124:201531363" studioType="Java" customDataTypeDisplayCount="50">
+      <languageCode>en_GB</languageCode>
+      <databaseAccess databasePropertyDisplayCount="50"/>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//enumProduct">
+        <dataTypeName manuallyCreated="true" value="enumProduct"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Life insurance'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Absenteeism insurance'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Disability insurance'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//enumGender">
+        <dataTypeName manuallyCreated="true" value="enumGender"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Female'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Male'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="52" eDataType="#//enumStatus">
+        <dataTypeName manuallyCreated="true" value="enumStatus"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Approved'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Rejected'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Review'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <customDataTypeList enumerationDisplayCount="50" eDataType="#//enumBranch">
+        <dataTypeName manuallyCreated="true" value="enumBranch"/>
+        <baseDataType manuallyCreated="true" value="String"/>
+        <enumeration value="true"/>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Agriculture'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Healthcare'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Hospitality'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Financial Services'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Manufacturing'"/>
+        </enumerationElements>
+        <enumerationElements>
+          <value manuallyCreated="true" value="'Shipowners'"/>
+        </enumerationElements>
+      </customDataTypeList>
+      <vocabularyMappings name="Branch premium adjustments (REST)" ID="REST_1" description="Retrieves the premium adjustment factor for a given branch and company turnover" mappingType="REST">
+        <mappingProperties key="SERVER">
+          <value manuallyCreated="true" value="com.corticon.database.id.AUTOREST"/>
+        </mappingProperties>
+        <mappingProperties key="AUTHENTICATION_TYPE">
+          <value manuallyCreated="true" value="None"/>
+        </mappingProperties>
+        <mappingProperties key="SCHEMA">
+          <value manuallyCreated="true" value="AUTOREST"/>
+        </mappingProperties>
+        <mappingProperties key="REST_URL">
+          <value manuallyCreated="true" value="https://api.sheety.co/cfd695112cd9446b99793da05dd030ad/premiumFactors/branchPremiumAdjustments"/>
+        </mappingProperties>
+        <mappingProperties key="REST_PATH_PARAMETERS"/>
+        <mappingProperties key="REST_PARAMETERS"/>
+        <mappingProperties key="REST_POST_PARAMETERS"/>
+        <mappingProperties key="REST_SCHEMA">
+          <value manuallyCreated="true" value="{&#xD;&#xA;&#x9;&quot;REST_DATA&quot;:{&#xD;&#xA;&#x9;&#x9;&quot;#path&quot;:[&#xD;&#xA;&#x9;&#x9;&#x9;&quot;https://api.sheety.co/cfd695112cd9446b99793da05dd030ad/premiumFactors/branchPremiumAdjustments /branchPremiumAdjustments&quot;&#xD;&#xA;&#x9;&#x9;],&#xD;&#xA;&#x9;&#x9;&quot;id&quot;:&quot;Integer,#key&quot;,&#xD;&#xA;&#x9;&#x9;&quot;turnoverFrom&quot;:&quot;Integer&quot;,&#xD;&#xA;&#x9;&#x9;&quot;turnoverTo&quot;:&quot;BigInt&quot;,&#xD;&#xA;&#x9;&#x9;&quot;branch&quot;:&quot;VarChar(64)&quot;,&#xD;&#xA;&#x9;&#x9;&quot;adjustmentFactor&quot;:&quot;Double&quot;&#xD;&#xA;&#x9;}&#xD;&#xA;}"/>
+        </mappingProperties>
+        <entityMappings element="#//Employer">
+          <mappingProperties key="identity"/>
+          <mappingProperties key="tableName"/>
+          <children element="#//Employer/IndustryBranch">
+            <mappingProperties key="columnName"/>
+          </children>
+        </entityMappings>
+        <entityMappings element="#//BranchPolicyRiskAdjustmentFactor">
+          <mappingProperties key="identity">
+            <value manuallyCreated="true" value="ID"/>
+          </mappingProperties>
+          <mappingProperties key="tableName">
+            <value manuallyCreated="true" value="AUTOREST.REST_DATA"/>
+          </mappingProperties>
+          <children element="#//BranchPolicyRiskAdjustmentFactor/ID">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="ID"/>
+            </mappingProperties>
+          </children>
+          <children element="#//BranchPolicyRiskAdjustmentFactor/Branch">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="BRANCH"/>
+            </mappingProperties>
+          </children>
+          <children element="#//BranchPolicyRiskAdjustmentFactor/AdjustmentFactor">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="ADJUSTMENTFACTOR"/>
+            </mappingProperties>
+          </children>
+          <children element="#//BranchPolicyRiskAdjustmentFactor/TurnoverFrom">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="TURNOVERFROM"/>
+            </mappingProperties>
+          </children>
+          <children element="#//BranchPolicyRiskAdjustmentFactor/TurnoverTo">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="TURNOVERTO"/>
+            </mappingProperties>
+          </children>
+        </entityMappings>
+        <databaseMetadata>
+          <tableMetadataList schemaName="AUTOREST" tableName="REST_DATA" tableType="TABLE">
+            <columnMetadataList columnName="ID" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <columnMetadataList columnName="TURNOVERFROM" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <columnMetadataList columnName="TURNOVERTO" jdbcDataType="BIGINT" sqlDataType="BigInt" columnSize="19"/>
+            <columnMetadataList columnName="BRANCH" jdbcDataType="VARCHAR" sqlDataType="VarChar" columnSize="64" decimalDigits="-1"/>
+            <columnMetadataList columnName="ADJUSTMENTFACTOR" jdbcDataType="DOUBLE" sqlDataType="Double" columnSize="53" decimalDigits="-1"/>
+            <primaryKeyMetadataList primaryKeyName="PK_AUTOREST_REST_DATA" primaryKeySchemaName="AUTOREST" primaryKeyTableName="REST_DATA">
+              <primaryKeyColumnMetadataList sequenceNumber="1" primaryKeyColumnName="ID"/>
+            </primaryKeyMetadataList>
+          </tableMetadataList>
+          <tableMetadataList schemaName="AUTOREST" tableName="_CONFIGURATION" tableType="TABLE">
+            <columnMetadataList columnName="ID" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <columnMetadataList columnName="CONTENT" jdbcDataType="LONGVARCHAR" sqlDataType="LongVarChar" columnSize="16777215" decimalDigits="-1"/>
+            <primaryKeyMetadataList primaryKeyName="PK_AUTOREST__CONFIGURATION" primaryKeySchemaName="AUTOREST" primaryKeyTableName="_CONFIGURATION">
+              <primaryKeyColumnMetadataList sequenceNumber="1" primaryKeyColumnName="ID"/>
+            </primaryKeyMetadataList>
+          </tableMetadataList>
+        </databaseMetadata>
+      </vocabularyMappings>
+      <vocabularyMappings name="Employee contribution (REST)" ID="REST_2" description="Retrieves the pension contribtion percentage of the annual gross salary based on employee age which will be contributed to his/her retirement policy." mappingType="REST">
+        <mappingProperties key="SERVER">
+          <value manuallyCreated="true" value="com.corticon.database.id.AUTOREST"/>
+        </mappingProperties>
+        <mappingProperties key="AUTHENTICATION_TYPE">
+          <value manuallyCreated="true" value="None"/>
+        </mappingProperties>
+        <mappingProperties key="SCHEMA">
+          <value manuallyCreated="true" value="AUTOREST"/>
+        </mappingProperties>
+        <mappingProperties key="REST_URL">
+          <value manuallyCreated="true" value="https://api.sheety.co/cfd695112cd9446b99793da05dd030ad/premiumFactors/employeeContribution"/>
+        </mappingProperties>
+        <mappingProperties key="REST_PATH_PARAMETERS"/>
+        <mappingProperties key="REST_PARAMETERS"/>
+        <mappingProperties key="REST_POST_PARAMETERS"/>
+        <mappingProperties key="REST_SCHEMA">
+          <value manuallyCreated="true" value="{&#xD;&#xA;&#x9;&quot;REST_DATA&quot;:{&#xD;&#xA;&#x9;&#x9;&quot;#path&quot;:[&#xD;&#xA;&#x9;&#x9;&#x9;&quot;https://api.sheety.co/cfd695112cd9446b99793da05dd030ad/premiumFactors/employeeContribution /employeeContribution&quot;&#xD;&#xA;&#x9;&#x9;],&#xD;&#xA;&#x9;&#x9;&quot;age&quot;:&quot;Integer,#key&quot;,&#xD;&#xA;&#x9;&#x9;&quot;contribution&quot;:&quot;Double&quot;,&#xD;&#xA;&#x9;&#x9;&quot;id&quot;:&quot;Integer&quot;&#xD;&#xA;&#x9;}&#xD;&#xA;}"/>
+        </mappingProperties>
+        <entityMappings element="#//Employee">
+          <mappingProperties key="identity">
+            <value manuallyCreated="true" value="Age"/>
+          </mappingProperties>
+          <mappingProperties key="tableName">
+            <value manuallyCreated="true" value="AUTOREST.REST_DATA"/>
+          </mappingProperties>
+          <children element="#//Employee/AnnualGrossSalary">
+            <mappingProperties key="columnName"/>
+          </children>
+          <children element="#//Employee/Age">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="AGE"/>
+            </mappingProperties>
+          </children>
+          <children element="#//Employee/YearlyPensionContributionPremium">
+            <mappingProperties key="columnName"/>
+          </children>
+          <children element="#//Employee/SalaryContributionPercentage">
+            <mappingProperties key="columnName">
+              <value manuallyCreated="true" value="CONTRIBUTION"/>
+            </mappingProperties>
+          </children>
+        </entityMappings>
+        <databaseMetadata>
+          <tableMetadataList schemaName="AUTOREST" tableName="REST_DATA" tableType="TABLE">
+            <columnMetadataList columnName="AGE" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <columnMetadataList columnName="CONTRIBUTION" jdbcDataType="DOUBLE" sqlDataType="Double" columnSize="53" decimalDigits="-1"/>
+            <columnMetadataList columnName="ID" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <primaryKeyMetadataList primaryKeyName="PK_AUTOREST_REST_DATA" primaryKeySchemaName="AUTOREST" primaryKeyTableName="REST_DATA">
+              <primaryKeyColumnMetadataList sequenceNumber="1" primaryKeyColumnName="AGE"/>
+            </primaryKeyMetadataList>
+          </tableMetadataList>
+          <tableMetadataList schemaName="AUTOREST" tableName="_CONFIGURATION" tableType="TABLE">
+            <columnMetadataList columnName="ID" jdbcDataType="INTEGER" sqlDataType="Integer" columnSize="10"/>
+            <columnMetadataList columnName="CONTENT" jdbcDataType="LONGVARCHAR" sqlDataType="LongVarChar" columnSize="16777215" decimalDigits="-1"/>
+            <primaryKeyMetadataList primaryKeyName="PK_AUTOREST__CONFIGURATION" primaryKeySchemaName="AUTOREST" primaryKeyTableName="_CONFIGURATION">
+              <primaryKeyColumnMetadataList sequenceNumber="1" primaryKeyColumnName="ID"/>
+            </primaryKeyMetadataList>
+          </tableMetadataList>
+        </databaseMetadata>
+      </vocabularyMappings>
+    </contents>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Quotation">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Quotation"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employer" eType="#//Employer" eOpposite="#//Employer/quotation">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="employer"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StartDateFrom" lowerBound="1" eType="ecore:EDataType http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore#//Date">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="StartDateFrom"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Product" lowerBound="1" eType="#//enumProduct">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.0">
+          <name manuallyCreated="true" value="Product"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="YearlyPremium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="YearlyPremium"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="review" upperBound="-1" eType="#//Review" eOpposite="#//Review/quotation">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="review"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Status" eType="#//enumStatus">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="Status"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employer">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Employer"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quotation" lowerBound="1" eType="#//Quotation" eOpposite="#//Quotation/employer">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="quotation"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employee" upperBound="-1" eType="#//Employee" eOpposite="#//Employee/employer">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="employee"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IndustryBranch" lowerBound="1" eType="#//enumBranch">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.3">
+          <name manuallyCreated="true" value="IndustryBranch"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsRegistered" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="IsRegistered"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AnnualTurnover" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="AnnualTurnover"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IncorporationDate" eType="ecore:EDataType http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore#//Date">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="IncorporationDate"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AdjustmentFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="AdjustmentFactor"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchPolicyRiskAdjustmentFactor" upperBound="-1" eType="#//BranchPolicyRiskAdjustmentFactor" eOpposite="#//BranchPolicyRiskAdjustmentFactor/employer">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="branchPolicyRiskAdjustmentFactor"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Employee"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employer" lowerBound="1" eType="#//Employer" eOpposite="#//Employer/employee">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="employer"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="Name"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DateOfBirth" eType="ecore:EDataType http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore#//Date">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="DateOfBirth"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Gender" eType="#//enumGender">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.1">
+          <name manuallyCreated="true" value="Gender"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AnnualGrossSalary" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="AnnualGrossSalary"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Status" eType="#//enumStatus">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="Status"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="Age"/>
+          <mode manuallyCreated="true" value="ExtendedTransient"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MaxAnnualGrossSalary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="MaxAnnualGrossSalary"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DateOfEmployment" eType="ecore:EDataType http:///com/corticon/rulesemf/canonicalvocabularymodel.ecore#//Date">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="DateOfEmployment"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SalaryContributionPercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="SalaryContributionPercentage"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="YearlyPensionContributionPremium" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="YearlyPensionContributionPremium"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="enumProduct">
+    <eLiterals name="V0" literal="'Life insurance'"/>
+    <eLiterals name="V1" value="1" literal="'Absenteeism insurance'"/>
+    <eLiterals name="V2" value="2" literal="'Disability insurance'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="enumGender">
+    <eLiterals name="V0" literal="'Female'"/>
+    <eLiterals name="V1" value="1" literal="'Male'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="enumStatus">
+    <eLiterals name="V0" literal="'Approved'"/>
+    <eLiterals name="V1" value="1" literal="'Rejected'"/>
+    <eLiterals name="V2" value="2" literal="'Review'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Review">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="Review"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="Comment"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quotation" lowerBound="1" eType="#//Quotation" eOpposite="#//Quotation/review">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="quotation"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Status" eType="#//enumStatus">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension" customDataType="#//%http:%2F%2F%2Fcom%2Fcorticon%2Frulesemf%2Fcanonicalvocabularymodel%2FVocabularyExtension%/@contents.0/@customDataTypeList.2">
+          <name manuallyCreated="true" value="Status"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="enumBranch">
+    <eLiterals name="V0" literal="'Agriculture'"/>
+    <eLiterals name="V1" value="1" literal="'Healthcare'"/>
+    <eLiterals name="V2" value="2" literal="'Hospitality'"/>
+    <eLiterals name="V3" value="3" literal="'Financial Services'"/>
+    <eLiterals name="V4" value="4" literal="'Manufacturing'"/>
+    <eLiterals name="V5" value="5" literal="'Shipowners'"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BranchPolicyRiskAdjustmentFactor">
+    <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+      <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:EntityExtension">
+        <name manuallyCreated="true" value="BranchPolicyRiskAdjustmentFactor"/>
+        <datastorePersistent manuallyCreated="true" value="false"/>
+        <datastoreCaching manuallyCreated="true" value="false"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AdjustmentFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="AdjustmentFactor"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Branch" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="Branch"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="ID"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TurnoverFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="TurnoverFrom"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TurnoverTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AttributeExtension">
+          <name manuallyCreated="true" value="TurnoverTo"/>
+          <mode manuallyCreated="true" value="Base"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employer" lowerBound="1" eType="#//Employer" eOpposite="#//Employer/branchPolicyRiskAdjustmentFactor">
+      <eAnnotations source="http:///com/corticon/rulesemf/canonicalvocabularymodel/VocabularyExtension">
+        <contents xsi:type="com.corticon.rulesemf.canonicalvocabularymodel:AssociationEndExtension">
+          <name manuallyCreated="true" value="employer"/>
+        </contents>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
