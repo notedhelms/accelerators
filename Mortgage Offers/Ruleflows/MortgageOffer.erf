@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuleflowAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.canonicalrulemodel.ruleflow="http:///com/corticon/rulesemf/canonicalrulemodel/ruleflow.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram="http:///com/corticon/rulesemf/viewrulemodel/ruleflow/flowdiagram.ecore" majorVersionNumber="5" minorVersionNumber="5" majorServiceNumber="2" minorServiceNumber="7" buildNumber="6096" updateStamp="_ZI_cgFXaEea0KqCoTpUtaw" externalChecksum="1229514692:507989954:1209191707" rulesheetAssets="../Rulesheets/CreditWorthiness.ers#/ ../Rulesheets/InitialCalculations.ers#/ ../Rulesheets/CreateLoanOffers.ers#/ ../Rulesheets/15_Year_Fixed.ers#/ ../Rulesheets/30_Year_Fixed.ers#/ ../Rulesheets/5_1_Adjustable.ers#/ ../Rulesheets/Amortization.ers#/">
+  <ruleflow majorVersion="1" vocabularyUpdateStamp="_NeFmgFXYEea0KqCoTpUtaw" vocabulary="../Vocabulary/Mortgage.ecore#/">
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="CreditWorthiness" order="2" ruleActivityUpdateStamp="_b14vVlXUEea82uSVs-B5sg" invokes="../Rulesheets/CreditWorthiness.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="InitialCalculations" order="1" ruleActivityUpdateStamp="_wBrrg1XaEea0KqCoTpUtaw" invokes="../Rulesheets/InitialCalculations.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="CreateLoanOffers" order="3" ruleActivityUpdateStamp="_9-1qQlXXEea0KqCoTpUtaw" invokes="../Rulesheets/CreateLoanOffers.ers#//@ruleset"/>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:BranchContainer" name="Loans" order="4" ruleActivityUpdateStamp="_ZI_cgFXaEea0KqCoTpUtaw" invokes="#//@ruleflow/@flowControlList.3">
+      <condition expression="Applicant.offer.type">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Applicant.offer.type" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+          <referencedTermList>
+            <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Applicant.offer.type">
+              <parentTerm text="offer" datatype="Offer" termtype="ENTITY" fulltext="Applicant.offer">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </condition>
+      <branches>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="5_1_Adjustable" ruleActivityUpdateStamp="_1W-KoVXZEea0KqCoTpUtaw" invokes="../Rulesheets/5_1_Adjustable.ers#//@ruleset"/>
+        <label expression="'5/1 ARM'"/>
+        <viewExpressions lhs="Applicant.offer.type" rhs="'5/1 ARM'"/>
+      </branches>
+      <branches>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="15_Year_Fixed" ruleActivityUpdateStamp="_KrKlM1XTEea82uSVs-B5sg" invokes="../Rulesheets/15_Year_Fixed.ers#//@ruleset"/>
+        <label expression="'15-Year Fixed Rate'"/>
+        <viewExpressions lhs="Applicant.offer.type" rhs="'15-Year Fixed Rate'"/>
+      </branches>
+      <branches>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="30_Year_Fixed" ruleActivityUpdateStamp="_b4sywVXUEea82uSVs-B5sg" invokes="../Rulesheets/30_Year_Fixed.ers#//@ruleset"/>
+        <label expression="'30-Year Fixed Rate'"/>
+        <viewExpressions lhs="Applicant.offer.type" rhs="'30-Year Fixed Rate'"/>
+      </branches>
+    </flowControlList>
+    <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Amortization" order="5" ruleActivityUpdateStamp="_afqUg1XaEea0KqCoTpUtaw" invokes="../Rulesheets/Amortization.ers#//@ruleset"/>
+  </ruleflow>
+  <ruleflowViewList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:FlowDiagram">
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="60" y="72" width="133" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.0"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="60" y="12" width="133" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.1" activityNode="#//@ruleflow/@flowControlList.1"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="60" y="132" width="133" height="36" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.0" activityNode="#//@ruleflow/@flowControlList.2"/>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:BranchContainerShape" x="60" y="192" width="229" height="180" outboundEdges="#//@ruleflowViewList.0/@flowEdgeList.3" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.2" activityNode="#//@ruleflow/@flowControlList.3" valid="true" branchContainer="#//@ruleflow/@flowControlList.3">
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="20" y="9" width="132" height="36" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.3/@branchEdgeList.1" activityNode="#//@ruleflow/@flowControlList.3/@branches.1/@nextStep.0"/>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="19" y="59" width="133" height="36" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.3/@branchEdgeList.2" activityNode="#//@ruleflow/@flowControlList.3/@branches.2/@nextStep.0"/>
+      <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="19" y="107" width="133" height="36" inboundEdges="#//@ruleflowViewList.0/@flowShapeList.3/@branchEdgeList.0" activityNode="#//@ruleflow/@flowControlList.3/@branches.0/@nextStep.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.3/@flowShapeList.2" branch="#//@ruleflow/@flowControlList.3/@branches.0"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.3/@flowShapeList.0" branch="#//@ruleflow/@flowControlList.3/@branches.1"/>
+      <branchEdgeList targetShape="#//@ruleflowViewList.0/@flowShapeList.3/@flowShapeList.1" branch="#//@ruleflow/@flowControlList.3/@branches.2"/>
+    </flowShapeList>
+    <flowShapeList xsi:type="com.corticon.rulesemf.viewrulemodel.ruleflow.flowdiagram:ActivityShape" x="372" y="264" width="169" height="36" inboundEdges="#//@ruleflowViewList.0/@flowEdgeList.3" activityNode="#//@ruleflow/@flowControlList.4"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.0" targetShape="#//@ruleflowViewList.0/@flowShapeList.2"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.1" targetShape="#//@ruleflowViewList.0/@flowShapeList.0"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.2" targetShape="#//@ruleflowViewList.0/@flowShapeList.3"/>
+    <flowEdgeList sourceShape="#//@ruleflowViewList.0/@flowShapeList.3" targetShape="#//@ruleflowViewList.0/@flowShapeList.4"/>
+  </ruleflowViewList>
+</com.corticon.rulesemf.assetmodel:RuleflowAsset>

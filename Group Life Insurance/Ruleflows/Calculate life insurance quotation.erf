@@ -15,17 +15,17 @@
       <branches>
         <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Get contribution percentage by employee (REST)" order="6" ruleActivityUpdateStamp="_pZuPRVkpEe29Vc4vJ-JC9g" invokes="#//@ruleflow/@connectorList.0"/>
         <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Get company branch premium adjustment factor (REST)" order="7" ruleActivityUpdateStamp="_pZuPRVkpEe29Vc4vJ-JC9g" invokes="#//@ruleflow/@connectorList.1"/>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Calculate yearly premium" order="8" ruleActivityUpdateStamp="_P7sVvVkpEe29Vc4vJ-JC9g" invokes="../Rulesheets/Calculate%20yearly%20premium.ers#//@ruleset"/>
-        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Remove non applicable adjustment factors" order="9" ruleActivityUpdateStamp="_MOcLcFkqEe29Vc4vJ-JC9g" invokes="../Rulesheets/Remove%20non%20applicable%20adjustment%20factors.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Calculate yearly premium" order="8" ruleActivityUpdateStamp="_IIPZrqe-Ee2CYcAFLXQDZg" invokes="../Rulesheets/Calculate%20yearly%20premium.ers#//@ruleset"/>
+        <nextStep xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Remove non applicable adjustment factors" order="9" ruleActivityUpdateStamp="_IHImH6e-Ee2CYcAFLXQDZg" invokes="../Rulesheets/Remove%20non%20applicable%20adjustment%20factors.ers#//@ruleset"/>
         <label expression="'Approved'"/>
         <label expression="'Review'"/>
         <viewExpressions lhs="Quotation.Status" rhs="'Review'"/>
       </branches>
     </flowControlList>
     <subflowList name="Company &amp; employee eligibility">
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Determine employee participation" order="2" ruleActivityUpdateStamp="_iX9cY1qMEe2Jl6rrfPf_eA" nextStep="#//@ruleflow/@subflowList.0/@flowControlList.1" invokes="../Rulesheets/Determine%20employee%20participation.ers#//@ruleset"/>
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Determine company eligibility" order="3" ruleActivityUpdateStamp="_K5PtcVoDEe2XAPiuELRq8A" nextStep="#//@ruleflow/@subflowList.0/@flowControlList.2" invokes="../Rulesheets/Determine%20company%20eligibility.ers#//@ruleset"/>
-      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Assess overall eligibility" order="4" ruleActivityUpdateStamp="_cTMWgFksEe29Vc4vJ-JC9g" invokes="../Rulesheets/Assess%20overall%20eligibility.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Determine employee participation" order="2" ruleActivityUpdateStamp="_IF86nKe-Ee2CYcAFLXQDZg" nextStep="#//@ruleflow/@subflowList.0/@flowControlList.1" invokes="../Rulesheets/Determine%20employee%20participation.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Determine company eligibility" order="3" ruleActivityUpdateStamp="_IL5yAae-Ee2CYcAFLXQDZg" nextStep="#//@ruleflow/@subflowList.0/@flowControlList.2" invokes="../Rulesheets/Determine%20company%20eligibility.ers#//@ruleset"/>
+      <flowControlList xsi:type="com.corticon.rulesemf.canonicalrulemodel.ruleflow:ActivityNode" name="Assess overall eligibility" order="4" ruleActivityUpdateStamp="_IKus26e-Ee2CYcAFLXQDZg" invokes="../Rulesheets/Assess%20overall%20eligibility.ers#//@ruleset"/>
     </subflowList>
     <connectorList className="CorticonREST" serviceName="retrieveData">
       <connectorDecryptedProperties name="Datasource Name" value="Employee contribution (REST)"/>

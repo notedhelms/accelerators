@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="5" majorServiceNumber="2" minorServiceNumber="7" buildNumber="6096" updateStamp="_afqUg1XaEea0KqCoTpUtaw" externalChecksum="1229514692:507989954:1209191707">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_NeFmgFXYEea0KqCoTpUtaw" vocabulary="../Vocabulary/Mortgage.ecore#/">
+    <rule>
+      <action>
+        <opaqueExpression expression="Offers.monthlyCalcInterest=Offers.interestRate/100/12">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.monthlyCalcInterest = Offers.interestRate / 100 / 12" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="monthlyCalcInterest" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.monthlyCalcInterest">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="interestRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.interestRate">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Offers.type = '30-Year Fixed Rate' or Offers.type = '15-Year Fixed Rate'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.type = '30-Year Fixed Rate' or Offers.type = '15-Year Fixed Rate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Offers.type">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Offers.type" rhs="{'30-Year Fixed Rate', '15-Year Fixed Rate'}"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Offers.payment=((1+Offers.monthlyCalcInterest)**Offers.months)*Offers.monthlyCalcInterest*Applicant.loanAmount /  ((1+Offers.monthlyCalcInterest)**Offers.months.toDecimal - 1)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.payment = ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months ) * Offers.monthlyCalcInterest * Applicant.loanAmount / ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months.toDecimal - 1 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="payment" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.payment">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="loanAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Applicant.loanAmount">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toDecimal" datatype="Decimal" termtype="METHOD" fulltext="Offers.months.toDecimal">
+                <parentTerm text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                  <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="monthlyCalcInterest" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.monthlyCalcInterest">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="Offers.type = '5/1 ARM'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.type = '5/1 ARM'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Offers.type">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Offers.type" rhs="'5/1 ARM'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Offers.payment=((1+Offers.monthlyCalcInterest)**Offers.months)*Offers.monthlyCalcInterest*Applicant.loanAmount /  ((1+Offers.monthlyCalcInterest)**Offers.months.toDecimal - 1)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.payment = ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months ) * Offers.monthlyCalcInterest * Applicant.loanAmount / ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months.toDecimal - 1 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="payment" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.payment">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="loanAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Applicant.loanAmount">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toDecimal" datatype="Decimal" termtype="METHOD" fulltext="Offers.months.toDecimal">
+                <parentTerm text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                  <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="monthlyCalcInterest" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.monthlyCalcInterest">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <logicalVariable entity="../Vocabulary/Mortgage.ecore#//Applicant">
+      <extension explicit="true" association="true" entity="../Vocabulary/Mortgage.ecore#//Offer" traversedAssocRole="../Vocabulary/Mortgage.ecore#//Applicant/offer">
+        <alias value="Offers"/>
+        <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Offer/type"/>
+        <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Offer/payment"/>
+        <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Offer/monthlyCalcInterest"/>
+        <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Offer/interestRate"/>
+        <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Offer/months"/>
+      </extension>
+      <referencedAttributes attribute="../Vocabulary/Mortgage.ecore#//Applicant/loanAmount"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightAdvancedView="15" sashWeightConditionsIf="53">
+    <actionSection rowCount="47" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Offers.monthlyCalcInterest=Offers.interestRate/100/12">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.monthlyCalcInterest = Offers.interestRate / 100 / 12" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="monthlyCalcInterest" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.monthlyCalcInterest">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="interestRate" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.interestRate">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="Offers.payment=((1+Offers.monthlyCalcInterest)**Offers.months)*Offers.monthlyCalcInterest*Applicant.loanAmount /  ((1+Offers.monthlyCalcInterest)**Offers.months.toDecimal - 1)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.payment = ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months ) * Offers.monthlyCalcInterest * Applicant.loanAmount / ( ( 1 + Offers.monthlyCalcInterest ) ** Offers.months.toDecimal - 1 )" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="payment" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.payment">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="loanAmount" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Applicant.loanAmount">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="toDecimal" datatype="Decimal" termtype="METHOD" fulltext="Offers.months.toDecimal">
+                <parentTerm text="months" datatype="Integer" termtype="ATTRIBUTE" fulltext="Offers.months">
+                  <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="monthlyCalcInterest" datatype="Decimal" termtype="ATTRIBUTE" fulltext="Offers.monthlyCalcInterest">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <conditionSection rowCount="50" columnWidthFactor="0.922608695652174">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Offers.type">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.type" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Offers.type">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="344" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="{'30-Year Fixed Rate', '15-Year Fixed Rate'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.type = '30-Year Fixed Rate' or Offers.type = '15-Year Fixed Rate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Offers.type">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="181" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'5/1 ARM'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Offers.type = '5/1 ARM'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="type" datatype="String" termtype="ATTRIBUTE" fulltext="Offers.type">
+                <parentTerm text="Offers" datatype="Offer" termtype="ENTITY" fulltext="Offers">
+                  <parentTerm text="Applicant" datatype="Applicant" termtype="ENTITY" fulltext="Applicant"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

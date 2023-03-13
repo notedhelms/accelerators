@@ -316,7 +316,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList rowHeight="25">
+      <actionItemList rowHeight="56">
         <naturalLanguageText value="The annual maximum salary as the basis for all pension calculations is capped at 100,000"/>
         <valueSetCell/>
         <expressionCell external="Employee.MaxAnnualGrossSalary = Employee.AnnualGrossSalary.min(100000)">

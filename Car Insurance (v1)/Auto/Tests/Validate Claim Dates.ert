@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RuletestAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder="http:///com/corticon/rulesemf/viewtestmodel/ruletest/tabfolder.ecore" xmlns:com.corticon.rulesemf.viewtestmodel.testsheet.treeset="http:///com/corticon/rulesemf/viewtestmodel/testsheet/treeset.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_PKNK4G1eEeu4veDEig82Dw" externalChecksum="3391387159:507989954" studioType="Java">
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_ui47mafYEe2CYcAFLXQDZg" externalChecksum="3391387159:507989954">
+    <comments timestamp="2018-02-09T10:04:34.666-0500" username="hverlee" text="All dates OK" objects="#//@testsheetAssets.0/@testsheetViewList.0/@inputRoot/@children.0" type="Note"/>
+    <testsheet ruleActivityUpdateStamp="_QkEBVCFBEeynK_2DbWl8hA" ruleActivity="../Rulesheets/Validate%20Claim%20Dates.ers#//@ruleset" locale="">
+      <input/>
+      <output>
+        <PostedMessage severity="Info" text="If claim loss date is on or before the claim date, then claim is valid."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="John" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/03/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>All dates OK</comments>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" newOrModified="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="John" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" newOrModified="true" messageItem="#//@testsheetAssets.0/@testsheetViewList.0/@outputMessageSection/@messageItemList.0" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" newOrModified="true" value="Valid" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDateStatus"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/03/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600">
+        <messageItemList postedMessage="#//@testsheetAssets.0/@testsheet/@output/@PostedMessage.0" testNode="#//@testsheetAssets.0/@testsheetViewList.0/@outputRoot/@children.0/@children.1/@children.1"/>
+      </outputMessageSection>
+      <expectedRoot/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_RY1loG1eEeu4veDEig82Dw" externalChecksum="3391387159:507989954">
+    <comments timestamp="2018-02-09T10:04:34.710-0500" username="hverlee" text="All dates OK" objects="#//@testsheetAssets.1/@testsheetViewList.0/@inputRoot/@children.0" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.710-0500" username="hverlee" text="No insurance coverage at claim date" objects="#//@testsheetAssets.1/@testsheetViewList.0/@inputRoot/@children.1" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.710-0500" username="hverlee" text="Loss date after claim date????" objects="#//@testsheetAssets.1/@testsheetViewList.0/@inputRoot/@children.2" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.710-0500" username="hverlee" text="" objects="#//@testsheetAssets.1/@testsheetViewList.0/@inputRoot/@children.2/@children.1/@children.1/@children.1" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.711-0500" username="hverlee" text="All dates OK" objects="#//@testsheetAssets.1/@testsheetViewList.0/@outputRoot/@children.0" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.711-0500" username="hverlee" text="No insurance coverage at claim date" objects="#//@testsheetAssets.1/@testsheetViewList.0/@outputRoot/@children.1" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.711-0500" username="hverlee" text="Loss date after claim date????" objects="#//@testsheetAssets.1/@testsheetViewList.0/@outputRoot/@children.2" type="Note"/>
+    <testsheet ruleActivityUpdateStamp="_QjARSSFBEeynK_2DbWl8hA" ruleActivity="../Rulesheets/Check%20claim%20exclusions.ers#//@ruleset">
+      <input/>
+      <output/>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="John" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/03/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>All dates OK</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Sue" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2015/12/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2015/11/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>No insurance coverage at claim date</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Ellen" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/05/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate">
+                <comments></comments>
+              </children>
+            </children>
+          </children>
+          <comments>Loss date after claim date????</comments>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true">
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="John" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/03/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>All dates OK</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Sue" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2015/12/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2015/11/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>No insurance coverage at claim date</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="Ellen" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" value="2016/05/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+            </children>
+          </children>
+          <comments>Loss date after claim date????</comments>
+        </children>
+      </outputRoot>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <testsheetAssets majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_RY6eIG1eEeu4veDEig82Dw" externalChecksum="3391387159:507989954">
+    <comments timestamp="2018-02-09T10:04:34.856-0500" username="hverlee" text="All dates OK" objects="#//@testsheetAssets.2/@testsheetViewList.0/@inputRoot/@children.0" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.856-0500" username="hverlee" text="No insurance coverage at claim date" objects="#//@testsheetAssets.2/@testsheetViewList.0/@inputRoot/@children.1" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.856-0500" username="hverlee" text="Loss date after claim date????" objects="#//@testsheetAssets.2/@testsheetViewList.0/@inputRoot/@children.2" type="Note"/>
+    <comments timestamp="2018-02-09T10:04:34.856-0500" username="hverlee" text="" objects="#//@testsheetAssets.2/@testsheetViewList.0/@inputRoot/@children.2/@children.1/@children.1/@children.1" type="Note"/>
+    <testsheet ruleActivityUpdateStamp="_RYWdd21eEeu4veDEig82Dw" ruleActivity="../Ruleflows/Validate%20Claim.erf#//@ruleflow" majorVersion="1" minorVersion="0">
+      <input/>
+      <output>
+        <PostedMessage severity="Warning" text="[Validate_Claim_Dates,1] If claim date is before policy start date, then claim request is rejected."/>
+        <PostedMessage severity="Info" text="[Validate_Claim_Dates,3] Fraud? Typo mistake? Manual review."/>
+        <PostedMessage severity="Info" text="[Validate_Claim_Dates,2] If claim loss date is on or before the claim date, then claim is valid."/>
+        <PostedMessage severity="Violation" text="[Calculate_Claim_Costs,1] Claims labor costs must be provided. Claim is rejected."/>
+        <PostedMessage severity="Info" text="[Calculate_Claim_Costs,2] Claims labor costs are correct. Claim is valid."/>
+        <PostedMessage severity="Info" text="[Calculate_Claim_Costs,2] Claims labor costs are correct. Claim is valid."/>
+        <PostedMessage severity="Info" text="[Calculate_Claim_Costs,5] Claim labor and part costs are both valid."/>
+        <PostedMessage severity="Info" text="[Calculate_Claim_Costs,5] Claim labor and part costs are both valid."/>
+        <PostedMessage severity="Info" text="[Validate_Claim_Costs,1] If total claim costs are equal or below the policy indemnification limit amount, then the claim is valid."/>
+        <PostedMessage severity="Info" text="[Validate_Claim_Costs,1] If total claim costs are equal or below the policy indemnification limit amount, then the claim is valid."/>
+        <PostedMessage severity="Violation" text="[Validate_Claim_Costs,4] If labor and/or part costs are not or partially provided, then the claim is rejected."/>
+        <PostedMessage severity="Violation" text="[Validate_Overall_Claim,2] Claim is invalid as claim limit validation check has failed."/>
+        <PostedMessage severity="Violation" text="[Validate_Overall_Claim,4] Claim is invalid as labor costs validation check has failed."/>
+        <PostedMessage severity="Violation" text="[Validate_Overall_Claim,5] Claim is invalid as date validations check has failed."/>
+        <PostedMessage severity="Violation" text="[Validate_Overall_Claim,5] Claim is invalid as date validations check has failed."/>
+        <PostedMessage severity="Violation" text="[Validate_Overall_Claim,5] Claim is invalid as date validations check has failed."/>
+      </output>
+      <expectedOutput/>
+    </testsheet>
+    <testsheetViewList xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestTreeSet">
+      <inputRoot>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="1" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="John" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="1" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/03/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="500.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LaborCosts"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="400.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/PartsCosts"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1000.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/IndemnificationLimitAmount"/>
+          </children>
+          <comments>All dates OK</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="2" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Sue" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="2" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2015/12/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/02/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="500.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LaborCosts"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="400.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/PartsCosts"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="1000.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/IndemnificationLimitAmount"/>
+          </children>
+          <comments>No insurance coverage at claim date</comments>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestEntity" nodeID="3" manuallyCreated="true" eClass="../Vocabularies/Claims%20Management2.ecore#//Client">
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="Ellen" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Client/Name"/>
+          <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Client/policy" eClass="../Vocabularies/Claims%20Management2.ecore#//Policy">
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/01/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/ValidFromDate"/>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAssociationImbedded" nodeID="3" manuallyCreated="true" eReference="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" eClass="../Vocabularies/Claims%20Management2.ecore#//Claim">
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/04/01" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/ClaimDate"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="2016/05/15" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LossDate">
+                <comments></comments>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="0.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LaborCosts"/>
+              <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="400.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Claim/PartsCosts"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewtestmodel.testsheet.treeset:TestAttribute" manuallyCreated="true" value="500.00" eAttribute="../Vocabularies/Claims%20Management2.ecore#//Policy/IndemnificationLimitAmount"/>
+          </children>
+          <comments>Loss date after claim date????</comments>
+        </children>
+      </inputRoot>
+      <outputRoot newOrModified="true"/>
+      <outputMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+      <expectedRoot/>
+      <expectedMessageSection rowCount="20" columnWidthSeverity="100" columnWidthMessage="600"/>
+    </testsheetViewList>
+  </testsheetAssets>
+  <ruletest vocabularyUpdateStamp="_HygJcDNfEeyy9Lg1D804PQ" testsheets="#//@testsheetAssets.0/@testsheet #//@testsheetAssets.1/@testsheet #//@testsheetAssets.2/@testsheet" vocabulary="../Vocabularies/Claims%20Management2.ecore#/"/>
+  <ruletestViewList xsi:type="com.corticon.rulesemf.viewtestmodel.ruletest.tabfolder:TestTabFolder">
+    <testTabList name="Simple"/>
+    <testTabList name="Multiple"/>
+    <testTabList name="Validate Claim"/>
+  </ruletestViewList>
+</com.corticon.rulesemf.assetmodel:RuletestAsset>

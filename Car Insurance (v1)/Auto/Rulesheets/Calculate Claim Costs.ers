@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="2" buildNumber="8020" updateStamp="_QisvViFBEeynK_2DbWl8hA" externalChecksum="547642878:507989954:3413468793" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_uXzNoNUMEeuuQJWf0VfEWA" vocabulary="../Vocabularies/Claims%20Management2.ecore#/">
+    <rule>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="TheClaim.LaborCosts &lt;= 0 or TheClaim.LaborCosts = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts &lt;= 0 or TheClaim.LaborCosts = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.LaborCosts" rhs="{&lt;= 0, null}"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="TheClaim.LaborCostsStatus = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="TheClaim.LaborCosts > 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.LaborCosts" rhs="> 0"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="TheClaim.LaborCostsStatus = 'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="TheClaim.PartsCosts &lt; 0 or TheClaim.PartsCosts = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts &lt; 0 or TheClaim.PartsCosts = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.PartsCosts" rhs="{&lt; 0, null}"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="TheClaim.PartsCostsStatus = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.3">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="TheClaim.PartsCosts >= 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts >= 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.PartsCosts" rhs=">= 0"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="TheClaim.PartsCostsStatus = 'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.4">
+      <condition>
+        <opaqueExpression expression="TheClaim.LaborCosts > 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.LaborCosts" rhs="> 0"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="TheClaim.PartsCosts >= 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts >= 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="TheClaim.PartsCosts" rhs=">= 0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="TheClaim.LaborCostsStatus = 'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="TheClaim.PartsCostsStatus = 'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="TheClaim.TotalClaimCosts=TheClaim.LaborCosts+TheClaim.PartsCosts">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.TotalClaimCosts = TheClaim.LaborCosts + TheClaim.PartsCosts" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="TotalClaimCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.TotalClaimCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Claims labor costs must be provided. Claim is rejected.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claims labor costs must be provided. Claim is rejected." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Claims labor costs are correct.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claims labor costs are correct." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Claim part costs must be provided. Claim is rejected.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim part costs must be provided. Claim is rejected." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Claim part costs are correct.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim part costs are correct." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+      <text expression="Claim labor and part costs are both valid.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim labor and part costs are both valid." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="../Vocabularies/Claims%20Management2.ecore#//Client">
+      <extension explicit="true" association="true" entity="../Vocabularies/Claims%20Management2.ecore#//Policy" traversedAssocRole="../Vocabularies/Claims%20Management2.ecore#//Client/policy">
+        <alias value="ThePolicy"/>
+        <extension explicit="true" association="true" entity="../Vocabularies/Claims%20Management2.ecore#//Claim" traversedAssocRole="../Vocabularies/Claims%20Management2.ecore#//Policy/claim" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.4 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.3">
+          <alias value="TheClaim"/>
+          <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LaborCosts"/>
+          <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Claim/PartsCosts"/>
+          <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Claim/LaborCostsStatus"/>
+          <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Claim/TotalClaimCosts"/>
+          <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Claim/PartsCostsStatus"/>
+        </extension>
+        <referencedAttributes attribute="../Vocabularies/Claims%20Management2.ecore#//Policy/IndemnificationLimitAmount"/>
+      </extension>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightAdvancedView="21" sashWeightConditionsActions="50" sashWeightConditionsIf="43">
+    <actionSection rowCount="51" columnWidthFactor="0.5">
+      <actionItemList>
+        <naturalLanguageText value="The labor costs quoted by dealer or repair shop are"/>
+        <valueSetCell/>
+        <expressionCell external="TheClaim.LaborCostsStatus">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="The parts costs qoated dealer or repair shop are"/>
+        <valueSetCell/>
+        <expressionCell external="TheClaim.PartsCostsStatus">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <naturalLanguageText value="Calculate the total claim costs as the sum of labor and part costs"/>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="TheClaim.TotalClaimCosts=TheClaim.LaborCosts+TheClaim.PartsCosts">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.TotalClaimCosts = TheClaim.LaborCosts + TheClaim.PartsCosts" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="TotalClaimCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.TotalClaimCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="52" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="129" columnWidthID="50" columnWidthText="796" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Claims labor costs must be provided. Claim is rejected.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claims labor costs must be provided. Claim is rejected." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="Claims labor costs are correct.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claims labor costs are correct." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="Claim part costs must be provided. Claim is rejected.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim part costs must be provided. Claim is rejected." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference external="4"/>
+        <text external="Claim part costs are correct.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim part costs are correct." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference external="5"/>
+        <text external="Claim labor and part costs are both valid.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Claim labor and part costs are both valid." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="49" columnWidthFactor="0.8788819875776398">
+      <conditionItemList variableMode="Literal">
+        <naturalLanguageText value="The labor costs quoted by dealer or repair shop equal"/>
+        <valueSetCell/>
+        <expressionCell external="TheClaim.LaborCosts">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <naturalLanguageText value="The parts costs quoted dealer or repair shop equal"/>
+        <valueSetCell/>
+        <expressionCell external="TheClaim.PartsCosts">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="22">
+      <ruleColumnList ruleId="0" columnWidth="86" pRule="#//@ruleset/@rules.0">
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <overrideValueSetCell valueSet=""/>
+        <conditionValueSetCellList valueSet="{&lt;= 0, null}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts &lt;= 0 or TheClaim.LaborCosts = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="> 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <overrideValueSetCell valueSet=""/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="{&lt; 0, null}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts &lt; 0 or TheClaim.PartsCosts = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet=">= 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts >= 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="> 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCosts > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="LaborCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet=">= 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCosts >= 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="PartsCosts" datatype="Decimal" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCosts">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.LaborCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="LaborCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.LaborCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="'Valid'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="TheClaim.PartsCostsStatus = 'Valid'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="PartsCostsStatus" datatype="String" termtype="ATTRIBUTE" fulltext="TheClaim.PartsCostsStatus">
+                <parentTerm text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                  <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                    <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="TheClaim" datatype="Claim" termtype="ENTITY" fulltext="TheClaim">
+                <parentTerm text="ThePolicy" datatype="Policy" termtype="ENTITY" fulltext="ThePolicy">
+                  <parentTerm text="Client" datatype="Client" termtype="ENTITY" fulltext="Client"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
