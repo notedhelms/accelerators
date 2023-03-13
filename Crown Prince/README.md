@@ -62,4 +62,4 @@ Fortunately, as you can see below, our Kingdom is preserved in this Studio Tests
 
 ![Alt text](images/heir6.png)
 
-The full solution can be downloaded from the [Corticon GitHub repository](https://github.com/corticon/newsletter-solutions/tree/main/NewsletterPuzzleSolutionFall2021 "https://github.com/corticon/newsletter-solutions/tree/main/NewsletterPuzzleSolutionFall2021").****
+The full solution can be downloaded from the [Corticon GitHub repository](https://github.com/corticon/newsletter-solutions/tree/main/NewsletterPuzzleSolutionFall2021 "https://github.com/corticon/newsletter-solutions/tree/main/NewsletterPuzzleSolutionFall2021").**
