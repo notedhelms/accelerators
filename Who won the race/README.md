@@ -27,7 +27,7 @@ Below is a small Vocabulary that contains everything needed to model this proble
 
 ![](images/small%20vocab.png)
 
-A Person entity allows us to talk about a collection of Person entities who make up the group
+A `Person` entity allows us to talk about a collection of Person entities who make up the group
 of racers who enter the race.
 
 Then, each Person entity has a place and name attribute. This represents the fact that any Person
@@ -39,16 +39,15 @@ specifically, those that satisfy the constraints. So, we need a Vocabulary that 
 and model these possibilities.
 
 Now, let’s design a Rulesheet that fleshes out our set of possibilities. In other words, we want
-to model rules that will give each Person in the race a set of all possible finishing places, first
+to model rules that will give each `Person` in the race a set of all possible finishing places, first
 through last.
 
-So, let's create 7 Person instances with a place indication in Corticon working memory through
+So, let's create 7 `Person` instances with a place indication in Corticon working memory through
 an initialization rulesheet (initialize.ers).
 
 Of course, we could also provide this in our input request to the rules.
 
-The Person entity instances are created in a set of non-conditional rules using the **new**
-operator.
+The Person entity instances are created in a set of non-conditional rules using the `new` operator.
 
 ![Alt text](images/actions.png)
 
@@ -60,10 +59,10 @@ Learn more about this operator and its syntax here.
 
 Our next step would be to assign the proper name to each instance based on our set of rules.
 This we’ll do in the next rulesheet (race.ers). It is too large to fit on the page, so we’ll break it up
-into several screenshots. Let’s start with the scope section:
+into several screenshots. Let’s start with the scope section.
 
 
-Remember we created 7 Person entity instances in the initialization rulesheet reflecting all
+Remember we created 7 instances of the `Person` entity  in the initialization rulesheet, reflecting all
 possible race finishing positions for a Person entity. The Corticon scope section allows us to
 define a set of named aliases for each Person entity. Effectively, this means that our initial entity
 instances are replicated in working memory for each race participant. This is pretty powerful as
@@ -79,7 +78,7 @@ race.
 Condition/Action column 1 is the combination of all the requirements from the puzzle’s
 definition. When the first requirement states “Tom finished before Harry, Dick and Mary”, we
 interpret this to mean (in the context of our Vocabulary) that Tom’s place number is less than
-Harry’s and Dick’s and Mary’s. This logic is modeled as Condition rows b-d. Notice that these
+Harry’s and Dick’s and Mary’s. This logic is modeled as Condition rows b,c, and d. Notice that these
 conditions, and all the others, are AND’ed together. In other words, only a finishing sequence
 that satisfies all the requirements at the same time can be considered a solution.
 
@@ -100,11 +99,11 @@ First, we build a simple ruleflow that includes the two rulesheets.
 ![Alt text](images/rf.png)
 
 The Input Testsheet is empty. We don’t need to supply data in the input as the initialization
-rulesheet sets up the 7 Person entity instances, also known by our alias as the racers.
+rulesheet sets up the 7 `Person` entity instances, also known by our alias as the racers.
 
 ![Alt text](images/test.png)
 
-The Output pane in the test sheet shows each racer (Person) identified by a place attribute,
+The Output pane in the test sheet shows each racer (`Person`) identified by a place attribute,
 numbered 1 through 7. This is the result of the race rulesheet executing.
 
 The answer to the puzzle is contained in the posted Rule Statement, below:

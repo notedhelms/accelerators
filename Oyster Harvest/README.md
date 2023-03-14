@@ -5,7 +5,7 @@ Aficionados believe that raw oysters are best eaten during months that end with 
 #  The Solution
 There are two pieces to this puzzle:
 1. identifying those months containing an “r” in their names, and
-2. calculating the number of days between the date to be tested (let’s call it TestDate) and the beginning or end of oyster season.
+2. calculating the number of days between the date to be tested (let’s call it `TestDate`) and the beginning or end of oyster season.
 To start, we’ll look at each component individually; we will combine them at the end. 
 	
 ## Step 1: Identifying those months containing an “r”
@@ -26,10 +26,10 @@ Let’s now define the rules.
 
 ![Alt text](images/oyster%20rules.png)
 
-In the Rulesheet above, our `TestDate` is a ‘Date’ attribute, and we use the .month
+In the Rulesheet above, our `TestDate` is a ‘Date’ attribute, and we use the `.month`
 operator to identify the integer number of the month. The 1st rule column tests if the month number falls within the range 1..4 (representing the months January through April) or 9..12 (September through December) – these two ranges, taken together, cover the entire oyster-eating season. 
 
-The 2nd rule column tests if the month number falls within the range 5..8 (May through August) – the range covering non-oyster-eating season. We’re working from a Date—no matter what the format (mask) of the ‘Date’ information is, the .month operator will always extract the month as an integer.
+The 2nd rule column tests if the month number falls within the range 5..8 (May through August) – the range covering non-oyster-eating season. We’re working from a Date—no matter what the format (mask) of the ‘Date’ information is, the `.month` operator will always extract the month as an integer.
 
 ## Step 2: Calculate the number of days between TestDate and the beginning or end of oyster season.
 

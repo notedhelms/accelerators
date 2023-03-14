@@ -12,6 +12,6 @@ This sheet determines the number of days in the month taking into consideration 
 
 This sheet generates the string form of the date of the last day of the month by concatenating
 the various components with the ‘+’ operator and also determines what day of the week it falls
-on. It makes use of the operators: toString, dateStringToDateTime, toDateTime and dayOfWeek:
+on. It makes use of the operators: `toString`, `dateStringToDateTime`, `toDateTime` and `dayOfWeek`:
 
 ![](images/sshot-38.png)
