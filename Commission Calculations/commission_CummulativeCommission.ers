@@ -589,7 +589,7 @@
       </extension>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="12" sashWeightScope="80" sashWeightConditionsActions="9" sashWeightConditionsIf="58">
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
@@ -610,7 +610,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="23">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeGrossBookings = quarter.grossBookings->sum">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeGrossBookings = quarter.grossBookings->sum" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -666,7 +666,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="30">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCostOfGoods = quarter.costOfGoods->sum">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCostOfGoods = quarter.costOfGoods->sum" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -694,7 +694,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="21">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeNetBookings = theFiscalYear.cumulativeGrossBookings - theFiscalYear.cumulativeCostOfGoods">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeNetBookings = theFiscalYear.cumulativeGrossBookings - theFiscalYear.cumulativeCostOfGoods" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -723,7 +723,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="33">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.quotaRatio = theFiscalYear.cumulativeGrossBookings/theFiscalYear.cumulativeQuota">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.quotaRatio = theFiscalYear.cumulativeGrossBookings / theFiscalYear.cumulativeQuota" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -752,7 +752,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="25">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned=theFiscalYear.cumulativeNetBookings * 0.01">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeNetBookings * 0.01" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -776,7 +776,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="25">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+=theFiscalYear.cumulativeQuota * 0.01">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + theFiscalYear.cumulativeQuota * 0.01" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -805,7 +805,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="36">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+=(theFiscalYear.cumulativeNetBookings -theFiscalYear.cumulativeQuota) * 0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + ( theFiscalYear.cumulativeNetBookings - theFiscalYear.cumulativeQuota ) * 0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -839,7 +839,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="34">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+=(theFiscalYear.cumulativeQuota * 0.25) * 0.05">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + ( theFiscalYear.cumulativeQuota * 0.25 ) * 0.05" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -868,7 +868,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="21">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+= (theFiscalYear.cumulativeNetBookings -theFiscalYear.cumulativeQuota * 1.25) * 0.10">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + ( theFiscalYear.cumulativeNetBookings - theFiscalYear.cumulativeQuota * 1.25 ) * 0.10" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -902,7 +902,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="21">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+=(theFiscalYear.cumulativeQuota * 0.25) * 0.10">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + ( theFiscalYear.cumulativeQuota * 0.25 ) * 0.10" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -931,7 +931,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="49">
         <valueSetCell/>
         <expressionCell external="theFiscalYear.cumulativeCommissionEarned+=(theFiscalYear.cumulativeNetBookings -theFiscalYear.cumulativeQuota * 1.50) * 0.15">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.cumulativeCommissionEarned = theFiscalYear.cumulativeCommissionEarned + ( theFiscalYear.cumulativeNetBookings - theFiscalYear.cumulativeQuota * 1.50 ) * 0.15" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -987,7 +987,7 @@
       </rootNode>
     </scopeSection>
     <filterSection rowCount="50"/>
-    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="173" columnWidthID="50" columnWidthText="1808" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="1"/>
         <text external="Year {theFiscalYear.year}: Up to quota is paid at 1% of net bookings">
@@ -1016,7 +1016,7 @@
           </parserOutput>
         </text>
       </ruleStatementItemList>
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+      <ruleStatementItemList rowHeight="21" ruleStatement="#//@ruleset/@ruleStatements.2">
         <reference external="3"/>
         <text external="Year {theFiscalYear.year}: Up to 150% of quota: Quota at 1% and 25% of quota at 5% and the rest at 10%">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Year  + theFiscalYear.year + : Up to 150% of quota: Quota at 1% and 25% of quota at 5% and the rest at 10%" expressiontype="BRSTATEMENT">
@@ -1030,7 +1030,7 @@
           </parserOutput>
         </text>
       </ruleStatementItemList>
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+      <ruleStatementItemList rowHeight="21" ruleStatement="#//@ruleset/@ruleStatements.3">
         <reference external="4"/>
         <text external="Year {theFiscalYear.year}: Over 150% of quota: Quota at 1% and 25% of quota at 5% and 25% at 10% and the rest at 15%">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Year  + theFiscalYear.year + : Over 150% of quota: Quota at 1% and 25% of quota at 5% and 25% at 10% and the rest at 15%" expressiontype="BRSTATEMENT">
@@ -1062,7 +1062,7 @@
       </conditionItemList>
     </conditionSection>
     <ruleSection columnCount="20">
-      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+      <ruleColumnList ruleId="0" columnWidth="43" pRule="#//@ruleset/@rules.0">
         <conditionValueSetCellList valueSet=""/>
         <actionValueSetCellList valueSet="X"/>
         <actionValueSetCellList valueSet="X"/>
@@ -1071,7 +1071,7 @@
         <actionValueSetCellList valueSet="X"/>
         <actionValueSetCellList valueSet="X"/>
       </ruleColumnList>
-      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+      <ruleColumnList ruleId="1" columnWidth="65" pRule="#//@ruleset/@rules.1">
         <conditionValueSetCellList valueSet="&lt;= 1">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.quotaRatio &lt;= 1" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -1091,7 +1091,7 @@
         <actionValueSetCellList/>
         <actionValueSetCellList valueSet="X"/>
       </ruleColumnList>
-      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+      <ruleColumnList ruleId="2" columnWidth="86" pRule="#//@ruleset/@rules.2">
         <conditionValueSetCellList valueSet="( 1 .. 1.25 ]">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.quotaRatio in ( 1 .. 1.25 ]" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -1113,7 +1113,7 @@
         <actionValueSetCellList valueSet="X"/>
         <actionValueSetCellList valueSet="X"/>
       </ruleColumnList>
-      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+      <ruleColumnList ruleId="3" columnWidth="92" pRule="#//@ruleset/@rules.3">
         <conditionValueSetCellList valueSet="( 1.25 .. 1.5 ]">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.quotaRatio in ( 1.25 .. 1.5 ]" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>
@@ -1137,7 +1137,7 @@
         <actionValueSetCellList valueSet="X"/>
         <actionValueSetCellList valueSet="X"/>
       </ruleColumnList>
-      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+      <ruleColumnList ruleId="4" columnWidth="55" pRule="#//@ruleset/@rules.4">
         <conditionValueSetCellList valueSet="> 1.5">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="theFiscalYear.quotaRatio > 1.5" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
             <referencedTermList>

@@ -164,9 +164,9 @@
       </extension>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightScope="86">
     <actionSection rowCount="50" columnWidthFactor="0.5">
-      <actionItemList>
+      <actionItemList rowHeight="44">
         <valueSetCell/>
         <expressionCell external="quarter.netBookings = quarter.grossBookings - quarter.costOfGoods">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="quarter.netBookings = quarter.grossBookings - quarter.costOfGoods" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -203,7 +203,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList>
+      <actionItemList rowHeight="61">
         <valueSetCell/>
         <expressionCell external="quarter.commissionEarned = quarter.commissionRate * quarter.netBookings">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="quarter.commissionEarned = quarter.commissionRate * quarter.netBookings" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -259,7 +259,7 @@
     </scopeSection>
     <filterSection rowCount="50"/>
     <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+      <ruleStatementItemList rowHeight="77" ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="A0"/>
         <text external="Quarter {quarter.quarter}: Net Bookings (${quarter.netBookings}) are Gross Bookings (${quarter.grossBookings}) less Cost of Goods (${quarter.costOfGoods})">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quarter  + quarter.quarter + : Net Bookings ($ + quarter.netBookings + ) are Gross Bookings ($ + quarter.grossBookings + ) less Cost of Goods ($ + quarter.costOfGoods + )" expressiontype="BRSTATEMENT">
@@ -296,7 +296,7 @@
           </parserOutput>
         </text>
       </ruleStatementItemList>
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+      <ruleStatementItemList rowHeight="82" ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="B0"/>
         <text external="Quarter {quarter.quarter}: Commission Earned (${quarter.commissionEarned}) is calculated by multiplying the Commission rate (${quarter.commissionRate}) times Net Bookings (${quarter.netBookings}).">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Quarter  + quarter.quarter + : Commission Earned ($ + quarter.commissionEarned + ) is calculated by multiplying the Commission rate ($ + quarter.commissionRate + ) times Net Bookings ($ + quarter.netBookings + )." expressiontype="BRSTATEMENT">

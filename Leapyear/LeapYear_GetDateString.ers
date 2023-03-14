@@ -418,9 +418,9 @@
       <referencedAttributes attribute="LeapYear.ecore#//Calculation/lastDayofMonthString"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsActions="21" sashWeightConditionsIf="24">
     <actionSection rowCount="50" columnWidthFactor="0.5">
-      <actionItemList>
+      <actionItemList rowHeight="85">
         <valueSetCell/>
         <expressionCell external="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Calculation.dateString = Calculation.dateMonth.toString + '/' + Calculation.lastDayofMonthNumber.toString + '/' + Calculation.dateYear.toString" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -517,7 +517,7 @@
       </rootNode>
     </scopeSection>
     <filterSection rowCount="50"/>
-    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="1239" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
       <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="1"/>
         <text external="The last day of {Calculation.dateMonth}/{Calculation.dateYear} is a {Calculation.lastDayofMonthString}">
