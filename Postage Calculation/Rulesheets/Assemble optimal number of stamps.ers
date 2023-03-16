@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_jKthVae-Ee2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_xuT0gsP5Ee2gVvnwWCllAA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_GB</languageCode>
   <ruleset vocabularyUpdateStamp="_RiAh0DW_Ee2eFP8bVIuwAw" vocabulary="../Vocabulary/Postage.ecore#/">
     <rule>
@@ -196,7 +196,7 @@
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.4">
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.4">
       <text expression="Exceeds required postage [{Letter.PostageDue}] &lt;  [{p10.Index}] x 10c + [{p25.Index}] x 25c + [{p45.Index}] x 45c.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Exceeds required postage [ + Letter.PostageDue + ] &lt;  [ + p10.Index + ] x 10c + [ + p25.Index + ] x 25c + [ + p45.Index + ] x 45c." expressiontype="BRSTATEMENT">
           <referencedTermList>
@@ -249,9 +249,9 @@
       <referencedAttributes attribute="../Vocabulary/Postage.ecore#//Solution/Quantity45"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="15" sashWeightConditionsIf="65">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="29" sashWeightScope="50" sashWeightConditionsIf="44">
     <actionSection rowCount="50" columnWidthFactor="0.5">
-      <actionItemList rowHeight="22">
+      <actionItemList rowHeight="82">
         <valueSetCell valueSet=""/>
         <expressionCell external="Possibility.SubTotal = Possibility.Value * Possibility.Index">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Possibility.SubTotal = Possibility.Value * Possibility.Index" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
@@ -272,7 +272,7 @@
           </parserOutput>
         </expressionCell>
       </actionItemList>
-      <actionItemList rowHeight="21">
+      <actionItemList rowHeight="70">
         <valueSetCell valueSet=""/>
         <expressionCell external="Solution.new[Quantity10 = p10.Index, Quantity25 = p25.Index, Quantity45 = p45.Index, Type = cellValue]">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Solution.new [ Solution.Type = cellValue , Solution.Quantity45 = p45.Index , Solution.Quantity25 = p25.Index , Solution.Quantity10 = p10.Index ]" datatype="Solution" expressiontype="EXPRESSION" enumeration="false" cellValue="true">
@@ -387,7 +387,7 @@
       </filterItemList>
     </filterSection>
     <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="645" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+      <ruleStatementItemList rowHeight="45" ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="1"/>
         <text external="Exact required postage [{Letter.PostageDue}] = [{p10.Index}] x 10c + [{p25.Index}] x 25c + [{p45.Index}] x 45c.">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Exact required postage [ + Letter.PostageDue + ] = [ + p10.Index + ] x 10c + [ + p25.Index + ] x 25c + [ + p45.Index + ] x 45c." expressiontype="BRSTATEMENT">
@@ -408,7 +408,7 @@
           </parserOutput>
         </text>
       </ruleStatementItemList>
-      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+      <ruleStatementItemList rowHeight="67" ruleStatement="#//@ruleset/@ruleStatements.1">
         <reference external="2"/>
         <text external="Exceeds required postage [{Letter.PostageDue}] &lt;  [{p10.Index}] x 10c + [{p25.Index}] x 25c + [{p45.Index}] x 45c.">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Exceeds required postage [ + Letter.PostageDue + ] &lt;  [ + p10.Index + ] x 10c + [ + p25.Index + ] x 25c + [ + p45.Index + ] x 45c." expressiontype="BRSTATEMENT">

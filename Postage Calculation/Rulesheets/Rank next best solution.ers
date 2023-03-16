@@ -119,9 +119,9 @@
       <referencedAttributes attribute="../Vocabulary/Postage.ecore#//Letter/PostageDue"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="24" sashWeightConditionsIf="70">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="24" sashWeightConditionsIf="36">
     <actionSection rowCount="51" columnWidthFactor="0.5">
-      <actionItemList rowHeight="29">
+      <actionItemList rowHeight="65">
         <valueSetCell/>
         <expressionCell external="ExceedsDue.TotalPostage = ExceedsDue.Quantity10 * 0.10 + ExceedsDue.Quantity25 * 0.25 + ExceedsDue.Quantity45 * 0.45">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ExceedsDue.TotalPostage = ExceedsDue.Quantity10 * 0.10 + ExceedsDue.Quantity25 * 0.25 + ExceedsDue.Quantity45 * 0.45" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">

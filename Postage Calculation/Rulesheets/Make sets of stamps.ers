@@ -223,9 +223,9 @@
       <referencedAttributes attribute="../Vocabulary/Postage.ecore#//StampBook/Quantity"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsActions="26" sashWeightConditionsIf="33">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsActions="26" sashWeightConditionsIf="42">
     <actionSection rowCount="51" columnWidthFactor="0.5">
-      <actionItemList>
+      <actionItemList rowHeight="75">
         <valueSetCell/>
         <expressionCell external="Possibility.new[Value = StampBook.Value, Index = StampBook.Counter]">
           <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Possibility.new [ Possibility.Value = StampBook.Value , Possibility.Index = StampBook.Counter ]" datatype="Possibility" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
