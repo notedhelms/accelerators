@@ -57,6 +57,7 @@ Depending on whether age difference or number of interests was the more importan
 
 
 ![Alt text](images/sshot-73.png)
+
 _Natural language representation (effectively a specification)_
 
 A possible implementation where `criteria1` and 2 refer to the selection criteria for person1 and 2.
@@ -96,7 +97,6 @@ In contrast we can easily do this with gender since there are (in this model) on
 
 ```
 criteria1.acceptableGenders.contains(person2.gender)
-
 ```
 This works providing gender is constrained to be m or f. If the person was allowed to enter a word like “female” then this would match both m and f.
 
