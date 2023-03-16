@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="3" minorServiceNumber="3" buildNumber="8017" updateStamp="_HaQIg37BEeyRssaNuFFqUw" externalChecksum="7824986:201531363:2146616488" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_pcenlMQBEe2ZaZb8mmkfLA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_US</languageCode>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CUbEEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.0/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcRzQMQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.0/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Tom].</textVariables>
     <locationVariables>a</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CVCIEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.4/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcSaUMQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.4/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Harry].</textVariables>
     <locationVariables>e</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CWQQEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.7/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcTBYMQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.7/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Jenny].</textVariables>
     <locationVariables>h</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CWQQUOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.9/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcTBYcQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.9/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Mary].</textVariables>
     <locationVariables>j</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CXeYEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.12/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcTocMQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.12/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Jenny].</textVariables>
     <locationVariables>m</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CYFcEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.15/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcToccQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.15/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Bill].</textVariables>
     <locationVariables>p</locationVariables>
   </validationMessages>
-  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_5CYsgEOjEeyDTb-QRQ0RHw" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.19/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_pcUPgMQBEe2ZaZb8mmkfLA" key="1" type="Validation" severity="Error" demoted="true" invalidObjects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.19/@expressionCell" textKey="RulesheetTableModelAPIImpl.Validation.InvalidConditionExpression" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Condition">
     <textVariables>Unrecognized expression: Invalid Operator or Unexpected characters starting from [Jim].</textVariables>
     <locationVariables>t</locationVariables>
   </validationMessages>
-  <comments timestamp="2022-01-26T16:54:00.865+0100" username="hverlee" text="Seven runners enter a race. The following rules describe the race results:&#xD;&#xA;&#xD;&#xA;1.    Tom finished before Harry, Dick, and Mary&#xD;&#xA;2.    Harry and Jenny finished before Dick&#xD;&#xA;3.    Jenny finished after Harry&#xD;&#xA;4.    Mary finished before Harry and Jim&#xD;&#xA;5.    Jenny and Harry finished after Jim&#xD;&#xA;6.    Bill finished before Harry, Jenny, and Tom&#xD;&#xA;7.    Jim and Mary finished before Dick and Harry" objects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.0" type="Note" ruleSheetSelectionType="Condition" ruleSheetSelectionReference="1,1,0,0,0,0"/>
+  <comments timestamp="2022-01-26T10:54:00.865-0500" username="hverlee" text="Seven runners enter a race. The following rules describe the race results:&#xD;&#xA;&#xD;&#xA;1.    Tom finished before Harry, Dick, and Mary&#xD;&#xA;2.    Harry and Jenny finished before Dick&#xD;&#xA;3.    Jenny finished after Harry&#xD;&#xA;4.    Mary finished before Harry and Jim&#xD;&#xA;5.    Jenny and Harry finished after Jim&#xD;&#xA;6.    Bill finished before Harry, Jenny, and Tom&#xD;&#xA;7.    Jim and Mary finished before Dick and Harry" objects="#//@rulesheetViewList.0/@conditionSection/@conditionItemList.0" type="Note" ruleSheetSelectionType="Condition" ruleSheetSelectionReference="1,1,0,0,0,0"/>
   <ruleset vocabularyUpdateStamp="_1Lmc8UJKEeyt4r4q-nIadQ" vocabulary="race.ecore#/">
     <rule>
       <condition disabled="true"/>
@@ -542,7 +542,7 @@
       <referencedAttributes attribute="race.ecore#//Person/place"/>
     </logicalVariable>
   </ruleset>
-  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="22" sashWeightConditionsActions="63" sashWeightConditionsIf="28">
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="22" sashWeightConditionsActions="63" sashWeightConditionsIf="55">
     <actionSection rowCount="50" columnWidthFactor="0.5">
       <actionItemList>
         <valueSetCell/>
@@ -683,7 +683,7 @@
       </rootNode>
     </scopeSection>
     <filterSection rowCount="50" scrollRowTop="12"/>
-    <ruleStatementSection rowCount="51" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="45" columnWidthID="50" columnWidthText="582" columnWidthRuleName="45" columnWidthRuleLink="30" columnWidthSourceName="22" columnWidthSourceLink="24" columnWidthCategory="35" columnWidthComments="400">
+    <ruleStatementSection rowCount="51" scrollRowTop="3" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="45" columnWidthID="50" columnWidthText="582" columnWidthRuleName="45" columnWidthRuleLink="30" columnWidthSourceName="22" columnWidthSourceLink="24" columnWidthCategory="35" columnWidthComments="400">
       <ruleStatementItemList rowHeight="68" ruleStatement="#//@ruleset/@ruleStatements.0">
         <reference external="1"/>
         <text external="Race result: Tom finished [{Tom.place}], Dick finished [{Dick.place}], Harry finished [{Harry.place}], Jenny finished [{Jenny.place}], Mary finished [{Mary.place}], Bill finished [{Bill.place}] and Jim finished [{Jim.place}].">

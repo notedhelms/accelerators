@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_jLV0safYEe2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_2K2WpsQMEe2ZaZb8mmkfLA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_IsNMk6e_Ee2gbrpbCI1CFg" vocabulary="UServ.ecore#/">
     <rule/>
@@ -210,35 +210,35 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
       <text expression="If the Potential Occupant Injury Rating is extremely high, then the auto eligibility is &quot;not eligible&quot;.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Potential Occupant Injury Rating is extremely high, then the auto eligibility is  + \&quot; + not eligible + \&quot; + ." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.2">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
       <text expression="If the Potential Occupant Injury Rating is high, then the auto eligibility is &quot;provisional&quot;.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Potential Occupant Injury Rating is high, then the auto eligibility is  + \&quot; + provisional + \&quot; + ." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.3">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
       <text expression="If the Potential Theft Rating is high, then the auto eligibility is &quot;provisional&quot;.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the Potential Theft Rating is high, then the auto eligibility is  + \&quot; + provisional + \&quot; + ." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.4">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0">
       <text expression="If none of the following is true, then the auto eligibility is &quot;eligible&quot;: auto eligibility is &quot;not eligible&quot;; auto eligibility is &quot;provisional&quot;.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If none of the following is true, then the auto eligibility is  + \&quot; + eligible + \&quot; + : auto eligibility is  + \&quot; + not eligible + \&quot; + ; auto eligibility is  + \&quot; + provisional + \&quot; + ." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <logicalVariable explicit="true" entity="UServ.ecore#//Client" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
+    <logicalVariable explicit="true" entity="UServ.ecore#//Client" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.2" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
       <alias value="theClient"/>
       <extension explicit="true" association="true" entity="UServ.ecore#//Service" traversedAssocRole="UServ.ecore#//Client/service" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
         <alias value="policy"/>

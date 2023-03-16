@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_kiU11qfYEe2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_Fn9k5sQNEe2ZaZb8mmkfLA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_IsNMk6e_Ee2gbrpbCI1CFg" vocabulary="UServ.ecore#/">
     <rule/>
@@ -256,35 +256,35 @@
         </parserOutput>
       </opaqueExpression>
     </filter>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the car has no airbags, then the car's potential occupant injury rating is extremely high.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the car has no airbags, then the car's potential occupant injury rating is extremely high." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.2">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the car only has driver's air bag, then the car's potential occupant injury rating is high.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the car only has driver's air bag, then the car's potential occupant injury rating is high." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.3">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the car has driver's and front passenger air bags, then the car's potential occupant injury rating is moderate.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the car has driver's and front passenger air bags, then the car's potential occupant injury rating is moderate." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.4">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the car has driver's, front passenger and side panel air bags, then the car's potential occupant injury is low.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the car has driver's, front passenger and side panel air bags, then the car's potential occupant injury is low." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.5">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the car is a convertible and has no roll bar, then the potential occupant injury is extremely high.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the car is a convertible and has no roll bar, then the potential occupant injury is extremely high." expressiontype="BRSTATEMENT">
           <referencedTermList/>
@@ -295,7 +295,7 @@
       <alias value="theClient"/>
       <extension explicit="true" association="true" entity="UServ.ecore#//Service" traversedAssocRole="UServ.ecore#//Client/service" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1">
         <alias value="policy"/>
-        <extension explicit="true" association="true" entity="UServ.ecore#//Vehicle" traversedAssocRole="UServ.ecore#//Service/vehicle" filters="#//@ruleset/@filters.1">
+        <extension explicit="true" association="true" entity="UServ.ecore#//Vehicle" traversedAssocRole="UServ.ecore#//Service/vehicle" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.4" filters="#//@ruleset/@filters.1">
           <alias value="car"/>
           <referencedAttributes attribute="UServ.ecore#//Vehicle/vehicleType"/>
           <referencedAttributes attribute="UServ.ecore#//Vehicle/airbag"/>

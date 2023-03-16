@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_j8EGxKfYEe2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="__LDL1MQMEe2ZaZb8mmkfLA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_IsNMk6e_Ee2gbrpbCI1CFg" vocabulary="UServ.ecore#/">
     <rule/>
@@ -201,28 +201,28 @@
         </opaqueExpression>
       </action>
     </rule>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the driver has been convicted of a DUI, then the driver qualifies as a High Risk driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the driver has been convicted of a DUI, then the driver qualifies as a High Risk driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.2">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the number of accidents the applicant has been involved in is greater than 2, then the driver qualifies as a High Risk driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the number of accidents the applicant has been involved in is greater than 2, then the driver qualifies as a High Risk driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.3">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the driver has had more than 3 moving violations in the last two years, then the driver qualifies as a High Risk driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the driver has had more than 3 moving violations in the last two years, then the driver qualifies as a High Risk driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.4">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.4" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the driver has not been convicted of a DUI, has 2 or less accidents, and has 3 or fewer moving violations in the last year, driver does not meet the criteria for a High Risk driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the driver has not been convicted of a DUI, has 2 or less accidents, and has 3 or fewer moving violations in the last year, driver does not meet the criteria for a High Risk driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
@@ -233,7 +233,7 @@
       <alias value="theClient"/>
       <extension explicit="true" association="true" entity="UServ.ecore#//Service" traversedAssocRole="UServ.ecore#//Client/service">
         <alias value="policy"/>
-        <extension explicit="true" association="true" entity="UServ.ecore#//ServiceParticipant" traversedAssocRole="UServ.ecore#//Service/serviceParticipant">
+        <extension explicit="true" association="true" entity="UServ.ecore#//ServiceParticipant" traversedAssocRole="UServ.ecore#//Service/serviceParticipant" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3">
           <alias value="driver"/>
           <referencedAttributes attribute="UServ.ecore#//ServiceParticipant/numOfDUIs"/>
           <referencedAttributes attribute="UServ.ecore#//ServiceParticipant/numOfAccidents"/>

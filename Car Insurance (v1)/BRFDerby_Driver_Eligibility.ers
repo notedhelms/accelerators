@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_iRFzE6fYEe2CYcAFLXQDZg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_9C_6NsQMEe2ZaZb8mmkfLA" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
   <languageCode>en_US</languageCode>
   <ruleset vocabularyUpdateStamp="_IsNMk6e_Ee2gbrpbCI1CFg" vocabulary="UServ.ecore#/">
     <rule/>
@@ -156,35 +156,35 @@
         </opaqueExpression>
       </action>
     </rule>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.1">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If young driver and driver has training certification, then eligible driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If young driver and driver has training certification, then eligible driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.2">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If senior driver and driver has training certification, then eligible driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If senior driver and driver has training certification, then eligible driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement ruleModelElements="#//@ruleset/@rules.3">
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="If the following are not true, then eligible driver: Young driver, Senior driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the following are not true, then eligible driver: Young driver, Senior driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement>
+    <ruleStatement post="Info" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="**If young driver without training certification, then not eligible driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="**If young driver without training certification, then not eligible driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
         </parserOutput>
       </text>
     </ruleStatement>
-    <ruleStatement>
+    <ruleStatement post="Info" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
       <text expression="**If senior driver without training certification, then not eligible driver.">
         <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="**If senior driver without training certification, then not eligible driver." expressiontype="BRSTATEMENT">
           <referencedTermList/>
@@ -195,7 +195,7 @@
       <alias value="theClient"/>
       <extension explicit="true" association="true" entity="UServ.ecore#//Service" traversedAssocRole="UServ.ecore#//Client/service">
         <alias value="policy"/>
-        <extension explicit="true" association="true" entity="UServ.ecore#//ServiceParticipant" traversedAssocRole="UServ.ecore#//Service/serviceParticipant">
+        <extension explicit="true" association="true" entity="UServ.ecore#//ServiceParticipant" traversedAssocRole="UServ.ecore#//Service/serviceParticipant" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.3 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.4">
           <alias value="driver"/>
           <referencedAttributes attribute="UServ.ecore#//ServiceParticipant/driverAgeClass"/>
           <referencedAttributes attribute="UServ.ecore#//ServiceParticipant/hasTrainingCert"/>
