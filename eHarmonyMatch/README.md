@@ -6,10 +6,10 @@ _Response to Decision Management Community Rule Challenge_
 Consider the following situation. You have been approached by an online dating service that wants to
 use a rules engine to improve its process for matching people.
 Below is a brief explanation of the “business logic” behind their online dating services:
-Each person creates a profile defining their preferences.
-The rules check the profiles to determine all the possible matches for a person.
-The matches are scored. Higher scores indicate a better match.
-Scoring (once the matching criteria are met) is based on the age difference and the number of matching interests.
+- Each person creates a profile defining their preferences.
+- The rules check the profiles to determine all the possible matches for a person.
+- The matches are scored. Higher scores indicate a better match.
+- Scoring (once the matching criteria are met) is based on the age difference and the number of matching interests.
 
 Each profile includes:
 
