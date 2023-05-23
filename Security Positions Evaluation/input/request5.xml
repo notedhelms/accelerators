@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CorticonRequest xmlns="urn:Corticon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" decisionServiceName="Complex">
+  <WorkDocuments>
+    <Transaction id="Transaction_id_1">
+      <accruedInterest>0.000000</accruedInterest>
+      <holdCode>Long</holdCode>
+      <price>85.000000</price>
+      <quantity>100000.000000</quantity>
+      <account id="Account_id_1">
+        <accountDurationType>MOD</accountDurationType>
+        <benchmarkDuration>3.000000</benchmarkDuration>
+        <cashMaximum>65.000000</cashMaximum>
+        <cDBInternationalFlg xsi:nil="1" />
+        <cDBInternationalMsg xsi:nil="1" />
+        <cKDeskBinderDurationFlag xsi:nil="1" />
+        <cKDeskBinderDurationMsg xsi:nil="1" />
+        <ckDeskBinderFloaterFlg xsi:nil="1" />
+        <ckDeskBinderFloaterMsg xsi:nil="1" />
+        <cKDeskBinderSectorFlag xsi:nil="1" />
+        <cKDeskBinderSectorMsg xsi:nil="1" />
+        <consent144a>NO</consent144a>
+        <cooperABSList>YES</cooperABSList>
+        <intlConsent>NO</intlConsent>
+        <isQIB>NO</isQIB>
+        <isSpendableAccount>YES</isSpendableAccount>
+        <issuerLimitABS>65.000000</issuerLimitABS>
+        <issuerLimitCanadian>65.000000</issuerLimitCanadian>
+        <issuerLimitCorp>65.000000</issuerLimitCorp>
+        <issuerLimitForeign>65.000000</issuerLimitForeign>
+        <issuerLimitOtherGO>65.000000</issuerLimitOtherGO>
+        <issuerLimitOtherRO>65.000000</issuerLimitOtherRO>
+        <issuerLimitStateGO>65.000000</issuerLimitStateGO>
+        <issuerLimitSupranational>65.000000</issuerLimitSupranational>
+        <issuerLimitUtilityRO>65.000000</issuerLimitUtilityRO>
+        <maxDollarValue>100000.000000</maxDollarValue>
+        <maxDuration>5.000000</maxDuration>
+        <maxDurBenchmark>1.100000</maxDurBenchmark>
+        <maximumCPAmount>500000.000000</maximumCPAmount>
+        <maxIssueMat>10.000000</maxIssueMat>
+        <maxMat>10.000000</maxMat>
+        <minDurBenchmark>0.900000</minDurBenchmark>
+        <minimumABSRating>80.000000</minimumABSRating>
+        <minimumAgencyRating>80.000000</minimumAgencyRating>
+        <minimumAverageMaturity>1.000000</minimumAverageMaturity>
+        <minimumAverageRating>80.000000</minimumAverageRating>
+        <minimumAverageStwRating>3.000000</minimumAverageStwRating>
+        <minimumAvgSPandMoodys>80.000000</minimumAvgSPandMoodys>
+        <minimumAvgSPorMoodys>80.000000</minimumAvgSPorMoodys>
+        <minimumSPandMoody>80.000000</minimumSPandMoody>
+        <minimumSPorMoody>80.000000</minimumSPorMoody>
+        <minimumSPRating>80.000000</minimumSPRating>
+        <netAdmittedAssets>500000.000000</netAdmittedAssets>
+        <pct144A>65.000000</pct144A>
+        <pctABS>65.000000</pctABS>
+        <pctABSandMuni>65.000000</pctABSandMuni>
+        <pctAgency>65.000000</pctAgency>
+        <pctAmtOutstanding>65.000000</pctAmtOutstanding>
+        <pctApproved144a>65.000000</pctApproved144a>
+        <pctBBB>65.000000</pctBBB>
+        <pctBBBMinus>65.000000</pctBBBMinus>
+        <pctBBBPortfolio>65.000000</pctBBBPortfolio>
+        <pctBelowMinRating>65.000000</pctBelowMinRating>
+        <pctCashEqIssuer>65.000000</pctCashEqIssuer>
+        <pctCashEqJapan>65.000000</pctCashEqJapan>
+        <pctCashInCP>65.000000</pctCashInCP>
+        <pctCDorBA>65.000000</pctCDorBA>
+        <pctCDorBAIssuer>65.000000</pctCDorBAIssuer>
+        <pctConvertible>65.000000</pctConvertible>
+        <pctCorp>65.000000</pctCorp>
+        <pctCPIssuer>65.000000</pctCPIssuer>
+        <pctCrossoverCredit>65.000000</pctCrossoverCredit>
+        <pctDur4>65.000000</pctDur4>
+        <pctDurationDiff>20.000000</pctDurationDiff>
+        <pctFloater>65.000000</pctFloater>
+        <pctForeignGovIssuer>65.000000</pctForeignGovIssuer>
+        <pctFutures>15.000000</pctFutures>
+        <pctGovtAgencyIssuer>65.000000</pctGovtAgencyIssuer>
+        <pctGuarAgency>65.000000</pctGuarAgency>
+        <pctHSBC>65.000000</pctHSBC>
+        <pctIlliquid>65.000000</pctIlliquid>
+        <pctIntl>65.000000</pctIntl>
+        <pctIntlNonCanadian>65.000000</pctIntlNonCanadian>
+        <pctIntlPerCountry>65.000000</pctIntlPerCountry>
+        <pctIssue>65.000000</pctIssue>
+        <pctIssuerAMinus>65.000000</pctIssuerAMinus>
+        <pctIssuersOutDebt>65.000000</pctIssuersOutDebt>
+        <pctLTPortBBB>65.000000</pctLTPortBBB>
+        <pctMBS>65.000000</pctMBS>
+        <pctMBSPerIssue>65.000000</pctMBSPerIssue>
+        <pctMM>65.000000</pctMM>
+        <pctMuni>65.000000</pctMuni>
+        <pctMutualFunds>65.000000</pctMutualFunds>
+        <pctName>65.000000</pctName>
+        <pctNonAgencyMBS>65.000000</pctNonAgencyMBS>
+        <pctNonAgencyMBSRatedA>65.000000</pctNonAgencyMBSRatedA>
+        <pctNonGBP>100.000000</pctNonGBP>
+        <pctNonGuarAgency>65.000000</pctNonGuarAgency>
+        <pctNonSovereignIssuers>65.000000</pctNonSovereignIssuers>
+        <pctOptions>65.000000</pctOptions>
+        <pctOptionsandFutures>65.000000</pctOptionsandFutures>
+        <pctPreRefunded>65.000000</pctPreRefunded>
+        <pctPrincipleCash>65.000000</pctPrincipleCash>
+        <pctPrvtPlmt>65.000000</pctPrvtPlmt>
+        <pctRevenueBond>65.000000</pctRevenueBond>
+        <pctRevRepo>65.000000</pctRevRepo>
+        <pctSector>65.000000</pctSector>
+        <pctShortFutures>15.000000</pctShortFutures>
+        <pctSubSector>65.000000</pctSubSector>
+        <pctSubSubSector>65.000000</pctSubSubSector>
+        <pctTIPS>65.000000</pctTIPS>
+        <pctUKNonGuarIssuer>65.000000</pctUKNonGuarIssuer>
+        <pctUKSovereign>65.000000</pctUKSovereign>
+        <pctUnrated>65.000000</pctUnrated>
+        <pctUSIssuer>65.000000</pctUSIssuer>
+        <pctYankee>65.000000</pctYankee>
+        <portDurVsBenchmark>1.000000</portDurVsBenchmark>
+        <portfolioLimitCanadian>65.000000</portfolioLimitCanadian>
+        <portfolioLimitForeign>65.000000</portfolioLimitForeign>
+        <restricted>NO</restricted>
+        <splitRated>80.000000</splitRated>
+        <securityPosition id="SecurityPosition_id_1">
+          <amount>100000.000000</amount>
+          <quantity>0.000000</quantity>
+          <security id="Security_id_1">
+            <industryGrp>PrincipalCash</industryGrp>
+            <securityId>9999</securityId>
+            <securityIssuer id="SecurityIssuer_id_1">
+              <shortName>PrincipalCash</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_2">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_2">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>2.000000</duration>
+            <fitchRating>AA+</fitchRating>
+            <fitchRatingNumeric>95.000000</fitchRatingNumeric>
+            <industryGrp>CommercialPaper</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>CashEquivalents</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2004-07-01</maturityDate>
+            <moodyRating>AA+</moodyRating>
+            <moodyRatingNumeric>95.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>80.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1002</securityId>
+            <securityType>Cash</securityType>
+            <spRating>AA+</spRating>
+            <spRatingNumeric>95.000000</spRatingNumeric>
+            <stwRating>AA</stwRating>
+            <stwRatingNumeric>2.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_2">
+              <shortName>Abbey</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_3">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_3">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>3.000000</duration>
+            <fitchRating>A</fitchRating>
+            <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+            <industryGrp>U.S.Government</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>Government</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar>YES</isAgencyGuar>
+            <maturityDate>2006-07-01</maturityDate>
+            <moodyRating>A</moodyRating>
+            <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>100.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1003</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A</spRating>
+            <spRatingNumeric>85.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_3">
+              <shortName>USGovt</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_4">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>200000.000000</quantity>
+          <security id="Security_id_4">
+            <countryIso>US</countryIso>
+            <couponType>Variable</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>4.000000</duration>
+            <fitchRating>A-</fitchRating>
+            <fitchRatingNumeric>82.000000</fitchRatingNumeric>
+            <industryGrp>Finance</industryGrp>
+            <industrySubGrp>Banks</industrySubGrp>
+            <industryType>Corporate</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2008-07-01</maturityDate>
+            <moodyRating>A-</moodyRating>
+            <moodyRatingNumeric>82.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>110.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1004</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A-</spRating>
+            <spRatingNumeric>82.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_4">
+              <shortName>BofA</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+      </account>
+      <security id="Security_id_5">
+        <amtOutstanding>1000000.000000</amtOutstanding>
+        <countryIso>US</countryIso>
+        <couponType>Fixed</couponType>
+        <currencyCode>USD</currencyCode>
+        <duration>3.000000</duration>
+        <fitchRating>A</fitchRating>
+        <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+        <industryGrp>Finance</industryGrp>
+        <industrySubGrp>Banks</industrySubGrp>
+        <industryType>Corporate</industryType>
+        <is144a xsi:nil="1" />
+        <is144aApproved xsi:nil="1" />
+        <isAgencyGuar xsi:nil="1" />
+        <maturityDate>2006-07-01</maturityDate>
+        <moodyRating>A</moodyRating>
+        <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+        <multiplier>1.000000</multiplier>
+        <rAD xsi:nil="1" />
+        <sAD xsi:nil="1" />
+        <securityId>1005</securityId>
+        <securityType>Bonds</securityType>
+        <spRating>A</spRating>
+        <spRatingNumeric>85.000000</spRatingNumeric>
+        <stwRating>A</stwRating>
+        <stwRatingNumeric>3.000000</stwRatingNumeric>
+        <securityIssuer id="SecurityIssuer_id_5">
+          <amtOutstanding>10000000.000000</amtOutstanding>
+          <shortName>BofA</shortName>
+        </securityIssuer>
+      </security>
+    </Transaction>
+    <Transaction id="Transaction_id_2">
+      <accruedInterest>0.000000</accruedInterest>
+      <holdCode>Long</holdCode>
+      <price>85.000000</price>
+      <quantity>100000.000000</quantity>
+      <account id="Account_id_2">
+        <accountDurationType>MOD</accountDurationType>
+        <benchmarkDuration>3.000000</benchmarkDuration>
+        <cashMaximum>65.000000</cashMaximum>
+        <cDBInternationalFlg xsi:nil="1" />
+        <cDBInternationalMsg xsi:nil="1" />
+        <cKDeskBinderDurationFlag xsi:nil="1" />
+        <cKDeskBinderDurationMsg xsi:nil="1" />
+        <ckDeskBinderFloaterFlg xsi:nil="1" />
+        <ckDeskBinderFloaterMsg xsi:nil="1" />
+        <cKDeskBinderSectorFlag xsi:nil="1" />
+        <cKDeskBinderSectorMsg xsi:nil="1" />
+        <consent144a>NO</consent144a>
+        <cooperABSList>YES</cooperABSList>
+        <intlConsent>NO</intlConsent>
+        <isQIB>NO</isQIB>
+        <isSpendableAccount>YES</isSpendableAccount>
+        <issuerLimitABS>65.000000</issuerLimitABS>
+        <issuerLimitCanadian>65.000000</issuerLimitCanadian>
+        <issuerLimitCorp>65.000000</issuerLimitCorp>
+        <issuerLimitForeign>65.000000</issuerLimitForeign>
+        <issuerLimitOtherGO>65.000000</issuerLimitOtherGO>
+        <issuerLimitOtherRO>65.000000</issuerLimitOtherRO>
+        <issuerLimitStateGO>65.000000</issuerLimitStateGO>
+        <issuerLimitSupranational>65.000000</issuerLimitSupranational>
+        <issuerLimitUtilityRO>65.000000</issuerLimitUtilityRO>
+        <maxDollarValue>100000.000000</maxDollarValue>
+        <maxDuration>5.000000</maxDuration>
+        <maxDurBenchmark>1.100000</maxDurBenchmark>
+        <maximumCPAmount>500000.000000</maximumCPAmount>
+        <maxIssueMat>10.000000</maxIssueMat>
+        <maxMat>10.000000</maxMat>
+        <minDurBenchmark>0.900000</minDurBenchmark>
+        <minimumABSRating>80.000000</minimumABSRating>
+        <minimumAgencyRating>80.000000</minimumAgencyRating>
+        <minimumAverageMaturity>1.000000</minimumAverageMaturity>
+        <minimumAverageRating>80.000000</minimumAverageRating>
+        <minimumAverageStwRating>3.000000</minimumAverageStwRating>
+        <minimumAvgSPandMoodys>80.000000</minimumAvgSPandMoodys>
+        <minimumAvgSPorMoodys>80.000000</minimumAvgSPorMoodys>
+        <minimumSPandMoody>80.000000</minimumSPandMoody>
+        <minimumSPorMoody>80.000000</minimumSPorMoody>
+        <minimumSPRating>80.000000</minimumSPRating>
+        <netAdmittedAssets>500000.000000</netAdmittedAssets>
+        <pct144A>65.000000</pct144A>
+        <pctABS>65.000000</pctABS>
+        <pctABSandMuni>65.000000</pctABSandMuni>
+        <pctAgency>65.000000</pctAgency>
+        <pctAmtOutstanding>65.000000</pctAmtOutstanding>
+        <pctApproved144a>65.000000</pctApproved144a>
+        <pctBBB>65.000000</pctBBB>
+        <pctBBBMinus>65.000000</pctBBBMinus>
+        <pctBBBPortfolio>65.000000</pctBBBPortfolio>
+        <pctBelowMinRating>65.000000</pctBelowMinRating>
+        <pctCashEqIssuer>65.000000</pctCashEqIssuer>
+        <pctCashEqJapan>65.000000</pctCashEqJapan>
+        <pctCashInCP>65.000000</pctCashInCP>
+        <pctCDorBA>65.000000</pctCDorBA>
+        <pctCDorBAIssuer>65.000000</pctCDorBAIssuer>
+        <pctConvertible>65.000000</pctConvertible>
+        <pctCorp>65.000000</pctCorp>
+        <pctCPIssuer>65.000000</pctCPIssuer>
+        <pctCrossoverCredit>65.000000</pctCrossoverCredit>
+        <pctDur4>65.000000</pctDur4>
+        <pctDurationDiff>20.000000</pctDurationDiff>
+        <pctFloater>65.000000</pctFloater>
+        <pctForeignGovIssuer>65.000000</pctForeignGovIssuer>
+        <pctFutures>15.000000</pctFutures>
+        <pctGovtAgencyIssuer>65.000000</pctGovtAgencyIssuer>
+        <pctGuarAgency>65.000000</pctGuarAgency>
+        <pctHSBC>65.000000</pctHSBC>
+        <pctIlliquid>65.000000</pctIlliquid>
+        <pctIntl>65.000000</pctIntl>
+        <pctIntlNonCanadian>65.000000</pctIntlNonCanadian>
+        <pctIntlPerCountry>65.000000</pctIntlPerCountry>
+        <pctIssue>65.000000</pctIssue>
+        <pctIssuerAMinus>65.000000</pctIssuerAMinus>
+        <pctIssuersOutDebt>65.000000</pctIssuersOutDebt>
+        <pctLTPortBBB>65.000000</pctLTPortBBB>
+        <pctMBS>65.000000</pctMBS>
+        <pctMBSPerIssue>65.000000</pctMBSPerIssue>
+        <pctMM>65.000000</pctMM>
+        <pctMuni>65.000000</pctMuni>
+        <pctMutualFunds>65.000000</pctMutualFunds>
+        <pctName>65.000000</pctName>
+        <pctNonAgencyMBS>65.000000</pctNonAgencyMBS>
+        <pctNonAgencyMBSRatedA>65.000000</pctNonAgencyMBSRatedA>
+        <pctNonGBP>100.000000</pctNonGBP>
+        <pctNonGuarAgency>65.000000</pctNonGuarAgency>
+        <pctNonSovereignIssuers>65.000000</pctNonSovereignIssuers>
+        <pctOptions>65.000000</pctOptions>
+        <pctOptionsandFutures>65.000000</pctOptionsandFutures>
+        <pctPreRefunded>65.000000</pctPreRefunded>
+        <pctPrincipleCash>65.000000</pctPrincipleCash>
+        <pctPrvtPlmt>65.000000</pctPrvtPlmt>
+        <pctRevenueBond>65.000000</pctRevenueBond>
+        <pctRevRepo>65.000000</pctRevRepo>
+        <pctSector>65.000000</pctSector>
+        <pctShortFutures>15.000000</pctShortFutures>
+        <pctSubSector>65.000000</pctSubSector>
+        <pctSubSubSector>65.000000</pctSubSubSector>
+        <pctTIPS>65.000000</pctTIPS>
+        <pctUKNonGuarIssuer>65.000000</pctUKNonGuarIssuer>
+        <pctUKSovereign>65.000000</pctUKSovereign>
+        <pctUnrated>65.000000</pctUnrated>
+        <pctUSIssuer>65.000000</pctUSIssuer>
+        <pctYankee>65.000000</pctYankee>
+        <portDurVsBenchmark>1.000000</portDurVsBenchmark>
+        <portfolioLimitCanadian>65.000000</portfolioLimitCanadian>
+        <portfolioLimitForeign>65.000000</portfolioLimitForeign>
+        <restricted>NO</restricted>
+        <splitRated>80.000000</splitRated>
+        <securityPosition id="SecurityPosition_id_5">
+          <amount>100000.000000</amount>
+          <quantity>0.000000</quantity>
+          <security id="Security_id_7">
+            <industryGrp>PrincipalCash</industryGrp>
+            <securityId>9999</securityId>
+            <securityIssuer id="SecurityIssuer_id_7">
+              <shortName>PrincipalCash</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_6">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_8">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>2.000000</duration>
+            <fitchRating>AA+</fitchRating>
+            <fitchRatingNumeric>95.000000</fitchRatingNumeric>
+            <industryGrp>CommercialPaper</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>CashEquivalents</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2004-07-01</maturityDate>
+            <moodyRating>AA+</moodyRating>
+            <moodyRatingNumeric>95.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>80.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1002</securityId>
+            <securityType>Cash</securityType>
+            <spRating>AA+</spRating>
+            <spRatingNumeric>95.000000</spRatingNumeric>
+            <stwRating>AA</stwRating>
+            <stwRatingNumeric>2.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_8">
+              <shortName>Abbey</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_7">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_9">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>3.000000</duration>
+            <fitchRating>A</fitchRating>
+            <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+            <industryGrp>U.S.Government</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>Government</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar>YES</isAgencyGuar>
+            <maturityDate>2006-07-01</maturityDate>
+            <moodyRating>A</moodyRating>
+            <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>100.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1003</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A</spRating>
+            <spRatingNumeric>85.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_9">
+              <shortName>USGovt</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_8">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>200000.000000</quantity>
+          <security id="Security_id_10">
+            <countryIso>US</countryIso>
+            <couponType>Variable</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>4.000000</duration>
+            <fitchRating>A-</fitchRating>
+            <fitchRatingNumeric>82.000000</fitchRatingNumeric>
+            <industryGrp>Finance</industryGrp>
+            <industrySubGrp>Banks</industrySubGrp>
+            <industryType>Corporate</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2008-07-01</maturityDate>
+            <moodyRating>A-</moodyRating>
+            <moodyRatingNumeric>82.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>110.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1004</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A-</spRating>
+            <spRatingNumeric>82.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_10">
+              <shortName>BofA</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+      </account>
+      <security id="Security_id_6">
+        <amtOutstanding>1000000.000000</amtOutstanding>
+        <countryIso>US</countryIso>
+        <couponType>Fixed</couponType>
+        <currencyCode>USD</currencyCode>
+        <duration>3.000000</duration>
+        <fitchRating>A</fitchRating>
+        <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+        <industryGrp>Finance</industryGrp>
+        <industrySubGrp>Banks</industrySubGrp>
+        <industryType>Corporate</industryType>
+        <is144a xsi:nil="1" />
+        <is144aApproved xsi:nil="1" />
+        <isAgencyGuar xsi:nil="1" />
+        <maturityDate>2006-07-01</maturityDate>
+        <moodyRating>A</moodyRating>
+        <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+        <multiplier>1.000000</multiplier>
+        <rAD xsi:nil="1" />
+        <sAD xsi:nil="1" />
+        <securityId>1005</securityId>
+        <securityType>Bonds</securityType>
+        <spRating>A</spRating>
+        <spRatingNumeric>85.000000</spRatingNumeric>
+        <stwRating>A</stwRating>
+        <stwRatingNumeric>3.000000</stwRatingNumeric>
+        <securityIssuer id="SecurityIssuer_id_6">
+          <amtOutstanding>10000000.000000</amtOutstanding>
+          <shortName>BofA</shortName>
+        </securityIssuer>
+      </security>
+    </Transaction>
+    <Transaction id="Transaction_id_3">
+      <accruedInterest>0.000000</accruedInterest>
+      <holdCode>Long</holdCode>
+      <price>85.000000</price>
+      <quantity>100000.000000</quantity>
+      <account id="Account_id_3">
+        <accountDurationType>MOD</accountDurationType>
+        <benchmarkDuration>3.000000</benchmarkDuration>
+        <cashMaximum>65.000000</cashMaximum>
+        <cDBInternationalFlg xsi:nil="1" />
+        <cDBInternationalMsg xsi:nil="1" />
+        <cKDeskBinderDurationFlag xsi:nil="1" />
+        <cKDeskBinderDurationMsg xsi:nil="1" />
+        <ckDeskBinderFloaterFlg xsi:nil="1" />
+        <ckDeskBinderFloaterMsg xsi:nil="1" />
+        <cKDeskBinderSectorFlag xsi:nil="1" />
+        <cKDeskBinderSectorMsg xsi:nil="1" />
+        <consent144a>NO</consent144a>
+        <cooperABSList>YES</cooperABSList>
+        <intlConsent>NO</intlConsent>
+        <isQIB>NO</isQIB>
+        <isSpendableAccount>YES</isSpendableAccount>
+        <issuerLimitABS>65.000000</issuerLimitABS>
+        <issuerLimitCanadian>65.000000</issuerLimitCanadian>
+        <issuerLimitCorp>65.000000</issuerLimitCorp>
+        <issuerLimitForeign>65.000000</issuerLimitForeign>
+        <issuerLimitOtherGO>65.000000</issuerLimitOtherGO>
+        <issuerLimitOtherRO>65.000000</issuerLimitOtherRO>
+        <issuerLimitStateGO>65.000000</issuerLimitStateGO>
+        <issuerLimitSupranational>65.000000</issuerLimitSupranational>
+        <issuerLimitUtilityRO>65.000000</issuerLimitUtilityRO>
+        <maxDollarValue>100000.000000</maxDollarValue>
+        <maxDuration>5.000000</maxDuration>
+        <maxDurBenchmark>1.100000</maxDurBenchmark>
+        <maximumCPAmount>500000.000000</maximumCPAmount>
+        <maxIssueMat>10.000000</maxIssueMat>
+        <maxMat>10.000000</maxMat>
+        <minDurBenchmark>0.900000</minDurBenchmark>
+        <minimumABSRating>80.000000</minimumABSRating>
+        <minimumAgencyRating>80.000000</minimumAgencyRating>
+        <minimumAverageMaturity>1.000000</minimumAverageMaturity>
+        <minimumAverageRating>80.000000</minimumAverageRating>
+        <minimumAverageStwRating>3.000000</minimumAverageStwRating>
+        <minimumAvgSPandMoodys>80.000000</minimumAvgSPandMoodys>
+        <minimumAvgSPorMoodys>80.000000</minimumAvgSPorMoodys>
+        <minimumSPandMoody>80.000000</minimumSPandMoody>
+        <minimumSPorMoody>80.000000</minimumSPorMoody>
+        <minimumSPRating>80.000000</minimumSPRating>
+        <netAdmittedAssets>500000.000000</netAdmittedAssets>
+        <pct144A>65.000000</pct144A>
+        <pctABS>65.000000</pctABS>
+        <pctABSandMuni>65.000000</pctABSandMuni>
+        <pctAgency>65.000000</pctAgency>
+        <pctAmtOutstanding>65.000000</pctAmtOutstanding>
+        <pctApproved144a>65.000000</pctApproved144a>
+        <pctBBB>65.000000</pctBBB>
+        <pctBBBMinus>65.000000</pctBBBMinus>
+        <pctBBBPortfolio>65.000000</pctBBBPortfolio>
+        <pctBelowMinRating>65.000000</pctBelowMinRating>
+        <pctCashEqIssuer>65.000000</pctCashEqIssuer>
+        <pctCashEqJapan>65.000000</pctCashEqJapan>
+        <pctCashInCP>65.000000</pctCashInCP>
+        <pctCDorBA>65.000000</pctCDorBA>
+        <pctCDorBAIssuer>65.000000</pctCDorBAIssuer>
+        <pctConvertible>65.000000</pctConvertible>
+        <pctCorp>65.000000</pctCorp>
+        <pctCPIssuer>65.000000</pctCPIssuer>
+        <pctCrossoverCredit>65.000000</pctCrossoverCredit>
+        <pctDur4>65.000000</pctDur4>
+        <pctDurationDiff>20.000000</pctDurationDiff>
+        <pctFloater>65.000000</pctFloater>
+        <pctForeignGovIssuer>65.000000</pctForeignGovIssuer>
+        <pctFutures>15.000000</pctFutures>
+        <pctGovtAgencyIssuer>65.000000</pctGovtAgencyIssuer>
+        <pctGuarAgency>65.000000</pctGuarAgency>
+        <pctHSBC>65.000000</pctHSBC>
+        <pctIlliquid>65.000000</pctIlliquid>
+        <pctIntl>65.000000</pctIntl>
+        <pctIntlNonCanadian>65.000000</pctIntlNonCanadian>
+        <pctIntlPerCountry>65.000000</pctIntlPerCountry>
+        <pctIssue>65.000000</pctIssue>
+        <pctIssuerAMinus>65.000000</pctIssuerAMinus>
+        <pctIssuersOutDebt>65.000000</pctIssuersOutDebt>
+        <pctLTPortBBB>65.000000</pctLTPortBBB>
+        <pctMBS>65.000000</pctMBS>
+        <pctMBSPerIssue>65.000000</pctMBSPerIssue>
+        <pctMM>65.000000</pctMM>
+        <pctMuni>65.000000</pctMuni>
+        <pctMutualFunds>65.000000</pctMutualFunds>
+        <pctName>65.000000</pctName>
+        <pctNonAgencyMBS>65.000000</pctNonAgencyMBS>
+        <pctNonAgencyMBSRatedA>65.000000</pctNonAgencyMBSRatedA>
+        <pctNonGBP>100.000000</pctNonGBP>
+        <pctNonGuarAgency>65.000000</pctNonGuarAgency>
+        <pctNonSovereignIssuers>65.000000</pctNonSovereignIssuers>
+        <pctOptions>65.000000</pctOptions>
+        <pctOptionsandFutures>65.000000</pctOptionsandFutures>
+        <pctPreRefunded>65.000000</pctPreRefunded>
+        <pctPrincipleCash>65.000000</pctPrincipleCash>
+        <pctPrvtPlmt>65.000000</pctPrvtPlmt>
+        <pctRevenueBond>65.000000</pctRevenueBond>
+        <pctRevRepo>65.000000</pctRevRepo>
+        <pctSector>65.000000</pctSector>
+        <pctShortFutures>15.000000</pctShortFutures>
+        <pctSubSector>65.000000</pctSubSector>
+        <pctSubSubSector>65.000000</pctSubSubSector>
+        <pctTIPS>65.000000</pctTIPS>
+        <pctUKNonGuarIssuer>65.000000</pctUKNonGuarIssuer>
+        <pctUKSovereign>65.000000</pctUKSovereign>
+        <pctUnrated>65.000000</pctUnrated>
+        <pctUSIssuer>65.000000</pctUSIssuer>
+        <pctYankee>65.000000</pctYankee>
+        <portDurVsBenchmark>1.000000</portDurVsBenchmark>
+        <portfolioLimitCanadian>65.000000</portfolioLimitCanadian>
+        <portfolioLimitForeign>65.000000</portfolioLimitForeign>
+        <restricted>NO</restricted>
+        <splitRated>80.000000</splitRated>
+        <securityPosition id="SecurityPosition_id_9">
+          <amount>100000.000000</amount>
+          <quantity>0.000000</quantity>
+          <security id="Security_id_12">
+            <industryGrp>PrincipalCash</industryGrp>
+            <securityId>9999</securityId>
+            <securityIssuer id="SecurityIssuer_id_12">
+              <shortName>PrincipalCash</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_10">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_13">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>2.000000</duration>
+            <fitchRating>AA+</fitchRating>
+            <fitchRatingNumeric>95.000000</fitchRatingNumeric>
+            <industryGrp>CommercialPaper</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>CashEquivalents</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2004-07-01</maturityDate>
+            <moodyRating>AA+</moodyRating>
+            <moodyRatingNumeric>95.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>80.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1002</securityId>
+            <securityType>Cash</securityType>
+            <spRating>AA+</spRating>
+            <spRatingNumeric>95.000000</spRatingNumeric>
+            <stwRating>AA</stwRating>
+            <stwRatingNumeric>2.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_13">
+              <shortName>Abbey</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_11">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_14">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>3.000000</duration>
+            <fitchRating>A</fitchRating>
+            <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+            <industryGrp>U.S.Government</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>Government</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar>YES</isAgencyGuar>
+            <maturityDate>2006-07-01</maturityDate>
+            <moodyRating>A</moodyRating>
+            <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>100.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1003</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A</spRating>
+            <spRatingNumeric>85.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_14">
+              <shortName>USGovt</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_12">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>200000.000000</quantity>
+          <security id="Security_id_15">
+            <countryIso>US</countryIso>
+            <couponType>Variable</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>4.000000</duration>
+            <fitchRating>A-</fitchRating>
+            <fitchRatingNumeric>82.000000</fitchRatingNumeric>
+            <industryGrp>Finance</industryGrp>
+            <industrySubGrp>Banks</industrySubGrp>
+            <industryType>Corporate</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2008-07-01</maturityDate>
+            <moodyRating>A-</moodyRating>
+            <moodyRatingNumeric>82.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>110.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1004</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A-</spRating>
+            <spRatingNumeric>82.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_15">
+              <shortName>BofA</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+      </account>
+      <security id="Security_id_11">
+        <amtOutstanding>1000000.000000</amtOutstanding>
+        <countryIso>US</countryIso>
+        <couponType>Fixed</couponType>
+        <currencyCode>USD</currencyCode>
+        <duration>3.000000</duration>
+        <fitchRating>A</fitchRating>
+        <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+        <industryGrp>Finance</industryGrp>
+        <industrySubGrp>Banks</industrySubGrp>
+        <industryType>Corporate</industryType>
+        <is144a xsi:nil="1" />
+        <is144aApproved xsi:nil="1" />
+        <isAgencyGuar xsi:nil="1" />
+        <maturityDate>2006-07-01</maturityDate>
+        <moodyRating>A</moodyRating>
+        <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+        <multiplier>1.000000</multiplier>
+        <rAD xsi:nil="1" />
+        <sAD xsi:nil="1" />
+        <securityId>1005</securityId>
+        <securityType>Bonds</securityType>
+        <spRating>A</spRating>
+        <spRatingNumeric>85.000000</spRatingNumeric>
+        <stwRating>A</stwRating>
+        <stwRatingNumeric>3.000000</stwRatingNumeric>
+        <securityIssuer id="SecurityIssuer_id_11">
+          <amtOutstanding>10000000.000000</amtOutstanding>
+          <shortName>BofA</shortName>
+        </securityIssuer>
+      </security>
+    </Transaction>
+    <Transaction id="Transaction_id_4">
+      <accruedInterest>0.000000</accruedInterest>
+      <holdCode>Long</holdCode>
+      <price>85.000000</price>
+      <quantity>100000.000000</quantity>
+      <account id="Account_id_4">
+        <accountDurationType>MOD</accountDurationType>
+        <benchmarkDuration>3.000000</benchmarkDuration>
+        <cashMaximum>65.000000</cashMaximum>
+        <cDBInternationalFlg xsi:nil="1" />
+        <cDBInternationalMsg xsi:nil="1" />
+        <cKDeskBinderDurationFlag xsi:nil="1" />
+        <cKDeskBinderDurationMsg xsi:nil="1" />
+        <ckDeskBinderFloaterFlg xsi:nil="1" />
+        <ckDeskBinderFloaterMsg xsi:nil="1" />
+        <cKDeskBinderSectorFlag xsi:nil="1" />
+        <cKDeskBinderSectorMsg xsi:nil="1" />
+        <consent144a>NO</consent144a>
+        <cooperABSList>YES</cooperABSList>
+        <intlConsent>NO</intlConsent>
+        <isQIB>NO</isQIB>
+        <isSpendableAccount>YES</isSpendableAccount>
+        <issuerLimitABS>65.000000</issuerLimitABS>
+        <issuerLimitCanadian>65.000000</issuerLimitCanadian>
+        <issuerLimitCorp>65.000000</issuerLimitCorp>
+        <issuerLimitForeign>65.000000</issuerLimitForeign>
+        <issuerLimitOtherGO>65.000000</issuerLimitOtherGO>
+        <issuerLimitOtherRO>65.000000</issuerLimitOtherRO>
+        <issuerLimitStateGO>65.000000</issuerLimitStateGO>
+        <issuerLimitSupranational>65.000000</issuerLimitSupranational>
+        <issuerLimitUtilityRO>65.000000</issuerLimitUtilityRO>
+        <maxDollarValue>100000.000000</maxDollarValue>
+        <maxDuration>5.000000</maxDuration>
+        <maxDurBenchmark>1.100000</maxDurBenchmark>
+        <maximumCPAmount>500000.000000</maximumCPAmount>
+        <maxIssueMat>10.000000</maxIssueMat>
+        <maxMat>10.000000</maxMat>
+        <minDurBenchmark>0.900000</minDurBenchmark>
+        <minimumABSRating>80.000000</minimumABSRating>
+        <minimumAgencyRating>80.000000</minimumAgencyRating>
+        <minimumAverageMaturity>1.000000</minimumAverageMaturity>
+        <minimumAverageRating>80.000000</minimumAverageRating>
+        <minimumAverageStwRating>3.000000</minimumAverageStwRating>
+        <minimumAvgSPandMoodys>80.000000</minimumAvgSPandMoodys>
+        <minimumAvgSPorMoodys>80.000000</minimumAvgSPorMoodys>
+        <minimumSPandMoody>80.000000</minimumSPandMoody>
+        <minimumSPorMoody>80.000000</minimumSPorMoody>
+        <minimumSPRating>80.000000</minimumSPRating>
+        <netAdmittedAssets>500000.000000</netAdmittedAssets>
+        <pct144A>65.000000</pct144A>
+        <pctABS>65.000000</pctABS>
+        <pctABSandMuni>65.000000</pctABSandMuni>
+        <pctAgency>65.000000</pctAgency>
+        <pctAmtOutstanding>65.000000</pctAmtOutstanding>
+        <pctApproved144a>65.000000</pctApproved144a>
+        <pctBBB>65.000000</pctBBB>
+        <pctBBBMinus>65.000000</pctBBBMinus>
+        <pctBBBPortfolio>65.000000</pctBBBPortfolio>
+        <pctBelowMinRating>65.000000</pctBelowMinRating>
+        <pctCashEqIssuer>65.000000</pctCashEqIssuer>
+        <pctCashEqJapan>65.000000</pctCashEqJapan>
+        <pctCashInCP>65.000000</pctCashInCP>
+        <pctCDorBA>65.000000</pctCDorBA>
+        <pctCDorBAIssuer>65.000000</pctCDorBAIssuer>
+        <pctConvertible>65.000000</pctConvertible>
+        <pctCorp>65.000000</pctCorp>
+        <pctCPIssuer>65.000000</pctCPIssuer>
+        <pctCrossoverCredit>65.000000</pctCrossoverCredit>
+        <pctDur4>65.000000</pctDur4>
+        <pctDurationDiff>20.000000</pctDurationDiff>
+        <pctFloater>65.000000</pctFloater>
+        <pctForeignGovIssuer>65.000000</pctForeignGovIssuer>
+        <pctFutures>15.000000</pctFutures>
+        <pctGovtAgencyIssuer>65.000000</pctGovtAgencyIssuer>
+        <pctGuarAgency>65.000000</pctGuarAgency>
+        <pctHSBC>65.000000</pctHSBC>
+        <pctIlliquid>65.000000</pctIlliquid>
+        <pctIntl>65.000000</pctIntl>
+        <pctIntlNonCanadian>65.000000</pctIntlNonCanadian>
+        <pctIntlPerCountry>65.000000</pctIntlPerCountry>
+        <pctIssue>65.000000</pctIssue>
+        <pctIssuerAMinus>65.000000</pctIssuerAMinus>
+        <pctIssuersOutDebt>65.000000</pctIssuersOutDebt>
+        <pctLTPortBBB>65.000000</pctLTPortBBB>
+        <pctMBS>65.000000</pctMBS>
+        <pctMBSPerIssue>65.000000</pctMBSPerIssue>
+        <pctMM>65.000000</pctMM>
+        <pctMuni>65.000000</pctMuni>
+        <pctMutualFunds>65.000000</pctMutualFunds>
+        <pctName>65.000000</pctName>
+        <pctNonAgencyMBS>65.000000</pctNonAgencyMBS>
+        <pctNonAgencyMBSRatedA>65.000000</pctNonAgencyMBSRatedA>
+        <pctNonGBP>100.000000</pctNonGBP>
+        <pctNonGuarAgency>65.000000</pctNonGuarAgency>
+        <pctNonSovereignIssuers>65.000000</pctNonSovereignIssuers>
+        <pctOptions>65.000000</pctOptions>
+        <pctOptionsandFutures>65.000000</pctOptionsandFutures>
+        <pctPreRefunded>65.000000</pctPreRefunded>
+        <pctPrincipleCash>65.000000</pctPrincipleCash>
+        <pctPrvtPlmt>65.000000</pctPrvtPlmt>
+        <pctRevenueBond>65.000000</pctRevenueBond>
+        <pctRevRepo>65.000000</pctRevRepo>
+        <pctSector>65.000000</pctSector>
+        <pctShortFutures>15.000000</pctShortFutures>
+        <pctSubSector>65.000000</pctSubSector>
+        <pctSubSubSector>65.000000</pctSubSubSector>
+        <pctTIPS>65.000000</pctTIPS>
+        <pctUKNonGuarIssuer>65.000000</pctUKNonGuarIssuer>
+        <pctUKSovereign>65.000000</pctUKSovereign>
+        <pctUnrated>65.000000</pctUnrated>
+        <pctUSIssuer>65.000000</pctUSIssuer>
+        <pctYankee>65.000000</pctYankee>
+        <portDurVsBenchmark>1.000000</portDurVsBenchmark>
+        <portfolioLimitCanadian>65.000000</portfolioLimitCanadian>
+        <portfolioLimitForeign>65.000000</portfolioLimitForeign>
+        <restricted>NO</restricted>
+        <splitRated>80.000000</splitRated>
+        <securityPosition id="SecurityPosition_id_13">
+          <amount>100000.000000</amount>
+          <quantity>0.000000</quantity>
+          <security id="Security_id_17">
+            <industryGrp>PrincipalCash</industryGrp>
+            <securityId>9999</securityId>
+            <securityIssuer id="SecurityIssuer_id_17">
+              <shortName>PrincipalCash</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_14">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_18">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>2.000000</duration>
+            <fitchRating>AA+</fitchRating>
+            <fitchRatingNumeric>95.000000</fitchRatingNumeric>
+            <industryGrp>CommercialPaper</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>CashEquivalents</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2004-07-01</maturityDate>
+            <moodyRating>AA+</moodyRating>
+            <moodyRatingNumeric>95.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>80.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1002</securityId>
+            <securityType>Cash</securityType>
+            <spRating>AA+</spRating>
+            <spRatingNumeric>95.000000</spRatingNumeric>
+            <stwRating>AA</stwRating>
+            <stwRatingNumeric>2.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_18">
+              <shortName>Abbey</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_15">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_19">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>3.000000</duration>
+            <fitchRating>A</fitchRating>
+            <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+            <industryGrp>U.S.Government</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>Government</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar>YES</isAgencyGuar>
+            <maturityDate>2006-07-01</maturityDate>
+            <moodyRating>A</moodyRating>
+            <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>100.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1003</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A</spRating>
+            <spRatingNumeric>85.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_19">
+              <shortName>USGovt</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_16">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>200000.000000</quantity>
+          <security id="Security_id_20">
+            <countryIso>US</countryIso>
+            <couponType>Variable</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>4.000000</duration>
+            <fitchRating>A-</fitchRating>
+            <fitchRatingNumeric>82.000000</fitchRatingNumeric>
+            <industryGrp>Finance</industryGrp>
+            <industrySubGrp>Banks</industrySubGrp>
+            <industryType>Corporate</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2008-07-01</maturityDate>
+            <moodyRating>A-</moodyRating>
+            <moodyRatingNumeric>82.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>110.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1004</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A-</spRating>
+            <spRatingNumeric>82.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_20">
+              <shortName>BofA</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+      </account>
+      <security id="Security_id_16">
+        <amtOutstanding>1000000.000000</amtOutstanding>
+        <countryIso>US</countryIso>
+        <couponType>Fixed</couponType>
+        <currencyCode>USD</currencyCode>
+        <duration>3.000000</duration>
+        <fitchRating>A</fitchRating>
+        <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+        <industryGrp>Finance</industryGrp>
+        <industrySubGrp>Banks</industrySubGrp>
+        <industryType>Corporate</industryType>
+        <is144a xsi:nil="1" />
+        <is144aApproved xsi:nil="1" />
+        <isAgencyGuar xsi:nil="1" />
+        <maturityDate>2006-07-01</maturityDate>
+        <moodyRating>A</moodyRating>
+        <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+        <multiplier>1.000000</multiplier>
+        <rAD xsi:nil="1" />
+        <sAD xsi:nil="1" />
+        <securityId>1005</securityId>
+        <securityType>Bonds</securityType>
+        <spRating>A</spRating>
+        <spRatingNumeric>85.000000</spRatingNumeric>
+        <stwRating>A</stwRating>
+        <stwRatingNumeric>3.000000</stwRatingNumeric>
+        <securityIssuer id="SecurityIssuer_id_16">
+          <amtOutstanding>10000000.000000</amtOutstanding>
+          <shortName>BofA</shortName>
+        </securityIssuer>
+      </security>
+    </Transaction>
+    <Transaction id="Transaction_id_5">
+      <accruedInterest>0.000000</accruedInterest>
+      <holdCode>Long</holdCode>
+      <price>85.000000</price>
+      <quantity>100000.000000</quantity>
+      <account id="Account_id_5">
+        <accountDurationType>MOD</accountDurationType>
+        <benchmarkDuration>3.000000</benchmarkDuration>
+        <cashMaximum>65.000000</cashMaximum>
+        <cDBInternationalFlg xsi:nil="1" />
+        <cDBInternationalMsg xsi:nil="1" />
+        <cKDeskBinderDurationFlag xsi:nil="1" />
+        <cKDeskBinderDurationMsg xsi:nil="1" />
+        <ckDeskBinderFloaterFlg xsi:nil="1" />
+        <ckDeskBinderFloaterMsg xsi:nil="1" />
+        <cKDeskBinderSectorFlag xsi:nil="1" />
+        <cKDeskBinderSectorMsg xsi:nil="1" />
+        <consent144a>NO</consent144a>
+        <cooperABSList>YES</cooperABSList>
+        <intlConsent>NO</intlConsent>
+        <isQIB>NO</isQIB>
+        <isSpendableAccount>YES</isSpendableAccount>
+        <issuerLimitABS>65.000000</issuerLimitABS>
+        <issuerLimitCanadian>65.000000</issuerLimitCanadian>
+        <issuerLimitCorp>65.000000</issuerLimitCorp>
+        <issuerLimitForeign>65.000000</issuerLimitForeign>
+        <issuerLimitOtherGO>65.000000</issuerLimitOtherGO>
+        <issuerLimitOtherRO>65.000000</issuerLimitOtherRO>
+        <issuerLimitStateGO>65.000000</issuerLimitStateGO>
+        <issuerLimitSupranational>65.000000</issuerLimitSupranational>
+        <issuerLimitUtilityRO>65.000000</issuerLimitUtilityRO>
+        <maxDollarValue>100000.000000</maxDollarValue>
+        <maxDuration>5.000000</maxDuration>
+        <maxDurBenchmark>1.100000</maxDurBenchmark>
+        <maximumCPAmount>500000.000000</maximumCPAmount>
+        <maxIssueMat>10.000000</maxIssueMat>
+        <maxMat>10.000000</maxMat>
+        <minDurBenchmark>0.900000</minDurBenchmark>
+        <minimumABSRating>80.000000</minimumABSRating>
+        <minimumAgencyRating>80.000000</minimumAgencyRating>
+        <minimumAverageMaturity>1.000000</minimumAverageMaturity>
+        <minimumAverageRating>80.000000</minimumAverageRating>
+        <minimumAverageStwRating>3.000000</minimumAverageStwRating>
+        <minimumAvgSPandMoodys>80.000000</minimumAvgSPandMoodys>
+        <minimumAvgSPorMoodys>80.000000</minimumAvgSPorMoodys>
+        <minimumSPandMoody>80.000000</minimumSPandMoody>
+        <minimumSPorMoody>80.000000</minimumSPorMoody>
+        <minimumSPRating>80.000000</minimumSPRating>
+        <netAdmittedAssets>500000.000000</netAdmittedAssets>
+        <pct144A>65.000000</pct144A>
+        <pctABS>65.000000</pctABS>
+        <pctABSandMuni>65.000000</pctABSandMuni>
+        <pctAgency>65.000000</pctAgency>
+        <pctAmtOutstanding>65.000000</pctAmtOutstanding>
+        <pctApproved144a>65.000000</pctApproved144a>
+        <pctBBB>65.000000</pctBBB>
+        <pctBBBMinus>65.000000</pctBBBMinus>
+        <pctBBBPortfolio>65.000000</pctBBBPortfolio>
+        <pctBelowMinRating>65.000000</pctBelowMinRating>
+        <pctCashEqIssuer>65.000000</pctCashEqIssuer>
+        <pctCashEqJapan>65.000000</pctCashEqJapan>
+        <pctCashInCP>65.000000</pctCashInCP>
+        <pctCDorBA>65.000000</pctCDorBA>
+        <pctCDorBAIssuer>65.000000</pctCDorBAIssuer>
+        <pctConvertible>65.000000</pctConvertible>
+        <pctCorp>65.000000</pctCorp>
+        <pctCPIssuer>65.000000</pctCPIssuer>
+        <pctCrossoverCredit>65.000000</pctCrossoverCredit>
+        <pctDur4>65.000000</pctDur4>
+        <pctDurationDiff>20.000000</pctDurationDiff>
+        <pctFloater>65.000000</pctFloater>
+        <pctForeignGovIssuer>65.000000</pctForeignGovIssuer>
+        <pctFutures>15.000000</pctFutures>
+        <pctGovtAgencyIssuer>65.000000</pctGovtAgencyIssuer>
+        <pctGuarAgency>65.000000</pctGuarAgency>
+        <pctHSBC>65.000000</pctHSBC>
+        <pctIlliquid>65.000000</pctIlliquid>
+        <pctIntl>65.000000</pctIntl>
+        <pctIntlNonCanadian>65.000000</pctIntlNonCanadian>
+        <pctIntlPerCountry>65.000000</pctIntlPerCountry>
+        <pctIssue>65.000000</pctIssue>
+        <pctIssuerAMinus>65.000000</pctIssuerAMinus>
+        <pctIssuersOutDebt>65.000000</pctIssuersOutDebt>
+        <pctLTPortBBB>65.000000</pctLTPortBBB>
+        <pctMBS>65.000000</pctMBS>
+        <pctMBSPerIssue>65.000000</pctMBSPerIssue>
+        <pctMM>65.000000</pctMM>
+        <pctMuni>65.000000</pctMuni>
+        <pctMutualFunds>65.000000</pctMutualFunds>
+        <pctName>65.000000</pctName>
+        <pctNonAgencyMBS>65.000000</pctNonAgencyMBS>
+        <pctNonAgencyMBSRatedA>65.000000</pctNonAgencyMBSRatedA>
+        <pctNonGBP>100.000000</pctNonGBP>
+        <pctNonGuarAgency>65.000000</pctNonGuarAgency>
+        <pctNonSovereignIssuers>65.000000</pctNonSovereignIssuers>
+        <pctOptions>65.000000</pctOptions>
+        <pctOptionsandFutures>65.000000</pctOptionsandFutures>
+        <pctPreRefunded>65.000000</pctPreRefunded>
+        <pctPrincipleCash>65.000000</pctPrincipleCash>
+        <pctPrvtPlmt>65.000000</pctPrvtPlmt>
+        <pctRevenueBond>65.000000</pctRevenueBond>
+        <pctRevRepo>65.000000</pctRevRepo>
+        <pctSector>65.000000</pctSector>
+        <pctShortFutures>15.000000</pctShortFutures>
+        <pctSubSector>65.000000</pctSubSector>
+        <pctSubSubSector>65.000000</pctSubSubSector>
+        <pctTIPS>65.000000</pctTIPS>
+        <pctUKNonGuarIssuer>65.000000</pctUKNonGuarIssuer>
+        <pctUKSovereign>65.000000</pctUKSovereign>
+        <pctUnrated>65.000000</pctUnrated>
+        <pctUSIssuer>65.000000</pctUSIssuer>
+        <pctYankee>65.000000</pctYankee>
+        <portDurVsBenchmark>1.000000</portDurVsBenchmark>
+        <portfolioLimitCanadian>65.000000</portfolioLimitCanadian>
+        <portfolioLimitForeign>65.000000</portfolioLimitForeign>
+        <restricted>NO</restricted>
+        <splitRated>80.000000</splitRated>
+        <securityPosition id="SecurityPosition_id_17">
+          <amount>100000.000000</amount>
+          <quantity>0.000000</quantity>
+          <security id="Security_id_22">
+            <industryGrp>PrincipalCash</industryGrp>
+            <securityId>9999</securityId>
+            <securityIssuer id="SecurityIssuer_id_22">
+              <shortName>PrincipalCash</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_18">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_23">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>2.000000</duration>
+            <fitchRating>AA+</fitchRating>
+            <fitchRatingNumeric>95.000000</fitchRatingNumeric>
+            <industryGrp>CommercialPaper</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>CashEquivalents</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2004-07-01</maturityDate>
+            <moodyRating>AA+</moodyRating>
+            <moodyRatingNumeric>95.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>80.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1002</securityId>
+            <securityType>Cash</securityType>
+            <spRating>AA+</spRating>
+            <spRatingNumeric>95.000000</spRatingNumeric>
+            <stwRating>AA</stwRating>
+            <stwRatingNumeric>2.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_23">
+              <shortName>Abbey</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_19">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>100000.000000</quantity>
+          <security id="Security_id_24">
+            <countryIso>US</countryIso>
+            <couponType>Fixed</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>3.000000</duration>
+            <fitchRating>A</fitchRating>
+            <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+            <industryGrp>U.S.Government</industryGrp>
+            <industrySubGrp xsi:nil="1" />
+            <industryType>Government</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar>YES</isAgencyGuar>
+            <maturityDate>2006-07-01</maturityDate>
+            <moodyRating>A</moodyRating>
+            <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>100.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1003</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A</spRating>
+            <spRatingNumeric>85.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_24">
+              <shortName>USGovt</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+        <securityPosition id="SecurityPosition_id_20">
+          <accruedInterest>0.000000</accruedInterest>
+          <holdCode>Long</holdCode>
+          <quantity>200000.000000</quantity>
+          <security id="Security_id_25">
+            <countryIso>US</countryIso>
+            <couponType>Variable</couponType>
+            <currencyCode>USD</currencyCode>
+            <duration>4.000000</duration>
+            <fitchRating>A-</fitchRating>
+            <fitchRatingNumeric>82.000000</fitchRatingNumeric>
+            <industryGrp>Finance</industryGrp>
+            <industrySubGrp>Banks</industrySubGrp>
+            <industryType>Corporate</industryType>
+            <is144a xsi:nil="1" />
+            <is144aApproved xsi:nil="1" />
+            <isAgencyGuar xsi:nil="1" />
+            <maturityDate>2008-07-01</maturityDate>
+            <moodyRating>A-</moodyRating>
+            <moodyRatingNumeric>82.000000</moodyRatingNumeric>
+            <multiplier>1.000000</multiplier>
+            <price>110.000000</price>
+            <rAD xsi:nil="1" />
+            <sAD xsi:nil="1" />
+            <securityId>1004</securityId>
+            <securityType>Bonds</securityType>
+            <spRating>A-</spRating>
+            <spRatingNumeric>82.000000</spRatingNumeric>
+            <stwRating>A</stwRating>
+            <stwRatingNumeric>3.000000</stwRatingNumeric>
+            <securityIssuer id="SecurityIssuer_id_25">
+              <shortName>BofA</shortName>
+            </securityIssuer>
+          </security>
+        </securityPosition>
+      </account>
+      <security id="Security_id_21">
+        <amtOutstanding>1000000.000000</amtOutstanding>
+        <countryIso>US</countryIso>
+        <couponType>Fixed</couponType>
+        <currencyCode>USD</currencyCode>
+        <duration>3.000000</duration>
+        <fitchRating>A</fitchRating>
+        <fitchRatingNumeric>85.000000</fitchRatingNumeric>
+        <industryGrp>Finance</industryGrp>
+        <industrySubGrp>Banks</industrySubGrp>
+        <industryType>Corporate</industryType>
+        <is144a xsi:nil="1" />
+        <is144aApproved xsi:nil="1" />
+        <isAgencyGuar xsi:nil="1" />
+        <maturityDate>2006-07-01</maturityDate>
+        <moodyRating>A</moodyRating>
+        <moodyRatingNumeric>85.000000</moodyRatingNumeric>
+        <multiplier>1.000000</multiplier>
+        <rAD xsi:nil="1" />
+        <sAD xsi:nil="1" />
+        <securityId>1005</securityId>
+        <securityType>Bonds</securityType>
+        <spRating>A</spRating>
+        <spRatingNumeric>85.000000</spRatingNumeric>
+        <stwRating>A</stwRating>
+        <stwRatingNumeric>3.000000</stwRatingNumeric>
+        <securityIssuer id="SecurityIssuer_id_21">
+          <amtOutstanding>10000000.000000</amtOutstanding>
+          <shortName>BofA</shortName>
+        </securityIssuer>
+      </security>
+    </Transaction>
+  </WorkDocuments>
+</CorticonRequest>
+

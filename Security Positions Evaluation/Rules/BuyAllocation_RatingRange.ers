@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_ddTagaW5Ee2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_ddTaUKW5Ee2H0o2p0FFfeg" key="3" type="Validation" severity="Warning" invalidObjects="#//@ruleset/@logicalVariables.0/@alias.0" textKey="RulesheetTableModelAPIImpl.Validation.InvalidAlias" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Scope">
+    <textVariables>sec</textVariables>
+    <locationVariables>Security</locationVariables>
+  </validationMessages>
+  <ruleset vocabularyUpdateStamp="_cLS_4KW5Ee2H0o2p0FFfeg" vocabulary="../Vocab/STW.ecore#/">
+    <rule>
+      <condition/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating >= 100.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating >= 100.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs=">= 100.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'G&amp;A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'G&amp;A'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 98.0 .. 99.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 98.0 .. 99.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="98.0 .. 99.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'AAA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'AAA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 89.0 .. 97.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 89.0 .. 97.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="89.0 .. 97.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'AA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'AA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 80.0 .. 88.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 80.0 .. 88.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="80.0 .. 88.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'A'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 77.0 .. 79.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 77.0 .. 79.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="77.0 .. 79.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'BBB+'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB+'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 74.0 .. 76.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 74.0 .. 76.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="74.0 .. 76.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'BBB'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 71.0 .. 73.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 71.0 .. 73.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="71.0 .. 73.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'BBB-'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB-'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating in 1.0 .. 70.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 1.0 .. 70.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="1.0 .. 70.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'BelowBBB-'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BelowBBB-'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.highestRating = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating = 0.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.highestRating" rhs="0.0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="sec.ratingRange = 'NA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'NA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <logicalVariable explicit="true" entity="../Vocab/STW.ecore#//Security">
+      <alias validationMessages="#//@validationMessages.0" value="sec"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Security/highestRating"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Security/ratingRange"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet="{'G&amp;A', 'AAA', 'AA', 'A', 'BBB+', 'BBB', 'BBB-', 'BelowBBB-', 'NA'}"/>
+        <expressionCell external="sec.ratingRange">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{>= 100.0, 98.0 .. 99.0, 89.0 .. 97.0, 80.0 .. 88.0, 77.0 .. 79.0, 74.0 .. 76.0, 71.0 .. 73.0, 1.0 .. 70.0, 0.0}"/>
+        <expressionCell external="sec.highestRating">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating" datatype="Decimal" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet=">= 100.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating >= 100.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'G&amp;A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'G&amp;A'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="98.0 .. 99.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 98.0 .. 99.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'AAA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'AAA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="89.0 .. 97.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 89.0 .. 97.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'AA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'AA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="80.0 .. 88.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 80.0 .. 88.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'A'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'A'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="77.0 .. 79.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 77.0 .. 79.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'BBB+'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB+'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="74.0 .. 76.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 74.0 .. 76.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'BBB'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="71.0 .. 73.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 71.0 .. 73.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'BBB-'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BBB-'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="100" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList valueSet="1.0 .. 70.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating in 1.0 .. 70.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'BelowBBB-'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'BelowBBB-'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="9" columnWidth="100" pRule="#//@ruleset/@rules.9">
+        <conditionValueSetCellList valueSet="0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.highestRating = 0.0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="highestRating" datatype="Decimal" termtype="ATTRIBUTE" fulltext="sec.highestRating">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="'NA'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.ratingRange = 'NA'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="ratingRange" datatype="String" termtype="ATTRIBUTE" fulltext="sec.ratingRange">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="sec" datatype="Security" termtype="ENTITY" fulltext="sec"/>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

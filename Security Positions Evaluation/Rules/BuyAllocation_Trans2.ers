@@ -1,0 +1,2894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="3" majorServiceNumber="1" minorServiceNumber="2" buildNumber="8020" updateStamp="_eGZbEaW5Ee2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_eGQQsKW5Ee2H0o2p0FFfeg" key="3" type="Validation" severity="Warning" invalidObjects="#//@ruleset/@logicalVariables.0/@extension.0/@alias.0" textKey="RulesheetTableModelAPIImpl.Validation.InvalidAlias" locationKey="RulesheetTableModelAPIImpl.Validation.Location.Scope">
+    <textVariables>sec</textVariables>
+    <locationVariables>Transaction.security</locationVariables>
+  </validationMessages>
+  <ruleset vocabularyUpdateStamp="_cLS_4KW5Ee2H0o2p0FFfeg" vocabulary="../Vocab/STW.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Asset-Backed'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Asset-Backed'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Asset-Backed'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'CashEquivalents'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="sec.industryGrp = 'CommercialPaper'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'CommercialPaper'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="'CommercialPaper'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'CashEquivalents'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'BankAcceptances'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'BankAcceptances'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="{'CertificatesofDeposit', 'BankAcceptances'}"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'CashEquivalents'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="not (sec.industryGrp = 'BankAcceptances' or sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'CommercialPaper' or sec.industryGrp = null) or sec.industryGrp = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'BankAcceptances' or sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'CommercialPaper' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="other"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Corporate'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Corporate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Corporate'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Government'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Government'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Government'"/>
+      </condition>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="sec.industryGrp = 'U.S.GovernmentAgencies'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'U.S.GovernmentAgencies'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="'U.S.GovernmentAgencies'"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Government'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Government'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Government'"/>
+      </condition>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="not (sec.industryGrp = 'U.S.GovernmentAgencies' or sec.industryGrp = null) or sec.industryGrp = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'U.S.GovernmentAgencies' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="other"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Municipals'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = 'OtherRevenue'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = 'OtherRevenue'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="{'HousingRevenue', 'IndustrialRevenue', 'UtilityRevenue', 'OtherRevenue'}"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Municipals'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="sec.industryGrp = 'Pre-Refunded'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'Pre-Refunded'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="'Pre-Refunded'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Municipals'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="not (sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'OtherRevenue' or sec.industryGrp = 'Pre-Refunded' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = null) or sec.industryGrp = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'OtherRevenue' or sec.industryGrp = 'Pre-Refunded' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryGrp" rhs="other"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="sec.industryType = 'Mortgage-Backed'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Mortgage-Backed'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="'Mortgage-Backed'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="not (sec.industryType = 'Asset-Backed' or sec.industryType = 'CashEquivalents' or sec.industryType = 'Corporate' or sec.industryType = 'Government' or sec.industryType = 'Mortgage-Backed' or sec.industryType = 'Municipals' or sec.industryType = null) or sec.industryType = null">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryType = 'Asset-Backed' or sec.industryType = 'CashEquivalents' or sec.industryType = 'Corporate' or sec.industryType = 'Government' or sec.industryType = 'Mortgage-Backed' or sec.industryType = 'Municipals' or sec.industryType = null ) or sec.industryType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="sec.industryType" rhs="other"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+      <action>
+        <opaqueExpression expression="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <logicalVariable explicit="true" entity="../Vocab/STW.ecore#//Transaction">
+      <alias value="tr"/>
+      <extension explicit="true" association="true" entity="../Vocab/STW.ecore#//Security" traversedAssocRole="../Vocab/STW.ecore#//Transaction/security">
+        <alias validationMessages="#//@validationMessages.0" value="sec"/>
+        <referencedAttributes attribute="../Vocab/STW.ecore#//Security/industryType"/>
+        <referencedAttributes attribute="../Vocab/STW.ecore#//Security/industryGrp"/>
+      </extension>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/marketValue"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionABS"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionCashInCP"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionCDorBA"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionCorp"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionAgency"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionMuni"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionRevenueBond"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionPreRefunded"/>
+      <referencedAttributes attribute="../Vocab/STW.ecore#//Transaction/positionMBS"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionABS = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionABS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionABS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionABS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionABS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCashInCP = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCashInCP = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCashInCP = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCashInCP" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCashInCP">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCDorBA = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCDorBA = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCDorBA = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCDorBA" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCDorBA">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCorp = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionCorp = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionCorp = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionCorp" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionCorp">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionAgency = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionAgency = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionAgency = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionAgency" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionAgency">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionMuni = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionMuni = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMuni = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMuni" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMuni">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionRevenueBond = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionRevenueBond = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionRevenueBond = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionRevenueBond" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionRevenueBond">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionPreRefunded = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionPreRefunded = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionPreRefunded = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionPreRefunded" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionPreRefunded">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionMBS = tr.marketValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = tr.marketValue" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="marketValue" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.marketValue">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="tr.positionMBS = 0.0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="tr.positionMBS = 0.0" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="positionMBS" datatype="Decimal" termtype="ATTRIBUTE" fulltext="tr.positionMBS">
+                <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.7"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.8"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.9"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{'Asset-Backed', 'CashEquivalents', 'Corporate', 'Government', 'Municipals', 'Mortgage-Backed', other}"/>
+        <expressionCell external="sec.industryType">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{'CommercialPaper', 'CertificatesofDeposit', 'BankAcceptances', other}"/>
+        <expressionCell external="sec.industryGrp">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{'U.S.GovernmentAgencies', other}"/>
+        <expressionCell external="sec.industryGrp">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell valueSet="{'UtilityRevenue', 'OtherRevenue', 'HousingRevenue', 'IndustrialRevenue', 'Pre-Refunded', other}"/>
+        <expressionCell external="sec.industryGrp">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'Asset-Backed'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Asset-Backed'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="'CommercialPaper'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'CommercialPaper'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="{'CertificatesofDeposit', 'BankAcceptances'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'BankAcceptances'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'CashEquivalents'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'CashEquivalents'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="other">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'BankAcceptances' or sec.industryGrp = 'CertificatesofDeposit' or sec.industryGrp = 'CommercialPaper' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="100" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="'Corporate'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Corporate'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="100" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="'Government'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Government'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'U.S.GovernmentAgencies'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'U.S.GovernmentAgencies'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="100" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="'Government'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Government'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="other">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'U.S.GovernmentAgencies' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="100" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList valueSet="'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="{'HousingRevenue', 'IndustrialRevenue', 'UtilityRevenue', 'OtherRevenue'}">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = 'OtherRevenue'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="9" columnWidth="100" pRule="#//@ruleset/@rules.9">
+        <conditionValueSetCellList valueSet="'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'Pre-Refunded'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryGrp = 'Pre-Refunded'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="10" columnWidth="100" pRule="#//@ruleset/@rules.10">
+        <conditionValueSetCellList valueSet="'Municipals'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Municipals'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="other">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryGrp = 'HousingRevenue' or sec.industryGrp = 'IndustrialRevenue' or sec.industryGrp = 'OtherRevenue' or sec.industryGrp = 'Pre-Refunded' or sec.industryGrp = 'UtilityRevenue' or sec.industryGrp = null ) or sec.industryGrp = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryGrp" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryGrp">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="11" columnWidth="100" pRule="#//@ruleset/@rules.11">
+        <conditionValueSetCellList valueSet="'Mortgage-Backed'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="sec.industryType = 'Mortgage-Backed'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="12" columnWidth="100" pRule="#//@ruleset/@rules.12">
+        <conditionValueSetCellList valueSet="other">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="not ( sec.industryType = 'Asset-Backed' or sec.industryType = 'CashEquivalents' or sec.industryType = 'Corporate' or sec.industryType = 'Government' or sec.industryType = 'Mortgage-Backed' or sec.industryType = 'Municipals' or sec.industryType = null ) or sec.industryType = null" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="industryType" datatype="String" termtype="ATTRIBUTE" fulltext="sec.industryType">
+                <parentTerm text="sec" datatype="Security" termtype="ENTITY" fulltext="sec" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="tr" datatype="Transaction" termtype="ENTITY" fulltext="tr" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
