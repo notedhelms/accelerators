@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" majorServiceNumber="4" buildNumber="5724" updateStamp="__O73RvlkEeCZZIqj_Fep1A" externalChecksum="3054974779:201531363:0">
+  <languageCode>en_GB</languageCode>
+  <ruleset vocabularyUpdateStamp="_kNTZcbAfEeOhn4FjKi9Cpw" vocabulary="Grants.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="Application.score=0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.purpose = 'Agriculture'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose = 'Agriculture'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.purpose" rhs="'Agriculture'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=10">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 10" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.purpose = 'Education'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose = 'Education'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.purpose" rhs="'Education'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=20">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 20" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.purpose = 'Energy'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose = 'Energy'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.purpose" rhs="'Energy'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=70">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 70" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.purpose = 'Environmental Quality'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose = 'Environmental Quality'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.purpose" rhs="'Environmental Quality'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=40">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 40" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.purpose = 'Science and Technology'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose = 'Science and Technology'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.purpose" rhs="'Science and Technology'"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.blackOwnership in 0 .. 20">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership in 0 .. 20" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.blackOwnership" rhs="0 .. 20"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=-30">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = -30" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.blackOwnership in 21 .. 40">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership in 21 .. 40" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.blackOwnership" rhs="21 .. 40"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=-5">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = -5" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.blackOwnership in 41 .. 60">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership in 41 .. 60" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.blackOwnership" rhs="41 .. 60"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=20">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 20" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.blackOwnership in 61 .. 80">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership in 61 .. 80" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.blackOwnership" rhs="61 .. 80"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=30">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 30" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.blackOwnership in 81 .. 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership in 81 .. 100" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.blackOwnership" rhs="81 .. 100"/>
+      </condition>
+      <condition/>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=50">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 50" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.risk = 'High Risk'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.risk = 'High Risk'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.risk" rhs="'High Risk'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=-60">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = -60" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.risk = 'Medium Risk'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.risk = 'Medium Risk'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.risk" rhs="'Medium Risk'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="Application.risk = 'Low Risk'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.risk = 'Low Risk'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.risk" rhs="'Low Risk'"/>
+      </condition>
+      <action/>
+      <action>
+        <opaqueExpression expression="Application.tempScore=70">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = 70" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.1 #//@ruleset/@rules.2 #//@ruleset/@rules.3 #//@ruleset/@rules.4 #//@ruleset/@rules.5" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the purpose is [{Application.purpose}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the purpose is [ + Application.purpose + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.6 #//@ruleset/@rules.7 #//@ruleset/@rules.8 #//@ruleset/@rules.9 #//@ruleset/@rules.10" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the black ownership percentage is [{Application.blackOwnership}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the black ownership percentage is [ + Application.blackOwnership + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.11 #//@ruleset/@rules.12 #//@ruleset/@rules.13" logicalVariable="#//@ruleset/@logicalVariables.1">
+      <text expression="If the risk of the application is [{Application.risk}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the risk of the application is [ + Application.risk + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+          <referencedTermList>
+            <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+            <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+              <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="Grants.ecore#//Applicant">
+      <extension association="true" entity="Grants.ecore#//Application" traversedAssocRole="Grants.ecore#//Applicant/application">
+        <referencedAttributes attribute="Grants.ecore#//Application/blackOwnership"/>
+        <referencedAttributes attribute="Grants.ecore#//Application/isPublicCompany"/>
+        <referencedAttributes attribute="Grants.ecore#//Application/purpose"/>
+        <referencedAttributes attribute="Grants.ecore#//Application/risk"/>
+        <referencedAttributes attribute="Grants.ecore#//Application/amount"/>
+        <referencedAttributes attribute="Grants.ecore#//Application/status"/>
+      </extension>
+      <referencedAttributes attribute="Grants.ecore#//Applicant/isDisabled"/>
+    </logicalVariable>
+    <logicalVariable entity="Grants.ecore#//Application" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.1">
+      <referencedAttributes attribute="Grants.ecore#//Application/blackOwnership"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/risk"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/status"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/score"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/purpose"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/tempScore"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsActions="49" sashWeightConditionsIf="34">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <naturalLanguageText value="The starting score is 0"/>
+        <valueSetCell/>
+        <expressionCell external="Application.score=0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = 0" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="36">
+        <naturalLanguageText value="The score granted for the specific value assessed is"/>
+        <valueSetCell/>
+        <expressionCell external="Application.tempScore=cellValue">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.tempScore = cellValue" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="true">
+            <modifiedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList rowHeight="32">
+        <naturalLanguageText value="Add the score to the cummulative score"/>
+        <valueSetCell/>
+        <expressionCell external="Application.score+=Application.tempScore">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score = Application.score + Application.tempScore" datatype="Integer" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+        </children>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.1">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.1/@referencedAttributes.5"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList rowHeight="54" ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1:5"/>
+        <text external="If the purpose is [{Application.purpose}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the purpose is [ + Application.purpose + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="32" ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="6:10"/>
+        <text external="If the black ownership percentage is [{Application.blackOwnership}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the black ownership percentage is [ + Application.blackOwnership + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList rowHeight="36" ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="11:13"/>
+        <text external="If the risk of the application is [{Application.risk}] then score is [{Application.tempScore}]. Total cummulative score is [{Application.score}].">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the risk of the application is [ + Application.risk + ] then score is [ + Application.tempScore + ]. Total cummulative score is [ + Application.score + ]." expressiontype="BRSTATEMENT">
+            <referencedTermList>
+              <terms text="tempScore" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.tempScore">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+              <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="51" columnWidthFactor="0.5">
+      <conditionItemList rowHeight="42" variableMode="Literal">
+        <naturalLanguageText value="The purpose of this application is"/>
+        <valueSetCell/>
+        <expressionCell external="Application.purpose">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.purpose" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="purpose" datatype="String" termtype="ATTRIBUTE" fulltext="Application.purpose">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="36" variableMode="Literal">
+        <naturalLanguageText value="The percentage black ownership of the company applying is"/>
+        <valueSetCell/>
+        <expressionCell external="Application.blackOwnership">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.blackOwnership" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blackOwnership" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.blackOwnership">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="32" variableMode="Literal">
+        <naturalLanguageText value="The risk assessed for this application is"/>
+        <valueSetCell/>
+        <expressionCell external="Application.risk">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.risk" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="risk" datatype="String" termtype="ATTRIBUTE" fulltext="Application.risk">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.1"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="27" scrollColumnLeft="5">
+      <ruleColumnList ruleId="0" columnWidth="58" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="72" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'Agriculture'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="10"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="66" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="'Education'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="20"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="64" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="'Energy'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="70"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="100" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="'Environmental Quality'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="40"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="81" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="'Science and Technology'"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="50"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="6" columnWidth="60" pRule="#//@ruleset/@rules.6">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="0 .. 20"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="-30"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="7" columnWidth="56" pRule="#//@ruleset/@rules.7">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="21 .. 40"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="-5"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="8" columnWidth="56" pRule="#//@ruleset/@rules.8">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="41 .. 60"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="20"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="9" columnWidth="52" pRule="#//@ruleset/@rules.9">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="61 .. 80"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="30"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="10" columnWidth="59" pRule="#//@ruleset/@rules.10">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="81 .. 100"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="50"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="11" columnWidth="72" pRule="#//@ruleset/@rules.11">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'High Risk'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="-60"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="12" columnWidth="67" pRule="#//@ruleset/@rules.12">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'Medium Risk'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="0"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="13" columnWidth="63" pRule="#//@ruleset/@rules.13">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="'Low Risk'"/>
+        <actionValueSetCellList/>
+        <actionValueSetCellList valueSet="70"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

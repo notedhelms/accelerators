@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="5" minorVersionNumber="3" majorServiceNumber="4" buildNumber="5724" updateStamp="_MZ7wAvkEEeCbboKeXZom0A" externalChecksum="3054974779:201531363:0">
+  <languageCode>en_GB</languageCode>
+  <ruleset vocabularyUpdateStamp="_kNTZcbAfEeOhn4FjKi9Cpw" vocabulary="Grants.ecore#/">
+    <rule/>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="Application.score &lt; 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score &lt; 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.score" rhs="&lt; 0"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Application.status = 'Rejected'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.status = 'Rejected'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="Application.status">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.1">
+      <condition>
+        <opaqueExpression expression="Application.score in 0 ..100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score in 0 .. 100" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.score" rhs="0 ..100"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Application.status = 'Review'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.status = 'Review'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="Application.status">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.2">
+      <condition>
+        <opaqueExpression expression="Application.score > 100">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score > 100" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="Application.score" rhs="> 100"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="Application.status = 'Approved'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.status = 'Approved'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="Application.status">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application"/>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <ruleStatement post="Warning" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="If the score of the application is below 0, then REJECT the application.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is below 0, then REJECT the application." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.2" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="If the score of the application is between 0 and 100, then manually REVIEW the application.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is between 0 and 100, then manually REVIEW the application." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.3" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="If the score of the application is over 100, then APPROVE the application.">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is over 100, then APPROVE the application." expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="Grants.ecore#//Application" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2">
+      <referencedAttributes attribute="Grants.ecore#//Application/score"/>
+      <referencedAttributes attribute="Grants.ecore#//Application/status"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" sashWeightConditionsIf="25">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="Application.status">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.status" datatype="String" expressiontype="EXPRESSION" enumeration="true" cellValue="false">
+            <referencedTermList>
+              <terms text="status" datatype="String" termtype="ATTRIBUTE" fulltext="Application.status">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="If the score of the application is below 0, then REJECT the application.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is below 0, then REJECT the application." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference external="2"/>
+        <text external="If the score of the application is between 0 and 100, then manually REVIEW the application.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is between 0 and 100, then manually REVIEW the application." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference external="3"/>
+        <text external="If the score of the application is over 100, then APPROVE the application.">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="If the score of the application is over 100, then APPROVE the application." expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="Application.score">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Application.score" datatype="Integer" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="score" datatype="Integer" termtype="ATTRIBUTE" fulltext="Application.score">
+                <parentTerm text="Application" datatype="Application" termtype="ENTITY" fulltext="Application" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="28" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="&lt; 0"/>
+        <actionValueSetCellList valueSet="'Rejected'"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="0 ..100"/>
+        <actionValueSetCellList valueSet="'Review'"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="> 100"/>
+        <actionValueSetCellList valueSet="'Approved'"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
