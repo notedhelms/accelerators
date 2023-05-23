@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="2" buildNumber="8017" updateStamp="_wa6awKYwEe2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_vz7TQKYwEe2H0o2p0FFfeg" key="2" type="Validation" severity="Error" textKey="RulesheetModelAPIImpl.Validation.Reference.Vocabulary">
+    <textVariables>/C:/Users/smeldon/Workspaces/6.3/BRE52/MAGI/SF03_01_MAGI.ecore</textVariables>
+  </validationMessages>
+  <ruleset vocabulary="SF03_01_MAGI.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="caseIndv.v_agExtensionBuildSw = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_agExtensionBuildSw = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agExtensionBuildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_agExtensionBuildSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+      <condition>
+        <opaqueExpression expression="((caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalMemberInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemberInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV')" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="((caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalChildMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalChildMemInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV')" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="((caseIndv.presumptiveDisabledSw='Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.presumptiveDisabledSw = 'Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="presumptiveDisabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="presumptiveDisbVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisbVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(caseIndv.presumptiveDisabledSw='Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV')" rhs="T"/>
+      </condition>
+      <condition/>
+      <condition/>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="((caseIndv.disabledSw='Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.disabledSw = 'Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="disabledVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="disabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(caseIndv.disabledSw='Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV')" rhs="T"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="((caseIndv.blindResp='Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.blindResp = 'Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blindResp" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindResp">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="blindVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(caseIndv.blindResp='Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV')" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="caseIndv.v_IsIndvTribeOrEBDSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action/>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0">
+      <opaqueExpression expression="Case.perform_SF03_01_RDT123=true">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Case.perform_SF03_01_RDT123 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="perform_SF03_01_RDT123" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Case.perform_SF03_01_RDT123">
+              <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Violation" ruleModelElements="#//@ruleset/@rules.1" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Column1">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column1" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Column2">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column2" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Column3">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column3" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Violation" logicalVariable="#//@ruleset/@logicalVariables.0">
+      <text expression="Column4">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column4" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="SF03_01_MAGI.ecore#//Case" ruleStatements="#//@ruleset/@ruleStatements.0 #//@ruleset/@ruleStatements.1 #//@ruleset/@ruleStatements.2 #//@ruleset/@ruleStatements.3" filters="#//@ruleset/@filters.0">
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Case/individual">
+        <alias value="caseIndv"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/disabledVerCD"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/disabledSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/blindResp"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/tribalMemVerCD"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/presumptiveDisabledSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/tribalChildMemInd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/tribalChildMemVerCD"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/blindVerCD"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/presumptiveDisbVerCD"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/tribalMemberInd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/ageNum"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_ExtensionCreatedSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsIndvTribeOrEBDSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_agExtensionBuildSw"/>
+      </extension>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/programProcessCd"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT123"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="25" sashWeightScope="66" sashWeightConditionsActions="49" sashWeightConditionsIf="39">
+    <actionSection rowCount="30" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="caseIndv.v_IsIndvTribeOrEBDSw">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="caseIndv.v_agExtensionBuildSw">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_agExtensionBuildSw" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agExtensionBuildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_agExtensionBuildSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Case.perform_SF03_01_RDT123=true" filter="#//@ruleset/@filters.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.6"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.7"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.8"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.9"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.10"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.11"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.12"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.13"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.14"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="49">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="Case.perform_SF03_01_RDT123=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Case.perform_SF03_01_RDT123 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="perform_SF03_01_RDT123" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Case.perform_SF03_01_RDT123">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="1"/>
+        <text external="Column1">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column1" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference/>
+        <text external="Column2">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column2" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference/>
+        <text external="Column3">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column3" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference/>
+        <text external="Column4">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Column4" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="41" columnWidthFactor="0.5">
+      <conditionItemList rowHeight="52">
+        <valueSetCell/>
+        <expressionCell external="(caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalMemberInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemberInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="48">
+        <valueSetCell/>
+        <expressionCell external="(caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalChildMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalChildMemInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="48">
+        <valueSetCell/>
+        <expressionCell external="(caseIndv.presumptiveDisabledSw='Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseIndv.presumptiveDisabledSw = 'Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="presumptiveDisabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="presumptiveDisbVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisbVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="32">
+        <valueSetCell/>
+        <expressionCell external="(caseIndv.disabledSw='Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseIndv.disabledSw = 'Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="disabledVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="disabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="32">
+        <valueSetCell/>
+        <expressionCell external="(caseIndv.blindResp='Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseIndv.blindResp = 'Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blindResp" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindResp">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="blindVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="10">
+      <ruleColumnList ruleId="0" columnWidth="34" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_agExtensionBuildSw = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agExtensionBuildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_agExtensionBuildSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="26" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.tribalMemberInd = 'Y' and caseIndv.tribalMemVerCD &lt;> 'QV' and caseIndv.tribalMemVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalMemberInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalMemberInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="31" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.tribalChildMemInd = 'Y' and caseIndv.tribalChildMemVerCD &lt;> 'QV' and caseIndv.tribalChildMemVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="tribalChildMemVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="tribalChildMemInd" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.tribalChildMemInd">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="32" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.presumptiveDisabledSw = 'Y' and caseIndv.presumptiveDisbVerCD &lt;> 'QV' and caseIndv.presumptiveDisbVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="presumptiveDisabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="presumptiveDisbVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.presumptiveDisbVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="4" columnWidth="36" pRule="#//@ruleset/@rules.4">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.disabledSw = 'Y' and caseIndv.disabledVerCD &lt;> 'QV' and caseIndv.disabledVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="disabledVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="disabledSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.disabledSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="5" columnWidth="37" pRule="#//@ruleset/@rules.5">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( caseIndv.blindResp = 'Y' and caseIndv.blindVerCD &lt;> 'QV' and caseIndv.blindVerCD &lt;> 'NV' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="blindResp" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindResp">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="blindVerCD" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.blindVerCD">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseIndv.v_IsIndvTribeOrEBDSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsIndvTribeOrEBDSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="caseIndv.v_IsIndvTribeOrEBDSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

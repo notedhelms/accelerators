@@ -1,0 +1,2186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="2" buildNumber="8017" updateStamp="_30gvcKY5Ee2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_3L7sgKY5Ee2H0o2p0FFfeg" key="2" type="Validation" severity="Error" textKey="RulesheetModelAPIImpl.Validation.Reference.Vocabulary">
+    <textVariables>/C:/Users/smeldon/Workspaces/6.3/BRE52/MAGI/SF03_01_MAGI.ecore</textVariables>
+  </validationMessages>
+  <ruleset vocabulary="SF03_01_MAGI.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(ag1.subProgramCode = 'C')=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'C' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.subProgramCode = 'C'" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag1.subProgramCode = 'L')=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'L' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.subProgramCode = 'L'" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag2.programCd = ag1.programCd)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.programCd = ag1.programCd ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.programCd">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag2.programCd = ag1.programCd" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag2.subProgramCode = ag1.subProgramCode)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.subProgramCode = ag1.subProgramCode ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.subProgramCode">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag2.subProgramCode = ag1.subProgramCode" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv1.v_IndvCanBeMergedSw=true)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv1.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv1.v_IndvCanBeMergedSw=true" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv2.v_IndvCanBeMergedSw=true)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv2.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv2.v_IndvCanBeMergedSw=true" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv2.agIndvPIN=agIndv1.agIndvPIN)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.agIndvPIN = agIndv1.agIndvPIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv2.agIndvPIN=agIndv1.agIndvPIN" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((ag1.v_agRequiredRelationshipRule=ag2.v_agRequiredRelationshipRule and  ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agRequiredRelationshipRule = ag2.v_agRequiredRelationshipRule and ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredRelationshipRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredRelationshipRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(ag1.v_agRequiredRelationshipRule=ag2.v_agRequiredRelationshipRule and  ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule)" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((agIndv1.agIndvPIN =  caseIndv.individualID and caseIndv.primaryPersonSw = 'Y'))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = caseIndv.individualID and caseIndv.primaryPersonSw = 'Y' ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseIndv.individualID">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="primaryPersonSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.primaryPersonSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(agIndv1.agIndvPIN =  caseIndv.individualID and caseIndv.primaryPersonSw = 'Y')" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(donotMerge1->exists( donotMerge1.v_agIndvPIN=ag2.createdForIndivID))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( donotMerge1 ->exists( donotMerge1.v_agIndvPIN = ag2.createdForIndivID ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="donotMerge1" datatype="Boolean" termtype="COLLECTION" fulltext="donotMerge1->notEmpty">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="donotMerge1.v_agIndvPIN">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="donotMerge1->exists( donotMerge1.v_agIndvPIN=ag2.createdForIndivID)" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC')" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(( agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="( agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC')" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag1.v_agCanBeRemovedSw)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agCanBeRemovedSw ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agCanBeRemovedSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.v_agCanBeRemovedSw" rhs="F"/>
+      </condition>
+      <condition/>
+      <action>
+        <opaqueExpression expression="agIndv1.origPartStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.origPartStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv1.partStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv2.origPartStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.origPartStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv2.partStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.partStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.partStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="ag2.v_agCanBeRemovedSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.v_agCanBeRemovedSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agCanBeRemovedSw">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(ag1.subProgramCode = 'C')=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'C' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.subProgramCode = 'C'" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag1.subProgramCode = 'L')=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'L' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.subProgramCode = 'L'" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag2.programCd = ag1.programCd)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.programCd = ag1.programCd ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.programCd">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag2.programCd = ag1.programCd" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag2.subProgramCode = ag1.subProgramCode)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.subProgramCode = ag1.subProgramCode ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.subProgramCode">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag2.subProgramCode = ag1.subProgramCode" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv1.v_IndvCanBeMergedSw=true)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv1.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv1.v_IndvCanBeMergedSw=true" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv2.v_IndvCanBeMergedSw=true)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv2.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv2.v_IndvCanBeMergedSw=true" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(agIndv2.agIndvPIN=agIndv1.agIndvPIN)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.agIndvPIN = agIndv1.agIndvPIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv2.agIndvPIN=agIndv1.agIndvPIN" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((ag1.v_agRequiredRelationshipRule=ag2.v_agRequiredRelationshipRule and  ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agRequiredRelationshipRule = ag2.v_agRequiredRelationshipRule and ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredRelationshipRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredRelationshipRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(ag1.v_agRequiredRelationshipRule=ag2.v_agRequiredRelationshipRule and  ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule)" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((agIndv1.agIndvPIN =  caseIndv.individualID and caseIndv.primaryPersonSw = 'Y'))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = caseIndv.individualID and caseIndv.primaryPersonSw = 'Y' ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseIndv.individualID">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="primaryPersonSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.primaryPersonSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(agIndv1.agIndvPIN =  caseIndv.individualID and caseIndv.primaryPersonSw = 'Y')" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(donotMerge1->exists( donotMerge1.v_agIndvPIN=ag2.createdForIndivID))=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( donotMerge1 ->exists( donotMerge1.v_agIndvPIN = ag2.createdForIndivID ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="donotMerge1" datatype="Boolean" termtype="COLLECTION" fulltext="donotMerge1->notEmpty">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="donotMerge1.v_agIndvPIN">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="donotMerge1->exists( donotMerge1.v_agIndvPIN=ag2.createdForIndivID)" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC')" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(( agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="( agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC')" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(ag1.v_agCanBeRemovedSw)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agCanBeRemovedSw ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agCanBeRemovedSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.v_agCanBeRemovedSw" rhs="F"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(caseRel->exists((caseRel.sourceIndvID=ag2.createdForIndivID and caseRel.refIndvID=ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR'  or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB')))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseRel ->exists( ( caseRel.sourceIndvID = ag2.createdForIndivID and caseRel.refIndvID = ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR' or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseRel" datatype="Boolean" termtype="COLLECTION" fulltext="caseRel->notEmpty">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.sourceIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag1.createdForIndivID">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="caseRel.relCode">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.refIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="caseRel->exists((caseRel.sourceIndvID=ag2.createdForIndivID and caseRel.refIndvID=ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR'  or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB'))" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="agIndv1.origPartStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.origPartStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv1.partStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv2.origPartStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.origPartStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="agIndv2.partStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.partStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.partStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="ag2.v_agCanBeRemovedSw = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.v_agCanBeRemovedSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agCanBeRemovedSw">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0">
+      <opaqueExpression expression="ag1.perform_SF03_01_RDT173 = true">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.perform_SF03_01_RDT173 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="perform_SF03_01_RDT173" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.perform_SF03_01_RDT173">
+              <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.0">
+      <opaqueExpression expression="ag1.programCd = 'MAG'">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.programCd = 'MAG'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+              <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.1 #//@ruleset/@logicalVariables.0/@extension.0">
+      <opaqueExpression expression="ag1.createdForIndivID&lt;>ag2.createdForIndivID">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.createdForIndivID &lt;> ag2.createdForIndivID" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+              <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+            <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag1.createdForIndivID">
+              <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <logicalVariable explicit="true" entity="SF03_01_MAGI.ecore#//Case" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+      <alias value="case"/>
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Group" traversedAssocRole="SF03_01_MAGI.ecore#//Case/agGroup" filters="#//@ruleset/@filters.0 #//@ruleset/@filters.1 #//@ruleset/@filters.2">
+        <alias value="ag1"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Group/agIndividual">
+          <alias value="agIndv1"/>
+          <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Individual/individual">
+            <alias value="indv1"/>
+            <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//RelationShip" traversedAssocRole="SF03_01_MAGI.ecore#//Individual/relationShip">
+              <alias value="rel1"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/refIndvID"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/relCode"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/sourceIndvID"/>
+            </extension>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvNotPotentialMergerSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvPotentialMergerSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvCanBeMergedSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/ageNum"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/primaryPersonSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/indvBirthDt"/>
+          </extension>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvPIN"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agTargetSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/origPartStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/partStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_IndvNotPotentialMergerSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_IndvCanBeMergedSw"/>
+        </extension>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//DonotMergeIndvList" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Group/donotMergeIndvList">
+          <alias value="donotMerge1"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//DonotMergeIndvList/v_agIndvPIN"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//DonotMergeIndvList/v_createdForIndivID"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//DonotMergeIndvList/v_programCd"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//DonotMergeIndvList/v_subProgramCode"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/programCd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/subProgramCode"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT172"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredRelationshipRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredTaxFilerRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agCanBeRemovedSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/createdForIndivID"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT173"/>
+      </extension>
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Group" traversedAssocRole="SF03_01_MAGI.ecore#//Case/agGroup" filters="#//@ruleset/@filters.2">
+        <alias value="ag2"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Group/agIndividual">
+          <alias value="agIndv2"/>
+          <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Individual/individual">
+            <alias value="indv2"/>
+            <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//RelationShip" traversedAssocRole="SF03_01_MAGI.ecore#//Individual/relationShip">
+              <alias value="resl2"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/refIndvID"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/relCode"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/sourceIndvID"/>
+            </extension>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvCanBeMergedSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvPotentialMergerSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvNotPotentialMergerSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/ageNum"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/indvBirthDt"/>
+          </extension>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agTargetSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvPIN"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/origPartStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/partStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_IndvCanBeMergedSw"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/programCd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/subProgramCode"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredRelationshipRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredTaxFilerRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agCanBeRemovedSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/createdForIndivID"/>
+      </extension>
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Case/individual">
+        <alias value="caseIndv"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//RelationShip" traversedAssocRole="SF03_01_MAGI.ecore#//Individual/relationShip">
+          <alias value="caseRel"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/refIndvID"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/relCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/sourceIndvID"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/ageNum"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/primaryPersonSw"/>
+      </extension>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="27" sashWeightScope="70" sashWeightConditionsActions="66" sashWeightConditionsIf="54">
+    <actionSection rowCount="47" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="agIndv1.origPartStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.origPartStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="agIndv1.partStatusCode='EC'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = 'EC'" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="agIndv2.origPartStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.origPartStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="agIndv2.partStatusCode=' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.partStatusCode = ' '" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.partStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="ag2.v_agCanBeRemovedSw">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.v_agCanBeRemovedSw" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agCanBeRemovedSw">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.perform_SF03_01_RDT173 = true" filter="#//@ruleset/@filters.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.programCd = 'MAG'" filter="#//@ruleset/@filters.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.createdForIndivID&lt;>ag2.createdForIndivID" filter="#//@ruleset/@filters.2"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.perform_SF03_01_RDT173 = true" filter="#//@ruleset/@filters.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.programCd = 'MAG'" filter="#//@ruleset/@filters.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.createdForIndivID&lt;>ag2.createdForIndivID" filter="#//@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.6"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.6"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.7"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1/@referencedAttributes.3"/>
+            </children>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag1.createdForIndivID&lt;>ag2.createdForIndivID" filter="#//@ruleset/@filters.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.1"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.2"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.3"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.4"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@extension.0">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@extension.0/@referencedAttributes.5"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0/@referencedAttributes.4"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.5"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0/@referencedAttributes.2"/>
+            </children>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="43">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="ag1.perform_SF03_01_RDT173 = true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.perform_SF03_01_RDT173 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="perform_SF03_01_RDT173" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.perform_SF03_01_RDT173">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.1">
+        <expressionCell external="ag1.programCd = 'MAG'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.programCd = 'MAG'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+      <filterItemList filter="#//@ruleset/@filters.2">
+        <expressionCell external="ag1.createdForIndivID&lt;>ag2.createdForIndivID">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.createdForIndivID &lt;> ag2.createdForIndivID" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag1.createdForIndivID">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <conditionSection rowCount="29" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="ag1.subProgramCode = 'C'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.subProgramCode = 'C'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="ag1.subProgramCode = 'L'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.subProgramCode = 'L'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="ag2.programCd = ag1.programCd">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.programCd = ag1.programCd" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.programCd">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="ag2.subProgramCode = ag1.subProgramCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.subProgramCode = ag1.subProgramCode" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.subProgramCode">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="agIndv1.v_IndvCanBeMergedSw=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.v_IndvCanBeMergedSw = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv1.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="agIndv2.v_IndvCanBeMergedSw=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.v_IndvCanBeMergedSw = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv2.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="agIndv2.agIndvPIN=agIndv1.agIndvPIN">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv2.agIndvPIN = agIndv1.agIndvPIN" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="33">
+        <valueSetCell/>
+        <expressionCell external="(ag1.v_agRequiredRelationshipRule=ag2.v_agRequiredRelationshipRule and  ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agRequiredRelationshipRule = ag2.v_agRequiredRelationshipRule and ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredRelationshipRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredRelationshipRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="42">
+        <valueSetCell/>
+        <expressionCell external="(agIndv1.agIndvPIN =  caseIndv.individualID and caseIndv.primaryPersonSw = 'Y')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.agIndvPIN = caseIndv.individualID and caseIndv.primaryPersonSw = 'Y' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseIndv.individualID">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="primaryPersonSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.primaryPersonSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="32">
+        <valueSetCell valueSet=""/>
+        <expressionCell external="donotMerge1->exists( donotMerge1.v_agIndvPIN=ag2.createdForIndivID)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="donotMerge1 ->exists( donotMerge1.v_agIndvPIN = ag2.createdForIndivID )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="donotMerge1" datatype="Boolean" termtype="COLLECTION" fulltext="donotMerge1->notEmpty">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="donotMerge1.v_agIndvPIN">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="40">
+        <valueSetCell/>
+        <expressionCell external="(agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="39">
+        <valueSetCell/>
+        <expressionCell external="( agIndv1.agIndvPIN=agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="20" variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="ag1.v_agCanBeRemovedSw">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.v_agCanBeRemovedSw" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agCanBeRemovedSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="80">
+        <valueSetCell/>
+        <expressionCell external="caseRel->exists((caseRel.sourceIndvID=ag2.createdForIndivID and caseRel.refIndvID=ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR'  or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB'))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="caseRel ->exists( ( caseRel.sourceIndvID = ag2.createdForIndivID and caseRel.refIndvID = ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR' or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB' ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseRel" datatype="Boolean" termtype="COLLECTION" fulltext="caseRel->notEmpty">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.sourceIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag1.createdForIndivID">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="caseRel.relCode">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.refIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="6">
+      <ruleColumnList ruleId="0" columnWidth="43" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="40" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'C' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'L' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.programCd = ag1.programCd ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.programCd">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.subProgramCode = ag1.subProgramCode ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.subProgramCode">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv1.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv2.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.agIndvPIN = agIndv1.agIndvPIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agRequiredRelationshipRule = ag2.v_agRequiredRelationshipRule and ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredRelationshipRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredRelationshipRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = caseIndv.individualID and caseIndv.primaryPersonSw = 'Y' ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseIndv.individualID">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="primaryPersonSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.primaryPersonSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( donotMerge1 ->exists( donotMerge1.v_agIndvPIN = ag2.createdForIndivID ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="donotMerge1" datatype="Boolean" termtype="COLLECTION" fulltext="donotMerge1->notEmpty">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="donotMerge1.v_agIndvPIN">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agCanBeRemovedSw ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agCanBeRemovedSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.v_agCanBeRemovedSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agCanBeRemovedSw">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="51" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'C' ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'L' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.programCd = ag1.programCd ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.programCd">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag2.subProgramCode = ag1.subProgramCode ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag2.subProgramCode">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv1.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.v_IndvCanBeMergedSw = true ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IndvCanBeMergedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="agIndv2.v_IndvCanBeMergedSw">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv2.agIndvPIN = agIndv1.agIndvPIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agRequiredRelationshipRule = ag2.v_agRequiredRelationshipRule and ag1.v_agRequiredTaxFilerRule = ag2.v_agRequiredTaxFilerRule ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredRelationshipRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredRelationshipRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agRequiredRelationshipRule">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agRequiredTaxFilerRule" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agRequiredTaxFilerRule">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = caseIndv.individualID and caseIndv.primaryPersonSw = 'Y' ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseIndv.individualID">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="primaryPersonSw" datatype="String" termtype="ATTRIBUTE" fulltext="caseIndv.primaryPersonSw">
+                <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( donotMerge1 ->exists( donotMerge1.v_agIndvPIN = ag2.createdForIndivID ) ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="donotMerge1" datatype="Boolean" termtype="COLLECTION" fulltext="donotMerge1->notEmpty">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="donotMerge1.v_agIndvPIN">
+                <parentTerm text="donotMerge1" datatype="DonotMergeIndvList" termtype="ENTITY" fulltext="donotMerge1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.1">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv1.origPartStatusCode = 'CC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( agIndv1.agIndvPIN = agIndv2.agIndvPIN and agIndv2.origPartStatusCode = 'EC' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv1.agIndvPIN">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv2.origPartStatusCode">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="agIndvPIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="agIndv2.agIndvPIN">
+                <parentTerm text="agIndv2" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv2" variable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0">
+                  <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agCanBeRemovedSw ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agCanBeRemovedSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( caseRel ->exists( ( caseRel.sourceIndvID = ag2.createdForIndivID and caseRel.refIndvID = ag1.createdForIndivID and caseRel.relCode = 'STR' or caseRel.relCode = 'BTR' or caseRel.relCode = 'HSR' or caseRel.relCode = 'HBR' or caseRel.relCode = 'SSR' or caseRel.relCode = 'STB' ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseRel" datatype="Boolean" termtype="COLLECTION" fulltext="caseRel->notEmpty">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.sourceIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag2.createdForIndivID">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="createdForIndivID" datatype="Integer" termtype="ATTRIBUTE" fulltext="ag1.createdForIndivID">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="caseRel.relCode">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="caseRel.refIndvID">
+                <parentTerm text="caseRel" datatype="RelationShip" termtype="ENTITY" fulltext="caseRel" variable="#//@ruleset/@logicalVariables.0/@extension.2/@extension.0">
+                  <parentTerm text="caseIndv" datatype="Individual" termtype="ENTITY" fulltext="caseIndv" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                    <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag2.v_agCanBeRemovedSw = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_agCanBeRemovedSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag2.v_agCanBeRemovedSw">
+                <parentTerm text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2">
+                  <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="ag2" datatype="Ag_Group" termtype="ENTITY" fulltext="ag2">
+                <parentTerm text="case" datatype="Case" termtype="ENTITY" fulltext="case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

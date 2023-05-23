@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="2" buildNumber="8017" updateStamp="_WEKwgKYwEe2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_Vc2R0KYwEe2H0o2p0FFfeg" key="2" type="Validation" severity="Error" textKey="RulesheetModelAPIImpl.Validation.Reference.Vocabulary">
+    <textVariables>/C:/Users/smeldon/Workspaces/6.3/BRE52/MAGI/SF03_01_MAGI.ecore</textVariables>
+  </validationMessages>
+  <ruleset vocabulary="SF03_01_MAGI.ecore#/">
+    <rule>
+      <condition disabled="true"/>
+      <condition/>
+      <condition disabled="true"/>
+      <condition/>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="indv.v_IsFilerHasQualifiedRelToIndv = F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition disabled="true">
+        <opaqueExpression expression="(((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ))))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' )))" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ))))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' )))" rhs="T"/>
+      </condition>
+      <condition disabled="true"/>
+      <condition/>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="indv.v_IsFilerHasQualifiedRelToIndv = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition disabled="true"/>
+      <condition/>
+      <condition disabled="true">
+        <opaqueExpression expression="(((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ))))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' )))" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="(((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ))))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' )))" rhs="T"/>
+      </condition>
+      <condition/>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="indv.v_IsFilerHasQualifiedRelToIndv = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition disabled="true"/>
+      <condition/>
+      <condition disabled="true"/>
+      <condition/>
+      <condition>
+        <opaqueExpression expression="(indv.individualID=taxFiler.taxFilerSpousePIN)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( indv.individualID = taxFiler.taxFilerSpousePIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="indv.individualID=taxFiler.taxFilerSpousePIN" rhs="T"/>
+      </condition>
+      <action documentingRuleStatements="#//@ruleset/@ruleStatements.0">
+        <opaqueExpression expression="indv.v_IsFilerHasQualifiedRelToIndv = T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0 #//@ruleset/@logicalVariables.0/@extension.1">
+      <opaqueExpression expression="ag.perform_SF03_01_RDT113 = true">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag.perform_SF03_01_RDT113 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="perform_SF03_01_RDT113" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag.perform_SF03_01_RDT113">
+              <parentTerm text="ag" datatype="Ag_Group" termtype="ENTITY" fulltext="ag" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </parentTerm>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Info" ruleModelElements="#//@ruleset/@rules.0/@actions.0 #//@ruleset/@rules.1/@actions.0 #//@ruleset/@rules.2/@actions.0 #//@ruleset/@rules.3/@actions.0">
+      <text expression="Individual is marked as a Tax Filer">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Tax Filer" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Tax Dependent">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Tax Dependent" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="The filer for the individual is a qualified parent or spouse">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The filer for the individual is a qualified parent or spouse" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as living with non-joint filing parents">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as living with non-joint filing parents" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as Claimed as Tax Dependent by Someone Outside of Home">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as Claimed as Tax Dependent by Someone Outside of Home" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement/>
+    <ruleStatement>
+      <text expression="Mark individual as requiring Tax Filer Household Composition Rules">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Mark individual as requiring Tax Filer Household Composition Rules" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement>
+      <text expression="Mark individual as requiring Relationship Household Composition Rules">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Mark individual as requiring Relationship Household Composition Rules" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="SF03_01_MAGI.ecore#//Case" filters="#//@ruleset/@filters.0">
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Case/individual">
+        <alias value="indv"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//RelationShip" traversedAssocRole="SF03_01_MAGI.ecore#//Individual/relationShip">
+          <alias value="rel"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/refIndvID"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/sourceIndvID"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/relCode"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvTaxFilerSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsChildLiveWithNonJointFileParentSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsIndvReqTaxFilerHCRuleSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsIndvTaxDependentSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsTaxDepClaimedOutsideHomeSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsIndvReqRelHCRuleSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_ParentOfChild"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_CareTakerOfChild"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsChildLessAdultSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsIndvHavingTaxDepSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/indvBCPMutualSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IsFilerHasQualifiedRelToIndv"/>
+      </extension>
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Group" traversedAssocRole="SF03_01_MAGI.ecore#//Case/agGroup" filters="#//@ruleset/@filters.0">
+        <alias value="ag"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Group/agIndividual">
+          <alias value="agIndv"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT113"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT114"/>
+      </extension>
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//TaxDependent" traversedAssocRole="SF03_01_MAGI.ecore#//Case/taxDependent">
+        <alias value="taxFiler"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxDepPinNum"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxDepVericationCd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxFilerDependClaimInd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxFilerPinNum"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxFilerSpousePIN"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//TaxDependent/taxFilerStsInd"/>
+      </extension>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/v_UniversalTargetPIN"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/v_IsUniversalTargetFound"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="22" sashWeightScope="78" sashWeightConditionsActions="63" sashWeightConditionsIf="41">
+    <actionSection rowCount="49" columnWidthFactor="0.5">
+      <actionItemList rowHeight="20">
+        <valueSetCell/>
+        <expressionCell external="indv.v_IsFilerHasQualifiedRelToIndv">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder" expanded="true">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag.perform_SF03_01_RDT113 = true" filter="#//@ruleset/@filters.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.6"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.7"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.8"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.9"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.10"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.11"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.12"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="ag.perform_SF03_01_RDT113 = true" filter="#//@ruleset/@filters.0"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.1/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.1/@extension.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.2">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.2/@referencedAttributes.5"/>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="49">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="ag.perform_SF03_01_RDT113 = true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag.perform_SF03_01_RDT113 = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="perform_SF03_01_RDT113" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag.perform_SF03_01_RDT113">
+                <parentTerm text="ag" datatype="Ag_Group" termtype="ENTITY" fulltext="ag" variable="#//@ruleset/@logicalVariables.0/@extension.1">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" scrollRowTop="2" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference external="A"/>
+        <text external="Individual is marked as a Tax Filer">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Tax Filer" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference/>
+        <text external="Individual is marked as a Tax Dependent">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Tax Dependent" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference/>
+        <text external="The filer for the individual is a qualified parent or spouse">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="The filer for the individual is a qualified parent or spouse" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference/>
+        <text external="Individual is marked as living with non-joint filing parents">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as living with non-joint filing parents" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference/>
+        <text external="Individual is marked as Claimed as Tax Dependent by Someone Outside of Home">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as Claimed as Tax Dependent by Someone Outside of Home" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference/>
+        <text/>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.6">
+        <reference/>
+        <text external="Mark individual as requiring Tax Filer Household Composition Rules">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Mark individual as requiring Tax Filer Household Composition Rules" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.7">
+        <reference/>
+        <text external="Mark individual as requiring Relationship Household Composition Rules">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Mark individual as requiring Relationship Household Composition Rules" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="42" columnWidthFactor="0.5">
+      <conditionItemList disabled="true" rowHeight="119">
+        <valueSetCell/>
+        <expressionCell external="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' )))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="98">
+        <valueSetCell/>
+        <expressionCell external="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerPinNum and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' )))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList disabled="true" rowHeight="123">
+        <valueSetCell/>
+        <expressionCell external="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' )))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="114">
+        <valueSetCell/>
+        <expressionCell external="((taxFiler.taxFilerPinNum>0 and taxFiler.taxDepPinNum=indv.individualID) and (indv.individualID=rel.refIndvID and rel.sourceIndvID =taxFiler.taxFilerSpousePIN and (rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' )))">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="indv.individualID=taxFiler.taxFilerSpousePIN">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.individualID = taxFiler.taxFilerSpousePIN" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="11">
+      <ruleColumnList ruleId="0" columnWidth="43" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = F" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="43" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerPinNum and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' or rel.relCode = 'SON' or rel.relCode = 'DAU' or rel.relCode = 'STS' or rel.relCode = 'STD' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ( taxFiler.taxFilerPinNum > 0 and taxFiler.taxDepPinNum = indv.individualID ) and ( indv.individualID = rel.refIndvID and rel.sourceIndvID = taxFiler.taxFilerSpousePIN and ( rel.relCode = 'MTR' or rel.relCode = 'FTR' or rel.relCode = 'STF' or rel.relCode = 'STM' or rel.relCode = 'AFR' ) ) ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxDepPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxDepPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerPinNum" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerPinNum">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="refIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.refIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="sourceIndvID" datatype="Integer" termtype="ATTRIBUTE" fulltext="rel.sourceIndvID">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="relCode" datatype="String" termtype="ATTRIBUTE" fulltext="rel.relCode">
+                <parentTerm text="rel" datatype="RelationShip" termtype="ENTITY" fulltext="rel" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+      <ruleColumnList ruleId="3" columnWidth="100" pRule="#//@ruleset/@rules.3">
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="-"/>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( indv.individualID = taxFiler.taxFilerSpousePIN ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="taxFilerSpousePIN" datatype="Integer" termtype="ATTRIBUTE" fulltext="taxFiler.taxFilerSpousePIN">
+                <parentTerm text="taxFiler" datatype="TaxDependent" termtype="ENTITY" fulltext="taxFiler" variable="#//@ruleset/@logicalVariables.0/@extension.2">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="individualID" datatype="Integer" termtype="ATTRIBUTE" fulltext="indv.individualID">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="indv.v_IsFilerHasQualifiedRelToIndv = T" datatype="Boolean" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="v_IsFilerHasQualifiedRelToIndv" datatype="Boolean" termtype="ATTRIBUTE" fulltext="indv.v_IsFilerHasQualifiedRelToIndv">
+                <parentTerm text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="indv" datatype="Individual" termtype="ENTITY" fulltext="indv">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </actionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

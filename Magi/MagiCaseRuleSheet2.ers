@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="2" buildNumber="8020" updateStamp="_GkEFUN55EeuALK9kSny1Mw" externalChecksum="547642878:507989954:3413468793" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <ruleset vocabularyUpdateStamp="_W49DoGsLEeuBPvMDWWMpFQ" vocabulary="MagiCase.ecore#/">
+    <rule>
+      <condition/>
+      <action>
+        <opaqueExpression expression="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet = 5432.344">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet = 5432.344" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="budm03AmtIncSlfNet" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet">
+                <parentTerm text="pocIndvMaBud" datatype="PocIndvMaBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                    <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                      <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                        <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvMaBud" datatype="PocIndvMaBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm = 245.678">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm = 245.678" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="buda03AmtDsrgStpChldComm" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm">
+                <parentTerm text="pocIndvTanfBud" datatype="PocIndvTanfBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2">
+                  <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                    <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                      <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                        <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvTanfBud" datatype="PocIndvTanfBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2">
+                <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn = today">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn = today" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="selfDteSelfBgn" datatype="DateTime" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn">
+                <parentTerm text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd = today.addMonths(3)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd = today.addMonths ( 3 )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="selfDteSelfEnd" datatype="DateTime" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd">
+                <parentTerm text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+      <action>
+        <opaqueExpression expression="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome=222.222">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome = 222.222" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="inymAmtInfreqIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome">
+                <parentTerm text="pocIndvUinc" datatype="PocIndvUinc" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvUinc" datatype="PocIndvUinc" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(PocCase.caseNbrCase > 0)=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( PocCase.caseNbrCase > 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseNbrCase" datatype="Integer" termtype="ATTRIBUTE" fulltext="PocCase.caseNbrCase">
+                <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="PocCase.caseNbrCase > 0" rhs="T"/>
+      </condition>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="(PocCase.caseNbrCase > 0)=false">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( PocCase.caseNbrCase > 0 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseNbrCase" datatype="Integer" termtype="ATTRIBUTE" fulltext="PocCase.caseNbrCase">
+                <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="PocCase.caseNbrCase > 0" rhs="F"/>
+      </condition>
+    </rule>
+    <logicalVariable entity="MagiCase.ecore#//PocCase">
+      <extension association="true" entity="MagiCase.ecore#//PocAg" traversedAssocRole="MagiCase.ecore#//PocCase/pocAgs">
+        <extension association="true" entity="MagiCase.ecore#//PocIndvCase" traversedAssocRole="MagiCase.ecore#//PocAg/pocIndvCase">
+          <extension association="true" entity="MagiCase.ecore#//PocIndvPtr2" traversedAssocRole="MagiCase.ecore#//PocIndvCase/pocIndvPtr2">
+            <extension association="true" entity="MagiCase.ecore#//PocIndvElig" traversedAssocRole="MagiCase.ecore#//PocIndvPtr2/pocIndvElig">
+              <referencedAttributes attribute="MagiCase.ecore#//PocIndvElig/ielgCdeIndSsiResult"/>
+            </extension>
+            <extension association="true" entity="MagiCase.ecore#//PocIndvMaBud" traversedAssocRole="MagiCase.ecore#//PocIndvPtr2/pocIndvMaBud">
+              <referencedAttributes attribute="MagiCase.ecore#//PocIndvMaBud/budm03AmtIncSlfNet"/>
+            </extension>
+            <extension association="true" entity="MagiCase.ecore#//PocIndvTanfBud" traversedAssocRole="MagiCase.ecore#//PocIndvPtr2/pocIndvTanfBud">
+              <referencedAttributes attribute="MagiCase.ecore#//PocIndvTanfBud/buda03AmtDsrgStpChldComm"/>
+            </extension>
+          </extension>
+          <extension association="true" entity="MagiCase.ecore#//PocIndvSelfEmpl" traversedAssocRole="MagiCase.ecore#//PocIndvCase/pocIndvSelfEmpl">
+            <referencedAttributes attribute="MagiCase.ecore#//PocIndvSelfEmpl/selfDteSelfBgn"/>
+            <referencedAttributes attribute="MagiCase.ecore#//PocIndvSelfEmpl/selfDteSelfEnd"/>
+          </extension>
+          <extension association="true" entity="MagiCase.ecore#//PocIndvUinc" traversedAssocRole="MagiCase.ecore#//PocIndvCase/pocIndvUinc">
+            <referencedAttributes attribute="MagiCase.ecore#//PocIndvUinc/inymAmtInfreqIncome"/>
+          </extension>
+        </extension>
+      </extension>
+      <referencedAttributes attribute="MagiCase.ecore#//PocCase/caseNbrCase"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable">
+    <actionSection rowCount="50" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet = 5432.344">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet = 5432.344" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="budm03AmtIncSlfNet" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud.budm03AmtIncSlfNet">
+                <parentTerm text="pocIndvMaBud" datatype="PocIndvMaBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                    <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                      <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                        <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvMaBud" datatype="PocIndvMaBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvMaBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm = 245.678">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm = 245.678" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="buda03AmtDsrgStpChldComm" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud.buda03AmtDsrgStpChldComm">
+                <parentTerm text="pocIndvTanfBud" datatype="PocIndvTanfBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2">
+                  <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                    <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                      <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                        <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                      </parentTerm>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvTanfBud" datatype="PocIndvTanfBud" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2.pocIndvTanfBud" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2">
+                <parentTerm text="pocIndvPtr2" datatype="PocIndvPtr2" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvPtr2" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn = today">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn = today" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="selfDteSelfBgn" datatype="DateTime" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfBgn">
+                <parentTerm text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd = today.addMonths(3)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd = today.addMonths ( 3 )" datatype="DateTime" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="selfDteSelfEnd" datatype="DateTime" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl.selfDteSelfEnd">
+                <parentTerm text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvSelfEmpl" datatype="PocIndvSelfEmpl" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvSelfEmpl" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+      <actionItemList>
+        <valueSetCell/>
+        <expressionCell external="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome=222.222">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome = 222.222" datatype="Decimal" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="inymAmtInfreqIncome" datatype="Decimal" termtype="ATTRIBUTE" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc.inymAmtInfreqIncome">
+                <parentTerm text="pocIndvUinc" datatype="PocIndvUinc" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2">
+                  <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                    <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                      <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                    </parentTerm>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="pocIndvUinc" datatype="PocIndvUinc" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase.pocIndvUinc" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2">
+                <parentTerm text="pocIndvCase" datatype="PocIndvCase" termtype="ENTITY" fulltext="PocCase.pocAgs.pocIndvCase" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="pocAgs" datatype="PocAg" termtype="ENTITY" fulltext="PocCase.pocAgs" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.2/@referencedAttributes.0"/>
+                </children>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.1/@referencedAttributes.1"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.2/@referencedAttributes.0"/>
+              </children>
+            </children>
+          </children>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50"/>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400"/>
+    <conditionSection rowCount="50" columnWidthFactor="0.5">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="PocCase.caseNbrCase > 0">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="PocCase.caseNbrCase > 0" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseNbrCase" datatype="Integer" termtype="ATTRIBUTE" fulltext="PocCase.caseNbrCase">
+                <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="20">
+      <ruleColumnList ruleId="0" columnWidth="100" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="100" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( PocCase.caseNbrCase > 0 ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseNbrCase" datatype="Integer" termtype="ATTRIBUTE" fulltext="PocCase.caseNbrCase">
+                <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+        <actionValueSetCellList valueSet=""/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="2" columnWidth="100" pRule="#//@ruleset/@rules.2">
+        <conditionValueSetCellList valueSet="F">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( PocCase.caseNbrCase > 0 ) = false" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="caseNbrCase" datatype="Integer" termtype="ATTRIBUTE" fulltext="PocCase.caseNbrCase">
+                <parentTerm text="PocCase" datatype="PocCase" termtype="ENTITY" fulltext="PocCase" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>

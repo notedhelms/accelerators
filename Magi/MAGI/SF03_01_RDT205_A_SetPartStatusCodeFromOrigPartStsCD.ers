@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.corticon.rulesemf.assetmodel:RulesheetAsset xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.corticon.rulesemf.asg="http:///com/corticon/rulesemf/asg.ecore" xmlns:com.corticon.rulesemf.assetmodel="http:///com/corticon/rulesemf/assetmodel.ecore" xmlns:com.corticon.rulesemf.common="http:///com/corticon/rulesemf/common.ecore" xmlns:com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable="http:///com/corticon/rulesemf/viewrulemodel/rulesheet/decisiontable.ecore" majorVersionNumber="6" minorVersionNumber="1" majorServiceNumber="2" minorServiceNumber="2" buildNumber="8017" updateStamp="_j1Q9UKY6Ee2H0o2p0FFfeg" externalChecksum="3391387159:507989954:2614682131" studioType="Java">
+  <languageCode>en_US</languageCode>
+  <validationMessages xsi:type="com.corticon.rulesemf.common:InternationalValidationMessage" UUID="_jNNe0KY6Ee2H0o2p0FFfeg" key="2" type="Validation" severity="Error" textKey="RulesheetModelAPIImpl.Validation.Reference.Vocabulary">
+    <textVariables>/C:/Users/smeldon/Workspaces/6.3/BRE52/MAGI/SF03_01_MAGI.ecore</textVariables>
+  </validationMessages>
+  <ruleset vocabulary="SF03_01_MAGI.ecore#/">
+    <rule>
+      <condition/>
+      <condition/>
+      <condition/>
+      <condition disabled="true"/>
+      <action/>
+    </rule>
+    <rule>
+      <condition>
+        <opaqueExpression expression="ag1.programCd = 'MAG'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.programCd = 'MAG'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="ag1.programCd" rhs="'MAG'"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((ag1.subProgramCode= 'E' or ag1.subProgramCode= 'M'))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.subProgramCode = 'E' or ag1.subProgramCode = 'M' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(ag1.subProgramCode= 'E' or ag1.subProgramCode= 'M')" rhs="T"/>
+      </condition>
+      <condition>
+        <opaqueExpression expression="((ag1.v_agNewExtensionSw=true or ag1.v_agNewExtensionChildSw=true))=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agNewExtensionSw = true or ag1.v_agNewExtensionChildSw = true ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agNewExtensionChildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionChildSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agNewExtensionSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="(ag1.v_agNewExtensionSw=true or ag1.v_agNewExtensionChildSw=true)" rhs="T"/>
+      </condition>
+      <condition disabled="true">
+        <opaqueExpression expression="(agIndv1.partStatusCode= ' ')=true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.partStatusCode = ' ' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+        <viewExpressions lhs="agIndv1.partStatusCode= ' '" rhs="T"/>
+      </condition>
+      <action>
+        <opaqueExpression expression="agIndv1.partStatusCode =agIndv1.origPartStatusCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = agIndv1.origPartStatusCode" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </opaqueExpression>
+      </action>
+    </rule>
+    <filter logicalVariables="#//@ruleset/@logicalVariables.0">
+      <opaqueExpression expression="Case.perform_SF03_01_RDT205_A = true">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Case.perform_SF03_01_RDT205_A = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+          <referencedTermList>
+            <terms text="perform_SF03_01_RDT205_A" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Case.perform_SF03_01_RDT205_A">
+              <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+            </terms>
+          </referencedTermList>
+        </parserOutput>
+      </opaqueExpression>
+    </filter>
+    <ruleStatement post="Info">
+      <text expression="Individual is requesting healthcare and can be eligible as part of the case">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is requesting healthcare and can be eligible as part of the case" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Former Foster Care Youth">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Former Foster Care Youth" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Pregnant Woman">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Pregnant Woman" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Parent of a Child">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Parent of a Child" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Caretaker of a Child">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Caretaker of a Child" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a CEN">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a CEN" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a Child">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Child" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is marked as a NLRR child">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a NLRR child" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement post="Info">
+      <text expression="Individual is a marked childless adult">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is a marked childless adult" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <ruleStatement>
+      <text expression="Individual is requesting a deductible">
+        <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is requesting a deductible" expressiontype="BRSTATEMENT">
+          <referencedTermList/>
+        </parserOutput>
+      </text>
+    </ruleStatement>
+    <logicalVariable entity="SF03_01_MAGI.ecore#//Case" filters="#//@ruleset/@filters.0">
+      <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Group" traversedAssocRole="SF03_01_MAGI.ecore#//Case/agGroup">
+        <alias value="ag1"/>
+        <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Ag_Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Group/agIndividual">
+          <alias value="agIndv1"/>
+          <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//Individual" traversedAssocRole="SF03_01_MAGI.ecore#//Ag_Individual/individual">
+            <alias value="indv1"/>
+            <extension explicit="true" association="true" entity="SF03_01_MAGI.ecore#//RelationShip" traversedAssocRole="SF03_01_MAGI.ecore#//Individual/relationShip">
+              <alias value="rel"/>
+              <referencedAttributes attribute="SF03_01_MAGI.ecore#//RelationShip/relCode"/>
+            </extension>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/ageNum"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualID"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_IndvTaxFilerSw"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/v_indvMarkedAsEligInAtleaseOneAg"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/individualIDForOutput"/>
+            <referencedAttributes attribute="SF03_01_MAGI.ecore#//Individual/magiSelectedForClosureSw"/>
+          </extension>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/origPartStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_IsIndvPartStsCodeCountedSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_IsIndvPartStsCodeEligibleSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agTargetSw"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvPIN"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/failureReasonCd"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/v_ageInMonths"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvPaymentBegDt"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvPaymentEndDt"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/partStatusCode"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agIndvOptTypCD"/>
+          <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Individual/agNFPIN"/>
+        </extension>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/createdForIndivID"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/programCd"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/subProgramCode"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT121"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT160"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT140"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT141"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT142"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT143"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT144"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT150"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredRelationshipRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agRequiredTaxFilerRule"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT130"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT200_A"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT201_A"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT202_A"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/perform_SF03_01_RDT203_A"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agNewExtensionChildSw"/>
+        <referencedAttributes attribute="SF03_01_MAGI.ecore#//Ag_Group/v_agNewExtensionSw"/>
+      </extension>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/tempDate"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT206"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT205"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT207"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT210"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT220"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT221"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT224"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT225"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/paymentBeginDt"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/paymentEndDt"/>
+      <referencedAttributes attribute="SF03_01_MAGI.ecore#//Case/perform_SF03_01_RDT205_A"/>
+    </logicalVariable>
+  </ruleset>
+  <rulesheetViewList xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:DecisionTable" advanced="true" sashWeightAdvancedView="23" sashWeightScope="89" sashWeightConditionsActions="42" sashWeightConditionsIf="68">
+    <actionSection rowCount="31" columnWidthFactor="0.5">
+      <actionItemList>
+        <valueSetCell valueSet=""/>
+        <expressionCell external="agIndv1.partStatusCode =agIndv1.origPartStatusCode">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = agIndv1.origPartStatusCode" datatype="String" expressiontype="ASSIGNMENT" enumeration="false" cellValue="false">
+            <modifiedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </modifiedTermList>
+            <referencedTermList>
+              <terms text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="origPartStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.origPartStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </actionItemList>
+    </actionSection>
+    <scopeSection>
+      <rootNode>
+        <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeEntity" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0">
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFolder">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeFilter" expression="Case.perform_SF03_01_RDT205_A = true" filter="#//@ruleset/@filters.0"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.0"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0">
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0">
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAssociation" expanded="true" logicalVariable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0">
+                  <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.0"/>
+                </children>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+                <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+              </children>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.1"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.2"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.3"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.4"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.5"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.6"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.7"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.8"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.9"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.10"/>
+              <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0/@referencedAttributes.11"/>
+            </children>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.0"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.1"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.2"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.3"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.4"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.5"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.6"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.7"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.8"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.9"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.10"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.11"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.12"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.13"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.14"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.15"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.16"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.17"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.18"/>
+            <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@extension.0/@referencedAttributes.19"/>
+          </children>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.1"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.2"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.3"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.4"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.5"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.6"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.7"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.8"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.9"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.10"/>
+          <children xsi:type="com.corticon.rulesemf.viewrulemodel.rulesheet.decisiontable:ScopeAttribute" referencedAttribute="#//@ruleset/@logicalVariables.0/@referencedAttributes.11"/>
+        </children>
+      </rootNode>
+    </scopeSection>
+    <filterSection rowCount="50">
+      <filterItemList filter="#//@ruleset/@filters.0">
+        <expressionCell external="Case.perform_SF03_01_RDT205_A = true">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Case.perform_SF03_01_RDT205_A = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="perform_SF03_01_RDT205_A" datatype="Boolean" termtype="ATTRIBUTE" fulltext="Case.perform_SF03_01_RDT205_A">
+                <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </filterItemList>
+    </filterSection>
+    <ruleStatementSection rowCount="50" columnWidthReference="50" columnWidthPostSeverity="75" columnWidthAlias="100" columnWidthID="50" columnWidthText="600" columnWidthRuleName="100" columnWidthRuleLink="100" columnWidthSourceName="100" columnWidthSourceLink="100" columnWidthCategory="100" columnWidthComments="400">
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.0">
+        <reference/>
+        <text external="Individual is requesting healthcare and can be eligible as part of the case">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is requesting healthcare and can be eligible as part of the case" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.1">
+        <reference/>
+        <text external="Individual is marked as a Former Foster Care Youth">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Former Foster Care Youth" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.2">
+        <reference/>
+        <text external="Individual is marked as a Pregnant Woman">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Pregnant Woman" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.3">
+        <reference/>
+        <text external="Individual is marked as a Parent of a Child">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Parent of a Child" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.4">
+        <reference/>
+        <text external="Individual is marked as a Caretaker of a Child">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Caretaker of a Child" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.5">
+        <reference/>
+        <text external="Individual is marked as a CEN">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a CEN" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.6">
+        <reference/>
+        <text external="Individual is marked as a Child">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a Child" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.7">
+        <reference/>
+        <text external="Individual is marked as a NLRR child">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is marked as a NLRR child" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.8">
+        <reference/>
+        <text external="Individual is a marked childless adult">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is a marked childless adult" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+      <ruleStatementItemList ruleStatement="#//@ruleset/@ruleStatements.9">
+        <reference/>
+        <text external="Individual is requesting a deductible">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="Individual is requesting a deductible" expressiontype="BRSTATEMENT">
+            <referencedTermList/>
+          </parserOutput>
+        </text>
+      </ruleStatementItemList>
+    </ruleStatementSection>
+    <conditionSection rowCount="39" columnWidthFactor="0.7817109144542773">
+      <conditionItemList variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="ag1.programCd">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.programCd" datatype="String" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList rowHeight="24" variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="(ag1.subProgramCode= 'E' or ag1.subProgramCode= 'M')">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.subProgramCode = 'E' or ag1.subProgramCode = 'M' )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList>
+        <valueSetCell/>
+        <expressionCell external="(ag1.v_agNewExtensionSw=true or ag1.v_agNewExtensionChildSw=true)">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ag1.v_agNewExtensionSw = true or ag1.v_agNewExtensionChildSw = true )" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agNewExtensionChildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionChildSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agNewExtensionSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+      <conditionItemList disabled="true" variableMode="Literal">
+        <valueSetCell/>
+        <expressionCell external="agIndv1.partStatusCode= ' '">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="agIndv1.partStatusCode = ' '" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </expressionCell>
+      </conditionItemList>
+    </conditionSection>
+    <ruleSection columnCount="18">
+      <ruleColumnList ruleId="0" columnWidth="126" pRule="#//@ruleset/@rules.0">
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet=""/>
+        <conditionValueSetCellList valueSet="-"/>
+        <actionValueSetCellList/>
+      </ruleColumnList>
+      <ruleColumnList ruleId="1" columnWidth="113" pRule="#//@ruleset/@rules.1">
+        <conditionValueSetCellList valueSet="'MAG'">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="ag1.programCd = 'MAG'" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="programCd" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.programCd">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.subProgramCode = 'E' or ag1.subProgramCode = 'M' ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="subProgramCode" datatype="String" termtype="ATTRIBUTE" fulltext="ag1.subProgramCode">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( ( ag1.v_agNewExtensionSw = true or ag1.v_agNewExtensionChildSw = true ) ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="v_agNewExtensionChildSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionChildSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+              <terms text="v_agNewExtensionSw" datatype="Boolean" termtype="ATTRIBUTE" fulltext="ag1.v_agNewExtensionSw">
+                <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                  <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <conditionValueSetCellList valueSet="T">
+          <parserOutput xsi:type="com.corticon.rulesemf.asg:Expression" text="( agIndv1.partStatusCode = ' ' ) = true" datatype="Boolean" expressiontype="EXPRESSION" enumeration="false" cellValue="false">
+            <referencedTermList>
+              <terms text="partStatusCode" datatype="String" termtype="ATTRIBUTE" fulltext="agIndv1.partStatusCode">
+                <parentTerm text="agIndv1" datatype="Ag_Individual" termtype="ENTITY" fulltext="agIndv1" variable="#//@ruleset/@logicalVariables.0/@extension.0/@extension.0">
+                  <parentTerm text="ag1" datatype="Ag_Group" termtype="ENTITY" fulltext="ag1" variable="#//@ruleset/@logicalVariables.0/@extension.0">
+                    <parentTerm text="Case" datatype="Case" termtype="ENTITY" fulltext="Case" variable="#//@ruleset/@logicalVariables.0"/>
+                  </parentTerm>
+                </parentTerm>
+              </terms>
+            </referencedTermList>
+          </parserOutput>
+        </conditionValueSetCellList>
+        <actionValueSetCellList valueSet="X"/>
+      </ruleColumnList>
+    </ruleSection>
+  </rulesheetViewList>
+</com.corticon.rulesemf.assetmodel:RulesheetAsset>
