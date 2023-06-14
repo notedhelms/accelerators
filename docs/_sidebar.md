@@ -1,5 +1,0 @@
-- [**Corticon Studio**](studio/README.md 'Rule Authoring in Progress Corticon Studio')
-- [**Corticon Server**](server/README.md 'Deploying Rules to Progress Corticon Server')
-- [**Corticon.js**](js/README.md 'Generate JavaScript Decision Services with Progress Corticon.js')
-- [**Dynamic Forms**](forms/README.md 'Build client side Dynamic Forms using Progress Corticon.js')
-- [**FAQ**](faq/README.md)
