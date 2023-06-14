@@ -1,1 +1,1 @@
-<video src=".assets/Importing%20a%20Project.mp4" controls title="Importing a Project"></video>
+[<video src=".assets/Importing%20a%20Project.mp4" controls title="Importing a Project"></video>](https://raw.githubusercontent.com/corticon/templates/main/.assets/Importing%20a%20Project.mp4)https://raw.githubusercontent.com/corticon/templates/main/.assets/Importing%20a%20Project.mp4
