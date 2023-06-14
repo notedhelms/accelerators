@@ -2,6 +2,7 @@
 
 ## How to Download and Import a Template
 
+https://github.com/corticon/templates/assets/40301564/466d76ed-b705-48e6-9f23-bfc2dbe6e736
 
 ## Template Library
 
