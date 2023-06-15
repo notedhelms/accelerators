@@ -1,9 +1,5 @@
 # Corticon Template Library
 
-## How to Download and Import a Template
-
-<video src="assets/Importing%20a%20Project.mp4" controls title="Importing a Project"></video>
-
 ## Template Library
 
 * [Bayes Probability](<Projects/Bayes Probability/README.md>)
