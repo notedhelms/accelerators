@@ -2,18 +2,13 @@
 
 ## Template Library
 
-* [Bayes Probability](<Projects/Bayes Probability/README.md>)
-* [BlackJack Advisor](<Projects/BlackJack Advisor/README.md>)
 * [Calculate Compound Interest](<Projects/Calculate Compound Interest/README.md>)
-* [Car Insurance Claim](<Projects/Car Insurance Claim/README.md>)
 * [Commission Calculations](<Projects/Commission Calculations/README.md>)
-* [Counting words](<Projects/Counting words/README.md>)
-* [Determine Security Yield and Rationality](<Projects/Determine Security Yield and Rationality/README.md>)
 * [Hazardous Gas First Order Decay](<Projects/Hazardous Gas First Order Decay/README.md>)
+* [Holidays - Use Case for Advanced Inferencing w. Self Triggering](<Projects/Holidays - Use Case for Advanced Inferencing w. Self Triggering/README.md>)
 * [Matchmaking](Projects/Matchmaking/README.md)
-* [Next Working Day](<Projects/Next Working Day/README.md>)
 * [Oyster Harvesting](<Projects/Oyster Harvesting/README.md>)
 * [Postage Calculation](<Projects/Postage Calculation/README.md>)
-* [Solve for the Heir to the Throne](<Projects/Solve for the Heir to the Throne/README.md>)
+* [Who will be the heir to the throne?](<Projects/Solve for the Heir to the Throne/README.md>)
 * [Sunrise Sunset REST API](<Projects/Sunrise Sunset REST API/README.md>)
-* [Winner of the Race Word Problem](<Projects/Winner of the Race Word Problem/README.md>)
+* [Who won the race?](<Projects/Winner of the Race Word Problem/README.md>)
