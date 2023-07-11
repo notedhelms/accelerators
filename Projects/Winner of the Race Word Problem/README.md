@@ -1,5 +1,8 @@
 # Rule Authoring in Practice: ‘Off to the Races’
 
+[Download Project](https://github.com/corticon/templates/blob/main/Projects/Winner%20of%20the%20Race%20Word%20Problem/Winner%20of%20the%20Race%20Word%20Problem.zip)
+
+
 **Seven runners enter a race. The following rules describe the race results:**
 
 1. Tom finished before Harry, Dick and Mary

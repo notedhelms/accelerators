@@ -1,6 +1,9 @@
 # Online Dating Matchmaking
 _Response to Decision Management Community Rule Challenge_
 
+[Download Project](https://github.com/corticon/templates/blob/main/Projects/Matchmaking/Matchmaking.zip)
+
+
 ## Challenge Prompt:
 
 Consider the following situation. You have been approached by an online dating service that wants to

@@ -1,3 +1,9 @@
+# Holidays - Use Case for Advanced Inferencing w. Self Triggering
+
+[Download Project](https://github.com/corticon/templates/blob/main/Projects/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip
+)
+
+
 Advanced Inferencing with Self-Triggering is needed when the conditions of a rule may be changed by its own actions (or the actions of another rule) and that rule must be reevaluated when the values change. Independent rules will not be re-evaluated when using Advanced Inferencing. Independent rules will be re-evaluated when using Advanced Inferencing with self-triggering and the rule depends logically on themselves.
 
 For example, consider a set of workforce management rules which must plan into advance scheduling for a project across multiple workdays. The rules must assign a specified number of workdays for the project but consider both weekends and holidays. 

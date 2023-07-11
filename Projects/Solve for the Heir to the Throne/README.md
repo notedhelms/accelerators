@@ -1,5 +1,7 @@
 # Heir to the Throne
 
+[Download Project](https://github.com/corticon/templates/blob/main/Projects/Solve%20for%20the%20Heir%20to%20the%20Throne/Solve%20for%20the%20Heir%20to%20the%20Throne.zip)
+
 A King may have several children, but only the first-born son is designated “heir” to the throne. Create a rules project which determines which of his children is the “Crown Prince” and heir to the throne.
 
 As usual, there is more than one way to solve this problem: for example, we had a submission (we had a good laugh!) in which the author incorporated rules to check for misattributed paternity of children based on blood type matching. Very creative, well done!

@@ -1,5 +1,7 @@
 # Calculate Postage
 
+[Download Project](https://github.com/corticon/templates/blob/main/Projects/Postage%20Calculation/Postage%20Calculation.zip)
+
 Assume you need to mail a letter and the required postage costs (an arbitrary) 1.25 (whatever currency). The Post Office prints stamps in 45, 25, and 10‐cent increments. What combination of stamps is needed to total 1.25? If it’s not possible to total 1.25 exactly, which combination of stamps results in the least amount of wasted, excess postage?
 
 To make this puzzle a little easier to solve, let’s assume that we already have a few stamps (of various values), and simply want to choose the most efficient combination.
