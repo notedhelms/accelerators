@@ -15,6 +15,7 @@ Choose from these rule projects to import into Corticon Studio.
 | [Who will be the heir to the throne?](<Projects/Solve for the Heir to the Throne/README.md>)|Sorting Collections|
 | [Sunrise Sunset REST API](<Projects/Sunrise Sunset REST API/README.md>)|REST Datasource|
 | [Who won the race?](<Projects/Winner of the Race Word Problem/README.md>)|Sorting using Constraints|
+| [IPv4 Validation](<Projects/IPv4 Validation/README.md>)|Regular Expressions|
 
 ## Generating a Corticon.js JavaScript Function? 
 Choose from these rule projects to import into Corticon.js Studio. 
@@ -26,6 +27,8 @@ Choose from these rule projects to import into Corticon.js Studio.
 | [Who won the race?](<Projects/Winner of the Race Word Problem/README.md>)|Sorting using Constraints|
 | [Commission Calculations](<Projects/Commission Calculations/README.md>)|Collections|
 | [Matchmaking](Projects/Matchmaking/README.md)|Filtering|
+| [IPv4 Validation](<Projects/IPv4 Validation/README.md>)|Regular Expressions|
+
 
 ## Building a Corticon.js Dynamic Form? 
 Choose from these rule projects to import into Corticon.js Studio. When ready, generate a Corticon.js Decision Service and place the JavaScript file into the decision services folder of the client-side tester available [here](https://github.com/corticon/corticon.js-samples/tree/master/DynamicForms/CSC). 
