@@ -1,6 +1,14 @@
 # Corticon Starter Templates
 
-## Deploying to Corticon Server? 
+Corticon and Corticon.js can be used for many purposes, so these templates are broken out into three main categories.
+
+- **Classic Templates**: Rule Project templates for use in Corticon Studio and deployed to a Corticon Server
+- **Serverless Templates**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
+-  **Dynamic Form Templates**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
+
+
+
+## Classic Templates
 Choose from these rule projects to import into Corticon Studio. 
 
 | Project Name | Topics Demonstrated |
@@ -17,7 +25,7 @@ Choose from these rule projects to import into Corticon Studio.
 | [Who won the race?](<Projects/Winner of the Race Word Problem/README.md>)|Sorting using Constraints|
 | [IPv4 Validation](<Projects/IPv4 Validation/README.md>)|Regular Expressions|
 
-## Generating a Corticon.js JavaScript Function? 
+## Serverless Templates
 Choose from these rule projects to import into Corticon.js Studio. 
 
 | Project Name | Topics Demonstrated |
@@ -30,7 +38,7 @@ Choose from these rule projects to import into Corticon.js Studio.
 | [IPv4 Validation](<Projects/IPv4 Validation/README.md>)|Regular Expressions|
 
 
-## Building a Corticon.js Dynamic Form? 
+## Dynamic Form Templates
 Choose from these rule projects to import into Corticon.js Studio. When ready, generate a Corticon.js Decision Service and place the JavaScript file into the decision services folder of the client-side tester available [here](https://github.com/corticon/corticon.js-samples/tree/master/DynamicForms/CSC). 
 * [Car Insurance Application](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Car-Insurance)
 * [Registration for a conference](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Conference-Registration)
