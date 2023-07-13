@@ -4,7 +4,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 
 - **Classic Templates**: Rule Project templates for use in Corticon Studio and deployed to a Corticon Server
 - **Serverless Templates**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
--  **Dynamic Form Templates**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
+- **Dynamic Form Templates**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
 
 
