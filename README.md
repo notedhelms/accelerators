@@ -40,7 +40,7 @@ Choose from these rule projects to import into Corticon.js Studio.
 
 ## Dynamic Form Templates
 Choose from these rule projects to import into Corticon.js Studio. When ready, generate a Corticon.js Decision Service and place the JavaScript file into the decision services folder of the client-side tester available [here](https://github.com/corticon/corticon.js-samples/tree/master/DynamicForms/CSC). 
-* [Car Insurance Application](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Car-Insurance)
+* [Car Insurance Application](Dynamic-Form-Templates/Car-Insurance/README.md)
 * [Registration for a conference](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Conference-Registration)
 * [Select State based on country, city based on state](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Country-State-City-Selector)
 * [Type 2 Diabetes Risk](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Diabetes-Risk-Score-(Type-2))
