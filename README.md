@@ -44,7 +44,7 @@ Choose from these rule projects to import into Corticon.js Studio. When ready, g
 * [Registration for a conference](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Conference-Registration)
 * [Select State based on country, city based on state](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Country-State-City-Selector)
 * [Type 2 Diabetes Risk](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Diabetes-Risk-Score-(Type-2))
-* [Garden Plant Doctor](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Plant-Clinic)
+* [Garden Plant Doctor](Dynamic-Form-Templates/Plant-Clinic/README.md)
 * [Prediabetes Risk Score](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Prediabetes-Risk-Score)
 * [Select Vehicle Model based on make, year based on both](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/Select-Vehicle-Model-Make-Year)
 * [Calculate Income Tax Bill for 2021](https://github.com/corticon/templates/tree/main/Dynamic-Form-Templates/US-2021-Income-Tax-Calculator)
