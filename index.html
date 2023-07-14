@@ -10,8 +10,133 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="icon"
     href="https://cdn.bfldr.com/JI444684/at/cs3m9z6k5r2f4hqrn54g6tw/Progress_Stickers_CMYK_Progress_Brand_Mark.pdf?format=png">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-</head>
+    <!-- Theme: Simple (latest v0.x.x) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+    />
+    <style>
+      :root {
+        --base-font-size: 16px;
+        --theme-color: #5fafd7;
+        --link-color: #ff5f87;
+        --code-theme-background: #333;
+        --code-theme-text: #eee;
+        --code-inline-background: #eee;
+        --code-inline-color: #333;
+        --notice-tip-border-color: #5fafd7;
+        --notice-important-border-color: #ff5f87;
+      }
+
+      code[class*="language-"],
+      pre[class*="language-"] {
+        color: #ccc;
+        background: none;
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+        font-size: 1em;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: 1em;
+        margin: 0.5em 0;
+        overflow: auto;
+      }
+
+      :not(pre) > code[class*="language-"],
+      pre[class*="language-"] {
+        background: #2d2d2d;
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: 0.1em;
+        border-radius: 0.3em;
+        white-space: normal;
+      }
+
+      .token.comment,
+      .token.block-comment {
+        color: #9e9e9e;
+      }
+
+      .token.success,
+      .token.operator {
+        color: white;
+      }
+
+      .token.error {
+        color: white;
+        background-color: #ff5f87;
+      }
+
+      .token.property,
+      .token.class-name,
+      .token.constant,
+      .token.symbol,
+      .token.key,
+      .token.keypress {
+        color: #5fafd7;
+      }
+
+      .token.boolean,
+      .token.null,
+      .token.keyword {
+        color: #ff5f87;
+      }
+
+      .token.number {
+        color: #d78700;
+      }
+
+      .token.string,
+      .token.char,
+      .token.attr-value,
+      .token.regex {
+        color: #afd787;
+      }
+
+      .token.variable,
+      .token.binary,
+      .token.function {
+        color: #ffd7d7;
+      }
+
+      .token.date {
+        color: #af87af;
+      }
+
+      .token.uri, .token.url {
+        color: #d6ffb7;
+        font-style: italic;
+      }
+
+      .token.diffAdded {
+        color: #afd787;
+      }
+      .token.diffModified {
+        color: #d78700;
+      }
+      .token.diffRemoved {
+        color: #ff5f87;
+      }
+    </style>
+    </head>
 <body>
   <div id="app"></div>
 </body>
