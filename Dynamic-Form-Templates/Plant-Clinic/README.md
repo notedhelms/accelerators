@@ -1,3 +1,5 @@
+# Garden Plant Issue Diagnosis Dynamic Form
 
+[Download Rule Assets](https://github.com/corticon/templates/blob/main/Dynamic-Form-Templates/Plant-Clinic/Rule%20Assets.zip)
 
-<script async src="//jsfiddle.net/salmelinovitz/3n198gqz/9/embed/result/"></script>
+<iframe width="100%" height="700" src="//jsfiddle.net/salmelinovitz/3n198gqz/9/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
