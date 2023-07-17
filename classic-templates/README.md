@@ -13,7 +13,7 @@ Choose from these rule projects to import into Corticon Studio.
 - [Who won the race](https://corticon.github.io/templates/#/classic-templates/Who-Won-The-Race/README.md)
 - [Work Scheduling Outside of Weekends and Holidays](https://corticon.github.io/templates/#/classic-templates/Working-Days/README.md)
 - [Pharmaceutical Dosing](https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md)
-
+- [Grouping together like-collections of entities](Iterating-Collections/README.md)
 <br>
 <br>
 <br>
