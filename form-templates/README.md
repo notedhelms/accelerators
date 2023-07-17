@@ -7,3 +7,9 @@ Choose from these rule projects to import into Corticon.js Studio. When ready, g
 * [Garden Plant Doctor](https://corticon.github.io/templates/#/form-templates/Plant-Clinic/README.md)
 * [Select Vehicle Model based on make, year based on both](https://corticon.github.io/templates/#/form-templates/Select-Vehicle-Model-Make-Year/README.md)
 * [Calculate Income Tax Bill for 2021](https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md)
+<br>
+<br>
+<br>
+<br>
+
+![ProgressCorticon.js_Logo_Stacked](../assets/ProgressCorticon.js_PrimaryLogo_Stacked.png)

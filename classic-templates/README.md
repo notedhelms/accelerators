@@ -13,3 +13,9 @@ Choose from these rule projects to import into Corticon Studio.
 - [Who won the race](https://corticon.github.io/templates/#/classic-templates/Who-Won-The-Race/README.md)
 - [Work Scheduling Outside of Weekends and Holidays](https://corticon.github.io/templates/#/classic-templates/Working-Days/README.md)
 
+<br>
+<br>
+<br>
+<br>
+
+![Alt text](../assets/ProgressCorticon_PrimaryLogo_Stacked.png)

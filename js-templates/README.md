@@ -7,3 +7,10 @@ Choose from these rule projects to import into Corticon.js Studio.
 - [IPv4 Validation](https://corticon.github.io/templates/#/js-templates/IPv4-Validation/README.md)
 - [Matchmaking](https://corticon.github.io/templates/#/js-templates/Matchmaking/README.md)
 - [Who won the race](https://corticon.github.io/templates/#/js-templates/Who-Won-The-Race/README.md)
+
+<br>
+<br>
+<br>
+<br>
+
+![ProgressCorticon.js_Logo_Stacked](../assets/ProgressCorticon.js_PrimaryLogo_Stacked.png)
