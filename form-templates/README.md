@@ -4,6 +4,5 @@ Choose from these rule projects to import into Corticon.js Studio. When ready, g
 * [Registration for a conference](https://corticon.github.io/templates/#/form-templates/Conference-Registration/README.md)
 * [Type 2 Diabetes Risk](https://corticon.github.io/templates/#/form-templates/Diabetes-Risk-Score-(Type-2)/README.md)
 * [Garden Plant Doctor](https://corticon.github.io/templates/#/form-templates/Plant-Clinic/README.md)
-* [Prediabetes Risk Score](https://corticon.github.io/templates/#/form-templates/Prediabetes-Risk-Score/README.md)
 * [Select Vehicle Model based on make, year based on both](https://corticon.github.io/templates/#/form-templates/Select-Vehicle-Model-Make-Year/README.md)
 * [Calculate Income Tax Bill for 2021](https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md)
