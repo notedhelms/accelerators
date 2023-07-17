@@ -1,7 +1,7 @@
 ## Classic Templates
 Choose from these rule projects to import into Corticon Studio. 
 
-- [Calculate Compound Interest](../Calculate-Compound-Interest/README.md)
+- [Calculate Compound Interest](/Calculate-Compound-Interest/README.md)
 - [Commission Calculations](Commission-Calculations/README.md)
 - [Hazardous Gas First Order Decay](Hazardous-Gas/README.md)
 - [IPv4 Validation](IPv4-Validation/README.md)
