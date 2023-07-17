@@ -1,7 +1,7 @@
 ## Classic Templates
 Choose from these rule projects to import into Corticon Studio. 
 
-| Project Name                                                                                                                             | Topics Demonstrated              |
+| Project Name| Topics Demonstrated|
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [Calculate Compound Interest](<Calculate Compound Interest/README.md>)| Calculations|
 | [Hazardous Gas First Order Decay](<Hazardous Gas First Order Decay/README.md>)| Calculations|
