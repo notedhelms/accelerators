@@ -8,10 +8,8 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 
 
 
-## Classic Templates +
-
-    Choose from these rule projects to import into Corticon Studio. 
-    - [Calculate Compound Interest](https://corticon.github.io/templates/#/?id=serverless-templates#/Projects/Calculate Compound Interest/README)
+## Classic Templates
+Choose from these rule projects to import into Corticon Studio. 
 
 | Project Name                                                                                                                             | Topics Demonstrated              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
