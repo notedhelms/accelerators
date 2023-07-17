@@ -1,5 +1,8 @@
 # Pharmaceutical Dosing
 
+[Download Project](https://github.com/corticon/templates/blob/main/classic-templates/Pharmaceutical-Dosing/Rule%20Assets.zip)
+
+
 Certain drugs are prescribed based upon a patient’s weight, but the prescriber must also consider whether the patient is overweight or underweight. When a patient is within the bounds of a clinically healthy weight, then that weight will serve as the input for calculating an appropriate dosage.
 
 If a patient is 20-30% above their ideal body weight, then this input is adjusted—for some medications, instead of the patient’s actual weight, an adjusted body weight is calculated. For other medications, their ideal body weight is used.
