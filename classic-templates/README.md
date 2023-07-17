@@ -12,7 +12,7 @@ Choose from these rule projects to import into Corticon Studio.
 - [Who will be the heir to the throne](https://corticon.github.io/templates/#/classic-templates/Who-is-Heir-to-throne/README.md)
 - [Who won the race](https://corticon.github.io/templates/#/classic-templates/Who-Won-The-Race/README.md)
 - [Work Scheduling Outside of Weekends and Holidays](https://corticon.github.io/templates/#/classic-templates/Working-Days/README.md)
-
+- [Pharmaceutical Dosing](https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md)
 <br>
 <br>
 <br>
