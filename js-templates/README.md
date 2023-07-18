@@ -1,6 +1,5 @@
 # Serverless Templates
 
-If using Corticon.js for Dynamic Forms is new to you, check out the overview page [here](overview.md).
 
 Choose from these rule projects to import into Corticon.js Studio. 
 
