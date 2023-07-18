@@ -16,7 +16,6 @@ Choose from these rule projects to import into Corticon Studio.
 - [Grouping together like-collections of entities](https://corticon.github.io/templates/#/classic-templates/Iterating-Collections/README.md)
 <br>
 <br>
-<br>
-<br>
 
-![Alt text](../assets/ProgressCorticon_PrimaryLogo_Stacked.png)
+
+![Alt text](../assets/ProgressCorticon_PrimaryLogo_Stacked.png ':size=100')

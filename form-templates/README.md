@@ -14,7 +14,6 @@ Choose from these rule projects to import into Corticon.js Studio. When ready, g
 * [Calculate Income Tax Bill for 2021](https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md)
 <br>
 <br>
-<br>
-<br>
 
-![ProgressCorticon.js_Logo_Stacked](../assets/ProgressCorticon.js_PrimaryLogo_Stacked.png)
+
+![ProgressCorticon.js_Logo_Stacked](../assets/ProgressCorticon.js_PrimaryLogo_Stacked.png ':size=100')
