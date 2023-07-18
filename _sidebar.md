@@ -2,7 +2,7 @@
 <br>
 _Starter Templates_
 
-- [Home](https://corticon.github.io/templates/#/?id=serverless-templates)
+- [Home](/)
 
 * [Classic Templates](classic-templates/README.md)
 * [Serverless Templates](js-templates/README.md)
