@@ -88,7 +88,7 @@ Description: We define which data we want to store by specifying in the initial 
 
 <!-- div:right-panel -->
 
-![Code](https://corticon.github.io/templates/#/form-templates/overview/images/pathToData.PNG)
+![Code](https://corticon.github.io/templates/form-templates/overview/images/pathToData.PNG)
 
 
 <!-- div:title-panel -->
@@ -104,7 +104,7 @@ Description: Set to ‘T’ for any stages where no UI needs to be rendered, but
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/noUItoRender.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/noUItoRender.png)
 ```hover mouse to copy
 UI.noUItoRender
 ```
@@ -124,7 +124,7 @@ Description: Upon receiving a done instruction from the decision service (a noti
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/UIdone.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/UIdone.png)
 
 ### **Copy these rules**
 
@@ -145,7 +145,7 @@ Description: The decision service sets the attribute `UI.nextStageNumber` to spe
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/nextStageNumber.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/nextStageNumber.png)
 
 <!-- div:title-panel -->
 
@@ -161,7 +161,7 @@ Description: When the client side rendering component is ready for the next step
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/currentStageNumber.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/currentStageNumber.png)
 
 <!-- div:title-panel -->
 
@@ -218,7 +218,7 @@ Description: When the client side rendering component is ready for the next step
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/createContainer.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/createContainer.png)
 
 ---
 
@@ -248,11 +248,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/text_rule.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/text_rule.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/text_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/text_rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -266,11 +266,11 @@ Description: When the client side rendering component is ready for the next step
 <!-- tabs:start -->
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/text_area_rules.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/text_area_rules.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/text_area_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/text_area_rendered.png)
 <!-- tabs:end -->
 
 
@@ -286,11 +286,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/singlechoice.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/singlechoice.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/singlechoice-rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/singlechoice-rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -304,11 +304,11 @@ Description: When the client side rendering component is ready for the next step
 <!-- tabs:start -->
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/multiple_choices_rules.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/multiple_choices_rules.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/multiple_choices_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/multiple_choices_rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -323,11 +323,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/number_rules.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/number_rules.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/number_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/number_rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -342,11 +342,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/date_time_rules.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/date_time_rules.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/date_time_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/date_time_rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -361,11 +361,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/readOnlyText.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/readOnlyText.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/readOnlyText_render.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/readOnlyText_render.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -381,11 +381,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/yes_no_rule.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/yes_no_rule.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/yes-no_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/yes-no_rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -401,11 +401,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/yes_no_boolean_rule.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/yes_no_boolean_rule.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/yes-no_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/yes-no_rendered.png)
 
 <!-- tabs:end -->
 
@@ -421,11 +421,11 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/file-upload-expense.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/file-upload-expense.png)
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/file_upload_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/file_upload_rendered.png)
 <!-- tabs:end -->
 
 
@@ -440,10 +440,10 @@ Description: When the client side rendering component is ready for the next step
 <!-- tabs:start -->
 
 ### **Rule Definition**
-![](https://corticon.github.io/templates/#/form-templates/overview/images/multiexpense%20rule.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/multiexpense%20rule.png)
 
 ### **Rendered Rules**
-![](https://corticon.github.io/templates/#/form-templates/overview/images/multiexpense%20rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/multiexpense%20rendered.png)
 <!-- tabs:end -->
 
 <!-- div:left-panel -->
@@ -461,13 +461,13 @@ Description: When the client side rendering component is ready for the next step
 
 ### **Rule Definition**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/MultipleChoicesMultiSelect_rule.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/MultipleChoicesMultiSelect_rule.png)
 
 
 
 ### **Rendered Rules**
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/MultipleChoicesMultiSelect_rendered.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/MultipleChoicesMultiSelect_rendered.png)
 
 ### **Copy these rules**
 ```hover mouse to copy
@@ -526,7 +526,7 @@ Description: Specifies the datasource to populate MultipleChoices dropdown optio
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/datasource.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/datasource.png)
 
 <!-- div:title-panel -->
 
@@ -550,7 +550,7 @@ Description: Optionally give the rendering component for this UI Control a minim
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/min.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/min.png)
 
 <!-- div:left-panel -->
 
@@ -573,7 +573,7 @@ Description: Optionally give the rendering component for this UI Control a maxim
 
 <!-- div:right-panel -->
 
-[](https://corticon.github.io/templates/#/form-templates/overview/images/maxDt.png)
+[](https://corticon.github.io/templates/form-templates/overview/images/maxDt.png)
 
 <!-- div:title-panel -->
 
@@ -667,7 +667,7 @@ Description: The content of a `ReadOnlyText` UI Control
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/readOnlyText.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/readOnlyText.png)
 
 <!-- div:title-panel -->
 
@@ -698,7 +698,7 @@ Description: Optionally instruct the rendering component how to sort the list of
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/formattedJSON.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/formattedJSON.png)
 
 <!-- div:left-panel -->
 
@@ -706,7 +706,7 @@ Description: Optionally instruct the rendering component how to sort the list of
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/unformattedJsonEnd.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/unformattedJsonEnd.png)
 
 
 ---
@@ -722,7 +722,7 @@ Description: Optionally define the key name to use as the display name for this 
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/dataTextField.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/dataTextField.png)
 
 <!-- div:title-panel -->
 
@@ -734,7 +734,7 @@ Description: Optionally define the name of the key whose value should be stored 
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/dataValueField.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/dataValueField.png)
 
 <!-- div:title-panel -->
 
@@ -748,7 +748,7 @@ Description: Optionally define where in a JSON endpoint is the array of options 
 <!-- tabs:start -->
 
 ### **Rule Definition**
-![](https://corticon.github.io/templates/#/form-templates/overview/images/pathToOptionsArray.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/pathToOptionsArray.png)
 
 ### **Copy this rule**
 ```
@@ -781,7 +781,7 @@ Description: The value stored in the `pathToData.fieldName` when user selects co
 
 <!-- div:right-panel -->
 
-![](https://corticon.github.io/templates/#/form-templates/overview/images/manualOptions.png)
+![](https://corticon.github.io/templates/form-templates/overview/images/manualOptions.png)
 
 
 <!-- panels:end -->
