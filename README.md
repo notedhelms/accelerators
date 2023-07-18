@@ -6,8 +6,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 - **[Serverless Templates](js-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
-## Corticon Starter Rule Vocabularies
+<!-- ## Corticon Starter Rule Vocabularies
 
 These are pre-built rule vocabularies, generated from JSON schemas and other data model representations of openly available ontologies. 
-
-### FedEx Developer APIs
+ -->
