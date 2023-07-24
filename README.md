@@ -7,7 +7,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
 
-**Importing a Rule Project:**
+### Importing a Rule Project
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
