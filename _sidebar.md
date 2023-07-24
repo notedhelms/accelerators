@@ -8,7 +8,6 @@
 
 ---
 
-* [Importing a Rule Project
-](https://corticon.github.io/templates/#/?id=importing-a-rule-project)
+* [Importing a Rule Project](https://corticon.github.io/templates/#/?id=importing-a-rule-project)
 
 <footer id="mb-footer"></footer>
