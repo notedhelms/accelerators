@@ -1,7 +1,7 @@
 # Car Insurance Quote Dynamic Form
 
 [Download Rule Assets
-](https://github.com/corticon/templates/blob/main/Dynamic-Form-Templates/Car-Insurance/Car-Insurance.zip)
+](https://github.com/corticon/templates/blob/main/form-templates/Car-Insurance/Car-Insurance.zip)
 
 For scenarios where the input data for a decision is being entered into a form by an end user, the decisions-from-data paradigm can be extended to optimize dynamic data-collection logic presented to end users.
 
