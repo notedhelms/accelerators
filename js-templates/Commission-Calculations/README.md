@@ -1,6 +1,6 @@
 # Sales Commission
 
-[Download Project](https://github.com/corticon/templates/blob/main/js-templates/Commission%20Calculations/Commission%20Calculations.zip)
+https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/js-templates/Commission%20Calculations/Commission%20Calculations.zip)
 
 _This example illustrates how sales commissions can be calculated using a tiering system whereby sales over quota are rewarded at higher commission rates_
 
