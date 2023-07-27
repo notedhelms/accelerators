@@ -1,6 +1,6 @@
 # Holidays - Use Case for Advanced Inferencing w. Self Triggering
 
-[Download Project](https://github.com/corticon/templates/blob/main/Projects/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip
+[Download Project](https://github.com/corticon/templates/blob/main/classic-templates/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip
 )
 
 

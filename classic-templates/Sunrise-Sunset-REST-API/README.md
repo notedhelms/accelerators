@@ -1,6 +1,6 @@
 # Retrieving Data from Sunrise/Sunset REST API
 
-[Download Project](https://github.com/corticon/templates/blob/main/Projects/Sunrise%20Sunset%20REST%20API/Sunrise%20Sunset%20REST%20API.zip)
+[Download Project](https://github.com/corticon/templates/blob/main/classic-templates/Sunrise%20Sunset%20REST%20API/Sunrise%20Sunset%20REST%20API.zip)
 
 Corticon's REST connectivity allows you to access data via REST services such that rule payloads can be enriched with REST data similar to database data. Corticon uses the [Progress Data Direct Autonomous REST Connector](https://www.progress.com/connectors/autonomous-rest-connector) to provide support for REST data integration. This allows you to access a REST service similar to the way you access a database. 
 
