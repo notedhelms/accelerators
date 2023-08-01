@@ -1,7 +1,8 @@
 # Online Dating Matchmaking
 _Response to Decision Management Community Rule Challenge_
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Matchmaking/Matchmaking.zip)
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Matchmaking/Matchmaking.zip)
 
 
 ## Challenge Prompt:

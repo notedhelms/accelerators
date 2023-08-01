@@ -1,6 +1,7 @@
 # Pharmaceutical Dosing
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Pharmaceutical-Dosing/Rule%20Assets.zip)
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Pharmaceutical-Dosing/Rule%20Assets.zip)
 
 
 Certain drugs are prescribed based upon a patient’s weight, but the prescriber must also consider whether the patient is overweight or underweight. When a patient is within the bounds of a clinically healthy weight, then that weight will serve as the input for calculating an appropriate dosage.

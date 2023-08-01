@@ -1,5 +1,7 @@
 # Calculate A Sum of Collection Attributes 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Iterating-Collections/Rule%20Assets.zip)
+
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Iterating-Collections/Rule%20Assets.zip)
 
 This sample demonstrates how to solve the problem of grouping like entities then performing calculations on their attributes' values. The objective is to identify instances of `Shipment` with identical values for the attribute `Shipment.postcode`. 
 
