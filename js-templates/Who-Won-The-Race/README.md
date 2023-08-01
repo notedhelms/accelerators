@@ -117,6 +117,3 @@ The answer to the puzzle is contained in the posted Rule Statement, below:
 In this case, only one finish sequence of the 5,040 possible satisfy all the constraints, so only
 one Rule Statement is posted.
 
-The full solution can be downloaded from the Corticon GitHub repository.
-
-
