@@ -1,6 +1,7 @@
 # The Miracle of Compound Interest
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Calculate-Compound-Interest/Calculate%20Compound%20Interest.zip)
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Calculate-Compound-Interest/Calculate%20Compound%20Interest.zip)
 
 
 With these rules you can calculate what the value of X dollars will be in the future using various bank interest scenarios:

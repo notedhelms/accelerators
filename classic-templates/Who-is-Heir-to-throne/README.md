@@ -1,6 +1,7 @@
 # Heir to the Throne
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Who-is-Heir-to-throne/Solve%20for%20the%20Heir%20to%20the%20Throne.zip)
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Who-is-Heir-to-throne/Solve%20for%20the%20Heir%20to%20the%20Throne.zip)
 
 A King may have several children, but only the first-born son is designated “heir” to the throne. Create a rules project which determines which of his children is the “Crown Prince” and heir to the throne.
 
