@@ -2,7 +2,7 @@
 
 [Corticon](https://www.progress.com/corticon) and [Corticon.js](https://www.progress.com/corticon-js) can be used for many purposes, so these templates are broken out by both intended runtime use case (JavaScript/Dynamic Forms/Deployed to a Server) and industry specific use cases. 
 
-<details><summary align="left"><h1>Templates by Runtime Use Case <img src="assets/javascript.png" style="vertical-align:middle" height="30"> <img src="assets/server.png" style="vertical-align:middle" height="30"> <img src="assets/database-storage.png" style="vertical-align:middle" height="30"> <img src="assets/checklist.png" style="vertical-align:middle" height="30"></h1></summary>
+<details><summary align="left"><h1>Templates by Runtime Use Case <img src="assets/javascript.png" style="vertical-align:middle" height="30"> <img src="assets/server.png" style="vertical-align:middle" height="30"> <img src="assets/database-storage.png" style="vertical-align:middle" height="30"> <img src="assets/dynamic-form.png" style="vertical-align:middle" height="30"></h1></summary>
   
 
 <div align="left">
