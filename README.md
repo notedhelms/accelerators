@@ -4,39 +4,47 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 
 ## Templates by Runtime Use Case
 
+
 - **[Classic Templates](classic-templates/README.md)**: Rule Project templates for use in Corticon Studio and deployed to a Corticon Server
 - **[Serverless Templates](js-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
-<h4>Templates by Runtime Use Case</h4>
-<details>
-    <summary>Classic Templates</summary>
-    <p>Rule Project templates for use in Corticon Studio and deployed to a Corticon Server</p>
-</details>
-<details>
-    <summary>Serverless Templates</summary>
-    <p>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function</p>
-</details>
-<details>
-    <summary>Dynamic Form Templates</summary>
-    <p>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior </p>
-</details>
+## Industry Templates
+- Clinical Decisions
+- Healthcare Payers
+- Finance
+- Insurance
 
-<details class="dropdown">
-    <summary role="button">
-      <a class="button">Click on me!</a>
+<section>
+  <h1>
+    Hypertext Accordion
+  </h1>
+  <details>
+    <summary>Details</summary>
+    <p>
+      Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
+    </p>
+  </details>
+  <details>
+    <summary>Features</summary>
+    <p>
+      Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
+    </p>
+  </details>
+  <details>
+    <summary>Information
     </summary>
-    <ul>
-      <li><a href="classic-templates/README.md">Classic Templates.</a></li>
-      <li><a href="#">In Pure CSS</a></li>
-      <li><a href="#">As in...</a></li>
-      <li><a href="#">No JavaScript.</a></li>
-      <li><a href="#">At All.</a></li>
-  </ul>
-</details>
+    <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
+  </details>
+  <details>
+    <summary>Specifications
+    </summary>
+    <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
+  </details>
+</section>
 
-
- <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+---
+?> <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <!-- ## Corticon Starter Rule Vocabularies
 
