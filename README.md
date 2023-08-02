@@ -8,14 +8,14 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 - **[Serverless Templates](js-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
-<!-- ## Industry Templates -->
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
 
-<!-- Clinical Decisions
 
-- Healthcare Payers
-- Finance
-- Insurance
-   -->
+
+
  <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <!-- ## Corticon Starter Rule Vocabularies
