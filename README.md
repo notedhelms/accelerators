@@ -11,8 +11,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 
 
 <section>
-  <h1>
-Industry Templates  </h1>
+  <h1>Industry Templates  </h1>
   <details>
     <summary>Clinical Decisions</summary>
     <p>
