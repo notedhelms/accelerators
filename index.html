@@ -11,7 +11,11 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="icon" href="assets/Progress_Stickers_CMYK_Progress_Brand_Mark.png">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
- 
+  <style>
+    :root {
+      --docsify-example-panels-left-panel-width : 70%; /* bit more for left */
+    }
+  </style>
 
 </head>
 
@@ -25,15 +29,6 @@
       auto2top: true,
       loadNavbar: true,
       loadSidebar: true,
-      autoFooter: {
-        name: 'Progress Corticon',
-        copyYear: 2023,
-        url: 'https://www.progress.com/corticon',
-        policy: false,   // show Privacy Policy (optional)
-        terms: false,   // show Terms of Service (optional)
-        cookies: false,   // show Cookies Policy (optional)
-        onBody: true             // if true it is on the main doc
-      },
       tabs: {
         theme: "material"
       }
@@ -56,8 +51,6 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
 
-  <!-- docsify.js-sidebar-footer -->
-  <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
 
   <!-- docsify-copy-code -->
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
