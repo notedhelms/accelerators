@@ -2,8 +2,9 @@
 
 [Corticon](https://www.progress.com/corticon) and [Corticon.js](https://www.progress.com/corticon-js) can be used for many purposes, so these templates are broken out by both intended runtime use case (JavaScript/Dynamic Forms/Deployed to a Server) and industry specific use cases. 
 
-<details><summary align="left"><h1>Templates by Runtime Use Case <img src="assets/javascript.png" style="vertical-align:middle" height="30"> <img src="assets/server.png" style="vertical-align:middle" height="30"> <img src="assets/database-storage.png" style="vertical-align:middle" height="30"> <img src="assets/dynamic-form.png" style="vertical-align:middle" height="30"></h1></summary>
-  
+<details>
+<summary><b>Templates by Runtime Use Case<b><img src="assets/javascript.png" style="vertical-align:middle" height="30"> <img src="assets/server.png" style="vertical-align:middle" height="30"> <img src="assets/database-storage.png" style="vertical-align:middle" height="30"> <img src="assets/dynamic-form.png" style="vertical-align:middle" height="30"></summary>
+
 
 <div align="left">
   <h3>Classic Templates</h3>
@@ -46,12 +47,14 @@
 <br><hr>
 
 </details>
-
+<br>
+<br>
+<br>
 <details>
-  <summary align="left"><h1>Templates by Industry Use Case <img src="assets/budget.png" style="vertical-align:middle" height="30">
+  <summary align="left"><b>Templates by Industry Use Case <b><img src="assets/budget.png" style="vertical-align:middle" height="30">
 <img src="assets/healthcare.png" style="vertical-align:middle" height="30">
 <img src="assets/protection.png" style="vertical-align:middle" height="30">
-<img src="assets/risks.png" style="vertical-align:middle" height="30"></h1></summary>
+<img src="assets/risks.png" style="vertical-align:middle" height="30"></summary>
 
 <div align="center">
 
