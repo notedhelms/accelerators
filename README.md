@@ -2,10 +2,10 @@
 
 Corticon and Corticon.js can be used for many purposes, so these templates are broken out by both intended runtime use case (JavaScript/Dynamic Forms/Deployed to a Server) and industry specific use cases. 
 
-<details>
-  <summary align="center"><h1>Templates by Runtime Use Case<img src="https://raw.githubusercontent.com/RE-SS3D/SS3D-Art/main/Artwork/Cutouts/Emojis/Computer.png" style="vertical-align:middle" height="30"></h1></summary>
+<details><summary align="left"><h1>Templates by Runtime Use Case <img src="assets/javascript.png" style="vertical-align:middle" height="30"> <img src="assets/server.png" style="vertical-align:middle" height="30"> <img src="assets/database-storage.png" style="vertical-align:middle" height="30"> <img src="assets/checklist.png" style="vertical-align:middle" height="30"></h1></summary>
+  
 
-<div align="center">
+<div align="left">
   <h3>Classic Templates</h3>
     <b>Rule Project templates for use in Corticon Studio and deployed to a Corticon Server</b> 
    <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
@@ -22,7 +22,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Iterating-Collections/README.md">Grouping together like-collections of entities</a></b> 
 
-  <h3>Serverless Templates</h3>
+<h3>Serverless Templates</h3>
       <b>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function</b> 
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Commission-Calculations/README.md">Commission Calculations</a></b> 
@@ -31,7 +31,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Matchmaking/README.md">Matchmaking</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Who-Won-The-Race/README.md">Who won the race</a></b> 
 
-  <h3>Dynamic Form Templates</h3>
+<h3>Dynamic Form Templates</h3>
       <b>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior</b> 
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/Car-Insurance/README.md">Car Insurance Application</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/Conference-Registration/README.md">Registration for a conference</a></b> 
@@ -40,38 +40,21 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/Plant-Clinic/README.md">Garden Plant Doctor</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/Select-Vehicle-Model-Make-Year/README.md">Select Vehicle Model based on make, year based on both</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md">Calculate Income Tax Bill for 2021</a></b> 
-
 </div>
+
 
 <br><hr>
 
 </details>
 
 <details>
-  <summary align="center"><h1>Templates by Industry Use Case&nbsp;<img src="https://raw.githubusercontent.com/RE-SS3D/SS3D-Art/main/Artwork/Cutouts/Emojis/ToolboxNote.png" style="vertical-align:middle" height="30"></h1></summary>
+  <summary align="left"><h1>Templates by Industry Use Case <img src="assets/budget.png" style="vertical-align:middle" height="30">
+<img src="assets/healthcare.png" style="vertical-align:middle" height="30">
+<img src="assets/protection.png" style="vertical-align:middle" height="30"
+<img src="assets/risks.png" style="vertical-align:middle" height="30"></h1></summary>
 
 <div align="center">
-  <h3><a href="https://ss3d.space">Website</a></h3>
-  <b><a href="https://ss3d.space/download/">Download</a></b> - Download our latest release!
-  <br><br>
-  <b><a href="https://ss3d.space/devblog/">Devblogs</a></b> - Periodic development blogs.
-  <br>
-  <b><a href="https://ss3d.space/about/">About</a></b> - About SS3D and *beep.
-  <br>
-  <b><a href="https://ss3d.space/faq/">FAQ</a></b> - Frequently Asked Questions.
-  <br>
-  <b><a href="https://ss3d.space/art/">Art</a></b> - SS3D artwork made by our contributors!
-  <br><br>
-  <b><a href="https://ss3d.space/contribute/">Contribute</a></b> - How to contribute to SS3D!
-  <br><br>
-  <h3><a href="https://ss3d.gitbook.io">GitBook</a></h3>
-  <b><a href="https://ss3d.gitbook.io/design/">Design</a></b> - Document for game design and ideas.
-  <br>
-  <b><a href="https://ss3d.gitbook.io/art-guide/">Art Guide</a></b> - Documents for creating assets for SS3D.
-  <br>
-  <b><a href="https://ss3d.gitbook.io/dev-guide/">Dev Guide</a></b> - Documents for developing/maintaining SS3D.
-  <br>
-  <b><a href="https://ss3d.gitbook.io/systems/">Systems</a></b> - Documentation for the implementation of technical systems.
+
 </div>
 
 <br><hr>
