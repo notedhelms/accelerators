@@ -9,35 +9,29 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 - **[Serverless Templates](js-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
-## Industry Templates
-- Clinical Decisions
-- Healthcare Payers
-- Finance
-- Insurance
 
 <section>
   <h1>
-    Hypertext Accordion
-  </h1>
+Industry Templates  </h1>
   <details>
-    <summary>Details</summary>
+    <summary>Clinical Decisions</summary>
     <p>
       Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
     </p>
   </details>
   <details>
-    <summary>Features</summary>
+    <summary>Healthcare Payers</summary>
     <p>
       Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
     </p>
   </details>
   <details>
-    <summary>Information
+    <summary>Finance
     </summary>
     <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
   </details>
   <details>
-    <summary>Specifications
+    <summary>Insurance
     </summary>
     <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
   </details>
