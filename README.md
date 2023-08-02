@@ -9,6 +9,27 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 - **[Serverless Templates](js-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function
 - **[Dynamic Form Templates](form-templates/README.md)**: Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior 
 
+<section>
+  <h1>Templates by Runtime Use Case </h1>
+  <details>
+    <summary>Classic Templates</summary>
+    <p>
+      Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
+    </p>
+  </details>
+  <details>
+    <summary>Serverless Templates</summary>
+    <p>
+         </p>
+  </details>
+  <details>
+    <summary>Dynamic Form Templates
+    </summary>
+    <p></p>
+  </details>
+
+</section>
+
 
 <section>
   <h1>Industry Templates  </h1>
@@ -21,18 +42,17 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
   <details>
     <summary>Healthcare Payers</summary>
     <p>
-      Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.
-    </p>
+         </p>
   </details>
   <details>
     <summary>Finance
     </summary>
-    <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
+    <p></p>
   </details>
   <details>
     <summary>Insurance
     </summary>
-    <p>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex. </p>
+    <p>. </p>
   </details>
 </section>
 
