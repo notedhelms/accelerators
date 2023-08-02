@@ -50,7 +50,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 <details>
   <summary align="left"><h1>Templates by Industry Use Case <img src="assets/budget.png" style="vertical-align:middle" height="30">
 <img src="assets/healthcare.png" style="vertical-align:middle" height="30">
-<img src="assets/protection.png" style="vertical-align:middle" height="30"
+<img src="assets/protection.png" style="vertical-align:middle" height="30">
 <img src="assets/risks.png" style="vertical-align:middle" height="30"></h1></summary>
 
 <div align="center">
