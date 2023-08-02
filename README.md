@@ -17,7 +17,6 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
     </p>
   </details>
   <details>
-    <summary>Serverless Templates</summary>
     <p>
     [Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function](js-templates/README.md ':include')
          </p>
@@ -32,7 +31,7 @@ Corticon and Corticon.js can be used for many purposes, so these templates are b
 
 
 <section>
-  <h1>Industry Templates  </h1>
+  <h1>Industry Templates</h1>
   <details>
     <summary>Clinical Decisions</summary>
     <p>
