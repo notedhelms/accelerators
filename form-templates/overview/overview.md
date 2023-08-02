@@ -460,6 +460,7 @@ Description: When the client side rendering component is ready for the next step
 ### **Rendered Rules**
 ![](https://corticon.github.io/templates/form-templates/overview/images/multiexpense%20rendered.png)
 <!-- tabs:end -->
+<!-- tabs:start -->
 
 <!-- div:left-panel -->
 
@@ -472,6 +473,8 @@ Description: When the client side rendering component is ready for the next step
 
 
 <!-- div:right-panel -->
+<!-- tabs:end -->
+
 <!-- tabs:start -->
 
 ### **Rule Definition**
