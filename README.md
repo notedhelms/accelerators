@@ -55,7 +55,6 @@
 </details>
 <br>
 <br>
-<br>
 <details>
 <summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Industry Use Case<img src="assets/budget.png" style="vertical-align:middle" height="30">
 <img src="assets/healthcare.png" style="vertical-align:middle" height="30">
@@ -63,14 +62,11 @@
 <img src="assets/risks.png" style="vertical-align:middle" height="30"></summary>
 
 <div align="left">
-  <h4>Classic Templates</h4>
-    <b>Clinical Decision Support</b> 
-   <br>   <br>
-  <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a></b> 
+  <h4>Clinical Decision Support</h4>
+  *  <a href="https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a></b> 
 
 <h4>Financial Services</h4>
-  <br>   <br>
- <b><a href="https://corticon.github.io/templates/#/classic-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
+  *  <a href="https://corticon.github.io/templates/#/classic-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
 
 </div>
 
