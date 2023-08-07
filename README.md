@@ -64,9 +64,13 @@
 
 <div align="left">
   <h4>Classic Templates</h4>
-    <b>Rule Project templates for use in Corticon Studio and deployed to a Corticon Server</b> 
+    <b>Clinical Decision Support</b> 
    <br>   <br>
-   <br><b><a href="https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md">Calculate Income Tax Bill for 2021</a></b> 
+  <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a></b> 
+
+<h4>Financial Services</h4>
+  <br>   <br>
+ <b><a href="https://corticon.github.io/templates/#/classic-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
 
 </div>
 
