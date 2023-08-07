@@ -73,12 +73,12 @@
 <br><hr>
 
 </details>
+   <br>   <br>
 
 <details>
 <summary style=" font-weight: bold; font-size: large; color: 0000ff"> Importing a Corticon Rule Project </summary>
 
 <div align="left">
-  <h4>Classic Templates</h4>
     <b>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </b> 
