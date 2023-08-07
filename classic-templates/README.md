@@ -14,7 +14,12 @@ Choose from these rule projects to import into Corticon Studio.
 - [Work Scheduling Outside of Weekends and Holidays](https://corticon.github.io/templates/#/classic-templates/Working-Days/README.md)
 - [Pharmaceutical Dosing](https://corticon.github.io/templates/#/classic-templates/Pharmaceutical-Dosing/README.md)
 - [Grouping together like-collections of entities](https://corticon.github.io/templates/#/classic-templates/Iterating-Collections/README.md)
-- 
+- [Sorting by Salary](https://corticon.github.io/templates/#/Sorting-by-Salary/README.md)
+- [Securities Transaction Validation](https://corticon.github.io/templates/#/Securities-Transaction-Validation/README.md)
+- [Airline Loyalty](https://corticon.github.io/templates/#/classic-templates/Airline-Loyalty/README.md)
+- [Airline Maintenance](https://corticon.github.io/templates/#/classic-templates/Airline-Maintenance/README.md)
+- [Grocery Cart](https://corticon.github.io/templates/#/classic-templates/Grocery-Cart/README.md)
+
 <br>
 <br>
 
