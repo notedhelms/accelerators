@@ -11,7 +11,7 @@
     <b>Rule Project templates for use in Corticon Studio and deployed to a Corticon Server</b> 
    <br>   <br>
 
- <b><a href="https://corticon.github.io/templates/#/classic-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
+ <b><a href="https://corticon.github.io/templates/#/templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Commission-Calculations/README.md">Commission Calculations</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Hazardous-Gas/README.md">Hazardous Gas First Order Decay</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/IPv4-Validation/README.md">IPv4 Validation</a></b> 
