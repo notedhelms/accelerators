@@ -5,71 +5,52 @@
 <div class="accordion">
 
 <details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff">Projects Categorized by Deployment Model</summary>
+<summary style=" font-weight: bold; font-size: large; color: 0000ff">Importable Rule Projects with Walkthroughs</summary>
 
 ### All Rule Project Templates
 
 #### [Calculate Compound Interest](templates/Calculate-Compound-Interest/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 
 #### [Commission Calculations](templates/Commission-Calculations/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 
 #### [Hazardous Gas First Order Decay](templates/Hazardous-Gas/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 
 #### [IPv4 Validation](templates/IPv4-Validation/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 
 #### [Matchmaking](templates/Matchmaking/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 
 #### [Oyster Harvesting](templates/Oyster-Harvesting/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
 
 #### [Postage Calculation](templates/Postage-Calculation/README.md).
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
 
 #### [Sunrise Sunset REST API](Sunrise-Sunset-REST-API/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
 
 #### [Who will be the heir to the throne](Who-is-Heir-to-throne/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
 
 #### [Who won the race](Who-Won-The-Race/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
- 
+
+
 #### [Work Scheduling Outside of Weekends and Holidays](templates/Working-Days/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
+
 
 #### [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
+
 
 #### [Cargo Shipping](templates/Iterating-Collections/README.md)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
 
+</div>
 
+<hr>
 
-### Dynamic Form Templates
+<div class="accordion">
+
+<details>
+<summary style=" font-weight: bold; font-size: large; color: 0000ff">Dynamic Form Templates</summary>
+
   Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior
 
 #### [Car Insurance Application](templates/Car-Insurance/README.md)
-
 #### [Registration for a conference](templates/Conference-Registration/README.md)
-
 #### [Country State City Selector](templates/Country-State-City-Selector/README.md)
 #### [Type 2 Diabetes Risk](templates/Diabetes-Risk-Score-(Type-2)/README.md)
 #### [What's wrong with my plant?](templates/Plant-Clinic/README.md)
@@ -89,12 +70,14 @@
 <h2>Financial Services</h2>
   *  <a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a> 
 </details>
-
-
 <hr>
 
 <details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff"> Importing a Corticon Rule Project </summary>
+<summary style="font-weight: bold; font-size: large; color: 0000ff">FAQ</summary>
+<br>
+<details>
+
+<summary> How do I import a rule project into Corticon Studio or Corticon.js Studio? </summary>
 
 <div align="left">
     
@@ -102,10 +85,5 @@
  
  </div>
 
-
-<br><hr>
-
 </details>
 
-
-<br><hr>
