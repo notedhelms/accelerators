@@ -25,8 +25,7 @@
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Iterating-Collections/README.md">Grouping together like-collections of entities</a></b> 
 
 <h4>Serverless Templates</h4>
-  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function</b> 
-
+  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function 
 
 <b><a href="https://corticon.github.io/templates/#/js-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Commission-Calculations/README.md">Commission Calculations</a></b> 
@@ -69,7 +68,6 @@
     <b>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J4Mizdn3cEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </b> 
-   <br>   <br>
  </div>
 
 
