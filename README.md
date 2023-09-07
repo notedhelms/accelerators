@@ -2,6 +2,8 @@
 
 [Corticon](https://www.progress.com/corticon) and [Corticon.js](https://www.progress.com/corticon-js) can be used for many purposes, so these templates are broken out by both intended runtime use case (JavaScript/Dynamic Forms/Deployed to a Server) and industry specific use cases. 
 
+---
+
 <div class="accordion">
 
 <details>
@@ -64,10 +66,10 @@
 <details>
 <summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Industry Use Case</summary>
 
-  <h2>Clinical Decision Support</h2>
+  <h3>Clinical Decision Support</h3>
   *  <a href="templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a> 
 
-<h2>Financial Services</h2>
+<h3>Financial Services</h3>
   *  <a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a> 
 </details>
 <hr>
