@@ -6,7 +6,7 @@
 <div class="accordion">
 
 <details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff">Templates by Runtime Use Case </summary>
+<summary style=" font-weight: bold; font-size: large; color: 0000ff">Projects Categorized by Deployment Model</summary>
 
 <h4>Classic Templates</h4>
 
@@ -25,8 +25,8 @@
   <br><b><a href="https://corticon.github.io/templates/#/classic-templates/Iterating-Collections/README.md">Grouping together like-collections of entities</a></b> 
 
 <h4>Serverless Templates</h4>
-    <b>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function</b> 
-  <br> 
+  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function</b> 
+
 
 <b><a href="https://corticon.github.io/templates/#/js-templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Commission-Calculations/README.md">Commission Calculations</a></b> 
@@ -36,7 +36,7 @@
   <br><b><a href="https://corticon.github.io/templates/#/js-templates/Who-Won-The-Race/README.md">Who won the race</a></b> 
 
 <h4>Dynamic Form Templates</h4>
-    <b>Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior</b> 
+  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior
 
 <b><a href="https://corticon.github.io/templates/#/form-templates/Car-Insurance/README.md">Car Insurance Application</a></b> 
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/Conference-Registration/README.md">Registration for a conference</a></b> 
@@ -47,7 +47,7 @@
   <br><b><a href="https://corticon.github.io/templates/#/form-templates/US-2021-Income-Tax-Calculator/README.md">Calculate Income Tax Bill for 2021</a></b> 
 </details>
 
-<br><hr>
+<hr>
 
 <details>
 <summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Industry Use Case</summary>
@@ -60,7 +60,7 @@
 </details>
 
 
-<br><hr>
+<hr>
 
 <details>
 <summary style=" font-weight: bold; font-size: large; color: 0000ff"> Importing a Corticon Rule Project </summary>
