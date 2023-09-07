@@ -1,8 +1,11 @@
-# Calculate A Sum of Collection Attributes 
+# Cargo Shipping
+---
 
 [Download Rule Assets
 ](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Iterating-Collections/Rule%20Assets.zip)
-
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+---
 This sample demonstrates how to solve the problem of grouping like entities then performing calculations on their attributes' values. The objective is to identify instances of `Shipment` with identical values for the attribute `Shipment.postcode`. 
 
 Let's assume you must send Shipments in cargo containers to destinations, but first must group together Shipments going to the same post code. However, you must also consider the maximum capacity of the cargo containers. Each shipment has a quantity defined in the attribute `Shipment.quantity`, and you must solve for the sum total of quantity of each of the Shipments going to the same post code.

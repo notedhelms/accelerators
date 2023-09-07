@@ -1,9 +1,13 @@
 # Online Dating Matchmaking
-_Response to Decision Management Community Rule Challenge_
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
+---
 
 [Download Rule Assets
 ](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Matchmaking/Matchmaking.zip)
+---
 
+_Response to Decision Management Community Rule Challenge_
 
 ## Challenge Prompt:
 

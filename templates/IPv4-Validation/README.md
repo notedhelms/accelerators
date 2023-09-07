@@ -1,7 +1,11 @@
 # IPv4 Validation
 
+ ---
 [Download Rule Assets
 ](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/js-templates/IPv4%20Validation/IPv4%20Validation.zip)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
+---
 
 This project, explored in depth in the below video, demonstrates the use of regular expressions in Corticon or Corticon.js to implement a IPv4 address verification service. 
 
@@ -16,5 +20,5 @@ This project, explored in depth in the below video, demonstrates the use of regu
 ![Ruletest](images/ipv4_ruletest.png 'Ruletest')
 
 <!-- tabs:end -->
-
+---
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rJDVrg9X01E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
