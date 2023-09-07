@@ -7,9 +7,9 @@
 <div class="accordion">
 
 <details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff">Importable Rule Projects with Walkthroughs</summary>
+<summary style=" font-weight: bold; font-size: large; color: 0000ff">Importable Rule Projects and Walkthroughs</summary>
 
-### All Rule Project Templates
+### Decision Automation Rules
 
 #### [Calculate Compound Interest](templates/Calculate-Compound-Interest/README.md)
 
