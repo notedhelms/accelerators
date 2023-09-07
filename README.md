@@ -7,42 +7,75 @@
 <details>
 <summary style=" font-weight: bold; font-size: large; color: 0000ff">Projects Categorized by Deployment Model</summary>
 
-<h2>Classic Templates</h2>
+### All Rule Project Templates
 
-<a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a>
-  <br><a href="templates/Commission-Calculations/README.md">Commission Calculations</a> 
-  <br><a href="templates/Hazardous-Gas/README.md">Hazardous Gas First Order Decay</a> 
-  <br><a href="templates/IPv4-Validation/README.md">IPv4 Validation</a> 
-  <br><a href="templates/Matchmaking/README.md">Matchmaking</a> 
-  <br><a href="templates/Oyster-Harvesting/README.md">Oyster Harvesting</a> 
-  <br><a href="templates/Postage-Calculation/README.md">Postage Calculation</a> 
-  <br><a href="templates/Sunrise-Sunset-REST-API/README.md">Sunrise Sunset REST API</a> 
-  <br><a href="templates/Who-is-Heir-to-throne/README.md">Who will be the heir to the throne</a> 
-  <br><a href="templates/Who-Won-The-Race/README.md">Who won the race</a> 
-  <br><a href="templates/Working-Days/README.md">Work Scheduling Outside of Weekends and Holidays</a> 
-  <br><a href="templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a> 
-  <br><a href="templates/Iterating-Collections/README.md">Grouping together like-collections of entities</a> 
+#### [Calculate Compound Interest](templates/Calculate-Compound-Interest/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
 
-<h2>Serverless Templates</h2>
-  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function 
+#### [Commission Calculations](templates/Commission-Calculations/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
 
-<a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a> 
-  <br><a href="templates/Commission-Calculations/README.md">Commission Calculations</a> 
-  <br><a href="templates/Hazardous-Gas/README.md">Hazardous Gas First Order Decay</a> 
-  <br><a href="templates/IPv4-Validation/README.md">IPv4 Validation</a> 
-  <br><a href="templates/Matchmaking/README.md">Matchmaking</a> 
-  <br><a href="templates/Who-Won-The-Race/README.md">Who won the race</a> 
+#### [Hazardous Gas First Order Decay](templates/Hazardous-Gas/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
 
-<h2>Dynamic Form Templates</h2>
+#### [IPv4 Validation](templates/IPv4-Validation/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
+
+#### [Matchmaking](templates/Matchmaking/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
+
+#### [Oyster Harvesting](templates/Oyster-Harvesting/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Postage Calculation](templates/Postage-Calculation/README.md).
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Sunrise Sunset REST API](Sunrise-Sunset-REST-API/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Who will be the heir to the throne](Who-is-Heir-to-throne/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Who won the race](Who-Won-The-Race/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ✅
+ 
+#### [Work Scheduling Outside of Weekends and Holidays](templates/Working-Days/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+#### [Cargo Shipping](templates/Iterating-Collections/README.md)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
+
+
+
+### Dynamic Form Templates
   Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior
 
-<a href="templates/Car-Insurance/README.md">Car Insurance Application</a> 
-  <br><a href="templates/Conference-Registration/README.md">Registration for a conference</a> 
-  <br><a href="templates/Country-State-City-Selector/README.md">Country State City Selector</a> 
-  <br><a href="templates/Diabetes-Risk-Score-(Type-2)/README.md">Type 2 Diabetes Risk</a> 
-  <br><a href="templates/Plant-Clinic/README.md">Garden Plant Doctor</a> 
-  <br><a href="templates/Select-Vehicle-Model-Make-Year/README.md">Select Vehicle Model based on make, year based on both</a> 
-  <br><a href="templates/US-2021-Income-Tax-Calculator/README.md">Calculate Income Tax Bill for 2021</a> 
+#### [Car Insurance Application](templates/Car-Insurance/README.md)
+
+#### [Registration for a conference](templates/Conference-Registration/README.md)
+
+#### [Country State City Selector](templates/Country-State-City-Selector/README.md)
+#### [Type 2 Diabetes Risk](templates/Diabetes-Risk-Score-(Type-2)/README.md)
+#### [What's wrong with my plant?](templates/Plant-Clinic/README.md)
+#### [Select Vehicle Model based on make, year based on both](Select-Vehicle-Model-Make-Year/README.md)
+#### [Calculate Income Tax Bill](templates/US-2021-Income-Tax-Calculator/README.md)
+
 </details>
 
 <hr>
