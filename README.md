@@ -56,7 +56,7 @@
 #### [Country State City Selector](templates/Country-State-City-Selector/README.md)
 #### [Type 2 Diabetes Risk](templates/Diabetes-Risk-Score-(Type-2)/README.md)
 #### [What's wrong with my plant?](templates/Plant-Clinic/README.md)
-#### [Select Vehicle Model based on make, year based on both](Select-Vehicle-Model-Make-Year/README.md)
+#### [Select Vehicle Model based on make, year based on both](templates/Select-Vehicle-Model-Make-Year/README.md)
 #### [Calculate Income Tax Bill](templates/US-2021-Income-Tax-Calculator/README.md)
 
 </details>
