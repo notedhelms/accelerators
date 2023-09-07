@@ -76,23 +76,3 @@
 
 
 <br><hr>
-
-<!-- <details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff"> Template Matrix </summary>
-
-
-
-
-<br><hr>
-
-</details> -->
-
-
-
-<!-- ## Corticon Starter Rule Vocabularies
-
-These are pre-built rule vocabularies, generated from JSON schemas and other data model representations of openly available ontologies. 
- -->
-
-
-
