@@ -10,7 +10,7 @@
 
 <h2>Classic Templates</h2>
 
-<a href="https://corticon.github.io/templates/#/templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a>
+<a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a>
   <br><a href="templates/Commission-Calculations/README.md">Commission Calculations</a> 
   <br><a href="templates/Hazardous-Gas/README.md">Hazardous Gas First Order Decay</a> 
   <br><a href="templates/IPv4-Validation/README.md">IPv4 Validation</a> 
