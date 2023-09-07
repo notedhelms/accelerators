@@ -1,11 +1,11 @@
 # Holidays - Use Case for Advanced Inferencing w. Self Triggering
 ---
+
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Working-Days/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip)
+
 * Use with Corticon classic? ✅
 * Use with Corticon.js? ❌
-  
-[Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Working-Days/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip
-)
+
 ---
 
 Advanced Inferencing with Self-Triggering is needed when the conditions of a rule may be changed by its own actions (or the actions of another rule) and that rule must be reevaluated when the values change. Independent rules will not be re-evaluated when using Advanced Inferencing. Independent rules will be re-evaluated when using Advanced Inferencing with self-triggering and the rule depends logically on themselves.

@@ -1,10 +1,10 @@
 # Calculate Postage
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
+
 ---
 
-[Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Postage-Calculation/Postage%20Calculation.zip)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Postage-Calculation/Postage%20Calculation.zip)
+* Use with Corticon classic? ✅
+* Use with Corticon.js? ❌
 ---
 Assume you need to mail a letter and the required postage costs (an arbitrary) 1.25 (whatever currency). The Post Office prints stamps in 45, 25, and 10‐cent increments. What combination of stamps is needed to total 1.25? If it’s not possible to total 1.25 exactly, which combination of stamps results in the least amount of wasted, excess postage?
 

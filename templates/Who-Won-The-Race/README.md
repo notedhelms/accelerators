@@ -1,9 +1,9 @@
 # Rule Authoring in Practice: ‘Off to the Races’
+
+---
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Who-Won-The-Race/Winner%20of%20the%20Race%20Word%20Problem.zip)
 * Use with Corticon classic? ✅
 * Use with Corticon.js? ✅
----
-[Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Who-Won-The-Race/Winner%20of%20the%20Race%20Word%20Problem.zip)
 ---
 
 **Seven runners enter a race. The following rules describe the race results:**
