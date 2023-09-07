@@ -25,11 +25,11 @@
 
 #### [Postage Calculation](templates/Postage-Calculation/README.md).
 
-#### [Sunrise Sunset REST API](Sunrise-Sunset-REST-API/README.md)
+#### [Sunrise Sunset REST API](templates/Sunrise-Sunset-REST-API/README.md)
 
-#### [Who will be the heir to the throne](Who-is-Heir-to-throne/README.md)
+#### [Who will be the heir to the throne](templates/Who-is-Heir-to-throne/README.md)
 
-#### [Who won the race](Who-Won-The-Race/README.md)
+#### [Who won the race](templates/Who-Won-The-Race/README.md)
 
 
 #### [Work Scheduling Outside of Weekends and Holidays](templates/Working-Days/README.md)
