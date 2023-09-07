@@ -31,25 +31,15 @@
 
 #### [Who won the race](templates/Who-Won-The-Race/README.md)
 
-
 #### [Work Scheduling Outside of Weekends and Holidays](templates/Working-Days/README.md)
-
 
 #### [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
 
-
 #### [Cargo Shipping](templates/Iterating-Collections/README.md)
 
-</div>
-
-<hr>
-
-<div class="accordion">
-
-<details>
-<summary style=" font-weight: bold; font-size: large; color: 0000ff">Dynamic Form Templates</summary>
-
+### Dynamic Forms
   Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior
+
 
 #### [Car Insurance Application](templates/Car-Insurance/README.md)
 #### [Registration for a conference](templates/Conference-Registration/README.md)
@@ -59,18 +49,40 @@
 #### [Select Vehicle Model based on make, year based on both](templates/Select-Vehicle-Model-Make-Year/README.md)
 #### [Calculate Income Tax Bill](templates/US-2021-Income-Tax-Calculator/README.md)
 
-</details>
+</div>
 
 <hr>
 
 <details>
-<summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Industry Use Case</summary>
+<summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Concepts Illustrated</summary>
 
-  <h3>Clinical Decision Support</h3>
-  *  <a href="templates/Pharmaceutical-Dosing/README.md">Pharmaceutical Dosing</a> 
+### Dynamic Forms
+  Rule Project templates for use in Corticon.js Studio, and generated into a JavaScript Decision Function driving client-side dynamic form behavior
+
+<Dynamic Forms>
+
+  #### [Car Insurance Application](templates/Car-Insurance/README.md)
+  #### [Registration for a conference](templates/Conference-Registration/README.md)
+  #### [Country State City Selector](templates/Country-State-City-Selector/README.md)
+  #### [Type 2 Diabetes Risk](templates/Diabetes-Risk-Score-(Type-2)/README.md)
+  #### [What's wrong with my plant?](templates/Plant-Clinic/README.md)
+  #### [Select Vehicle Model based on make, year based on both](templates/Select-Vehicle-Model-Make-Year/README.md)
+  #### [Calculate Income Tax Bill](templates/US-2021-Income-Tax-Calculator/README.md)
+</Dynamic Forms>
+
+</details>
+<hr>
+
+<details>
+<summary style="font-weight: bold; font-size: large; color: 0000ff">Templates by Industry</summary>
+
+<h3>Clinical Decision Support</h3>
+
+  [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
 
 <h3>Financial Services</h3>
-  *  <a href="templates/Calculate-Compound-Interest/README.md">Calculate Compound Interest</a> 
+
+[Calculate Compound Interest](templates/Calculate-Compound-Interest/README.md)  
 </details>
 <hr>
 
