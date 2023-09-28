@@ -15,6 +15,7 @@
     -  [Work Scheduling Outside of Weekends and Holidays](templates/Working-Days/README.md)
     -  [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
     -  [Cargo Shipping](templates/Iterating-Collections/README.md)
+  
 * Dynamic Forms
     -  [Car Insurance Application](templates/Car-Insurance/README.md)
     -  [Registration for a conference](templates/Conference-Registration/README.md)
@@ -23,6 +24,7 @@
     -  [What's wrong with my plant?](templates/Plant-Clinic/README.md)
     -  [Select Vehicle Model based on make, year based on both](templates/Select-Vehicle-Model-Make-Year/README.md)
     -  [Calculate Income Tax Bill](templates/US-2021-Income-Tax-Calculator/README.md)
+  
 * Industry Solutions
   * Clinical Decision Support
     - [Pharmaceutical Dosing](templates/Pharmaceutical-Dosing/README.md)
