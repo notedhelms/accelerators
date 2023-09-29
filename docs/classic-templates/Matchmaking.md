@@ -5,16 +5,10 @@ tags:
   - Corticon classic
 ---
 
-# Online Dating Matchmaking
+# Online Dating Matchmaker
 
----
-
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Matchmaking/Matchmaking.zip)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
----
-
-_Response to Decision Management Community Rule Challenge_
+You have been approached by an online dating service that wants to
+use a rules engine to improve its process for matching people.
 
 ## Challenge Prompt:
 
