@@ -6,6 +6,7 @@ tags:
 ---
 
 # Pharmaceutical Dosing
+Based upon patient attributes, calculate recommended medication dose.
 ---
 
 [Download Rule Assets

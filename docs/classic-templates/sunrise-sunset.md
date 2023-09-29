@@ -6,6 +6,7 @@ tags:
 ---
 
 # Retrieving Data from Sunrise/Sunset REST API
+Use data from external REST API in rules
 
 ---
 [Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Sunrise-Sunset-REST-API/Sunrise%20Sunset%20REST%20API.zip)
