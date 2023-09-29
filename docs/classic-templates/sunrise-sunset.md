@@ -1,4 +1,9 @@
 
+---
+title: Retrieving Data from Sunrise/Sunset REST API
+tags:
+  - Corticon classic
+---
 
 # Retrieving Data from Sunrise/Sunset REST API
 

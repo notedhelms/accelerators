@@ -1,5 +1,4 @@
 ---
-id: 
 title: 
 tags:
   - Corticon.js

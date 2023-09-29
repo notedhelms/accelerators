@@ -73,7 +73,7 @@ For example, if `TestDate` is May 1, 2021, then only `SeasonStart` is calculated
 
 Through our step by step approach, we have completed the rules and we can package them in a ruleflow which we can publish to Corticon Server as an executable decision service.
 
-![Alt text](images/oyster flow.png)
+![Alt text](<images/oyster flow.png>)
 
 Alternatively, the four steps shown above could be combined into a single Rulesheet – the dependencies between rules will still be understood and executed correctly by Studio. Here’s a screenshot of the combined rules in a single Rulesheet:
 

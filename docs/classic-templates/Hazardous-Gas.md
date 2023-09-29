@@ -1,5 +1,4 @@
 ---
-id: 
 title: First Order of Decay Calculations 
 tags:
   - Corticon.js

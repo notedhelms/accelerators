@@ -1,5 +1,4 @@
 ---
-id: 
 title: IPv4 Validation
 tags:
   - Corticon.js
