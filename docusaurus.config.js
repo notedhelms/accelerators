@@ -59,7 +59,7 @@ const config = {
       navbar: {
         title: 'Corticon Accelerate',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Corticon Accelerate Logo',
           src: 'img/favicon.ico',
         },
         items: [
