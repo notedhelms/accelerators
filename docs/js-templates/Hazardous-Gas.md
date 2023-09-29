@@ -1,6 +1,6 @@
 ---
-id: 
-title: 
+id: Decay
+title: First Order of Decay Calculations 
 tags:
   - Corticon.js
   - Corticon classic
