@@ -1,6 +1,6 @@
 ---
-id: forms_insurance
-title: Car Insurance Quote Dynamic Form
+id: forms_conference
+title: Conference Registration
 tags:
   - Corticon.js
   - Dynamic Forms

@@ -1,6 +1,6 @@
 ---
-id: forms_insurance
-title: Car Insurance Quote Dynamic Form
+id: Type-2-Diabetes-Risk-Score
+title: Type 2 Diabetes Risk Score
 tags:
   - Corticon.js
   - Dynamic Forms
