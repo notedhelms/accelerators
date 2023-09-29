@@ -11,8 +11,6 @@ tags:
 
 ---
 [Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Commissio-Calculations/Commission%20Calculations.zip)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
 ---
 
 _This example illustrates how sales commissions can be calculated using a tiering system whereby sales over quota are rewarded at higher commission rates_

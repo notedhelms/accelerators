@@ -1,3 +1,10 @@
+---
+id: Oyster
+title: Oyster Season
+tags:
+  - Corticon classic
+---
+
 # Oyster Season
 
 ---

@@ -1,3 +1,11 @@
+---
+id: 
+title: 
+tags:
+  - Corticon.js
+  - Corticon classic
+---
+
 # Rule Authoring in Practice: ‘Off to the Races’
 
 ---

@@ -1,4 +1,10 @@
-
+---
+id: 
+title: 
+tags:
+  - Corticon.js
+  - Corticon classic
+---
 
 
 # The Miracle of Compound Interest

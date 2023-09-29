@@ -1,3 +1,11 @@
+---
+id: 
+title: 
+tags:
+  - Corticon.js
+  - Corticon classic
+---
+
 # Holidays - Use Case for Advanced Inferencing w. Self Triggering
 ---
 

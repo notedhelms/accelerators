@@ -1,3 +1,11 @@
+---
+id: 
+title: 
+tags:
+  - Corticon.js
+  - Corticon classic
+---
+
 # Heir to the Throne
 * Use with Corticon classic? ✅
 * Use with Corticon.js? ❌
