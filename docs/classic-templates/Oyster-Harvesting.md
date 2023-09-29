@@ -19,7 +19,7 @@ To start, we’ll look at each component individually; we will combine them at t
 
 We start with the first rulesheet to tackle the first piece related to the month of harvest. To make our lives more straightforward as rule modelers, we start with our rule messages. Notice the TestDate which we inserted from the vocabulary in the statement to contextualize the produced rule messages once we start testing this with some real data.
 
-![Alt text](images/oyster rule msg.png)
+![Alt text](<images/oyster rule msg.png)
 
 We can even take this one step further, by starting with natural language text for our conditions and actions. We can open the Natural Language view as follows and drag the pane next to our rule statement pane.
 
@@ -31,7 +31,7 @@ Now we can enter the plain language text for our rules’ conditions and actions
 
 Let’s now define the rules.
 
-![Alt text](images/oyster rules.png)
+![Alt text](<images/oyster rules.png>)
 
 In the Rulesheet above, our `TestDate` is a ‘Date’ attribute, and we use the `.month`
 operator to identify the integer number of the month. The 1st rule column tests if the month number falls within the range 1..4 (representing the months January through April) or 9..12 (September through December) – these two ranges, taken together, cover the entire oyster-eating season. 
@@ -49,7 +49,7 @@ We’ll break our solution into two parts:
 
 ### 2.1 Determine the year of the season start or end (as appropriate).
 
-![Alt text](images/oyster determine season start rule.png)
+![Alt text](<images/oyster determine season start rule.png>)
 
 The Rulesheet above shows a simple way to determine the start or end year based on the month of `TestDate`. If `TestDate.month` is January through April, which is in-season, then the season ends in the same year (May 1). If `TestDate.month` is May through August, which is out-of-season, then the next season starts in the same year (September 1). However, if `TestDate.month` is September through December, which is in-season, then the season ends next year (May 1).
 
@@ -77,14 +77,14 @@ Through our step by step approach, we have completed the rules and we can packag
 
 Alternatively, the four steps shown above could be combined into a single Rulesheet – the dependencies between rules will still be understood and executed correctly by Studio. Here’s a screenshot of the combined rules in a single Rulesheet:
 
-![Alt text](images/oyster combined.png)
+![Alt text](<images/oyster combined.png>)
 
 Or in natural text format:
 
-![Alt text](images/oyster combined nat lang.png)
+![Alt text](<images/oyster combined nat lang.png>)
 
 As long as your rules are easily maintainable and understood by your business audience, you could take the step to step approach or consolidate all rules into one rulesheet. So next time you’re not sure whether it is oyster eating season, just consult your decision service (through Corticon Tester). You can call your consolidated rules rulesheet:
 
-![Alt text](images/oyster test1.png)
+![Alt text](<images/oyster test1.png>)
 
 As always, the full solution can be downloaded from the [Corticon GitHub repository](https://github.com/corticon/newsletter-solutions). 
