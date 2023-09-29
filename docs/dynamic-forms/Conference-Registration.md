@@ -1,3 +1,11 @@
+---
+id: forms_insurance
+title: Car Insurance Quote Dynamic Form
+tags:
+  - Corticon.js
+  - Dynamic Forms
+---
+
 # Conference Registration
 
 _**Dynamic Form Template**_

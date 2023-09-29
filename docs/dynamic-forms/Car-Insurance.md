@@ -1,4 +1,13 @@
+---
+id: forms_insurance
+title: Car Insurance Quote Dynamic Form
+tags:
+  - Corticon.js
+  - Dynamic Forms
+---
+
 # Car Insurance Quote Dynamic Form
+
 _**Dynamic Form Template**_
 
 [Download Rule Assets
