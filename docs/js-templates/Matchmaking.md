@@ -7,9 +7,8 @@ tags:
 ---
 
 # Online Dating Matchmaker
+Rules to match dating preferences 
 
-You have been approached by an online dating service that wants to
-use a rules engine to improve its process for matching people.
 ## Challenge Prompt:
 
 Consider the following situation. You have been approached by an online dating service that wants to

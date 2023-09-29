@@ -6,6 +6,7 @@ tags:
 ---
 
 # Shipping Logistics
+Group like-entities and to calculate as a collection.
 ---
 
 [Download Rule Assets

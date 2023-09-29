@@ -8,11 +8,11 @@ tags:
 
 # First Order of Decay Calculations 
 
- ---
-[Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Hazardous-Gas/Hazardous%20Gas%20First%20Order%20Decay.zip)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ✅
+How long for hazardous waste to decay to a safe level?
+
+---
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Hazardous-Gas/Hazardous%20Gas%20First%20Order%20Decay.zip)
+
 ---
 
 First Order of Decay Calculations are [widely used](https://pubmed.ncbi.nlm.nih.gov/27332778/) to estimate landfill gas generation for emissions inventories, life cycle assessments, and regulation. It is the methodological tool advised by the United Nations Framework Covention on Climate Change for the calculation of solid waste disposal site emissions. 

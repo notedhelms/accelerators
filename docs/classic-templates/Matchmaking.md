@@ -7,9 +7,7 @@ tags:
 ---
 
 # Online Dating Matchmaker
-
-You have been approached by an online dating service that wants to
-use a rules engine to improve its process for matching people.
+Rules to match dating preferences 
 
 ## Challenge Prompt:
 
