@@ -18,7 +18,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Progress Corticon', // Usually your GitHub org/user name.
+  organizationName: 'corticon', // Usually your GitHub org/user name.
   projectName: 'accelerators', // Usually your repo name.
 
   onBrokenLinks: 'throw',
