@@ -1,4 +1,5 @@
 ---
+id: classic_Pharmaceutical
 title: Pharmaceutical Dosing
 tags:
   - Corticon classic

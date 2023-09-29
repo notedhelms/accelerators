@@ -1,5 +1,5 @@
 ---
-id: Oyster
+id: Classic_Oyster
 title: Oyster Season
 tags:
   - Corticon classic

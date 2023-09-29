@@ -1,4 +1,5 @@
 ---
+id: classic_race
 title: Who won the race?
 tags:
   - Corticon.js

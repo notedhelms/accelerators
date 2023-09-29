@@ -1,4 +1,5 @@
 ---
+id: classic_holiday
 title: Is tomorrow a holiday?
 tags:
   - Corticon classic

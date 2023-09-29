@@ -1,5 +1,5 @@
 ---
-id: commission
+id: classic_commission
 title: Sales Commission
 tags:
   - Corticon.js

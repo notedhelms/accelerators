@@ -1,4 +1,5 @@
 ---
+id: classic_Decay
 title: First Order of Decay Calculations 
 tags:
   - Corticon.js

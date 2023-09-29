@@ -1,4 +1,5 @@
 ---
+id: classic_Logistics
 title: Shipping Logistics
 tags:
   - Corticon classic

@@ -1,4 +1,5 @@
 ---
+id: classic_Postal
 title: Change for a Postal Stamp
 tags:
   - Corticon classic
