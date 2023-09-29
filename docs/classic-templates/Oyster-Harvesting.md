@@ -7,12 +7,6 @@ tags:
 
 # Oyster Season
 
----
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Oyster Harvesting/Oyster Harvesting.zip)
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
-
----
 Aficionados believe that raw oysters are best eaten during months that end with an “r” because colder water temperatures in the winter contribute to tastier and healthier shellfish. To help maximize the oystermen’s time, please build a Corticon rules project that tests any given date to determine whether oysters should be harvested. When they should not be harvested, please define a rule stipulating how many days must pass before eating season begins. Or, if eating season is already in progress, how much longer will the season last?
 
 #  The Solution
@@ -29,11 +23,11 @@ We start with the first rulesheet to tackle the first piece related to the month
 
 We can even take this one step further, by starting with natural language text for our conditions and actions. We can open the Natural Language view as follows and drag the pane next to our rule statement pane.
 
-![Alt text](images/nat lang dropdown.png)
+![Alt text](<images/oyster_nat lang dropdown.png>)
 
 Now we can enter the plain language text for our rules’ conditions and actions!
 
-![Alt text](images/oyster nat lang.png)
+![Alt text](<images/oyster nat lang.png>)
 
 Let’s now define the rules.
 
