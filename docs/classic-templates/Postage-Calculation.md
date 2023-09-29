@@ -1,8 +1,7 @@
 ---
 id: 
-title: 
+title: Change for a Postal Stamp
 tags:
-  - Corticon.js
   - Corticon classic
 ---
 

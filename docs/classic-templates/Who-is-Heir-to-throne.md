@@ -1,6 +1,6 @@
 ---
 id: 
-title: 
+title: Who shall be the king's heir?
 tags:
   - Corticon.js
   - Corticon classic

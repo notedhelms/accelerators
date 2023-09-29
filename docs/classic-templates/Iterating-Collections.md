@@ -1,12 +1,11 @@
 ---
 id: 
-title: 
+title: Shipping Logistics
 tags:
-  - Corticon.js
   - Corticon classic
 ---
 
-# Cargo Shipping
+# Shipping Logistics
 ---
 
 [Download Rule Assets

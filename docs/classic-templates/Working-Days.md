@@ -10,8 +10,7 @@ tags:
 
 [Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Working-Days/Holidays%20-%20Use%20Case%20for%20Advanced%20Inferencing%20w.%20Self%20Triggering.zip)
 
-* Use with Corticon classic? ✅
-* Use with Corticon.js? ❌
+
 
 ---
 

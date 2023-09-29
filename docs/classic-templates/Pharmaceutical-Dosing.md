@@ -1,8 +1,7 @@
 ---
 id: 
-title: 
+title: Pharmaceutical Dosing
 tags:
-  - Corticon.js
   - Corticon classic
 ---
 
