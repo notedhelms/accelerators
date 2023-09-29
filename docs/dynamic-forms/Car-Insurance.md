@@ -4,8 +4,6 @@ _**Dynamic Form Template**_
 [Download Rule Assets
 ](https://github.com/corticon/templates/blob/main/form-templates/Car-Insurance/Car-Insurance.zip)
 
-For scenarios where the input data for a decision is being entered into a form by an end user, the decisions-from-data paradigm can be extended to optimize dynamic data-collection logic presented to end users.
-
 To illustrate, we'll consider a scenario where an insurance company is building out a new dynamic form to apply for a car insurance policy. They have documented business rules that they want to guide the mobile app’s behavior related to—
 
 - Maintaining updated versions of the myriad business rules and benchmarks set forth by the policy’s eligibility rules.
