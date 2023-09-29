@@ -1,3 +1,11 @@
+---
+id: commission
+title: Sales Commission
+tags:
+  - Corticon.js
+  - Corticon classic
+---
+
 # Sales Commission
 
 
