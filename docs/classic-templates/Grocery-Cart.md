@@ -246,7 +246,7 @@ You can change the role name for an association to make it more meaningful. In o
 
 ![](images/2023-10-03-11-21-25.png)
 
-### Model the first Rulesheet
+## Model the first Rulesheet
 
 With the Vocabulary ready, you can now focus on modeling the rules. Let’s begin with the first Rulesheet, which models the rules in the Raise Alerts substep.
 
