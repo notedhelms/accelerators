@@ -186,7 +186,9 @@ To add the attributes, start by adding attributes for the **Customer** entity ba
 
 ![](images/2023-10-03-10-41-13.png)
 
-> Note: The Data Type Time is not available in Corticon.js.
+:::info
+The Data Type Time is not available in Corticon.js.
+:::
 
 2. Rename this attribute by typing `name` over the default name.
    
@@ -226,7 +228,7 @@ To create associations between the entities, start with the association between 
 
 ![](images/2023-10-03-11-19-19.png)
 
- The association appears as shown here. 
+The association appears as shown here. 
 
 3. Notice that the association appears as many-to-one (![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/many-to-one.png?_LANG=enus)) under Customer and one-to-many (![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/izm1559244605551.png?_LANG=enus)) under PreferredAccount.
 
