@@ -243,3 +243,257 @@ Each association has an association role name. For example, the association betw
 You can change the role name for an association to make it more meaningful. In our example, let’s change the role name for the association between Customer and PreferredAccount to **preferredCard** by double-clicking the association under Customer,and typing **preferredCard** over the default value.
 
 ![](images/2023-10-03-11-21-25.png)
+
+### Model the first Rulesheet
+
+With the Vocabulary ready, you can now focus on modeling the rules. Let’s begin with the first Rulesheet, which models the rules in the Raise Alerts substep.
+
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image31.png?_LANG=enus)
+
+Before building or modeling anything, you should think about how to approach this part of the problem.
+
+The business rule identified for the Raise Alerts substep examines all items in a customer’s shopping cart and determines which items (if any) come from the Liquor department.
+
+Each **Item** has a barcode. The department code occupies the 4<sup class="ph sup">th</sup> through 6<sup class="ph sup">th</sup> characters of the barcode. Let’s assume that the department code for liquor is `291`. So if an item has `291` occupying the 4<sup class="ph sup">th</sup> through 6<sup class="ph sup">th</sup> characters of the barcode, the cashier must be alerted to check the customer’s identification.
+
+Considering this scenario, define two rules in Corticon Studio:
+
+1.  Determine the department code for every item in the shopping cart.
+2.  Determine if any of the items come from the Liquor department and if so, the rule raises an alert of some kind.
+
+It is normal t not always have a one-to-one correlation between the business rule defined in a business scenario and the corresponding rules modeled in Corticon Studio. A good guideline is to keep your individual rules relatively simple and let them work together to perform more complex logic defined by the business rules.
+
+### Create the Rulesheet
+
+1.  Before you start defining the rules, create a Rulesheet.
+    
+      
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image32.png?_LANG=enus)  
+    
+2.  Name the Rulesheet `checks`, and then click **Next**.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image33.png?_LANG=enus)  
+    
+3.  Select **groceryStore.ecore** as the Vocabulary.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image34.png?_LANG=enus)  
+    
+    Note: You named this Rulesheet **checks** as reminder of the overall organization—this Rulesheet performs any necessary checks and raises alerts as required.
+    
+4.  Click **Finish**.
+
+### Define rule scope
+
+You need to choose the point of view in the Vocabulary that best represents the terms required by the rules themselves. This point of view, called the scope of the rule, changes from Rulesheet to Rulesheet.
+
+Scope is a powerful and important concept. It determines which entity instances and attributes are evaluated and acted upon by a rule. For the first Rulesheet, define rules that act only on Items associated with a ShoppingCart, which in turn is associated with a Customer. Using Customer as the root entity and working with the associated ShoppingCart and its items makes sense because it is a Customer’s transaction that is processed by the Checkout step. It forms the scope of the rules in the Rulesheet.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image35.png?_LANG=enus)  
+
+To define the scope:
+
+1.  Open the **Scope** pane of the Rulesheet by ensuring that **checks.ers** is open and active, and selecting **Rulesheet > Advanced View**.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image36.png?_LANG=enus)  
+    The Scope pane opens in the Rulesheet.
+2.  Drag the **Customer** entity from the Rule Vocabulary view and drop it into the **Scope** pane.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image37.png?_LANG=enus)  
+    
+3.  Drag **shoppingCart** from under **Customer** into the **Scope** pane.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image38.png?_LANG=enus)  
+    
+4.  To complete the scope, drag **item** from under **shoppingCart** and drop it into the **Scope** pane.  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image39.png?_LANG=enus)  
+    
+
+Next, let’s enter an alias for a customer’s shopping cart and call it **currentCart** by double-clicking **shoppingCart** in the **Scope** pane and enter **currentCart**. From now on, when you model rules involving a customer’s shopping cart, use this alias to represent the perspective of a customer’s shopping cart.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image40.png?_LANG=enus)  
+
+Because a shopping cart can contain many items, let’s define another alias **items** that represents all the items in a customer’s shopping cart.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image41.png?_LANG=enus)  
+
+Assigning meaningful alias names is a good practice and using the plural form of item reminds us that the alias represents all the items in the customer’s shopping cart.
+
+Using aliases is optional in many cases—they serve to simplify and shorten rule expressions. But in certain cases, using aliases is mandatory. For example, applying collection operators to sets or collections of data in rules requires the use of aliases. Because you work with the collection of items in a customer’s shopping cart a bit later, keep the **items** alias defined and ready.
+
+Aliases always insert themselves automatically when terms are dragged from the **Scope** section or **Vocabulary** window to the Rulesheet. Because all Studio expressions are case-sensitive, to avoid errors, drag and drop terms instead of typing them manually.
+
+### Model the first rule
+
+To model the business rule for the Raise Alerts substep, create two rules in Corticon Studio in the checks Rulesheet:
+
+-   Rule 1: Determine the department code for every item in the shopping cart.
+-   Rule 2: Use the department code to determine if any of the items come from the Liquor department and if so, raise an alert.
+
+Let’s start modeling the first rule—determining the department codes. You know an item’s department is identified by the 4<sup class="ph sup">th</sup> through 6<sup class="ph sup">th</sup> characters in its barcode. So using the **items** alias, let’s add an **action-only rule** in an **Actions** row of column **0** using the String operator **.substring** as shown.
+
+
+:::info
+
+ A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. Here, you might need to write `substring(4;6)`.
+
+:::
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/daz1655744950627.image?_LANG=enus)  
+
+The expression **items.department=items.barCode.substring(4,6)** extracts the characters from positions 4 to 6 in the barcode string and assigns the substring to `items.department`. The checkbox in the corresponding cell of column **0** indicates that this is an action-only rule, which fires whenever the Rulesheet receives any data. Action-only rules fire first in the Rulesheet. In this example, it is useful because you need to extract the department code before identifying whether any items come from the Liquor department.
+
+Because the alias **items** represents the collection of all items associated with a customer’s shopping cart, this rule evaluates and processes every item in a customer’s shopping cart, extracts each department code, and then assigns that code to the item’s **department** attribute. This iteration is a natural behavior of the rule engine: it automatically processes all data that matches the rule’s scope.
+
+Notice that when you dragged the terms **barcode** and **department** from the Vocabulary to the **Action** row, they were automatically added to the **Scope** pane. Over time, the **Scope** pane becomes a reduced version of the Vocabulary, containing only those terms used by the rules in that Rulesheet.
+
+Save the Rulesheet.
+
+## Test the first rule
+
+1.  To test the first rule, create a Ruletest.    
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image43.png?_LANG=enus)  
+    
+2.  Name the Ruletest **checks**, and then choose the test subject **checks.ers**.
+3.  In the **Input** pane of the Ruletest, define a customer with an associated shopping cart containing two items, one of which is from the Liquor department.
+4.  Drag the **Customer** entity, and drop it into the Input pane. Then, drop **shoppingCart** (under Customer) onto the Customer entity:
+    
+      
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/bam1663781484772.image?_LANG=enus)  
+    
+Then drag and drop **item** (under shoppingCart) onto the shoppingCart entity twice.
+    
+>    Note: You must drop the items from the Vocabulary into the **Input** pane of the Ruletest in the indicated order so that you can duplicate the scope of the rule which that processes this data.
+    
+5.  When finished, enter test data as shown.
+    
+    Note: A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. In that case, you might need to write the price of Miller Beer as:
+    
+    ```
+    6,990000
+    ```
+    
+      
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image44.png?_LANG=enus)  
+    
+    As you can see, one of the items is from the liquor department (remember that the department code for Liquor is 291, which occupies characters 4 through 6 in the barcode).
+6.  Finally, execute the Ruletest. The output should look like this:  
+    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image45.png?_LANG=enus)  
+    
+
+The first rule has worked as expected. Characters 4-6 have been successfully parsed from each item’s **barCode** and assigned to its **department** attribute.
+
+By modeling a rule and then immediately testing it, you have demonstrated a good Studio modeling practice. Testing right away helps expose flaws in the rules as you go along.
+
+## Model the second rule
+
+Now that department codes are readily available for every item in a customer’s shopping cart, you need to determine if any came from the Liquor department.
+
+It requires you to look inside the collection of items to see if an item exists with `department = '291'`. You only need one check ID alert per checkout transaction, this is a job for a collection operator.
+
+A collection operator, because it acts on collections, evaluates once per collection and not once per item, as the previous rule did. You only need one check ID alert if the shopping cart contains any liquor. You do not want multiple alerts if the shopping cart contains several liquor items.
+
+Using the **items** alias, let’s add a Condition for the second rule that determines if any liquor items exist in the customer’s shopping cart. To add this condition, use the Collection operator **→exists**. The **→exists** operator checks if a specific value exists for an attribute in the entity instances in the collection. In this case the collection is **items**. So the condition expression is items->exists(department='291').
+
+Note: Always use plain single-quotation marks to specify a text string.
+
+Then, define an **Action** for the second rule to assign a value of `true` to the shopping cart’s **checkID** attribute, if any are found. (Here, the assumption is that the checkID term will act as the alerting mechanism to signal the cashier that an ID check is required during this checkout transaction.)
+
+The second rule looks like this:
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image46.png?_LANG=enus)  
+
+As mentioned earlier, using aliases to represent collections is mandatory when collection operators (like **→exists**) are used.
+
+Add rule statements for each rule as shown:
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image47.png?_LANG=enus)  
+
+## Test the second rule
+
+Now, let’s re-run the same Ruletest as before:
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/vkv1655501178197.image?_LANG=enus)  
+
+The **Condition** and **Action** rule has worked as expected. A customer’s shopping cart containing an item from the Liquor department has been identified, and the **checkID** attribute is set to `true` to alert the cashier to check the customer’s ID. Notice that the business rule statement has also been posted in the **Message** box. Often, a simple message is all you need to raise an alert or warning.
+
+Note: Ordinarily, you would check for Conflicts and Completeness before testing with data. But because this tutorial focuses on advanced rule modeling features, the Analyze phase of the rule development lifecycle is skipped.
+
+## Add more rules to the checks Rulesheet
+
+You have implemented two rules representing the first business rule in the checks Rulesheet. Let's use this Rulesheet to model two more rules:
+
+-   Check if a customer has a preferred account
+-   Add the total price of items in a shopping cart
+
+You use the output of the first rule in the next Rulesheet to filter out customers who do not have preferred accounts, since that Rulesheet contains promotional rules that apply only to preferred account holders.
+
+The second rule, which calculates total price, must be included in the first Rulesheet, because the second Rulesheet filters out customers who do not have preferred accounts, whereas you want to calculate the total price for every customer.
+
+## Check if a customer has a preferred account
+
+Any customer who has a **Preferred Account** has an associated preferredCard. So, let’s begin by defining the scope. Drag **preferredCard** under **Customer** in the Vocabulary to the **Scope** pane. Give it the Alias **account**.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image49.png?_LANG=enus)  
+
+The account alias represents a potential collection, where a customer has a **Preferred Card** only if they have a **Preferred Account**. The many-to-one nature of the association means a customer can have at most one account, and other customers (within the same family) share the same **Preferred Account**. For customers who do not have **Preferred Accounts**, the alias **account** represents an empty collection (the collection contains no elements).
+
+The **→notEmpty** collection operator checks a collection for the existence of at least one element in the set. You can use this operator to check if a customer has a preferred card. Because **→notEmpty** acts on a collection, the **account** alias must be used with it.
+
+Model a Boolean condition in row **b** in the **Conditions** pane that uses the **→notEmpty** collection operator as shown. If the **account** alias is not empty, the customer has a preferred account.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/vvu1655745315224.image?_LANG=enus)  
+
+Let’s add an action to this rule that assigns the value of `true` to the **isPreferredMember** attribute (from the **Customer** entity) and posts an informational message, as shown. Recall that **isPreferredMember** is a transient attribute whose value is only used in the rules.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image51.png?_LANG=enus)  
+
+Now, whenever you want to know if a customer is a preferred customer, simply refer to the value of the **isPreferredMember** attribute. This method of flagging an entity with a Boolean attribute is convenient when modeling larger Ruleflows. The value of the flag, like all attributes, carries over to other rules in this and other Rulesheets in the same Ruleflow.
+
+Now, let’s test this rule. For this rule to detect the presence of a preferred card account associated with a customer, you need to provide the appropriate test data. Drag the **preferredCard** entity and drop it onto the **Customer** entity in the Ruletest **Input**.
+
+Note: If you do not see the indented structure identical to the following image, delete the entity and try again.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image52.png?_LANG=enus)  
+
+## Run the Ruletest
+
+The Output shows the results.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image53.png?_LANG=enus)  
+
+Notice that the **isPreferredMember** transient attribute has been inserted and assigned the value `true`, and that an informational message has been posted. Our rule has worked as expected.
+
+## Calculate the total price of items in a shopping cart
+
+Finally, you add one more action-only rule to calculate the **totalAmount** of all items in a customer’s shopping cart by using the collection operator **→sum** as shown. This operator adds up the price attributes of all elements in the **items** alias, and then assigns that value to the **totalAmount** attribute.
+
+Now, add a rule statement for this rule. Adding rule statements is good practice, even if you do not post them as messages.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image54.png?_LANG=enus)  
+
+Finally, let’s test this rule. In the **Input** pane of the Ruletest there is a customer with two items in their shopping cart. Let’s see if the last rule calculates the **totalAmount** for the items in the Customer’s shopping cart.
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image55.png?_LANG=enus)  
+
+## Run the Ruletest
+
+  
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image56.png?_LANG=enus)  
+
+The following happened in this Ruletest:
+
+1.  The rules to determine if an ID check is required and if the customer is a preferred card holder still work.
+    
+    Note: You should double-check cumulative test results to make sure nothing has broken along the way.
+    
+2.  The **totalAmount** attribute has returned a value of **8.98**, which is the correct sum of the prices of items 1 and 2, showing that the latest rule also works as expected.
+
+You have now completed modeling and testing our first Rulesheet.
