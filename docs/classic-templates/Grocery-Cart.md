@@ -346,7 +346,7 @@ Notice that when you dragged the terms **barcode** and **department** from the V
 
 Save the Rulesheet.
 
-## Test the first rule
+### Test the first rule
 
 1.  To test the first rule, create a Ruletest.    
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image43.png?_LANG=enus)  
@@ -364,7 +364,7 @@ Then drag and drop **item** (under shoppingCart) onto the shoppingCart entity tw
     
 5.  When finished, enter test data as shown.
     
-    Note: A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. In that case, you might need to write the price of Miller Beer as:
+Note: A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. In that case, you might need to write the price of Miller Beer as:
     
     ```
     6,990000
