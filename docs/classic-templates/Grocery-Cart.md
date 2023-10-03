@@ -278,7 +278,9 @@ It is normal t not always have a one-to-one correlation between the business rul
 3.  Select **groceryStore.ecore** as the Vocabulary.  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image34.png?_LANG=enus)  
     
-    Note: You named this Rulesheet **checks** as reminder of the overall organization—this Rulesheet performs any necessary checks and raises alerts as required.
+:::info
+You named this Rulesheet **checks** as reminder of the overall organization—this Rulesheet performs any necessary checks and raises alerts as required.
+:::
     
 4.  Click **Finish**.
 
