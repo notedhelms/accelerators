@@ -63,7 +63,7 @@ Discovering business rules involves two things:
 
 Let’s start with the Vocabulary.
 
-## Identify Vocabulary terms and associations
+### Identify Vocabulary terms and associations
 
 To get started, you review the business problem and start compiling terms that need to be included in the Vocabulary. You can then identify the key entities and the assumptions about each entity:
 
@@ -109,7 +109,7 @@ To make these relationships clear, you create a diagram of the associations. Cre
 
 In this diagram, the connectors between entities show the kind of relationship. For example, Customer has a one-to-many association with ShoppingCart.
 
-## Identify the business rules
+### Identify the business rules
 
 Next, let’s identify specific business rules. At a high level, this is the basic process followed by every customer making purchases at a store:
 
@@ -158,7 +158,7 @@ The Vocabulary opens under the rule project MyAdvancedTutorial.
 
 ![](images/2023-10-03-10-36-33.png)
 
-## Add Entities
+### Add Entities
 
 Now, let’s add the entities (Customer, PreferredAccount, Item, ShoppingCart, Coupon):
 
@@ -174,7 +174,7 @@ Now, let’s add the entities (Customer, PreferredAccount, Item, ShoppingCart, C
 
 ![](images/2023-10-03-10-37-41.png)
 
-## Add Attributes
+### Add Attributes
 
 To add the attributes, start by adding attributes for the **Customer** entity based on this table:
 
@@ -211,7 +211,7 @@ After adding all the attributes, the Vocabulary looks like this:
 
 ![](images/2023-10-03-11-18-07.png)
 
-## Add Associations
+### Add Associations
 
 To create associations between the entities, start with the association between Customer and PreferredAccount. This is a many-to-one association.
 
