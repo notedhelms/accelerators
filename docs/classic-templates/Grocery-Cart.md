@@ -368,16 +368,19 @@ Then drag and drop **item** (under shoppingCart) onto the shoppingCart entity tw
     
 5.  When finished, enter test data as shown.
     
-Note: A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. In that case, you might need to write the price of Miller Beer as:
+:::info
+A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates. In that case, you might need to write the price of Miller Beer as:
+
+```
+6,990000
+```
+
     
-    ```
-    6,990000
-    ```
-    
-      
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image44.png?_LANG=enus)  
-    
-    As you can see, one of the items is from the liquor department (remember that the department code for Liquor is 291, which occupies characters 4 through 6 in the barcode).
+![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image44.png?_LANG=enus)  
+
+As you can see, one of the items is from the liquor department (remember that the department code for Liquor is 291, which occupies characters 4 through 6 in the barcode). 
+:::
+
 6.  Finally, execute the Ruletest. The output should look like this:  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image45.png?_LANG=enus)  
     
@@ -386,7 +389,7 @@ The first rule has worked as expected. Characters 4-6 have been successfully par
 
 By modeling a rule and then immediately testing it, you have demonstrated a good Studio modeling practice. Testing right away helps expose flaws in the rules as you go along.
 
-## Model the second rule
+### Model the second rule
 
 Now that department codes are readily available for every item in a customer’s shopping cart, you need to determine if any came from the Liquor department.
 
@@ -412,7 +415,7 @@ Add rule statements for each rule as shown:
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image47.png?_LANG=enus)  
 
-## Test the second rule
+### Test the second rule
 
 Now, let’s re-run the same Ruletest as before:
 
@@ -423,7 +426,7 @@ The **Condition** and **Action** rule has worked as expected. A customer’s sho
 
 Note: Ordinarily, you would check for Conflicts and Completeness before testing with data. But because this tutorial focuses on advanced rule modeling features, the Analyze phase of the rule development lifecycle is skipped.
 
-## Add more rules to the checks Rulesheet
+### Add more rules to the checks Rulesheet
 
 You have implemented two rules representing the first business rule in the checks Rulesheet. Let's use this Rulesheet to model two more rules:
 
@@ -459,12 +462,13 @@ Now, whenever you want to know if a customer is a preferred customer, simply ref
 
 Now, let’s test this rule. For this rule to detect the presence of a preferred card account associated with a customer, you need to provide the appropriate test data. Drag the **preferredCard** entity and drop it onto the **Customer** entity in the Ruletest **Input**.
 
-Note: If you do not see the indented structure identical to the following image, delete the entity and try again.
-
+:::note
+If you do not see the indented structure identical to the following image, delete the entity and try again.
+:::
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image52.png?_LANG=enus)  
 
-## Run the Ruletest
+### Run the Ruletest
 
 The Output shows the results.
 
@@ -473,7 +477,7 @@ The Output shows the results.
 
 Notice that the **isPreferredMember** transient attribute has been inserted and assigned the value `true`, and that an informational message has been posted. Our rule has worked as expected.
 
-## Calculate the total price of items in a shopping cart
+### Calculate the total price of items in a shopping cart
 
 Finally, you add one more action-only rule to calculate the **totalAmount** of all items in a customer’s shopping cart by using the collection operator **→sum** as shown. This operator adds up the price attributes of all elements in the **items** alias, and then assigns that value to the **totalAmount** attribute.
 
