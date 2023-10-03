@@ -437,7 +437,7 @@ You use the output of the first rule in the next Rulesheet to filter out custome
 
 The second rule, which calculates total price, must be included in the first Rulesheet, because the second Rulesheet filters out customers who do not have preferred accounts, whereas you want to calculate the total price for every customer.
 
-## Check if a customer has a preferred account
+### Check if a customer has a preferred account
 
 Any customer who has a **Preferred Account** has an associated preferredCard. So, let’s begin by defining the scope. Drag **preferredCard** under **Customer** in the Vocabulary to the **Scope** pane. Give it the Alias **account**.
 
@@ -491,7 +491,7 @@ Finally, let’s test this rule. In the **Input** pane of the Ruletest there is 
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image55.png?_LANG=enus)  
 
-## Run the Ruletest
+### Run the Ruletest
 
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image56.png?_LANG=enus)  
