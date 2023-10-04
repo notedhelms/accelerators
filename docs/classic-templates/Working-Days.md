@@ -5,7 +5,6 @@ tags:
   - Corticon classic
 ---
 
----
 
 Scheduling a project only on work days
 

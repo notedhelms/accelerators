@@ -5,8 +5,6 @@ tags:
   - Corticon classic
 ---
 
----
-
 Use data from external REST API in rules
 
 ---

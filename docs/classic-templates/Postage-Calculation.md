@@ -5,8 +5,6 @@ tags:
   - Corticon classic
 ---
 
----
-
 Which combination of stamps is optimal?
 
 ---

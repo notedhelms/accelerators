@@ -6,7 +6,6 @@ tags:
   - Corticon classic
 ---
 
----
 
 Seven runners enter a race--who comes out on top?
 

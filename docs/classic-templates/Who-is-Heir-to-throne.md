@@ -6,8 +6,6 @@ tags:
   - Corticon classic
 ---
 
----
-
 Which child is the crown prince?
 
  ---
