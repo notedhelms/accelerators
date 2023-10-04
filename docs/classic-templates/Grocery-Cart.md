@@ -527,13 +527,13 @@ Now, you are ready to model the second Rulesheet. Recall that the second Ruleshe
 
 In the second Rulesheet, you apply some promotional rules to the preferred account holders when they spend a pre-defined amount of money or buy items from specific departments at the store. The promotions may change frequently, but modeling them in Corticon makes future changes much easier.
 
-## Create the Rulesheet
+### Create the Rulesheet
 
 1.  Create a second Rulesheet under the **MyAdvancedTutorial** rule project.
 2.  Name it coupons.
 3.  Ensure that it uses the groceryStore.ecore Vocabulary.
 
-## Define the rule scope
+### Define the rule scope
 
 To define the rule scope:
 
@@ -611,7 +611,7 @@ Create a Filter expression in the **Filters** pane.
 
 The Filter expression (**Customer.isPreferredMember=T**) filters out all non-preferred customers by allowing only those customers with an **isPreferredMember** attribute value of `true` to pass (survive). Those customers whose **isPreferredMember** attribute value is not `true` are filtered out and not evaluated by other rules in this Rulesheet.
 
-### Define a rule to calculate cashBackEarned
+#### Define a rule to calculate cashBackEarned
 
 The first rule you define in the **coupons.ers** Rulesheet is to calculate cash back for every preferred customer.
 
@@ -673,7 +673,7 @@ In this case, the value of **cashBackEarned** and **cumulativeCashBack** to be p
 
 Save the Rulesheet.
 
-#### Test the rule
+### Test the rule
 
 1.  Create a Ruletest named **coupons2.ert** that uses **MyAdvancedTutorial.erf** as its test subject.
 2.  To test that cash back earned is being added to cumulative cash back:
@@ -699,7 +699,7 @@ When building Ruletests, if a Rulesheet’s Filters are not satisfied, they may 
     
 The rule works as expected. It calculates the cash back earned ($2) based on the total amount ($100), and adds it to the cumulative cash back ($10), giving it the updated value of $12. Notice that the rule message also contains this data.
 
-### Define a promotional rule for customers purchasing from the Floral department
+#### Define a promotional rule for customers purchasing from the Floral department
 
 Now that the cumulative cash back rule is complete, let’s move on the next business rule:
   
@@ -747,7 +747,7 @@ The rule has worked as expected. Department 290 has been recognized and the info
 
 The new message has been posted containing the value of `allItems.name` embedded in it.
 
-### Define a promotional rule for customers purchasing more than 3 soda/juice items
+#### Define a promotional rule for customers purchasing more than 3 soda/juice items
 
 Let’s move on to the next business rule:
 
@@ -801,7 +801,7 @@ The other rules have fired as well. For example, the total amount of the shoppin
  You should run multiple tests with different data to make sure that the rules work as expected in different scenarios. For example, you could change the department code of one of the items to 291 (liquor) and another one to 290 (floral). When you run the test with the new data, the alert to check the customer’s ID (liquor) and the free balloon coupon (floral) should be generated. However, the soda coupon should not get generated as you no longer have three soda items.
 :::
 
-### Define a promotional rule for customers purchasing more than $75 in this cart
+#### Define a promotional rule for customers purchasing more than $75 in this cart
 
 Let’s now model the last rule in the coupons Rulesheet:
 
@@ -884,7 +884,7 @@ Because the rules in this Rulesheet deal with a preferred shopper’s cart, you 
 With the creation of the third Rulesheet, you can complete this Ruleflow, implementing the execution sequence of the three Rulesheets. Open **MyAdvancedTutorial.erf** (if it isn’t already open) and add the **use\_cashBack.ers** Rulesheet as shown.  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/ikt1655739471983.image?_LANG=enus)  
 
-### Define a Filter in the use\_cashBack Rulesheet
+#### Define a Filter in the use\_cashBack Rulesheet
 
 In the **coupons.ers** Rulesheet, you had defined a Filter to filter out customers who are not preferred account holders. You define the same filter in the **use\_cashBack.ers** Rulesheet, because only preferred customers are eligible for cash back and bonus incentives. You have defined this Filter again because data that is filtered out in one Rulesheet is not automatically filtered out in other Rulesheets.
 
@@ -892,7 +892,7 @@ Define a Filter expression as shown.
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/bpk1651259462116.image?_LANG=enus)  
 
-### Define a rule to apply cash back
+#### Define a rule to apply cash back
 
 Let’s start modeling the first business rule:
   
