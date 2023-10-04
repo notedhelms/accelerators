@@ -851,7 +851,7 @@ Let’s test this rule.
 :::info
 The dateTime output in the JavaScript product is in the format:  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/nlh1657745703753.image?_LANG=enus)  
- :::
+:::
 
 This rule has worked as expected. The items have been totaled and the amount exceeds the $75 threshold so the 10% off coupon is created.
 
