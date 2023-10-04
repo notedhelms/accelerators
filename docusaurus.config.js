@@ -49,7 +49,7 @@ module.exports = {
       }),
     ],
   ],
-
+  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
