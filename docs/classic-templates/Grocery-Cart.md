@@ -422,7 +422,7 @@ Add rule statements for each rule as shown:
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image47.png?_LANG=enus)  
 
-### Test the second rule
+#### Test the second rule
 
 Now, let’s re-run the same Ruletest as before:
 
@@ -436,7 +436,7 @@ The **Condition** and **Action** rule has worked as expected. A customer’s sho
 Ordinarily, you would check for Conflicts and Completeness before testing with data. But because this tutorial focuses on advanced rule modeling features, the Analyze phase of the rule development lifecycle is skipped.
 :::
 
-### Add more rules to the checks Rulesheet
+#### Add more rules to the checks Rulesheet
 
 You have implemented two rules representing the first business rule in the checks Rulesheet. Let's use this Rulesheet to model two more rules:
 
@@ -447,7 +447,7 @@ You use the output of the first rule in the next Rulesheet to filter out custome
 
 The second rule, which calculates total price, must be included in the first Rulesheet, because the second Rulesheet filters out customers who do not have preferred accounts, whereas you want to calculate the total price for every customer.
 
-### Check if a customer has a preferred account
+#### Check if a customer has a preferred account
 
 Any customer who has a **Preferred Account** has an associated preferredCard. So, let’s begin by defining the scope. Drag **preferredCard** under **Customer** in the Vocabulary to the **Scope** pane. Give it the Alias **account**.
 
@@ -476,7 +476,7 @@ If you do not see the indented structure identical to the following image, delet
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image52.png?_LANG=enus)  
 
-### Run the Ruletest
+#### Run the Ruletest
 
 The Output shows the results.
 
@@ -484,7 +484,7 @@ The Output shows the results.
 
 Notice that the **isPreferredMember** transient attribute has been inserted and assigned the value `true`, and that an informational message has been posted. Our rule has worked as expected.
 
-### Calculate the total price of items in a shopping cart
+#### Calculate the total price of items in a shopping cart
 
 Finally, you add one more action-only rule to calculate the **totalAmount** of all items in a customer’s shopping cart by using the collection operator **→sum** as shown. This operator adds up the price attributes of all elements in the **items** alias, and then assigns that value to the **totalAmount** attribute.
 
@@ -496,7 +496,7 @@ Finally, let’s test this rule. In the **Input** pane of the Ruletest there is 
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image55.png?_LANG=enus)  
 
-### Run the Ruletest
+#### Run the Ruletest
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image56.png?_LANG=enus)  
 
