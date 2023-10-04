@@ -601,13 +601,11 @@ Define a Filter expression. A Filter expression, which acts to limit or reduce t
 
 The data satisfying the Filter expression survives the filter, and data that does not satisfy the expression is filtered out. Data that has been filtered out is ignored by other rules in the same Rulesheet.
 
-
 :::info
 Data filtered out in one Rulesheet is not also filtered out in other Rulesheets unless you include the Filter expression in those Rulesheets, too.
 :::
 
 Create a Filter expression in the **Filters** pane.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image65.png?_LANG=enus)  
 
@@ -617,7 +615,6 @@ The Filter expression (**Customer.isPreferredMember=T**) filters out all non-pre
 
 The first rule you define in the **coupons.ers** Rulesheet is to calculate cash back for every preferred customer.
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image66.png?_LANG=enus)  
 
 1.  Define an action-only rule (with a rule statement) as shown:  
@@ -655,13 +652,11 @@ The rule has worked as expected. The **totalAmount** attribute now has a value o
 
 After calculating the cash back earned, you need a rule to add it to cumulative cash back.
 
-
 :::info
 In our third Rulesheet, you define a rule to address the scenario where a customer wants to apply their cumulative cash back to a purchase.
 :::
 
 Define an action-only rule as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image71.png?_LANG=enus)  
 
@@ -693,11 +688,11 @@ Because you have already tested this Ruleflow’s ability to sum up the prices o
     
 3.  Define the input as shown here:  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image73.png?_LANG=enus)  
-    
 
 :::info
 When building Ruletests, if a Rulesheet’s Filters are not satisfied, they may prevent the rules from executing. This Rulesheet has a Filter expression that filters out all customers who aren’t Preferred Card members. So this test has a customer who is a preferred account holder in our test, to ensure that the Filter is satisfied, and the new rule model has a chance to execute.
 :::    
+
 4.  Run the test.
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image74.png?_LANG=enus)  
@@ -707,14 +702,12 @@ The rule works as expected. It calculates the cash back earned ($2) based on the
 ### Define a promotional rule for customers purchasing from the Floral department
 
 Now that the cumulative cash back rule is complete, let’s move on the next business rule:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image75.png?_LANG=enus)  
 
 For every item purchased from the Floral department, a coupon must be issued for a free balloon. Let’s assume that the Floral department has the department code **290**.
 
 Define a rule in **coupons.ers**.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image76.png?_LANG=enus)  
 
