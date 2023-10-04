@@ -743,16 +743,13 @@ Save the Rulesheet.
 4.  Set **cumulativeCashBack** to **0** for this test. One of the rules in the **coupons.ers** Rulesheet (in **Action row B**, **column 0**) needs a real initial value of **cumulativeCashBack** to increment. If its initial value is null, the rule will not fire.
 5.  Run the test.
     
-      
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/avd1655752314538.image?_LANG=enus)  
-    
 
 :::info
 In the JavaScript product the default output format for dateTime as:  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/jcx1657743459831.image?_LANG=enus) 
 ::: 
     
-
 The rule has worked as expected. Department 290 has been recognized and the informational message has been posted. The new **Coupon** entity has been created, displaying a value of **One Free Balloon** in the **description** attribute and **12/31/9999** in the **expirationDate** attribute, indicating that the coupon will not expire.
 
 The new message has been posted containing the value of `allItems.name` embedded in it.
@@ -761,25 +758,21 @@ The new message has been posted containing the value of `allItems.name` embedded
 
 Let’s move on to the next business rule:
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image79.png?_LANG=enus)  
 
 This rule must create a $2 off coupon when a customer buys three or more items from the Soda/Juice department. While determining whether any items from the Floral Department were in the shopping cart, you used the `allItems` alias. But to determine if three or more items were purchased from the Soda/Juice department, you do not need to count all items in a shopping cart, just those from the Soda/Juice department. You use the **sodaItems** alias you defined earlier in the scope section.
 
 To reduce the collection of items in the shopping cart to only those you want to count, use a **Filter** expression to filter the **sodaItems** alias. Let’s assume that the department code for the Soda/Juice department is **285**. Define a Filter expression as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/sxy1655734666626.image?_LANG=enus)  
 
 The filter in **row 2** ensures that the surviving members of the **sodaItems** alias all have a department code of **285**.
 
 Now, let’s model the rule. The Collection operator **→size** counts the number of elements in a collection. You use this operator to check how many soda or juice items are in the shopping cart. Define a condition as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image81.png?_LANG=enus)  
 
 If the number of items counted by the **→size** operator in the **sodaitems** collection is three or more, then a $2 off coupon is issued to the customer. Define this action for this as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/aha1655735234266.image?_LANG=enus)  
 
@@ -799,12 +792,10 @@ Next, let’s test this rule.
     
 6.  Run the Ruletest.
     
-      
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/hjg1657744413608.image?_LANG=enus)  
     
 
 The rule works as expected. The items from the Soda/Juice department have been identified and counted. A coupon has been added with a **$2 off next purchase** description and an **expirationDate** of 07/13/23 (which is 1 year from the date this test was run).
-
 
 :::info
 In JavaScript, the output is in the format:  
@@ -925,7 +916,6 @@ The rule has only one condition—check if the customer wants to apply their **c
 3.  To test the rule before adding more to it, create a Ruletest named **use\_cashBack.ert** that uses the **MyAdvancedTutorial.erf** Ruleflow as its test subject.
 4.  Define the input as shown:  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image98.png?_LANG=enus)  
-    
 
 :::info
 For this test, manually enter $9.24 in the preferred customer’s **cumulativeCashBack** attribute and indicate that they want to apply this balance towards today’s totalAmount (**useCashBack = true**).
