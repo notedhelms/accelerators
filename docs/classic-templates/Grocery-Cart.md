@@ -163,7 +163,6 @@ The Vocabulary opens under the rule project MyAdvancedTutorial.
 Now, let’s add the entities (Customer, PreferredAccount, Item, ShoppingCart, Coupon):
 
 1.  In the **Vocabulary editor** , right-click **groceryStore** and select **Add Entity**.
-
 ![](images/2023-10-03-10-37-04.png)
 
 2. Rename this entity by typing Customer over the default name.
@@ -268,21 +267,22 @@ It is normal t not always have a one-to-one correlation between the business rul
 ### Create the Rulesheet
 
 1.  Before you start defining the rules, create a Rulesheet.
-    
       
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image32.png?_LANG=enus)  
     
 2.  Name the Rulesheet `checks`, and then click **Next**.  
+   
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image33.png?_LANG=enus)  
     
 3.  Select **groceryStore.ecore** as the Vocabulary.  
+   
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image34.png?_LANG=enus)  
     
 :::info
 You named this Rulesheet **checks** as reminder of the overall organization—this Rulesheet performs any necessary checks and raises alerts as required.
 :::
     
-4.  Click **Finish**.
+1.  Click **Finish**.
 
 ### Define rule scope
 
@@ -297,14 +297,18 @@ To define the scope:
 
 1.  Open the **Scope** pane of the Rulesheet by ensuring that **checks.ers** is open and active, and selecting **Rulesheet > Advanced View**.  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image36.png?_LANG=enus)  
+
     The Scope pane opens in the Rulesheet.
+
 2.  Drag the **Customer** entity from the Rule Vocabulary view and drop it into the **Scope** pane.  
+
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image37.png?_LANG=enus)  
     
 3.  Drag **shoppingCart** from under **Customer** into the **Scope** pane.  
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image38.png?_LANG=enus)  
     
 4.  To complete the scope, drag **item** from under **shoppingCart** and drop it into the **Scope** pane.  
+   
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image39.png?_LANG=enus)  
     
 
@@ -314,7 +318,6 @@ Next, let’s enter an alias for a customer’s shopping cart and call it **curr
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image40.png?_LANG=enus)  
 
 Because a shopping cart can contain many items, let’s define another alias **items** that represents all the items in a customer’s shopping cart.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image41.png?_LANG=enus)  
 
@@ -332,7 +335,6 @@ To model the business rule for the Raise Alerts substep, create two rules in Cor
 -   Rule 2: Use the department code to determine if any of the items come from the Liquor department and if so, raise an alert.
 
 Let’s start modeling the first rule—determining the department codes. You know an item’s department is identified by the 4<sup class="ph sup">th</sup> through 6<sup class="ph sup">th</sup> characters in its barcode. So using the **items** alias, let’s add an **action-only rule** in an **Actions** row of column **0** using the String operator **.substring** as shown.
-
 
 :::info
 
@@ -385,6 +387,7 @@ As you can see, one of the items is from the liquor department (remember that th
 :::
 
 6.  Finally, execute the Ruletest. The output should look like this:  
+   
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image45.png?_LANG=enus)  
     
 
@@ -411,13 +414,11 @@ Then, define an **Action** for the second rule to assign a value of `true` to th
 
 The second rule looks like this:
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image46.png?_LANG=enus)  
 
 As mentioned earlier, using aliases to represent collections is mandatory when collection operators (like **→exists**) are used.
 
 Add rule statements for each rule as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image47.png?_LANG=enus)  
 
@@ -458,13 +459,11 @@ The account alias represents a potential collection, where a customer has a **Pr
 The **→notEmpty** collection operator checks a collection for the existence of at least one element in the set. You can use this operator to check if a customer has a preferred card. Because **→notEmpty** acts on a collection, the **account** alias must be used with it.
 
 Model a Boolean condition in row **b** in the **Conditions** pane that uses the **→notEmpty** collection operator as shown. If the **account** alias is not empty, the customer has a preferred account.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/vvu1655745315224.image?_LANG=enus)  
 
 Let’s add an action to this rule that assigns the value of `true` to the **isPreferredMember** attribute (from the **Customer** entity) and posts an informational message, as shown. Recall that **isPreferredMember** is a transient attribute whose value is only used in the rules.
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image51.png?_LANG=enus)  
 
 Now, whenever you want to know if a customer is a preferred customer, simply refer to the value of the **isPreferredMember** attribute. This method of flagging an entity with a Boolean attribute is convenient when modeling larger Ruleflows. The value of the flag, like all attributes, carries over to other rules in this and other Rulesheets in the same Ruleflow.
@@ -481,7 +480,6 @@ If you do not see the indented structure identical to the following image, delet
 
 The Output shows the results.
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image53.png?_LANG=enus)  
 
 Notice that the **isPreferredMember** transient attribute has been inserted and assigned the value `true`, and that an informational message has been posted. Our rule has worked as expected.
@@ -491,28 +489,25 @@ Notice that the **isPreferredMember** transient attribute has been inserted and 
 Finally, you add one more action-only rule to calculate the **totalAmount** of all items in a customer’s shopping cart by using the collection operator **→sum** as shown. This operator adds up the price attributes of all elements in the **items** alias, and then assigns that value to the **totalAmount** attribute.
 
 Now, add a rule statement for this rule. Adding rule statements is good practice, even if you do not post them as messages.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image54.png?_LANG=enus)  
 
 Finally, let’s test this rule. In the **Input** pane of the Ruletest there is a customer with two items in their shopping cart. Let’s see if the last rule calculates the **totalAmount** for the items in the Customer’s shopping cart.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image55.png?_LANG=enus)  
 
 ### Run the Ruletest
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image56.png?_LANG=enus)  
 
 The following happened in this Ruletest:
 
 1.  The rules to determine if an ID check is required and if the customer is a preferred card holder still work.
-    
 
 :::info
 You should double-check cumulative test results to make sure nothing has broken along the way.
 :::
+
 2.  The **totalAmount** attribute has returned a value of **8.98**, which is the correct sum of the prices of items 1 and 2, showing that the latest rule also works as expected.
 
 You have now completed modeling and testing our first Rulesheet.
@@ -527,7 +522,6 @@ Let’s take a quick look at what you did in the first Rulesheet (checks.ers):
 -   Finally, you defined another action-only rule to calculate the total price of items in the shopping cart.
 
 Now, you are ready to model the second Rulesheet. Recall that the second Rulesheet corresponds to the second substep in the Checkout process.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image57.png?_LANG=enus)  
 
@@ -547,7 +541,6 @@ To define the rule scope:
 2.  Like in the **checks.ers** Rulesheet, build the scope around the **Customer** entity, to apply promotional rules to each preferred customer.
 3.  Define the rule scope as shown:
     
-      
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image58.png?_LANG=enus)  
     
     1.  Assign the alias **currentCart** to a customer’s shopping cart, just like in the **checks.ers** Rulesheet.
@@ -555,7 +548,7 @@ To define the rule scope:
     3.  Use the **account** alias to represent the **preferredCard** account associated with the customer.
 4.  Save the Rulesheet.
 
-## Create a Ruleflow
+### Create a Ruleflow
 
 Before you define rules in the **coupon.ers** Rulesheet, let’s create a Ruleflow and add the **checks.ers** and the **coupons.ers** Rulesheets to it. When multiple Rulesheets are included in a Ruleflow (a single .erf file), the Rulesheets execute in a sequence determined by their Rulesheet order in the Ruleflow.
 
@@ -565,11 +558,9 @@ Create a Ruleflow as follows:
 
 1.  Right-click the **MyAdvancedTutorial** rule project in the Project Explorer view and select **File > New > Ruleflow**.
     
-      
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image59.png?_LANG=enus)  
     
 2.  In the **Create New Ruleflow** wizard, in the **File name** field, type **MyAdvancedTutorial**, and click **Next**.
-    
       
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/eiu1655667758501.image?_LANG=enus)  
     
@@ -581,11 +572,9 @@ Now let's add Rulesheets to the Ruleflow:
 
 1.  Drag **checks.ers** from the **Rule Vocabulary** view, and drop it in the Ruleflow editor.
     
-      
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image61.png?_LANG=enus)  
     
 2.  Drag **coupons.ers** from the **Rule Vocabulary** view, and drop it to right of the **checks.ers** Rulesheet.
-    
       
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image62.png?_LANG=enus)  
     
@@ -600,12 +589,11 @@ Now let's add Rulesheets to the Ruleflow:
     
 4.  Select and hold **checks.ers**, and drag the connection to **coupon.ers**. The Ruleflow shows the Rulesheet processing sequence.
     
-      
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/kst1655669146902.image?_LANG=enus)  
     
 5.  Save the Ruleflow.
 
-## Define a Filter in the coupons.ers Rulesheet
+### Define a Filter in the coupons.ers Rulesheet
 
 Now, let’s go back to the **coupons.ers** Rulesheet. Before you continue modeling promotional rules, filter out customers who do not have preferred accounts because the promotional rules apply only to customers who have a preferred account card.
 
@@ -625,7 +613,7 @@ Create a Filter expression in the **Filters** pane.
 
 The Filter expression (**Customer.isPreferredMember=T**) filters out all non-preferred customers by allowing only those customers with an **isPreferredMember** attribute value of `true` to pass (survive). Those customers whose **isPreferredMember** attribute value is not `true` are filtered out and not evaluated by other rules in this Rulesheet.
 
-## Define a rule to calculate cashBackEarned
+### Define a rule to calculate cashBackEarned
 
 The first rule you define in the **coupons.ers** Rulesheet is to calculate cash back for every preferred customer.
 
@@ -641,10 +629,12 @@ The first rule you define in the **coupons.ers** Rulesheet is to calculate cash 
 :::info
 Often, it’s desirable to use another Vocabulary attribute (a parameter) to hold a value, such as the percentage used in this formula, rather than hard-coding it (as in 0.02). If the value of an attribute such as **cashBackRate** is derived by other rules or maintained in an external database then it can be changed without changing the rule that uses it.
 :::
+
 2.  Save the Rulesheet.
 3.  Test this rule as part of the Ruleflow. Testing at the Ruleflow level ensures that Rulesheets are processed in the correct sequence and allows the values derived in prior Rulesheets to be used in subsequent Rulesheets.
 4.  Create a Ruletest named **coupons1**. Ensure that the test subject of the Ruletest is the **MyAdvancedTutorial.erf** Ruleflow.
 5.  To test the rule, provide input data where the customer is a preferred account holder. Add a few items to the **shoppingCart** and enter names and prices for each of them by entering details in the **Input** pane of the Ruletest:  
+   
     ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image68.png?_LANG=enus)  
     
 
@@ -655,15 +645,12 @@ According to this rule, the shopping cart of a preferred cardholder should earn 
 Because the list of items contains an item from the Liquor department, based on the rules in the **checks.ers** Rulesheet, (part of this Ruleflow), an alert should be raised.
 :::
     
-6.  Run the Ruletest.
-    
+7.  Run the Ruletest.
     
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image69.png?_LANG=enus)  
 
-
 The rule has worked as expected. The **totalAmount** attribute now has a value of $98.99 (as calculated by a rule in **checks.ers**) and the **cashBackEarned** attribute has been assigned a value of $1.9798 or 2% of $98.99.
 
-  
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image70.png?_LANG=enus)  
 
 After calculating the cash back earned, you need a rule to add it to cumulative cash back.
@@ -680,7 +667,7 @@ Define an action-only rule as shown:
 
 **Action row B** in **Column 0** calculates **cumulativeCashBack** amount in a customer’s account by incrementing its value (using the **+=** Decimal operator) by **cashBackEarned** in the current shopping cart.
 
-**Add a rule statement with dynamic data**
+#### Add a rule statement with dynamic data
 
 You should define rule statements that contain dynamic data—where the value of an attribute is extracted and added to the rule message. It can provide more meaningful and informative rule messages.
 
@@ -691,7 +678,7 @@ In this case, the value of **cashBackEarned** and **cumulativeCashBack** to be p
 
 Save the Rulesheet.
 
-**Test the rule**
+#### Test the rule
 
 1.  Create a Ruletest named **coupons2.ert** that uses **MyAdvancedTutorial.erf** as its test subject.
 2.  To test that cash back earned is being added to cumulative cash back:
@@ -712,7 +699,6 @@ Because you have already tested this Ruleflow’s ability to sum up the prices o
 When building Ruletests, if a Rulesheet’s Filters are not satisfied, they may prevent the rules from executing. This Rulesheet has a Filter expression that filters out all customers who aren’t Preferred Card members. So this test has a customer who is a preferred account holder in our test, to ensure that the Filter is satisfied, and the new rule model has a chance to execute.
 :::    
 4.  Run the test.
-    
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image74.png?_LANG=enus)  
     
@@ -827,7 +813,9 @@ In JavaScript, the output is in the format:
 
 The other rules have fired as well. For example, the total amount of the shopping cart and the cash back earned have been calculated. The cash back earned has been added to the cumulative cash back (which was set to 0).
 
-Note: You should run multiple tests with different data to make sure that the rules work as expected in different scenarios. For example, you could change the department code of one of the items to 291 (liquor) and another one to 290 (floral). When you run the test with the new data, the alert to check the customer’s ID (liquor) and the free balloon coupon (floral) should be generated. However, the soda coupon should not get generated as you no longer have three soda items.
+:::info
+ You should run multiple tests with different data to make sure that the rules work as expected in different scenarios. For example, you could change the department code of one of the items to 291 (liquor) and another one to 290 (floral). When you run the test with the new data, the alert to check the customer’s ID (liquor) and the free balloon coupon (floral) should be generated. However, the soda coupon should not get generated as you no longer have three soda items.
+:::
 
 ### Define a promotional rule for customers purchasing more than $75 in this cart
 
@@ -857,10 +845,8 @@ Let’s test this rule.
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image88.png?_LANG=enus)  
     
 3.  Run the test.
-    
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/fqs1657745405228.image?_LANG=enus)  
-    
 
 :::info
 The dateTime output in the JavaScript product is in the format:  
@@ -870,19 +856,16 @@ The dateTime output in the JavaScript product is in the format:
 This rule has worked as expected. The items have been totaled and the amount exceeds the $75 threshold so the 10% off coupon is created.
 
 You have now modeled all the rules in the **Calculations, Promotions and Coupons** substep of the Checkout process.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image57.png?_LANG=enus)  
 
 Here is the completed Rulesheet:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/ssz1657746392928.image?_LANG=enus)
 
 ## Model the third Rulesheet
 
 Now, model the last Rulesheet. Recall that the third Rulesheet corresponds to the third substep in the Checkout process.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/scf1655891954002.image?_LANG=enus)  
 
@@ -922,19 +905,16 @@ With the creation of the third Rulesheet, you can complete this Ruleflow, implem
 In the **coupons.ers** Rulesheet, you had defined a Filter to filter out customers who are not preferred account holders. You define the same filter in the **use\_cashBack.ers** Rulesheet, because only preferred customers are eligible for cash back and bonus incentives. You have defined this Filter again because data that is filtered out in one Rulesheet is not automatically filtered out in other Rulesheets.
 
 Define a Filter expression as shown.
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/bpk1651259462116.image?_LANG=enus)  
 
 ### Define a rule to apply cash back
 
 Let’s start modeling the first business rule:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image95.png?_LANG=enus)  
 
 The rule has only one condition—check if the customer wants to apply their **cumulativeCashBack** to the **totalAmount** of the **ShoppingCart**. Define the condition expression as shown:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/qmi1651259880579.image?_LANG=enus)  
 
@@ -956,15 +936,12 @@ According to the first rule in the **use\_cashBack.ers** Rulesheet, the **cumula
 :::
 
 5.  Run the test.
-    
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image99.png?_LANG=enus)  
     
-
 The rule has worked as expected. The **Output** panel shows the new **cashBackEarned** ($1.64) is added to cumulativeCashBack ($9.24+$1.64=$10.88) and subtracted from **totalAmount** ($82.49-$10.88=$71.6). You also see the **cashBackEarned** and the **cumulativeCashBack** values embedded in a rule message from the previous Rulesheet.
 
 Now, model the second business rule:
-
   
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image100.png?_LANG=enus)  
 
@@ -972,7 +949,6 @@ Now, model the second business rule:
 2.  Assign the value of **cumulativeCashBack** to the attribute named **savings**.
 3.  Assume that this **savings** value is shared with the customer on the receipt or in some other way. Then, you can reset the **cumulativeCashBack** value to **0**.
 4.  Define the actions and add a rule statement as shown:
-    
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/sbq1651261647803.image?_LANG=enus)  
     
@@ -982,15 +958,12 @@ The rule is now complete. Here is the third and final completed Rulesheet.
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/pbv1651260346668.image?_LANG=enus)  
     
 5.  Test it using the same Ruletest, without modifying or adding additional input. Execute **use\_cashBack.ert** again.
-    
       
 ![](https://progress-be-prod.zoominsoftware.io/bundle/adv-corticon-tutorial/page/image102.png?_LANG=enus)  
-    
 
 **cumulativeCashBack** is now **0**, and savings has the value previously held by **cumulativeCashBack**. There is also a new rule message explaining what has happened. Your final rule works as expected.
 
 Since this was a cumulative test, you can also be assured that the entire Ruleflow (all three Rulesheets) works as expected. The business problem has now been fully modeled and tested.
-
 
 :::info
 **A note about logical validation**
