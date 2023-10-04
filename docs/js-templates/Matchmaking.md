@@ -6,8 +6,8 @@ tags:
   - Corticon classic
 ---
 
-Rules to match dating preferences
- 
+Rules to match dating preferences 
+
 ---
 
 ## Challenge Prompt:

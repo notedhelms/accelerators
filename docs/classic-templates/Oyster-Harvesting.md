@@ -9,6 +9,10 @@ Is now the right time to go oyster huntin'?
 
 ---
 
+[Download Rule Project](https://github.com/corticon/newsletter-solutions)
+
+---
+
 Aficionados believe that raw oysters are best eaten during months that end with an “r” because colder water temperatures in the winter contribute to tastier and healthier shellfish. To help maximize the oystermen’s time, please build a Corticon rules project that tests any given date to determine whether oysters should be harvested. When they should not be harvested, please define a rule stipulating how many days must pass before eating season begins. Or, if eating season is already in progress, how much longer will the season last?
 
 #  The Solution
@@ -89,4 +93,4 @@ As long as your rules are easily maintainable and understood by your business au
 
 ![Alt text](<images/oyster test1.png>)
 
-As always, the full solution can be downloaded from the [Corticon GitHub repository](https://github.com/corticon/newsletter-solutions). 
+As always, 

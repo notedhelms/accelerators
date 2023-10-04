@@ -8,7 +8,7 @@ tags:
 
 Use regular expression in Corticon to validate IP address
 
----
+ ---
 [Download Rule Assets
 ](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/js-templates/IPv4%20Validation/IPv4%20Validation.zip)
 
