@@ -6,6 +6,7 @@ tags:
 ---
 
 Is now the right time to go oyster huntin'?
+
 ---
 
 Aficionados believe that raw oysters are best eaten during months that end with an “r” because colder water temperatures in the winter contribute to tastier and healthier shellfish. To help maximize the oystermen’s time, please build a Corticon rules project that tests any given date to determine whether oysters should be harvested. When they should not be harvested, please define a rule stipulating how many days must pass before eating season begins. Or, if eating season is already in progress, how much longer will the season last?

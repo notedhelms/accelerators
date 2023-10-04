@@ -6,6 +6,7 @@ tags:
 ---
 
 ---
+
 Use data from external REST API in rules
 
 ---
