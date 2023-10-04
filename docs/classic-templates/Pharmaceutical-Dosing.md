@@ -5,7 +5,7 @@ tags:
   - Corticon classic
 ---
 
-# Pharmaceutical Dosing
+---
 Based upon patient attributes, calculate recommended medication dose.
 ---
 

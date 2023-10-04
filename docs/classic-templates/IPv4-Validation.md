@@ -6,8 +6,6 @@ tags:
   - Corticon classic
 ---
 
-
-# IPv4 Validation
 Use regular expression in Corticon to validate IP address
  ---
 [Download Rule Assets

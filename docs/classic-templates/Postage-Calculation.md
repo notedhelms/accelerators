@@ -5,7 +5,7 @@ tags:
   - Corticon classic
 ---
 
-# Calculate Postage
+---
 Which combination of stamps is optimal?
 
 ---

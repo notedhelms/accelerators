@@ -6,8 +6,6 @@ tags:
   - Corticon classic
 ---
 
-# First Order of Decay Calculations 
-
 How long for hazardous waste to decay to a safe level?
 
 ---

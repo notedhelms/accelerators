@@ -5,7 +5,6 @@ tags:
   - Corticon classic
 ---
 
-# Shipping Logistics
 Group like-entities and to calculate as a collection.
 ---
 

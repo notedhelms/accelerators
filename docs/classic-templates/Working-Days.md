@@ -5,7 +5,7 @@ tags:
   - Corticon classic
 ---
 
-# Is tomorrow a holiday?
+---
 Scheduling a project only on work days
 ---
 

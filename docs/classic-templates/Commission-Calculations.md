@@ -6,8 +6,6 @@ tags:
   - Corticon classic
 ---
 
-# Sales Commission
-
 Calculate sales commission payments
 
 ---

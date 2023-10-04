@@ -6,7 +6,7 @@ tags:
   - Dynamic Forms
 ---
 
-# Conference Registration
+---
 
 _**Dynamic Form Template**_
 

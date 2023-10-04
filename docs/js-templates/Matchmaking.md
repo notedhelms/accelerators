@@ -1,13 +1,13 @@
 ---
-id: js_Matchmaker
+id: classic_Matchmaker
 title: Online Dating Matchmaker
 tags:
   - Corticon.js
   - Corticon classic
 ---
 
-# Online Dating Matchmaker
 Rules to match dating preferences 
+---
 
 ## Challenge Prompt:
 

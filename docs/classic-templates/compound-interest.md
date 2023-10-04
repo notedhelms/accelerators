@@ -6,9 +6,6 @@ tags:
   - Corticon classic
 ---
 
-
-# The Miracle of Compound Interest
-
 Calculate compound interest depending on type of compounding.
 
 ---

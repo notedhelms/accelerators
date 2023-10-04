@@ -5,7 +5,7 @@ tags:
   - Corticon classic
 ---
 
-# Retrieving Data from Sunrise/Sunset REST API
+---
 Use data from external REST API in rules
 
 ---

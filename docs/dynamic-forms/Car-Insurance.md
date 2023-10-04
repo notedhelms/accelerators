@@ -6,7 +6,7 @@ tags:
   - Dynamic Forms
 ---
 
-# Car Insurance Quote Dynamic Form
+---
 
 _**Dynamic Form Template**_
 

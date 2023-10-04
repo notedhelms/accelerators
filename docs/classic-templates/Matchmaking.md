@@ -6,8 +6,8 @@ tags:
   - Corticon classic
 ---
 
-# Online Dating Matchmaker
 Rules to match dating preferences 
+---
 
 ## Challenge Prompt:
 

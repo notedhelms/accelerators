@@ -6,7 +6,7 @@ tags:
   - Dynamic Forms
 ---
 
-# Type 2 Diabetes Risk Score
+---
 
 _**Dynamic Form Template**_
 
