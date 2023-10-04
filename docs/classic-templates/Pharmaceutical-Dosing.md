@@ -5,7 +5,6 @@ tags:
   - Corticon classic
 ---
 
----
 Based upon patient attributes, calculate recommended medication dose.
 
 ---
