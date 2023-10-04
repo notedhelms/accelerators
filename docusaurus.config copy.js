@@ -5,7 +5,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-module.exports = {
+const config = {
   title: 'Corticon Accelerate',
   tagline: 'Templates and Tutorials to Jumpstart Rule Projects',
   favicon: 'img/favicon.ico',
@@ -127,3 +127,5 @@ module.exports = {
       },
     }),
 };
+
+module.exports = config;
