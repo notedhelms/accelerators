@@ -121,6 +121,7 @@ module.exports = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Progress Software, Built with Docusaurus.`,
       },
+      
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
