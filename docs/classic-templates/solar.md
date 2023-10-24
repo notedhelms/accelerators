@@ -175,7 +175,7 @@ We’ll define overrides to tell Corticon which action to defer to in cases of c
 
   ![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
  
-### Testing Rules
+## Testing Rules
 Next, let’s set up a rule test to run test scenarios against this rulesheet. A Ruletest simulates a business scenario where the rules are applied to input data. If the data satisfies all the conditions in a rule, the rule fires and some output containing the results of the rule execution is produced. You can define different sets of input data to test how the rules behave in different scenarios. You can also use a Ruletest to compare the output of a rule execution with expected results. A Ruletest stores this information in a Ruletest file, enabling you to save use-cases that are of interest, change rules, and run the test again to see how the modified rules behave when applied to the same use-cases.
 1.	Right click on the Ruletests folder > New > Ruletest. 
   ![Alt text](<images/solar workshop/Solar Workshop_image072.png>)
@@ -196,10 +196,10 @@ In the real world, a Corticon Decision Service may receive input in different fo
 Above the ruletest, click the Run Test button:
 
  ![Alt text](<images/solar workshop/Solar Workshop_image078.png>)
- 
+
 The rules will be compiled into a Decision Service and executed against a test instance of the Corticon Server. In other words, the ruletest enables us to replicate the precise behavior we would expect from the rules if they were deployed as is. You should see the output populated in the Output pane, and Rule Messages sent back for the rules that fired. 
 
-### Data Integration
+## Data Integration
 So far, we’ve built a rulesheet and a test case in which we define the test data. Corticon is not limited to only evaluating data provided on the initial request to the Decision Service (like the data we defined by double clicking the attributes in the ruletest). Let’s incorporate some external data retrieved from a REST API. We’ll use the API provided by the US National Renewable Energy Lab to retrieve data about the solar radiation for a specific address. 
 We’ll be using an API key that will expire after today’s workshop, but they are free to generate at NREL.gov.
 1.	Reopen your rule vocabulary
