@@ -75,17 +75,17 @@ Your vocabulary will now look like this:
 ### Complete the Vocabulary
 Now, add the rest of the vocabulary elements we’ll need. 
 Add these attributes to ‘Site’:
-* length (decimal)
-* width (decimal)
-* maxPanels (integer)
-* annualRadiation_kWh (decimal)
-* aspect (string)
-* isSuitable (boolean)
-* slopeDegrees (decimal)
-* Add these attributes to ‘Panel’:
-* length (decimal)
-* width (decimal)
-* squareMeters (decimal)
+  * length (decimal)
+  * width (decimal)
+  * maxPanels (integer)
+  * annualRadiation_kWh (decimal)
+  * aspect (string)
+  * isSuitable (boolean)
+  * slopeDegrees (decimal)
+  * Add these attributes to ‘Panel’:
+  * length (decimal)
+  * width (decimal)
+  * squareMeters (decimal)
   
 Your vocabulary should now look like:
 
@@ -142,7 +142,7 @@ Let’s now define the conditions and actions for our initial set of rules. We w
 7.	Implement the next two rules and then update the Rule Statements as shown below. 
  ![Alt text](<images/solar workshop/Solar Workshop_image060.png>)
 
-Logical Integrity Checks
+### Logical Integrity Checks
 Before we test these rules with test data, Corticon can analyze them for logical issues we may have introduced. Look for these three buttons  ![Alt text](<images/solar workshop/Solar Workshop_image062.png>)  at the top of the rulesheet editor screen (if they’re greyed out, then click anywhere in the rulesheet to bring it into focus). 
 1.	Click them from left to right, start with the Logical Loop Checker. As the name implies, if we were introducing any circular logic, Corticon would point us to it automatically with this check. We shouldn’t have any loops. 
 2.	Next is the Completeness Checker—are there more scenarios implicitly possible based upon the rules we’ve authored so far? Corticon will condense all possibilities into a new column. This can be helpful, but some of the new conditions should be evaluated independently, and we’re not going to worry about null checks. You can select this column and click the delete button. 
@@ -169,9 +169,10 @@ You can copy and paste the italicized text below directly into your rule stateme
  ![Alt text](<images/solar workshop/Solar Workshop_image068.png>)
 Corticon has identified 15 conflicts—situations where the conditions we’ve defined could presumably overlap. Currently, any of the cells with a ‘ – ‘ in them will evaluate that rule without considering the vocabulary attribute on the left hand side. For example, the first conflict which Corticon shows us is a conflict between 1 and 3, because Corticon has inferred there may be scenarios ‘North’ could be the value in cell c2, or a value < 45 could be in the cell a3—if both conditions are met, which matters more? 
 
-    We can resolve this in a few ways—explicitly define every combination of values in every rule, or simply override one with another in cases of conflicts. We’re going to evaluate these rules such that if any aspect of the Site makes is unsuitable for solar, then that it will take precedent over any condition which resolves to isSuitable=T. However, recall that the condition for rule #4—when the slope is less than 10 degrees—will resolve to isSuitable=T even when the Site.aspect= ‘North’.  
+We can resolve this in a few ways—explicitly define every combination of values in every rule, or simply override one with another in cases of conflicts. We’re going to evaluate these rules such that if any aspect of the Site makes is unsuitable for solar, then that it will take precedent over any condition which resolves to isSuitable=T. However, recall that the condition for rule #4—when the slope is less than 10 degrees—will resolve to isSuitable=T even when the Site.aspect= ‘North’.  
 
-    We’ll define overrides to tell Corticon which action to defer to in cases of conflict. Other than rule #4 overriding number #3 for the reason mentioned above, all other rules that lead to a determination of isSuitable=F should override those which set isSuitable=T. At the bottom of each rule column, you’ll see an override row where you can specify which rule(s) that particular rule will override in cases of conflict. You can type them in or select them from the dropdown (hold down control to select multiple). Try this on your own, then check your work based on the screenshot below. 
+We’ll define overrides to tell Corticon which action to defer to in cases of conflict. Other than rule #4 overriding number #3 for the reason mentioned above, all other rules that lead to a determination of isSuitable=F should override those which set isSuitable=T. At the bottom of each rule column, you’ll see an override row where you can specify which rule(s) that particular rule will override in cases of conflict. You can type them in or select them from the dropdown (hold down control to select multiple). Try this on your own, then check your work based on the screenshot below. 
+
     ![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
  
 ### Testing Rules
