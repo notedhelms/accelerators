@@ -1,5 +1,5 @@
 ---
-id: classic_Postal
+id: classic_Solar
 title: Evaluate a Site for Solar Energy Potential
 tags:
   - Corticon classic
