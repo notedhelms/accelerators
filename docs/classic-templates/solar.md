@@ -100,7 +100,7 @@ As you likely deduced from the rule, “Aspect should not be north,” the word 
  .![Alt text](<images/solar workshop/Solar Workshop_image040.png>)
 You’ll see why we defined this custom data type in the next step. 
 
-### Create your first rulesheet
+## Create your first rulesheet
 Let’s start with a rule that will solve for a site’s area in square meters. First, right click on the ‘Rulesheets’ folder and select New > Rulesheet:
  ![Alt text](<images/solar workshop/Solar Workshop_image042.png>)
 Give it the name ‘Site Area’, and then click Finish. 
@@ -173,7 +173,7 @@ We can resolve this in a few ways—explicitly define every combination of value
 
 We’ll define overrides to tell Corticon which action to defer to in cases of conflict. Other than rule #4 overriding number #3 for the reason mentioned above, all other rules that lead to a determination of isSuitable=F should override those which set isSuitable=T. At the bottom of each rule column, you’ll see an override row where you can specify which rule(s) that particular rule will override in cases of conflict. You can type them in or select them from the dropdown (hold down control to select multiple). Try this on your own, then check your work based on the screenshot below. 
 
-    ![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
+  ![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
  
 ### Testing Rules
 Next, let’s set up a rule test to run test scenarios against this rulesheet. A Ruletest simulates a business scenario where the rules are applied to input data. If the data satisfies all the conditions in a rule, the rule fires and some output containing the results of the rule execution is produced. You can define different sets of input data to test how the rules behave in different scenarios. You can also use a Ruletest to compare the output of a rule execution with expected results. A Ruletest stores this information in a Ruletest file, enabling you to save use-cases that are of interest, change rules, and run the test again to see how the modified rules behave when applied to the same use-cases.
@@ -192,8 +192,11 @@ In the real world, a Corticon Decision Service may receive input in different fo
 1.	You can specify different entities as well as multiple instances of the same entity. Let’s try it—drag in two instances of the ‘Site’ entity, into the input pane. This adds all the attributes in the entity to the Input pane. However, you can delete attributes that you do not need. 
 2.	Double click the attributes to specify values. The syntax for specifying values is similar to specifying values for attributes in Rulesheets, with one difference—you must not enter any values in quotes, even if the data type of the attribute is String, DateTime, Date or Time. If you enter quotes, the Ruletest treats it as part of the value. Copy the values as shown below for your input:
  ![Alt text](<images/solar workshop/Solar Workshop_image076.png>)
+
 Above the ruletest, click the Run Test button:
+
  ![Alt text](<images/solar workshop/Solar Workshop_image078.png>)
+ 
 The rules will be compiled into a Decision Service and executed against a test instance of the Corticon Server. In other words, the ruletest enables us to replicate the precise behavior we would expect from the rules if they were deployed as is. You should see the output populated in the Output pane, and Rule Messages sent back for the rules that fired. 
 
 ### Data Integration
