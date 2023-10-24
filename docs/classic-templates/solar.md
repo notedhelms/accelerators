@@ -64,14 +64,15 @@ After you create an entity, you can add attributes to it. An attribute is like a
 ### Associations
 An association describes the relationship between two entities. In a Corticon Vocabulary, you can define the association under either entity. By default, the association that you define appears under both entities in the Vocabulary tree.
  ![Alt text](<images/solar workshop/Solar Workshop_image029.jpg>)
- 
+
 You add an association to an entity just as you add an attribute. 
 1.	Right-click Site and select Add Association.
 2.	The default selections should be what we want—one site to many associations. Click OK. 
  ![Alt text](<images/solar workshop/Solar Workshop_image030.png>)
 Your vocabulary will now look like this:
  ![Alt text](<images/solar workshop/Solar Workshop_image033.png>)
-Complete the Vocabulary
+
+### Complete the Vocabulary
 Now, add the rest of the vocabulary elements we’ll need. 
 Add these attributes to ‘Site’:
 * length (decimal)
