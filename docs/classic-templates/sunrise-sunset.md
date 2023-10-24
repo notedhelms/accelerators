@@ -3,6 +3,7 @@ id: classic_Sunset
 title: Retrieving Data from Sunrise/Sunset REST API
 tags:
   - Corticon classic
+  - REST Data Integration
 ---
 
 Use data from external REST API in rules

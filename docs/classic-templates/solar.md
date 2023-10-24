@@ -3,6 +3,8 @@ id: classic_Solar
 title: Evaluate a Site for Solar Energy Potential
 tags:
   - Corticon classic
+  - REST Data Integration
+
 ---
 
 Walks through the steps from brand new user to REST data connectivity
