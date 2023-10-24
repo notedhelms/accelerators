@@ -23,13 +23,16 @@ A Corticon rule project is a ‘container’ for rule-modeling files. A Corticon
 
 To import that template:
 1.	Click ‘File’ on the main toolbar, then click ‘Import…’
-![Alt text](<images/solar workshop/Solar Workshop_image011.png>)
+
+    ![Alt text](<images/solar workshop/Solar Workshop_image011.png>)
 
 2.	Choose the ‘Select archive file:’ option, then browse to the downloaded zip file
-![Alt text](<images/solar workshop/Solar Workshop_image013.png>)
+
+    ![Alt text](<images/solar workshop/Solar Workshop_image013.png>)
 
 3.	Click Finish
-![Alt text](<images/solar workshop/Solar Workshop_image013.png>)
+
+    ![Alt text](<images/solar workshop/Solar Workshop_image013.png>)
 
 Rule Vocabulary
 A Corticon Vocabulary is a rule-modeling component that enables you to define all the business terms that you require in your rules. For example, let’s take a look at how we might formulate a rule vocabulary from some common solar site evaluation rules. 
