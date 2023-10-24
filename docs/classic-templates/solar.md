@@ -44,7 +44,6 @@ Let’s define this is as a rule vocabulary, with Site and Panel being entities,
 Follow these steps to add an entity in the Vocabulary editor:
 
 1.	Double click the vocabulary file in the project explorer—it is in the Vocabulary folder and has the extension ‘.ecore’:
-
  ![Alt text](<images/solar workshop/Solar Workshop_image018.png>)
 
 2.	In the Vocabulary editor, right-click and select Add Entity, and type in ‘Site’. If you don’t enter a name, it will default to ‘Entity_1’, but it can be changed by double clicking on the name of the entity. 
@@ -71,19 +70,22 @@ Your vocabulary will now look like this:
 Complete the Vocabulary
 Now, add the rest of the vocabulary elements we’ll need. 
 Add these attributes to ‘Site’:
-•	length (decimal)
-•	width (decimal)
-•	maxPanels (integer)
-•	annualRadiation_kWh (decimal)
-•	aspect (string)
-•	isSuitable (boolean)
-•	slopeDegrees (decimal)
-Add these attributes to ‘Panel’:
-•	length (decimal)
-•	width (decimal)
-•	squareMeters (decimal)
+* length (decimal)
+* width (decimal)
+* maxPanels (integer)
+* annualRadiation_kWh (decimal)
+* aspect (string)
+* isSuitable (boolean)
+* slopeDegrees (decimal)
+* Add these attributes to ‘Panel’:
+* length (decimal)
+* width (decimal)
+* squareMeters (decimal)
+  
 Your vocabulary should now look like:
+
  ![Alt text](<images/solar workshop/Solar Workshop_image034.png>)
+
 As you likely deduced from the rule, “Aspect should not be north,” the word ‘aspect’ is used here to mean compass direction (north, south, east, west). Each of the four compass directions are ‘string’ (alphanumeric) datatypes, but there is a specific list of potential values for those strings—we want to make sure we don’t deviate from those specific values when modeling rules. For this situation, we’re going to define a ‘Custom Data Type’:
 1.	Click the name of the vocabulary at the top of the vocabulary tree, as shown:
   ![Alt text](<images/solar workshop/Solar Workshop_image037.png>)
@@ -100,27 +102,28 @@ Give it the name ‘Site Area’, and then click Finish.
 You define your rule logic in a Corticon Rulesheet. A rule is like an ‘if-then’ statement. Each rule consists of one or more conditions (if) that are associated with one or more actions (then). Here is an example of a Rulesheet with five rules:
  ![Alt text](<images/solar workshop/Solar Workshop_image044.png>)
 The Rulesheet editor has the following parts: 
-•	Conditions rows—for defining the specific value(s) of a given vocabulary attribute which should trigger this rule should fire. For example, car.price> 45000. The condition value could be a single value (45000), a set of values (45000, 60000), or a range of values (20000 .. 45000).
-•	Actions—where you assign the value(s) to assign to vocabulary attribute(s) when the conditions are met. For example, car.potentialTheftRating= 'High'.
+Conditions rows—for defining the specific value(s) of a given vocabulary attribute which should trigger this rule should fire. For example, car.price> 45000. The condition value could be a single value (45000), a set of values (45000, 60000), or a range of values (20000 .. 45000).
+Actions—where you assign the value(s) to assign to vocabulary attribute(s) when the conditions are met. For example, car.potentialTheftRating= 'High'.
 But what about unconditional rules? For example, let’s say our Solar site is always a rectangle, so square meters can always be solved for by ‘area=length * width’ with no conditions involved. This is called an ‘action-only’ rule—it will always fire. We define these in column 0. Let’s try it out. 
 Open your newly created ‘Site Area.ers’ rulesheet. When defining rules, it is easiest to arrange the different panels of the screen in the way shown here:
  
 ![Alt text](<images/solar workshop/Solar Workshop_image046.png>)
-1.	From vocabulary panel on the left, select the attribute ‘squareMeters’ from underneath the Site entity, and drag it onto the first action row: 
+1. From vocabulary panel on the left, select the attribute ‘squareMeters’ from underneath the Site entity, and drag it onto the first action row: 
  ![Alt text](<images/solar workshop/Solar Workshop_image048.png>)
-2.	In the column, we’re going to define the expression which will be used to assign the value for the ‘squareMeters’ attribute. Drag and drop (or just type in) the two other attributes that will be multiplied-- Site.length*Site.width:
+2. In the 0 column, we’re going to define the expression which will be used to assign the value for the ‘squareMeters’ attribute. Drag and drop (or just type in) the two other attributes that will be multiplied-- Site.length*Site.width:
 
   ![Alt text](<images/solar workshop/Solar Workshop_image050.png>)
-3.	Now, lets define a rule statement for this rule. Rule statements are ‘explainers’ of a sort for each rule that fires during the execution of the decision service, to help document the rules which contributed to the final output. In the Rule Statement section, copy the text below into the Text column in the first row: Site area is {Site.squareMeters} meters
-4.	Add the other values shown in the picture below to your rule statement:
+
+3. Now, lets define a rule statement for this rule. Rule statements are ‘explainers’ of a sort for each rule that fires during the execution of the decision service, to help document the rules which contributed to the final output. In the Rule Statement section, copy the text below into the Text column in the first row: Site area is {Site.squareMeters} meters
+4. Add the other values shown in the picture below to your rule statement:
  ![Alt text](<images/solar workshop/Solar Workshop_image052.png>)
 
 Let’s now define the conditions and actions for our initial set of rules. We will set the boolean attribute ‘isSuitable’ based upon whether the Site meets these conditions:
-The slope must be 45° or less.
-Annual solar radiation should be at least 800 kWh.
-Aspect should not be north.
-Areas with a slope of 10° or less are determined as suitable areas regardless of the aspect.
-20 m² and more area is needed.
+* The slope must be 45° or less.
+* Annual solar radiation should be at least 800 kWh.
+* Aspect should not be north.
+* Areas with a slope of 10° or less are determined as suitable areas regardless of the aspect.
+* 20 m² and more area is needed.
 
 1.	Copy and paste the five rows above into your Rule Statements underneath the one we’ve just defined:
  ![Alt text](<images/solar workshop/Solar Workshop_image054.png>)
@@ -143,24 +146,28 @@ Before we test these rules with test data, Corticon can analyze them for logical
 Since we have new rules, it is a good idea to add our additional rule statements for the rules. 
  ![Alt text](<images/solar workshop/Solar Workshop_image066.png>)
 You can copy and paste the italicized text below directly into your rule statements pane to save yourself some time. 
-A0		Info	Site	Site area is {Site.squareMeters} meters
-1		Info	Site	The slope must be 45° or less.
-2		Info	Site	Annual solar radiation should be at least 800 kWh.
-3		Violation	Site	Aspect should not be north.
-4		Info	Site	Areas with a slope of 10° or less are determined as suitable areas regardless of the aspect.
-5		Info	Site	20 m² and more area is needed.
-6		Violation	Site	The slope is not 45° or less.
-7		Violation	Site	Annual solar radiation is not at least 800 kWh.
-8		Info	Site	Aspect is not north.
-9		Violation	Site	Site is not at least 20 m²
+
+    |    	|           	|      	|                                                                                              	|
+    |----	|-----------	|------	|----------------------------------------------------------------------------------------------	|
+    | A0 	| Info      	| Site 	| Site area is {Site.squareMeters} meters                                                      	|
+    | 1  	| Info      	| Site 	| The slope must be 45° or less.                                                               	|
+    | 2  	| Info      	| Site 	| Annual solar radiation should be at least 800 kWh.                                           	|
+    | 3  	| Violation 	| Site 	| Aspect should not be north.                                                                  	|
+    | 4  	| Info      	| Site 	| Areas with a slope of 10° or less are determined as suitable areas regardless of the aspect. 	|
+    | 5  	| Info      	| Site 	| 20 m² and more area is needed.                                                               	|
+    | 6  	| Violation 	| Site 	| The slope is not 45° or less.                                                                	|
+    | 7  	| Violation 	| Site 	| Annual solar radiation is not at least 800 kWh.                                              	|
+    | 8  	| Info      	| Site 	| Aspect is not north.                                                                         	|
+    | 9  	| Violation 	| Site 	| Site is not at least 20 m²                                                                   	|
+
 4.	Finally, let’s run the Conflict Checker. Here, we can really see the value of business users that are well-acquainted with the rules being the implementers of the logic versus developers, because they will know best how to address logical mistakes in the rules:
  ![Alt text](<images/solar workshop/Solar Workshop_image068.png>)
 Corticon has identified 15 conflicts—situations where the conditions we’ve defined could presumably overlap. Currently, any of the cells with a ‘ – ‘ in them will evaluate that rule without considering the vocabulary attribute on the left hand side. For example, the first conflict which Corticon shows us is a conflict between 1 and 3, because Corticon has inferred there may be scenarios ‘North’ could be the value in cell c2, or a value < 45 could be in the cell a3—if both conditions are met, which matters more? 
 
-We can resolve this in a few ways—explicitly define every combination of values in every rule, or simply override one with another in cases of conflicts. We’re going to evaluate these rules such that if any aspect of the Site makes is unsuitable for solar, then that it will take precedent over any condition which resolves to isSuitable=T. However, recall that the condition for rule #4—when the slope is less than 10 degrees—will resolve to isSuitable=T even when the Site.aspect= ‘North’.  
+    We can resolve this in a few ways—explicitly define every combination of values in every rule, or simply override one with another in cases of conflicts. We’re going to evaluate these rules such that if any aspect of the Site makes is unsuitable for solar, then that it will take precedent over any condition which resolves to isSuitable=T. However, recall that the condition for rule #4—when the slope is less than 10 degrees—will resolve to isSuitable=T even when the Site.aspect= ‘North’.  
 
-We’ll define overrides to tell Corticon which action to defer to in cases of conflict. Other than rule #4 overriding number #3 for the reason mentioned above, all other rules that lead to a determination of isSuitable=F should override those which set isSuitable=T. At the bottom of each rule column, you’ll see an override row where you can specify which rule(s) that particular rule will override in cases of conflict. You can type them in or select them from the dropdown (hold down control to select multiple). Try this on your own, then check your work based on the screenshot below. 
-![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
+    We’ll define overrides to tell Corticon which action to defer to in cases of conflict. Other than rule #4 overriding number #3 for the reason mentioned above, all other rules that lead to a determination of isSuitable=F should override those which set isSuitable=T. At the bottom of each rule column, you’ll see an override row where you can specify which rule(s) that particular rule will override in cases of conflict. You can type them in or select them from the dropdown (hold down control to select multiple). Try this on your own, then check your work based on the screenshot below. 
+    ![Alt text](<images/solar workshop/Solar Workshop_image070.png>)
  
 ### Testing Rules
 Next, let’s set up a rule test to run test scenarios against this rulesheet. A Ruletest simulates a business scenario where the rules are applied to input data. If the data satisfies all the conditions in a rule, the rule fires and some output containing the results of the rule execution is produced. You can define different sets of input data to test how the rules behave in different scenarios. You can also use a Ruletest to compare the output of a rule execution with expected results. A Ruletest stores this information in a Ruletest file, enabling you to save use-cases that are of interest, change rules, and run the test again to see how the modified rules behave when applied to the same use-cases.
@@ -195,7 +202,7 @@ We’ll be using an API key that will expire after today’s workshop, but they 
 6.	In the REST URL field, paste the URL: https://developer.nrel.gov/api/solar/solar_resource/v1.json?address=Tremont%20St,%20Boston,%20MA%2002111
 7.	On the Authentication dropdown, select URL Parameter Token
 8.	Under field name, enter ‘api_key’
-9.	Under token, paste the following string: qBelSvrQOtJ3CzPBPJ9tZTWeEiwLHuahQ4ei8hfj
+9.	Under token, paste your API key
  ![Alt text](<images/solar workshop/Solar Workshop_image083.jpg>)
 10.	Click ‘Test Connection’. If everything is in the right place, you should get an alert that the connection was successful. 
 11.	Click ‘Discover’. This will import the various fields at that datasource endpoint, which we will then ‘map’ to our entities/attributes.
@@ -204,7 +211,8 @@ We’ll be using an API key that will expire after today’s workshop, but they 
 13.	Next, click the address attribute. This time on the righty hand side, select ADDRESS from the column name dropdown. 
 14.	Finally, do the same for the new avgDailyRadiation_kWh attribute, selecting OUTPUTS_AVG_DNI_ANNUAL from the column name dropdown. 
  ![Alt text](<images/solar workshop/Solar Workshop_image086.png>)
-Incorporate the REST Datasource
+
+### Incorporate the REST Datasource
 The one file we haven’t worked with yet is the Ruleflow. A Ruleflow enables you to connect two or more Rulesheets in a sequence. When the Ruleflow is processed at runtime, the Rulesheets are executed one by one in that sequence. The output of one Rulesheet becomes the input of the next Rulesheet. Note that a Rulesheet can be used in multiple Ruleflows. This enables you to use Rulesheets as reusable modules of rule logic. Any change in the rule logic only has to be made once in the Rulesheet and it is propagated across all Ruleflows that refer to it. 
 Besides defining a sequence of rulesheet executions, we can specify behavior like branching to different rulesheets at specific points in the decision execution based upon attribute values. We also specify the REST callout within the ruleflow. 
 1.	Right click the Ruleflows folder > New > Ruleflow
