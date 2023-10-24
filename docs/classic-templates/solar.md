@@ -34,7 +34,7 @@ To import that template:
 
     ![Alt text](<images/solar workshop/Solar Workshop_image013.png>)
 
-Rule Vocabulary
+## Rule Vocabulary
 A Corticon Vocabulary is a rule-modeling component that enables you to define all the business terms that you require in your rules. For example, let’s take a look at how we might formulate a rule vocabulary from some common solar site evaluation rules. 
 
 ![Alt text](<images/solar workshop/Solar Workshop_image017.png>)
@@ -64,6 +64,7 @@ After you create an entity, you can add attributes to it. An attribute is like a
 ### Associations
 An association describes the relationship between two entities. In a Corticon Vocabulary, you can define the association under either entity. By default, the association that you define appears under both entities in the Vocabulary tree.
  ![Alt text](<images/solar workshop/Solar Workshop_image029.jpg>)
+ 
 You add an association to an entity just as you add an attribute. 
 1.	Right-click Site and select Add Association.
 2.	The default selections should be what we want—one site to many associations. Click OK. 
