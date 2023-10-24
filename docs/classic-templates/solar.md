@@ -7,8 +7,7 @@ tags:
 
 ---
 
-Walks through the steps from brand new user to REST data connectivity
-
+Integrate data from external REST APIs to enrich your decision data
 ---
 
 ## First Launch of Corticon Studio
