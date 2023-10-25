@@ -4,6 +4,8 @@ title: IPv4 Validation
 tags:
   - Corticon.js
   - Corticon classic
+  - Regular Expressions
+
 ---
 
 Use regular expression in Corticon to validate IP address
