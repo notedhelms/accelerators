@@ -1,6 +1,6 @@
 ---
 id: forms_vehicle
-title: Select-Vehicle-Model-Make-Year
+title: Select Vehicle Model, Make, & Year
 tags:
   - Corticon.js
   - Dynamic Forms
