@@ -6,6 +6,8 @@ tags:
   - Dynamic Forms
 ---
 
+Implement the Diabetes Risk Score risk calculator [here](https://qxmd.com/calculate/calculator_675/diabetes-risk-score-type-2?buildpack=medscape) with Corticon.js  
+
 ---
 
 _**Dynamic Form Template**_

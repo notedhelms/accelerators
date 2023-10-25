@@ -6,6 +6,8 @@ tags:
   - Dynamic Forms
 ---
 
+Dynamic form to narrow down potential plant health issues when a plant looks sickly
+
 ---
 
 _**Dynamic Form Template**_
