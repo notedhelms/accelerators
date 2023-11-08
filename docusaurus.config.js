@@ -66,7 +66,7 @@ module.exports = {
             label: 'Accelerators',
           },
           {
-            href: 'https://github.com/corticon',
+            href: 'https://github.com/corticon/accelerators',
             label: 'GitHub',
             position: 'right',
           },
