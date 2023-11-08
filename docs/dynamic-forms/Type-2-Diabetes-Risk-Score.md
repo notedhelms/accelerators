@@ -14,4 +14,4 @@ _**Dynamic Form Template**_
 
 [Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main//form-templates/Diabetes-Risk-Score-(Type-2)/Rule%20Assets.zip)
 
-<iframe width="100%" height="300" src="//jsfiddle.net/notedhelms/5r60fxn9/17/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="200%" height="600" src="//jsfiddle.net/notedhelms/5r60fxn9/17/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
