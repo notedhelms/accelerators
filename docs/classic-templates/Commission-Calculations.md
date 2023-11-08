@@ -9,7 +9,7 @@ tags:
 Calculate sales commission payments
 
 ---
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Commissio-Calculations/Commission%20Calculations.zip)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Commission%20Calculations.zip)
 
 ---
 

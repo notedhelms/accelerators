@@ -9,7 +9,7 @@ Is now the right time to go oyster huntin'?
 
 ---
 
-[Download Rule Project](https://github.com/corticon/newsletter-solutions)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Oyster%20Harvesting.zip)
 
 ---
 

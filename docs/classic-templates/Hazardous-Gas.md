@@ -9,7 +9,7 @@ tags:
 How long for hazardous waste to decay to a safe level?
 
 ---
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Hazardous-Gas/Hazardous%20Gas%20First%20Order%20Decay.zip)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Hazardous%20Gas%20First%20Order%20Decay.zip)
 
 ---
 

@@ -10,7 +10,7 @@ Calculate compound interest depending on type of compounding.
 
 ---
 
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Calculate-Compound-Interest/Calculate%20Compound%20Interest.zip)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Calculate%20Compound%20Interest.zip)
 
 ---
 * Use with Corticon classic? ✅
