@@ -1,5 +1,5 @@
 ---
-id: classic_Matchmaker
+id: js_Matchmaker
 title: Online Dating Matchmaker
 tags:
   - Corticon.js
