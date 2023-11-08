@@ -10,7 +10,7 @@ Which child is the crown prince?
 
 ---
 
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Who-is-Heir-to-throne/Solve%20for%20the%20Heir%20to%20the%20Throne.zip)
+[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Solve%20for%20the%20Heir%20to%20the%20Throne.zip)
 
 ---
 
