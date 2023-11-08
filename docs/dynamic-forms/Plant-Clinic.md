@@ -1,6 +1,6 @@
 ---
 id: forms_Garden
-title: Garden Plant Issue Diagnosis Dynamic Form
+title: Diagnosis of Plant Health Problems
 tags:
   - Corticon.js
   - Dynamic Forms
