@@ -3,6 +3,14 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "For scenarios where the input data for a decision is being entered into a form by an end user, the decisions-from-data paradigm can be extended to optimize dynamic data-collection logic presented to end users."
+    "description": "
+    Dynamic Forms are just one use case for Corticon.js. In a nutshell, with Corticon and Corticon.js, you use a model-driven development environment called Corticon Studio for defining rules that will change input data based upon conditions and their resulting actions. Typically, a rules engine is used for making a decision from data that is already known and available, for example, calculating a loan rate based upon the data known about an applicant. Here, we're going to be gathering data from the end user, dynamically presenting additional user prompts that may be impacted based upon previous answers.
+    Dynamic Forms with Corticon.js
+    
+    Think of this design pattern as if you're designing a robot. Rule modelers will use Corticon to build the brain of the robot, while front end developers will handle its body.
+    
+    Corticon will be used to specify what prompts to present to the user, the input type for responding to the prompt, in what order to present the prompts, constraints/validations on the entered data, how the previous responses may or may not impact subsequent prompts, and when the requisite data has been gathered and is ready to be passed along to downstream systems. This is all defined in Corticon.js Studio, but are then transformed into a Decision Service-- the robot brain.
+    
+    The front end/client-side component in turn will be responsible for the styles of the forms' user interface and prompts, communicating with the decision service when the user hits 'next', rendering the components of the form that the decision service specifies, along with any constraints and validations it specifies."
   }
 }
