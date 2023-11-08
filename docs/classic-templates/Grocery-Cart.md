@@ -181,7 +181,7 @@ To add the attributes, start by adding attributes for the **Customer** entity ba
 
 ![](images/2023-10-03-10-38-01.png)
 
-[Download Rule Assets](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/Grocery-Cart/Shopping%20Cart.zip)
+[Download Rule Assets](https://github.com/corticon/accelerators/raw/main/docs/classic-templates/Grocery-Cart/Shopping%20Cart.zip)
 
 1. Right-click **Customer** and select **Add Attribute**, and then choose **String**.
 

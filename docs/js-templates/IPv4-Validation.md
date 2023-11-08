@@ -12,7 +12,7 @@ Use regular expression in Corticon to validate IP address
 
  ---
 [Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/js-templates/project-zips/IPv4%20Validation.zip)
+](https://github.com/corticon/accelerators/raw/main/docs/js-templates/project-zips/IPv4%20Validation.zip)
 
 ---
 

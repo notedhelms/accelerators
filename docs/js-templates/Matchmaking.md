@@ -12,7 +12,7 @@ Rules to match dating preferences
 
 
 [Download Rule Assets
-](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Matchmaking.zip)
+](https://github.com/corticon/accelerators/raw/main/docs/classic-templates/project-zips/Matchmaking.zip)
 
 ## Challenge Prompt:
 
