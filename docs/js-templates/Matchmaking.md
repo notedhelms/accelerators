@@ -10,6 +10,10 @@ Rules to match dating preferences
 
 ---
 
+
+[Download Rule Assets
+](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/corticon/templates/blob/main/classic-templates/project-zips/Matchmaking.zip)
+
 ## Challenge Prompt:
 
 Consider the following situation. You have been approached by an online dating service that wants to
