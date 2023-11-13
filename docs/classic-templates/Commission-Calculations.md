@@ -5,7 +5,7 @@ tags:
   - Corticon.js
   - Corticon classic
 ---
-https://github.com/corticon/accelerators/raw/main/docs/classic-templates/project-zips/Commission%20Calculations.zip
+
 Calculate sales commission payments
 
 ---
