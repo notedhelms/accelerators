@@ -80,10 +80,217 @@ First, we define a unified data model—the Rule Vocabulary—that captures:
 
 When working with this model in Corticon.js Studio, it is referred to as a Rule Vocabulary, but once we compile the rules into a JavaScript file, the Rule Vocabulary is translated into the JSON schema used to communicate between the front-end rendering component and the embedded business rules.
 
-#### Default UI Behavior Rule Vocabulary
+#### Out of the Box UI Rule Vocabulary as JSON Schema
 
-<iframe width="200%" height="600" src="https://codesandbox.io/embed/95k795?view=preview&module=%2Fsrc%2Fschema.json" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-
+```
+{
+    "type": "object",
+    "properties": {
+        "currentStageNumber": {
+            "type": "integer",
+            "description": "Where to specify: Filter panel of rulesheet, in advanced view\n\nDescription: When the client side rendering component is ready for the next step in the flow, it invokes the decision service by setting UI.currentStageNumber to UI.nextStageNumber in the input payload of the decision service."
+        },
+        "labelPosition": {
+            "type": "string",
+            "description": "Sets the default label position - Can be overidden on a control by control basis"
+        },
+        "stageOnExit": {
+            "type": "integer",
+            "description": "To invoke a subflow we need to specify the entry stage via nextStageNumber and where we will resume via stageOnExit"
+        },
+        "pathToData": {
+            "type": "string",
+            "description": "We define which data we want to store by specifying in the initial stage of the rules which vocabulary entity should ‘store’ the data accrued throughout the form. This is specified with UI.pathToData in an initial stage. The pathToData entity will be at index 1 in the JSON. The stored data can then be passed along to other workflow steps once the form is complete, or used to define a conditional rule at a later stage in the form.\nData Type: Any alphanumeric string will be accepted, but in order to use user-selected responses to dynamically change form behavior in future steps, this should be set to an entity in the vocabulary that will accrue the data"
+        },
+        "language": {
+            "type": "string",
+            "description": "On start, the rendered can accept the language from the UI but a decision service may switch the language based on some rules"
+        },
+        "containers": {
+            "type": "object",
+            "description": "For all steps in which something is being presented to the user (versus just a calculation/decision made in the background), the decision service will specify  the list of UI controls to render from the decision service JSON payload at the UI.containers element. This is an array of all the containers to render for this stage. The container can be viewed as a panel containing various labels and input fields decision service. The container has various attributes, for example a title.",
+            "properties": {
+                "validationMsg": {
+                    "type": "string",
+                    "description": "Creates a container wide validation message"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "An optional string that doesn't impact behavior of the form. It is mostly useful for troubleshooting. "
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Required if any container is being rendered."
+                },
+                "uiControls": {
+                    "type": "object",
+                    "description": "Each UI control element has multiple attributes. The most important one is the 'type' attribute as it allows the CSC to know what kind of control to render and which necessary attributes to access based on the type.",
+                    "properties": {
+                        "fieldName": {
+                            "type": "string",
+                            "description": " The UI control specifies where to store the data in the field UIControl.fieldName."
+                        },
+                        "dataSourceOptions": {
+                            "type": "object",
+                            "description": "When using the MultipleChoices UI Control, the actual choices can be populated from a JSON endpoint or be specified by the rule modeler. For the first option, the rule modeler must specify a URL on the field UIControl.dataSource. The default client renderer will look for the options at that endpoint under the value and displayName field. If the JSON data has different keys, such as shown below, the client renderer must be told which field is going to serve as the value field and which as the displayName field—these can be, and often are, the same. These are specified with the DataSourceOptions entity.",
+                            "properties": {
+                                "dataTextField": {
+                                    "type": "string",
+                                    "description": "Optionally define the key name to use as the display name for this option from dropdown, if its name isn’t displayName. Oftentimes this will be the same as the dataValueField field."
+                                },
+                                "dataValueField": {
+                                    "type": "string",
+                                    "description": "Optionally define the name of the key whose value should be stored should end user select this option from dropdown, if its name isn’t value. Oftentimes this will be the same as the dataTextField field."
+                                },
+                                "pathToOptionsArray": {
+                                    "type": "string",
+                                    "description": "Optionally define where in a JSON endpoint is the array of options to populate a dropdown list with "
+                                }
+                            },
+                            "required": [
+                                "dataTextField",
+                                "dataValueField"
+                            ]
+                        },
+                        "max": {
+                            "type": "integer",
+                            "description": "Optionally give the rendering component for this UI Control a numeric maximum"
+                        },
+                        "defaultValue": {
+                            "type": "string",
+                            "description": "Optionally give the rendering component for this UI Control a placeholder default value"
+                        },
+                        "multiple": {
+                            "type": "boolean",
+                            "description": "Description: When there could be any number of responses to a prompt, set this to true. The answers are stored in an array pointed as specified by fieldName attribute"
+                        },
+                        "tooltip": {
+                            "type": "string",
+                            "description": "Optionally give the rendering component for this UI Control a tooltip to assist end user"
+                        },
+                        "label": {
+                            "type": "string",
+                            "description": "Content of the prompt provided by the UI Control"
+                        },
+                        "rows": {
+                            "type": "integer",
+                            "description": "Description: HTML textarea rows attribute"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Text",
+                                "SingleChoice",
+                                "MultipleChoices",
+                                "DateTime",
+                                "Number",
+                                "ReadOnlyText",
+                                "YesNo",
+                                "TextArea",
+                                "FileUpload",
+                                "MultiExpenses",
+                                "MultipleChoicesMultiSelect",
+                                "YesNoBoolean"
+                            ]
+                        },
+                        "required": {
+                            "type": "boolean",
+                            "description": "Optionally tell the rendering component that this UI Control must be answered by the end user"
+                        },
+                        "min": {
+                            "type": "number",
+                            "description": "Optionally give the rendering component for this UI Control a minimum numeric value end user can enter"
+                        },
+                        "minDT": {
+                            "type": "string",
+                            "description": "Optionally give the rendering component for this UI Control a minimum date value end user can enter",
+                            "format": "date"
+                        },
+                        "labelPosition": {
+                            "type": "string",
+                            "description": "Optionally instruct the rendering component where to place the label for this UI Control "
+                        },
+                        "sortOptions": {
+                            "description": "Optionally instruct the rendering component how to sort the list of options applied to this UI Control ",
+                            "enum": [
+                                "'A to Z'",
+                                "'Z to A'"
+                            ]
+                        },
+                        "maxDT": {
+                            "type": "string",
+                            "description": "Optionally give the rendering component for this UI Control a maximum date value end user can enter",
+                            "format": "date"
+                        },
+                        "validationErrorMsg": {
+                            "type": "string",
+                            "description": "Creates validation message for individual UI Control"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Data Type: Any unique alphanumeric string\n\nDescription: Unique identifier (within the context of one container) for the UI control."
+                        },
+                        "cols": {
+                            "type": "integer",
+                            "description": "Description: HTML textarea cols attribute"
+                        },
+                        "dataSource": {
+                            "type": "string",
+                            "description": "Specifies the datasource to populate MultipleChoices dropdown options from. Value field at the JSON endpoint must have the key value, display name must have the value displayName. If not the case for either of these, these can be overridden by specifying a child entity ‘DataSourceOptions’",
+                            "format": "uri-template"
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "The content of a ReadOnlyText UI Control"
+                        },
+                        "option": {
+                            "type": "object",
+                            "description": "Use in conjunction with MultipleChoices UI Control to populate the list of options. Alternative is to specify an endpoint for the UI Control's datasource to retrieve data from. ",
+                            "properties": {
+                                "displayName": {
+                                    "type": "string",
+                                    "description": "What the particular dropdown option's dispay name should be"
+                                },
+                                "value": {
+                                    "type": "string",
+                                    "description": "What the particular dropdown option's value will be stored as should it be selected"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "label",
+                        "type",
+                        "id"
+                    ]
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Renders the h3 header on Container entity"
+                }
+            },
+            "required": [
+                "id",
+                "title"
+            ]
+        },
+        "done": {
+            "type": "boolean",
+            "description": "Upon receiving a done instruction from the decision service (a notification of the end of the flow) via UI.done=T, it is expected the collected data will be passed to another function or process; typically an event will be raised with a pointer to the JSON data collected during the flow. "
+        },
+        "nextStageNumber": {
+            "type": "integer",
+            "description": "Description: The decision service sets the attribute UI.nextStageNumber to specify the next step in the flow, unless it is the last stage, in which case this field is left null and done is set to ‘true’\n\nWhere to specify: Action row of rulesheet"
+        },
+        "currentStageDescription": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "currentStageNumber"
+    ]
+}
+```
 
 ## Testing Form with the Test Driver Renderer
 
