@@ -98,7 +98,7 @@ When working with this model in Corticon.js Studio, it is referred to as a Rule 
  UI\.containers\.description                                       | An optional string that doesn't impact behavior of the form\. It is mostly useful for troubleshooting\.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | String                                                                                                                                                          
  UI\.containers\.title                                             | Renders the h3 header on Container entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | String                                                                                                                                                          
  UI\.containers\.id                                                | Required if any container is being rendered\.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | String                                                                                                                                                          
- UI\.containers\.uiControls                                        | Each UI control element has multiple attributes\. The most important one is the 'type' attribute as it allows the CSC to know what kind of control to render and which necessary attributes to access based on the type\.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | object                                                                                                                                                          
+ UI\.containers\.uiControls                                        | Each UI control element has multiple attributes\. The most important one is the 'type' attribute as it allows the Test Drive Client to know what kind of control to render and which necessary attributes to access based on the type\.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | object                                                                                                                                                          
  UI\.containers\.uiControls\.fieldName                             | The UI control specifies where to store the data in the field UIControl\.fieldName\. For example, if we want to store the value of a person's date of birth in a field called 'dob', within a JSON object called 'Person', we would first need to set \(either in this stage or a preceding one\) the UI\.pathToData = 'Person' and then we could define the UI Control's fieldName to be 'dob'\. This would hold the value selected for the dob in the JSON object as follows: "Person" : \{ "dob" : "MM/DD/YYYY" \}                                                                                                                                                                     | String                                                                                                                                                          
  UI\.containers\.uiControls\.dataSourceOptions                     | When using the MultipleChoices UI Control, the actual choices can be populated from a JSON endpoint or be specified by the rule modeler\. For the first option, the rule modeler must specify a URL on the field UIControl\.dataSource\. The default client renderer will look for the options at that endpoint under the value and displayName field\. If the JSON data has different keys, such as shown below, the client renderer must be told which field is going to serve as the value field and which as the displayName field—these can be, and often are, the same\. These are specified with the DataSourceOptions entity\.                                                    | object                                                                                                                                                          
  UI\.containers\.uiControls\.dataSourceOptions\.dataTextField      | Optionally define the key name to use as the display name for this option from dropdown, if its name isn’t displayName\. Oftentimes this will be the same as the dataValueField field\.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | String                                                                                                                                                          
@@ -129,10 +129,49 @@ When working with this model in Corticon.js Studio, it is referred to as a Rule 
 
 
 
-## Testing Form with the Test Driver Renderer
+## Testing Form with the Test Driver Client
 
 When we build the dynamic form rules, we're ultimately going to be transpiling the rules into a self-contained JavaScript bundle. In simpler terms, all of the logic will be encapsulated into just one file decisionServiceBundle.js.
 
 Front end developers handle the 'rendering side' of the form. This includes defining data that will be passed in at the onset of the form, styling, and where the data goes once the form is filled out.
 
 To make everyone's life easier, we provide open source implementations of Corticon.js Dynamic Forms which you can freely download, import into your environment, and adapt to your needs. This includes both sample rule assets that you can work with in Corticon.js Studio, and a sample client side rendering component.
+
+### Overview of the Test Drive Client
+
+The Dynamic Forms in the sample page are rendered by a reusable, adaptable template referred to as the Test Drive Client. By template, we mean that the same Test Drive Client can be reused for multiple questionnaires without any front end client changes. When you switch samples with the dropdown sample selector, you're in a different dynamic form; however it is using the Test Drive Client for all the samples.
+
+This framework of separating the Test Drive Client from the rules promotes agility for development teams, as it disentangles the 'instructions' logic for what to present to the user (defined in a Corticon.js decision service) and the code that renders the form based upon these instructions. Typically, a Test Drive Client is written and maintained by a developer or a team of developers while the decision services are written by business analysts who understand well the problem domain of the questionnaire.
+
+If you are familiar with model/views design patterns; you can consider the Test Drive Client to be the view while the model is created and maintained using a Corticon.js decision service.
+
+### Responsibilities  of the Test Drive Client
+
+The Test Drive Client is responsible for rendering the UI Controls (questions, labels, descriptions, validation messages…), collecting the data entered along the flow (the answers), and navigating through the next steps.
+
+It does so by:
+
+1.  Invoking the decision service at both the start of the flow and at each step in the flow. The decision service returns a JSON payload with all the necessary data to proceed for the entire step.
+2.  Maintaining the state of the flow. That is, the state machine representing the flow is maintained by the Test Drive Client and not by the decision service (The decision service is stateless).
+3.  Exiting when the end of the flow is reported by the decision service.
+
+All of this is by default implemented in an interoperable fashion, as the same Test Drive Client can be reused on different pages and with different use cases.
+
+### What the Test Drive Client Needs from the Decision Service returned payload
+
+The decision service returns a JSON payload containing an array with 2 elements.  
+Each of the element represents top level entities from the Corticon model.
+
+The item at index 0 is the UI model.
+
+The item at index 1 is the data for the specific use case. We call this the project data. It contains:
+
+1.  Initial data to pass to the first step of the flow (initialization data for this specific flow session). For example, this could be contextual information about a user (first name, last name, preferred language…). In an insurance claim that could be the type of insurance the user has, ect…
+2.  Accumulated answers along the flow.
+3.  Additional data created by the decision service along the flow. For example, the decision service can compute the total expenses amount in one step and then use that total in another step to decide to skip some questions based on whether the total is less than say $1000.
+
+:::note
+
+In the rest of this document when we reference an item as UI.fieldName we mean to reference the top level entity item at index 0 from the payload (that is UI.fieldName is a short hand notation for payload\[0\].fieldName).
+
+:::
