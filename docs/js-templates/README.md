@@ -1,0 +1,1 @@
+Use these resources to jumpstart rule projects that will be generated from Corticon.js Studio into JavaScript.
