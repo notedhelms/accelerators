@@ -1,3 +1,11 @@
+---
+id: forms_Intro
+title: Dynamic Forms with Corticon.js
+tags:
+  - Corticon.js
+  - Dynamic Forms
+---
+
 # Dynamic Forms with Corticon.js
 
 Creating a dynamic form can be a slog even when you know what you're doing. It's time consuming, repetitive, and frankly runs the risk of transforming front end developers into Jack Torrance from _The Shining:_
@@ -13,13 +21,7 @@ It's common to fill out forms and most frameworks can easily handle simple forms
 One of the biggest challenges is how to manage those rules and systematize them into a single system and test those paths in a robust way without putting in manual labor. Another related problem is how those rules are defined (via descriptive language, UI, etc.) and whether a businessperson can write them down without having any technical experience.
 
 The last element of the array of problems is how to visualize all those rules on the frontend as a form without asking your developers to have domain knowledge of your business processes, and of course, how to maintain any changes without taking days for implementation and regression testing.
----
-id: forms_Intro
-title: Dynamic Forms with Corticon.js
-tags:
-  - Corticon.js
-  - Dynamic Forms
----
+
 ## Dynamic Forms with Corticon.js
 
 Dynamic Forms are just one use case for Corticon.js. The dynamic form solution is architected around having a model/view, where:
