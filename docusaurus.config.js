@@ -1,79 +1,84 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
-title: 'Corticon Accelerate',
+
+module.exports = {
+  title: 'Corticon Accelerate',
   tagline: 'Templates and Tutorials to Jumpstart Rule Projects',
+  favicon: 'img/favicon.ico',
   url: 'https://corticon.github.io/',
-  baseUrl: "/accelerators/",
-  trailingSlash: false,
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  baseUrl: '/accelerators/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'corticon',
+  organizationName: 'corticon', // Usually your GitHub org/user name.
   projectName: 'accelerators', // Usually your repo name.
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  deploymentBranch: 'gh-pages',
+
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
-
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          // editUrl:
+          //   'https://github.com/corticon/accelerators',
         },
-        blog: false,
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
+        blog: false
       }),
     ],
   ],
 
-  plugins: [],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Replace with your project's social card
+      image: 'img/favicon.ico',
       navbar: {
-        title: "Corticon Accelerate",
+        title: 'Corticon Accelerate',
         logo: {
           alt: 'Corticon Accelerate Logo',
-          src: "/img/favicon.ico",
+          src: 'img/favicon.ico',
         },
         items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Accelerators',
+          },
           {
             href: 'https://github.com/corticon/accelerators',
             label: 'GitHub',
             position: 'right',
           },
         ],
-        style: "primary",
       },
-      docs: {
-        sidebar: {
-            // Customisation for the left sidebar:
-            autoCollapseCategories: false,
-            hideable: true,
-        },
-    },
+
       footer: {
-        copyright: `Copyright © ${new Date().getFullYear()} Progress Software, Built with Docusaurus.`,
+        style: 'dark',
         links: [
+
           {
             title: 'Resources',
             items: [
@@ -95,23 +100,40 @@ title: 'Corticon Accelerate',
             title: 'More',
             items: [
               {
-                label: 'Corticon Blog on Progress.com',
+                label: 'Blog',
                 to: 'https://www.progress.com/blogs/cognitive-services',
               },
               {
-                label: 'Corticon on Github',
+                label: 'GitHub',
                 href: 'https://github.com/corticon/',
               },
             ],
           },
         ],
+        copyright: `Copyright © ${new Date().getFullYear()} Progress Software, Built with Docusaurus.`,
       },
-
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+      themeConfig: {
+        imageZoom: {
+          // CSS selector to apply the plugin to, defaults to '.markdown img'
+          selector: '.markdown img',
+          // Optional medium-zoom options
+          // see: https://www.npmjs.com/package/medium-zoom#options
+          options: {
+            margin: 24,
+            background: '#BADA55',
+            scrollOffset: 0,
+            container: '#zoom-container',
+            template: '#zoom-template',
+          },
+        },        metadata: [{ name: 'keywords', content: 'corticon, rules engine, brms, bre, dynamic forms, business rules' }],
+        prism: {
+          theme: lightCodeTheme,
+          darkTheme: darkCodeTheme,
+        }
       },
-    }),
-};
-
-module.exports = config;
+      plugins: [
+        'plugin-image-zoom'
+      ],
+    }
+  )
+  }
