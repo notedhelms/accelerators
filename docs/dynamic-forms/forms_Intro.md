@@ -82,6 +82,8 @@ When working with this model in Corticon.js Studio, it is referred to as a Rule 
 
 #### Default UI Behavior Rule Vocabulary
 
+<iframe width="200%" height="600" src="https://codesandbox.io/embed/95k795?view=preview&module=%2Fsrc%2Fschema.json" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 
 ## Testing Form with the Test Driver Renderer
 
