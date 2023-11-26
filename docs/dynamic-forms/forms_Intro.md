@@ -8,9 +8,8 @@ tags:
 
 # Dynamic Forms with Corticon.js
 
-Creating a dynamic form can be a slog even when you know what you're doing. It's time consuming, repetitive, and frankly runs the risk of transforming front end developers into Jack Torrance from _The Shining:_
+Creating a dynamic form can be a slog even when you know what you're doing. It's time consuming, repetitive, and frankly runs the risk of transforming front end developers [into Jack Torrance from _The Shining_.](http://static.tumblr.com/72b7451c23e74696386ae2e2c05a8761/alu9pkg/eSdnfi67l/tumblr_static_7lu60nk316gw4sggg4owgcwgg_640_v2.jpg)
 
-![The Shining all work and no play screenshot](images/shining.jpg)
 
 But with Corticon.js, dynamic forms can be created in a fraction of the time, with substantial contributions from non-developers, and through a framework-agnostic design pattern that maximizes the reusability of form logic.
 
