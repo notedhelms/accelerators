@@ -39,7 +39,7 @@ Below, we’ll share the solution of one of this rule modeling challenge’s ent
 
 Below is a small Vocabulary that contains everything needed to model this problem.
 
-![](../js-templates/images/Who-Won-The-Race_vocab.png)
+![](../02-js-templates/images/Who-Won-The-Race_vocab.png)
 
 A `Person` entity allows us to talk about a collection of Person entities who make up the group
 of racers who enter the race.
@@ -63,12 +63,12 @@ Of course, we could also provide this in our input request to the rules.
 
 The Person entity instances are created in a set of non-conditional rules using the `new` operator.
 
-![Alt text](../js-templates/images/Who-Won-The-Raceactions.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Raceactions.png)
 
 You can find this operator in the Corticon operator tree under Entity/Association Operators.
 Learn more about this operator and its syntax here.
 
-![Alt text](../js-templates/images/Who-Won-The-Race_rule operators.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Race_rule operators.png)
 
 
 Our next step would be to assign the proper name to each instance based on our set of rules.
@@ -82,7 +82,7 @@ define a set of named aliases for each Person entity. Effectively, this means th
 instances are replicated in working memory for each race participant. This is pretty powerful as
 we can now start to build rules for all these named (aliased) entity instances.
 
-![Alt text](../js-templates/images/Who-Won-The-Race_aliases.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Race_aliases.png)
 
 For convenience sake and readability, we have used a condition row to refer to our original
 rules. This generates a little warning message on the rulesheet, which you can ignore. As you
@@ -99,30 +99,30 @@ that satisfies all the requirements at the same time can be considered a solutio
 It’s only when ALL rule conditions are satisfied that we assign the name attribute to the proper
 Person entity instance in the Actions pane.
 
-![Alt text](../js-templates/images/Who-Won-The-Race_rs 1.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Race_rs 1.png)
 
 The Action simply posts the following message, which has been entered as Rule Statement 1:
 
-![Alt text](../js-templates/images/Who-Won-The-Racestatements.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Racestatements.png)
 
 So, any finish sequence that satisfies all the Conditions of the rule will be detailed in the posted
 Rule Statement. Let’s try a Test and see what happens.
 
 First, we build a simple ruleflow that includes the two rulesheets.
 
-![Alt text](../js-templates/images/Who-Won-The-Race_rf.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Race_rf.png)
 
 The Input Testsheet is empty. We don’t need to supply data in the input as the initialization
 rulesheet sets up the 7 `Person` entity instances, also known by our alias as the racers.
 
-![Alt text](../js-templates/images/Who-Won-The-Racetest.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Racetest.png)
 
 The Output pane in the test sheet shows each racer (`Person`) identified by a place attribute,
 numbered 1 through 7. This is the result of the race rulesheet executing.
 
 The answer to the puzzle is contained in the posted Rule Statement, below:
 
-![Alt text](../js-templates/images/Who-Won-The-Racetest message.png)
+![Alt text](../02-js-templates/images/Who-Won-The-Racetest message.png)
 
 In this case, only one finish sequence of the 5,040 possible satisfy all the constraints, so only
 one Rule Statement is posted.
