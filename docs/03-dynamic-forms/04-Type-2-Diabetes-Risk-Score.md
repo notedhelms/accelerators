@@ -12,6 +12,6 @@ Implement the Diabetes Risk Score risk calculator [here](https://qxmd.com/calcul
 
 _**Dynamic Form Template**_
 
-[Download Rule Assets](https://github.com/corticon/accelerators/raw/main/docs//form-templates/Diabetes-Risk-Score-(Type-2)/Rule%20Assets.zip)
+[Download Rule Assets](https://github.com/corticon/accelerators/raw/main/docs/03-dynamic-forms/project-zips/T2DB.zip)
 
 <iframe width="200%" height="600" src="//jsfiddle.net/notedhelms/5r60fxn9/17/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
