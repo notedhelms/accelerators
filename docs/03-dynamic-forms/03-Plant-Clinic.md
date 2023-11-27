@@ -13,5 +13,4 @@ Dynamic form to narrow down potential plant health issues when a plant looks sic
 _**Dynamic Form Template**_
 
 
-
 <iframe width="200%" height="600" src="//jsfiddle.net/notedhelms/b0a5qjeu/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
