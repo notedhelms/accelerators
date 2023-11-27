@@ -9,7 +9,6 @@ tags:
 
 Generate list of models based upon chosen makes, and years based upon models
 
-C:\Users\smeldon\github\Samples-Repository\docs\03-dynamic-forms\
 ---
 
 _**Dynamic Form Template**_
