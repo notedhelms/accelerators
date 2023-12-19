@@ -1,12 +1,10 @@
 (function() {
     if ( window.corticon === undefined )
         window.corticon = {};
-
     if ( window.corticon.util === undefined )
         window.corticon.util = {};
     else
         throw "window.corticon.util should not be used by another jquery plugin";
-
     /**
      * usage: jQuery.corticon.util.namespace( corticon.xyz );
      * or $.corticon.util.namespace( corticon.xyz );
@@ -22,16 +20,12 @@
                 o = o[d[j]];
             }
         }
-
     };
-
     window.corticon.util.copyToClipboard = function (selector) {
         const text = $(selector).val();
-
         navigator.clipboard.writeText(text).then(function(result) {
         }, function(result) {
             console.log("Could not copy to clipboard - probably no privs to do that in this browser !"+result);
         });
     }
 })();
-
