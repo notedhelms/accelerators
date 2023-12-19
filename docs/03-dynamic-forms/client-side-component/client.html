@@ -1,53 +1,31 @@
 <html>
-
 <head>
 	<meta charset="utf-8" />
 	<title>Dynamic Forms Demo</title>
-
-
 	<script src="clientSideComponent/dependencies/jsonpath-plus/index-browser-umd.cjs"></script>
-
 	<script src="https://kendo.cdn.telerik.com/2023.1.425/js/jquery.min.js"></script>
-
-
 	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/6.3.0/classic/classic-green-dark.css" />
-
-
-
-
 	<script src="https://kendo.cdn.telerik.com/2023.1.425/js/kendo.all.min.js"></script>
-
-
-
 	<script type="text/javascript" src="clientSideComponent/util/util.js"></script>
 	<script type="text/javascript" src="clientSideComponent/dynForm/customEvents.js"></script>
 	<script type="text/javascript" src="trace/trace.js"></script>
 	<script type="text/javascript" src="clientSideComponent/dynForm/history.js"></script>
 	<script type="text/javascript" src="clientSideComponent/dynForm/uiControlsRenderers.js"></script>
 	<script type="text/javascript" src="clientSideComponent/dynForm/stepsController.js"></script>
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
 	<link rel="stylesheet" href="client.css">
 	<link rel="stylesheet" href="clientSideComponent/dynForm/UIControlsStyles.css">
 	<link rel="stylesheet" href="trace/TraceStyles.css">
-
-
 	<script type="text/javascript"
 		src="decisionServices/Country-State-City-Selector/browser/decisionServiceBundle.js"></script>
 	<script type="text/javascript"
 		src="decisionServices/Select-Vehicle-Model-Make-Year/browser/decisionServiceBundle.js"></script>
 	<script type="text/javascript" src="decisionServices/PropertyCasualty/browser/decisionServiceBundle.js"></script>
-
-
 	<script type="text/javascript" src="clientSetup.js"></script>
-
 </head>
-
 <body>
 	<div class="sampleTitle"><i class="bi bi-file-earmark-ruled"></i>&nbsp;Test Driver for Rules Driven Dynamic Forms
 	</div>
-
 	<table width="100%">
 		<tr>
 			<td valign="top">
@@ -58,10 +36,8 @@
 							<option value="0">Select Country, Load States, then Towns</option>
 							<option value="1">Select Vehicle Make, Load Models, then Years</option>
 							<option value="2">Property and Casualty Quote </option>
-
 						</select>
 					</div>
-
 					<div style="display: none;" id="languageContainerId">
 						<div class="commandVerticalSpacer">&nbsp;</div>
 						<div class="commandContainer">
@@ -69,9 +45,7 @@
 							</select>
 						</div>
 					</div>
-
 					<div class="commandVerticalSpacer">&nbsp;</div>
-
 					<div class="commandContainer">
 						<span class="commandButton" id="startActionId">
 							<a class="command" accesskey="s"
@@ -99,7 +73,6 @@
 							</a>
 						</span>
 					</div>
-
 					<div class="commandContainer showTraceContainer">
 						<span class="commandButton" id="showTraceId">
 							<a class="command" accesskey="t"
@@ -150,10 +123,8 @@
 			</td>
 		</tr>
 	</table>
-
 	<div class="allTracesContainer">
 		<div class="tracePanelTitle">Decision Service (Rules) Trace Panel</div>
-
 		<div class="stageTraceHistory" style="overflow-x: auto; overflow-y: hidden; padding: 0.8rem;">
 			<span style="width: 20px;" id="traceHistorySummaryId"><i class="bi bi-journal-text"></i></span>
 			<span style="margin-left: 0.6rem;" id="traceHistoryId"></span>
@@ -193,5 +164,4 @@
 		</table>
 	</div>
 </body>
-
 </html>
