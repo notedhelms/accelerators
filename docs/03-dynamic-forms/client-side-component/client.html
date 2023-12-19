@@ -61,8 +61,7 @@
 				event.theData = data;
 				document.body.dispatchEvent(event);
 			}
-		})();
-	</script>
+		})(); </script>
 	<script type="text/javascript">corticon.util.namespace( "corticon.tracer" );
 		function Tracer () {
 			let itsStagesTrace = [];
@@ -161,8 +160,7 @@
 			corticon.tracer.tracerClickStage = function ( index, theEl ) {
 				corticon.dynForm.raiseEvent(corticon.tracer.tracerCustomEvents.SWITCH_TO_SAVED_STAGE,{ "index": index, "el": theEl });
 			}
-		})();
-		</script>
+		})();	</script>
 	<script type="text/javascript">corticon.util.namespace("corticon.dynForm");
 		corticon.dynForm.History = function () {
 			let itsHistory = [];
@@ -211,8 +209,7 @@
 				getPreviousStageData: getPreviousStageData,
 				isHistoryEmpty: isHistoryEmpty
 			}
-		}
-	</script>
+		}</script>
 	<script type="text/javascript">corticon.util.namespace( "corticon.dynForm" );
 		corticon.dynForm.UIControlsRenderer = function () {
 			let itsFlagRenderWithKui = false;
@@ -852,8 +849,7 @@
 			return {
 				renderUI: renderUI,
 			}
-		}
-		</script>
+		}</script>
 	<script type="text/javascript">corticon.util.namespace( "corticon.dynForm" );
 		corticon.dynForm.StepsController = function () {
 			let itsDecisionServiceInput = [{},{}];
@@ -1250,8 +1246,7 @@
 				processNextStep: processNextStep,
 				processPrevStep: processPrevStep
 			}
-		}
-		</script>
+		}</script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="client.css">
 	<script type="text/javascript"
@@ -1419,8 +1414,7 @@
 				else
 					$("#useKuiId").show();
 			});
-		});
-		</script>
+		});</script>
 </head>
 
 <body>
