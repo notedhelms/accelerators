@@ -1,6 +1,6 @@
 let currentDecisionServiceEngine;
 let allInputData = [];
-let inputData; // per decision service initial data set (external data)
+let inputData;
 let itsCurrentLanguage = 'english';
 let itsQuestionnaireKey = '0';
 let itsFlagRenderWithKui = false;
@@ -52,11 +52,9 @@ function processClickPrev() {
 }
 
 function saveStateToLocalStorage(key, value) {
-    // save it in local storage for restore  on reload
     try {
         window.localStorage.setItem(key, value);
     } catch (e) {
-        // Some browser in private mode may throw exception when using local storage
     }
 }
 
@@ -107,7 +105,6 @@ function setupInitialInputData() {
     inDataClaim.claim = {};
     inDataClaim.claim.policyType = 'Individual';
 
-    // Must correspond with the order of the DS inclusion
     allInputData.push(inDataCanonical);
     allInputData.push(inDataValidation);
     allInputData.push(inDataTaxes);
@@ -182,7 +179,7 @@ $( document ).ready(function() {
 
     corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.AFTER_DONE, () => {
         $("#nextActionId").hide();
-        $("#prevActionId").hide();  // needed when continuing to a sample after finishing a sample
+        $("#prevActionId").hide();
         $("#startActionId").show();
         $('#dynUIContainerId').html('<div style="margin: 2em; font-size: larger;">&nbsp;<i class="bi bi-check-circle"></i>All Done</div>');
         $("#sampleSelectId").attr('disabled', false);

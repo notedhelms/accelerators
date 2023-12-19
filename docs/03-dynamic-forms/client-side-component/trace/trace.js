@@ -1,7 +1,6 @@
 corticon.util.namespace( "corticon.tracer" );
 
 function Tracer () {
-    // private section
     let itsStagesTrace = [];
 
     function setupTracing() {
@@ -43,12 +42,10 @@ function Tracer () {
         else
             stageDescription = "no description provided";
 
-        // we assume there was a call to trace the input and thus a new element in history
         const index = itsStagesTrace.length - 1;
         itsStagesTrace[index].result = JSON.stringify(result, null, 2);
         itsStagesTrace[index].timing = Math.round(execTimeMs);
 
-        // add tooltip to the existing node created before we made call to DS
         const el = $("#traceNodeId_"+index);
         el.prop("title", stageDescription);
 

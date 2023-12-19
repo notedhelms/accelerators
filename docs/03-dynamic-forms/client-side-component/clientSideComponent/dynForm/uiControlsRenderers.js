@@ -1,23 +1,12 @@
 corticon.util.namespace( "corticon.dynForm" );
 
 corticon.dynForm.UIControlsRenderer = function () {
-// TODO:
-// Number field as integer vs decimal -> new field type?
 
     let itsFlagRenderWithKui = false;
 
-    // Render all Containers in base element (baseEl: A Jquery object - typically from a div element)
-    // This is the main public entry point
     function renderUI ( containers, baseEl, labelPositionAtUILevel, language, useKui ) {
         itsFlagRenderWithKui = useKui;
 
-        /* Without JQuery one could create all dynamic elements just using the DOM API.  For example:
-        var contEl = document.createElement('div');
-        contEl.setAttribute('id', containers[0].id);
-        contEl.appendChild(document.createTextNode(containers[0].title));
-        document.getElementById('theDynamicUIContainerId').appendChild(contEl);
-        */
-        // Start with clean component - that is without any UI Controls from previous steps
         baseEl.empty();
 
         if ( itsFlagRenderWithKui ) {
@@ -35,7 +24,6 @@ corticon.dynForm.UIControlsRenderer = function () {
             allFormEls[0].focus();
     }
 
-    // Render all Controls in container element
     function renderUIForOneContainer( container, baseEl, labelPositionAtUILevel, language ) {
         let html = '<div';
         if ( itsFlagRenderWithKui )
@@ -87,7 +75,6 @@ corticon.dynForm.UIControlsRenderer = function () {
         renderContainerValidationMessage(container.validationMsg, baseEl);
     }
 
-// Begin expense
     let nextExpenseId = 0;
     function renderExpenseInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
         const html = '<div class="expenseInputContainer"></div>';
@@ -115,7 +102,7 @@ corticon.dynForm.UIControlsRenderer = function () {
     function createOneExpenseInput(oneUIControl, expenseContainerEl) {
         nextExpenseId++;
         const inputContainerEl = createInputContainer(expenseContainerEl, true, true);
-        inputContainerEl.data("uicontroltype", oneUIControl.type );  // save it so that we can conditionally add the proper fields when creating the expense object literal in the stepsController.js
+        inputContainerEl.data("uicontroltype", oneUIControl.type );
 
         let htmlExpenseType = `<select "id": ${oneUIControl.id}_expType_${nextExpenseId}>`;
         const theOptions = oneUIControl.option;
@@ -159,7 +146,6 @@ corticon.dynForm.UIControlsRenderer = function () {
         currencyEl.data("fieldName", oneUIControl.fieldName );
         inputContainerEl.append(currencyEl);
     }
-// End expense
 
     function renderSingleChoiceInput(oneUIControl, baseEl) {
         const inputContainerEl = createInputContainer(baseEl);
@@ -190,15 +176,6 @@ corticon.dynForm.UIControlsRenderer = function () {
             return;
         }
 
-        /*
-        <form action="/action_page.php">
-          <input type="file" id="myFile" name="filename">
-          <input type="submit">
-        </form>
-
-        <label for="fileUpId">Choose a file:</label>
-        <input type="file" id="fileUpId" name="xyz">
-         */
         if ( oneUIControl.label === undefined || oneUIControl.label === null || oneUIControl.label.length === 0 ) {
             alert('missing label for fileupload '+oneUIControl.id);
             return;
@@ -224,10 +201,6 @@ corticon.dynForm.UIControlsRenderer = function () {
             return;
         }
 
-        /*
-        <label for="fileUpId">Choose a file:</label>
-        <input type="file" id="fileUpId" name="xyz">
-         */
         if ( oneUIControl.label === undefined || oneUIControl.label === null || oneUIControl.label.length === 0 ) {
             alert('missing label for fileupload '+oneUIControl.id);
             return;
@@ -268,12 +241,10 @@ corticon.dynForm.UIControlsRenderer = function () {
     }
 
     function renderGeoCoordinates(oneUIControl, baseEl, labelPositionAtUILevel) {
-        // temporary: will be implemented soon
         alert('Error rendering GeoCoord not yet supported');
     }
 
     function renderRating(oneUIControl, baseEl, labelPositionAtUILevel) {
-        // temporary: will be implemented soon
         alert('Error rendering Rating not yet supported');
     }
 
@@ -293,7 +264,6 @@ corticon.dynForm.UIControlsRenderer = function () {
         else
             alert('Missing field name for '+oneUIControl.id);
 
-        // there may be a value (default value)
         if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
             textInputEl.val(oneUIControl.value);
         }
@@ -359,7 +329,6 @@ corticon.dynForm.UIControlsRenderer = function () {
             theAttributes['max'] = oneUIControl.maxDT;
 
         if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
-            // assume the value is specified as getMilliseconds
             const x = new Date(Number(oneUIControl.value));
             let month = (x.getMonth() + 1);
             let day = x.getDate();
@@ -390,7 +359,7 @@ corticon.dynForm.UIControlsRenderer = function () {
 
         if ( itsFlagRenderWithKui ) {
             if ( oneUIControl.showTime !== undefined && oneUIControl.showTime !== null && oneUIControl.showTime )
-                textInputEl.kendoDateTimePicker({...theAttributes, format: 'u'}); // u: Renders universal sortable UTC date/time pattern ("yyyy-MM-dd HH:mm:ssZ"
+                textInputEl.kendoDateTimePicker({...theAttributes, format: 'u'});
             else
                 textInputEl.kendoDatePicker({...theAttributes, format: 'yyyy-MM-dd'});
         }
@@ -447,7 +416,7 @@ corticon.dynForm.UIControlsRenderer = function () {
     function renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel ) {
         const arrayTypeControl = isArrayType(oneUIControl);
         const inputContainerEl = createInputContainer(baseEl, arrayTypeControl, false);
-        inputContainerEl.data("uicontroltype", oneUIControl.type );  // save it for finding control type in ui controller - we use it to map the name of the field to use in the object literals we save in the array
+        inputContainerEl.data("uicontroltype", oneUIControl.type );
         appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
 
         if ( oneUIControl.type === 'Text' ) {
@@ -482,12 +451,11 @@ corticon.dynForm.UIControlsRenderer = function () {
         textInputEl.appendTo(inputContainerEl);
         if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null ) {
             textInputEl.data("fieldName", oneUIControl.fieldName );
-            textInputEl.data("type", "decimal" ); //todo: should add an attrib for doing integer too
+            textInputEl.data("type", "decimal" );
         }
         else
             alert('Missing field name for '+oneUIControl.id);
 
-        // there may be a value (default value or when validation fails we re-render with entered data)
         if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
             textInputEl.val(oneUIControl.value);
         }
@@ -608,10 +576,8 @@ corticon.dynForm.UIControlsRenderer = function () {
         }
         else {
             if ( itsFlagRenderWithKui ) {
-                //todo: add support for multiple?
                 addOptions(theOptions, dataSource, multipleChoicesEl,
                     inputContainerEl, oneUIControl, () => { multipleChoicesEl.kendoDropDownList(); });
-                    // inputContainerEl, oneUIControl, () => { multipleChoicesEl.kendoDropDownList({filter: true}); });
             }
             else
                 addOptions(theOptions, dataSource, multipleChoicesEl, inputContainerEl, oneUIControl);
@@ -635,9 +601,8 @@ corticon.dynForm.UIControlsRenderer = function () {
                 alert('List of options is empty - are you sure you this is intentional? - for multiple choices control  ' + oneUIControl.id);
         }
 
-        // https://api.jquery.com/jquery.get/
         if ( dataSource !== undefined && dataSource !== null ) {
-            inputContainerEl.hide();  // we hide it until we receive the data.  that way, if server is down or user does not have a server when trying the sample nothing is shown.
+            inputContainerEl.hide();
             const jqxhr = $.get( dataSource, function(data) {
                     addOptionsFromDataSource( multipleChoicesEl, data, oneUIControl );
                     if ( itsFlagRenderWithKui && completionFct !== undefined )
@@ -667,21 +632,16 @@ corticon.dynForm.UIControlsRenderer = function () {
                     console.log( "Could not get error getting list of options from " + dataSource + " - " + msg );
                     console.log( `Got Http Status: ${jqXHR.status} and exception: ${exception}` );
                 })
-                // .always(function() {
-                //     alert( "finished" );
-                // });
         }
     }
 
     function addOptionsFromDataSource( multipleChoicesEl, data, oneUIControl ) {
-        // set up the default field names
         let dataValueField = "value";
         let dataTextField = "displayName";
         let optionsArray = data;
         let sortData = true;
         let sortDir = 'a';
 
-        // check if we need to override field names as specified in decision service model
         if ( oneUIControl.dataSourceOptions !== undefined && oneUIControl.dataSourceOptions !== null ) {
             const dsOptions = oneUIControl.dataSourceOptions[0];
             if ( dsOptions.dataValueField  !== undefined && dsOptions.dataValueField !== null && dsOptions.dataValueField !== "" )
@@ -690,21 +650,11 @@ corticon.dynForm.UIControlsRenderer = function () {
             if ( dsOptions.dataTextField  !== undefined && dsOptions.dataTextField !== null && dsOptions.dataTextField !== "" )
                 dataTextField = dsOptions.dataTextField;
 
-            // check where we get the array of results - if not path is specified we assume the data is at the root level.
             if ( dsOptions.pathToOptionsArray !== undefined && dsOptions.pathToOptionsArray !== null ) {
                 optionsArray = data[dsOptions.pathToOptionsArray];
             }
 
-            // check where we get the array of results - if not path is specified we assume the data is at the root level, otherwise
-            // we assume it is a json path specification.
             if ( dsOptions.pathToOptionsArray !== undefined && dsOptions.pathToOptionsArray !== null ) {
-                // example queries:
-                // const  x = "$.Results.*"; -> get all
-                // const  x = "$.Results[:10]"; -> first 10
-                // const  x = '$.Results[?(@.Model_Name.startsWith("A"))]';
-                // debugger;
-                // const r = JSONPath.JSONPath(x, data);
-                // optionsArray = r;
                 const result = JSONPath.JSONPath(dsOptions.pathToOptionsArray, data);
                 if ( result.length === 0 )
                     alert("There are no results with the JSON Path expression "+dsOptions.pathToOptionsArray);
@@ -718,21 +668,20 @@ corticon.dynForm.UIControlsRenderer = function () {
                 const a = e1[dataTextField];
                 const b = e2[dataTextField];
                 if (a === b) {
-                    return 0; // equal items sort equally
-                } else if (a === null || a === undefined) { // nulls and undefined sort after anything else
+                    return 0;
+                } else if (a === null || a === undefined) {
                     return 1;
                 } else if (b === null || b === undefined) {
                     return -1;
                 } else {
                     if ( sortDir === 'a' )
-                        return a < b ? -1 : 1; // as we are ascending, lowest sorts first
+                        return a < b ? -1 : 1;
                     else
-                        return a < b ? 1 : -1; // as we are descending, highest sorts first
+                        return a < b ? 1 : -1;
                 }
             });
         }
 
-        // Process the data from the array of value and display name
         for ( let i=0 ; i<optionsArray.length; i++ ) {
             multipleChoicesEl.append($('<option>', {
                 value: optionsArray[i][dataValueField],
@@ -752,7 +701,6 @@ corticon.dynForm.UIControlsRenderer = function () {
     function createInputContainer(baseEl, arrayTypeControl=false, complexArrayType=false ) {
         let html;
         if ( arrayTypeControl ) {
-            //arrayTypeControl: this is needed as the marker for finding the inputs that have to be stored in an array as opposed to directly in a field.
             let markerClass;
             if ( complexArrayType )
                 markerClass = 'complexArrayTypeControl';
@@ -812,7 +760,6 @@ corticon.dynForm.UIControlsRenderer = function () {
         return "_" + nextUniqueInputId;
     }
 
-    // public interface
     return {
         renderUI: renderUI,
     }
