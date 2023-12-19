@@ -1,28 +1,1428 @@
+<!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<title>Dynamic Forms Demo</title>
 	<script src="clientSideComponent/dependencies/jsonpath-plus/index-browser-umd.cjs"></script>
 	<script src="https://kendo.cdn.telerik.com/2023.1.425/js/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/6.3.0/classic/classic-green-dark.css" />
 	<script src="https://kendo.cdn.telerik.com/2023.1.425/js/kendo.all.min.js"></script>
-	<script type="text/javascript" src="clientSideComponent/util/util.js"></script>
-	<script type="text/javascript" src="clientSideComponent/dynForm/customEvents.js"></script>
-	<script type="text/javascript" src="trace/trace.js"></script>
-	<script type="text/javascript" src="clientSideComponent/dynForm/history.js"></script>
-	<script type="text/javascript" src="clientSideComponent/dynForm/uiControlsRenderers.js"></script>
-	<script type="text/javascript" src="clientSideComponent/dynForm/stepsController.js"></script>
+	<script type="text/javascript">(function () {
+			if (window.corticon === undefined)
+				window.corticon = {};
+			if (window.corticon.util === undefined)
+				window.corticon.util = {};
+			else
+				throw "window.corticon.util should not be used by another jquery plugin";
+			/**
+			 * usage: jQuery.corticon.util.namespace( corticon.xyz );
+			 * or $.corticon.util.namespace( corticon.xyz );
+			 * Multiple namespaces can be defined in one call: or $.corticon.util.namespace( corticon.xyz corticon.abc );
+			 */
+			window.corticon.util.namespace = function () {
+				var a = arguments, o = null, i, j, d;
+				for (i = 0; i < a.length; i = i + 1) {
+					d = a[i].split(".");
+					o = window;
+					for (j = 0; j < d.length; j = j + 1) {
+						o[d[j]] = o[d[j]] || {};
+						o = o[d[j]];
+					}
+				}
+			};
+			window.corticon.util.copyToClipboard = function (selector) {
+				const text = $(selector).val();
+				navigator.clipboard.writeText(text).then(function (result) {
+				}, function (result) {
+					console.log("Could not copy to clipboard - probably no privs to do that in this browser !" + result);
+				});
+			}
+		})();
+	</script>
+	<script type="text/javascript">corticon.util.namespace("corticon.dynForm");
+		(function () {
+			corticon.dynForm.customEvents = {
+				"BEFORE_START": "beforeStart",
+				"AFTER_START": "afterStart",
+				"FORM_DONE": "formDone",
+				"AFTER_DONE": "afterDone",
+				"BACK_AT_FORM_BEGINNING": "backAtFormBeginning",
+				"NEW_STEP": "newStep",
+				"NEW_FORM_DATA_SAVED": "newFormDataSaved",
+				"NEW_DS_EXECUTION": "newDSExecution",
+				"BEFORE_DS_EXECUTION": "beforeDSExecution",
+				"AFTER_UI_STEP_RENDERED": "afterUIStepRendered",
+			}
+			corticon.dynForm.addCustomEventHandler = function (name, fct) {
+				document.body.addEventListener(name, fct, false);
+			}
+			corticon.dynForm.raiseEvent = function (name, data) {
+				const event = new Event(name);
+				event.theData = data;
+				document.body.dispatchEvent(event);
+			}
+		})();
+	</script>
+	<script type="text/javascript">corticon.util.namespace( "corticon.tracer" );
+		function Tracer () {
+			let itsStagesTrace = [];
+			function setupTracing() {
+				corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.BEFORE_START, _clearTraceData );
+				corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.NEW_FORM_DATA_SAVED, _traceFormData);
+				corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.BEFORE_DS_EXECUTION, _traceDecisionServiceInputs);
+				corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.NEW_DS_EXECUTION, _traceDecisionServiceResults);
+				corticon.dynForm.addCustomEventHandler( corticon.tracer.tracerCustomEvents.SWITCH_TO_SAVED_STAGE, _switchToSavedStage);
+			}
+			function _clearTraceData() {
+				document.getElementById("decisionServiceInputId").value = "";
+				document.getElementById("decisionServiceResultId").value = "";
+				document.getElementById("formDataId").value = "";
+				itsStagesTrace = [];
+				$("#traceHistoryId").empty();
+			}
+			function _traceDecisionServiceInputs ( event ) {
+				const theData = event.theData;
+				const input = theData.input;
+				const stage = theData.stage;
+				const index = itsStagesTrace.length;
+				const x = JSON.stringify(input, null, 2);
+				itsStagesTrace[index] = { "input": x, "result": null, "formData": null };
+				_showDecisionServiceInputs(x);
+				_addStageInHistory(stage, index);
+			}
+			function _traceDecisionServiceResults (event) {
+				const theData = event.theData;
+				const result = theData.output;
+				const execTimeMs = theData.execTimeMs;
+				let stageDescription;
+				if ( theData.stageDescription !== undefined && theData.stageDescription !== null )
+					stageDescription = theData.stageDescription;
+				else
+					stageDescription = "no description provided";
+				const index = itsStagesTrace.length - 1;
+				itsStagesTrace[index].result = JSON.stringify(result, null, 2);
+				itsStagesTrace[index].timing = Math.round(execTimeMs);
+				const el = $("#traceNodeId_"+index);
+				el.prop("title", stageDescription);
+				_showDecisionServiceResults ( itsStagesTrace[index].result, itsStagesTrace[index].timing );
+			}
+			function _showDecisionServiceInputs ( newValue ) {
+				document.getElementById("decisionServiceInputId").value = newValue;
+			}
+			function _removeHighlightedStage() {
+				$(".stageInTrace").removeClass("activeStageInTrace");
+			}
+			function _addStageInHistory(stage, index) {
+				_removeHighlightedStage();
+				let html = `<span>`;
+				if ( index !== 0 )
+					html += `&rarr;`
+				html += `<a class="activeStageInTrace stageInTrace" id="traceNodeId_${index}"
+		href="#" onclick="corticon.tracer.tracerClickStage(${index}, this)">&nbsp;${stage}&nbsp;</a></span>`
+				$("#traceHistoryId").append(html);
+				const newTitle = "Stages History: " + itsStagesTrace.length + " stages";
+				$("#traceHistorySummaryId").prop("title", newTitle);
+			}
+			function _traceFormData(event) {
+				const theData = event.theData;
+				const index = itsStagesTrace.length - 1;
+				const x = JSON.stringify(theData, null, 2);
+				itsStagesTrace[index].formData = x;
+				_showSavedFormData(x);
+			}
+			function _switchToSavedStage(event) {
+				const index = event.theData.index;
+				const theEl = event.theData.el;
+				_removeHighlightedStage();
+				$(theEl).addClass("activeStageInTrace");
+				const oneTrace = itsStagesTrace[index];
+				_showDecisionServiceInputs(oneTrace.input);
+				_showDecisionServiceResults(oneTrace.result, oneTrace.timing);
+				_showSavedFormData(oneTrace.formData);
+			}
+			function _showDecisionServiceResults ( newValue, execTimeMs ) {
+				document.getElementById("decisionServiceResultId").value = newValue;
+				$("#execTimeId").html("(" + execTimeMs +"ms)");
+			}
+			function _showSavedFormData ( newValue ) {
+				if ( newValue === null || newValue.length === 0 )
+					newValue = "Form Data was not saved at that step";
+				document.getElementById("formDataId").value = newValue;
+			}
+			return {
+				setupTracing: setupTracing,
+				switchToSavedStage: _switchToSavedStage
+			}
+		}
+		(function () {
+			corticon.tracer.tracerCustomEvents = {
+				"SWITCH_TO_SAVED_STAGE": "switchToSavedStage",
+			}
+			corticon.tracer.tracerClickStage = function ( index, theEl ) {
+				corticon.dynForm.raiseEvent(corticon.tracer.tracerCustomEvents.SWITCH_TO_SAVED_STAGE,{ "index": index, "el": theEl });
+			}
+		})();
+		</script>
+	<script type="text/javascript">corticon.util.namespace("corticon.dynForm");
+		corticon.dynForm.History = function () {
+			let itsHistory = [];
+			function setupHistory() {
+				corticon.dynForm.addCustomEventHandler(corticon.dynForm.customEvents.AFTER_UI_STEP_RENDERED, storeDecisionServiceInputs2);
+			}
+			function storeDecisionServiceInputs2(event) {
+				const theData = event.theData;
+				const input = JSON.parse(JSON.stringify(theData.input));
+				const stage = theData.stage;
+				if (stage === 0)
+					itsHistory = [];
+				const index = itsHistory.length;
+				itsHistory[index] = { "input": input, "stage": stage };
+			}
+			function isHistoryEmpty() {
+				return itsHistory.length <= 1;
+			}
+			function getPreviousStageData() {
+				let currentStage;
+				if (itsHistory.length === 1)
+					currentStage = itsHistory[0];
+				else
+					currentStage = itsHistory.pop();
+				if (currentStage === undefined) {
+					console.log('Internal error in history.getPreviousStageData: there should be a current stage');
+					return;
+				}
+				const prevStage = itsHistory.pop();
+				if (prevStage === undefined) {
+					console.log('error in history.getPreviousStageData: there should be a previous stage');
+					return;
+				}
+				return prevStage;
+			}
+			function getRestartHistory() {
+				return JSON.stringify(itsHistory);
+			}
+			function setRestartHistory(savedHistory) {
+				itsHistory = JSON.parse(savedHistory);
+			}
+			return {
+				setupHistory: setupHistory,
+				getRestartHistory: getRestartHistory,
+				setRestartHistory: setRestartHistory,
+				getPreviousStageData: getPreviousStageData,
+				isHistoryEmpty: isHistoryEmpty
+			}
+		}
+	</script>
+	<script type="text/javascript">corticon.util.namespace( "corticon.dynForm" );
+		corticon.dynForm.UIControlsRenderer = function () {
+			let itsFlagRenderWithKui = false;
+			function renderUI ( containers, baseEl, labelPositionAtUILevel, language, useKui ) {
+				itsFlagRenderWithKui = useKui;
+				baseEl.empty();
+				if ( itsFlagRenderWithKui ) {
+					baseEl.addClass( 'k-content' );
+				}
+				else {
+					baseEl.addClass( 'dynUIContainerColors' );
+				}
+				for ( let i=0; i<containers.length; i++ )
+					renderUIForOneContainer( containers[i], baseEl, labelPositionAtUILevel, language );
+				const allFormEls = $(baseEl).find(':input');
+				if ( allFormEls !== null && allFormEls.length > 0 )
+					allFormEls[0].focus();
+			}
+			function renderUIForOneContainer( container, baseEl, labelPositionAtUILevel, language ) {
+				let html = '<div';
+				if ( itsFlagRenderWithKui )
+					html += ' class="k-content"';
+				html += ' id="' + container.id + '"  title="' + container.title + '"><h3>' + container.title + '</h3></div>';
+				baseEl.append(html);
+				const uiControls = container.uiControls;
+				if ( uiControls === undefined || uiControls === null ) {
+					alert('There are no UI Controls to render in this step');
+					return;
+				}
+				for ( var i=0; i<uiControls.length; i++ ) {
+					const oneUIControl = uiControls[i];
+					if ( oneUIControl.type === 'Text' )
+						renderTextInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'TextArea' )
+						renderTextAreaInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'DateTime' )
+						renderDateTimeInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'YesNo' || oneUIControl.type === 'YesNoBoolean' )
+						renderYesNoInput(oneUIControl, baseEl, labelPositionAtUILevel, language, oneUIControl.type);
+					else if ( oneUIControl.type === 'ReadOnlyText' )
+						renderReadOnlyText(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'Number' )
+						renderNumberInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'SingleChoice' )
+						renderSingleChoiceInput(oneUIControl, baseEl);
+					else if ( oneUIControl.type === 'MultipleChoices' || oneUIControl.type === 'MultipleChoicesMultiSelect' )
+						renderMultipleChoicesInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'MultiExpenses' )
+						renderExpenseInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'FileUpload' )
+						renderFileUploadInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'FileUploadExpenses' )
+						renderFileUploadExpenseInput(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'QRCode' )
+						renderQRCode(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'GeoCoordinates' )
+						renderGeoCoordinates(oneUIControl, baseEl, labelPositionAtUILevel);
+					else if ( oneUIControl.type === 'Rating' )
+						renderRating(oneUIControl, baseEl, labelPositionAtUILevel);
+					else
+						alert('This ui control is not yet supported: '+oneUIControl.type);
+				}
+				renderContainerValidationMessage(container.validationMsg, baseEl);
+			}
+			let nextExpenseId = 0;
+			function renderExpenseInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const html = '<div class="expenseInputContainer"></div>';
+				const expenseContainerEl = $(html);
+				baseEl.append(expenseContainerEl);
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, expenseContainerEl);
+				createOneExpenseInput(oneUIControl, expenseContainerEl);
+				createAddExpenseControl( baseEl, oneUIControl, expenseContainerEl );
+				addValidationMsgFromDecisionService(oneUIControl, expenseContainerEl);
+			}
+			function createAddExpenseControl( baseEl, oneUIControl, expenseContainerEl ) {
+				const html = '<div title="Add another expense" class="addExpenseContainer">&nbsp;+&nbsp;</div>';
+				const addContainerEl = $(html);
+				baseEl.append(addContainerEl);
+				addContainerEl.click(function() {
+					createOneExpenseInput(oneUIControl, expenseContainerEl);
+				});
+			}
+			function createOneExpenseInput(oneUIControl, expenseContainerEl) {
+				nextExpenseId++;
+				const inputContainerEl = createInputContainer(expenseContainerEl, true, true);
+				inputContainerEl.data("uicontroltype", oneUIControl.type );
+				let htmlExpenseType = `<select "id": ${oneUIControl.id}_expType_${nextExpenseId}>`;
+				const theOptions = oneUIControl.option;
+				if ( theOptions === undefined || theOptions === null ) {
+					alert("Missing options for "+oneUIControl.id);
+				}
+				else {
+					if ( theOptions.length > 0 ) {
+						for ( let i=0; i<theOptions.length; i++)
+							htmlExpenseType += `<option value="${theOptions[i].value}">${theOptions[i].displayName}</option>`;
+					}
+					else
+						alert('missing list of options for expense control '+oneUIControl.id);
+				}
+				htmlExpenseType += '</select>';
+				const expenseEl = $(htmlExpenseType);
+				inputContainerEl.append(expenseEl);
+				const theAttributes = { "type": "text", "id": `${oneUIControl.id}_expAmount_${nextExpenseId}`};
+				const textInputEl = $('<input class="expenseAmount"/>').attr(theAttributes);
+				textInputEl.appendTo(inputContainerEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null ) {
+					textInputEl.data("fieldName", oneUIControl.fieldName );
+					textInputEl.data("type", "array" );
+				}
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				addCurrencyDropDown(oneUIControl,inputContainerEl);
+			}
+			function addCurrencyDropDown(oneUIControl,inputContainerEl) {
+				let currency = `<select class="currencySelector" "id": ${oneUIControl.id}_Currency_${nextExpenseId}>`;
+				currency += `<option value="USD">$ US Dollars</option>`;
+				currency += `<option value="EUR">&euro; Euro</option>`;
+				currency += '</select>';
+				const currencyEl = $(currency);
+				currencyEl.data("fieldName", oneUIControl.fieldName );
+				inputContainerEl.append(currencyEl);
+			}
+			function renderSingleChoiceInput(oneUIControl, baseEl) {
+				const inputContainerEl = createInputContainer(baseEl);
+				if ( oneUIControl.label !== undefined && oneUIControl.label !== null ) {
+					const theAttributes = { "type": "checkbox", "id": oneUIControl.id, "name": oneUIControl.id};
+					const checkboxInputEl = $('<input/>').attr(theAttributes);
+					checkboxInputEl.appendTo(inputContainerEl);
+					const checkboxLabelEl = $(`<label for="${oneUIControl.id}">&nbsp;${oneUIControl.label}</label>`)
+					checkboxLabelEl.appendTo(inputContainerEl);
+					if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+						checkboxInputEl.data("fieldName", oneUIControl.fieldName );
+					else
+						alert('Missing field name for '+oneUIControl.id);
+					if ( itsFlagRenderWithKui )
+						checkboxInputEl.kendoCheckBox();
+				}
+				else
+					alert('Missing label for checkbox '+oneUIControl.id);
+			}
+			function renderFileUploadInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const inputContainerEl = createInputContainer(baseEl);
+				if ( oneUIControl.id === undefined || oneUIControl.id === null ) {
+					alert('missing id for fileupload ');
+					return;
+				}
+				if ( oneUIControl.label === undefined || oneUIControl.label === null || oneUIControl.label.length === 0 ) {
+					alert('missing label for fileupload '+oneUIControl.id);
+					return;
+				}
+				const fileUpHtml = `<label htmlFor="${oneUIControl.id}">${oneUIControl.label}:</label>
+										<input type="file" id="${oneUIControl.id}">`;
+				const fileUpEl = $(fileUpHtml);
+				inputContainerEl.append(fileUpEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					fileUpEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				if (itsFlagRenderWithKui)
+					fileUpEl.kendoUpload();
+			}
+			function renderFileUploadExpenseInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const inputContainerEl = createInputContainer(baseEl);
+				if ( oneUIControl.id === undefined || oneUIControl.id === null ) {
+					alert('missing id for fileupload ');
+					return;
+				}
+				if ( oneUIControl.label === undefined || oneUIControl.label === null || oneUIControl.label.length === 0 ) {
+					alert('missing label for fileupload '+oneUIControl.id);
+					return;
+				}
+				const fileUpHtml = `<label htmlFor="${oneUIControl.id}">${oneUIControl.label}:</label>
+										<input class="markerFileUploadExpense" type="file" id="${oneUIControl.id}">`;
+				const fileUpEl = $(fileUpHtml);
+				inputContainerEl.append(fileUpEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					fileUpEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+			}
+			function renderQRCode(oneUIControl, baseEl, labelPositionAtUILevel) {
+				if ( ! itsFlagRenderWithKui ) {
+					alert ("QRCode UI controls can only be rendered in KendoUI mode");
+					return;
+				}
+				if ( oneUIControl.value === undefined || oneUIControl.value === null ) {
+					console.log('Error rendering QRCode no value specified - id: ' + oneUIControl.id);
+					return;
+				}
+				const contEl = $(`<div class="inputContainer"></div>`);
+				contEl.appendTo(baseEl);
+				appendLabel(oneUIControl, labelPositionAtUILevel, contEl);
+				const qrCodeEl = $(`<div class="QRCode" id="${oneUIControl.id}"></div>`);
+				qrCodeEl.appendTo(contEl);
+				if ( itsFlagRenderWithKui )
+					qrCodeEl.kendoQRCode({ value: oneUIControl.value });
+				else
+					qrCodeEl.html = oneUIControl.value;
+			}
+			function renderGeoCoordinates(oneUIControl, baseEl, labelPositionAtUILevel) {
+				alert('Error rendering GeoCoord not yet supported');
+			}
+			function renderRating(oneUIControl, baseEl, labelPositionAtUILevel) {
+				alert('Error rendering Rating not yet supported');
+			}
+			function renderTextInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel);
+			}
+			function createOneTextInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, addBreak=false) {
+				const theAttributes = { "type": "text", "id": oneUIControl.id + getNextUniqueId() };
+				if ( oneUIControl.tooltip !== undefined && oneUIControl.tooltip !== null )
+					theAttributes["title"] = oneUIControl.tooltip;
+				const textInputEl = $('<input/>').attr(theAttributes);
+				textInputEl.appendTo(inputContainerEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					textInputEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
+					textInputEl.val(oneUIControl.value);
+				}
+				if ( addBreak ) {
+					const breakEl = $('<div>');
+					breakEl.append(textInputEl);
+					inputContainerEl.append(breakEl);
+				}
+				else {
+					inputContainerEl.append(textInputEl);
+				}
+				if ( itsFlagRenderWithKui )
+					textInputEl.kendoTextBox();
+			}
+			function renderTextAreaInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const inputContainerEl = createInputContainer(baseEl);
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+				let html3 = `<textarea class="textAreaControl" id="${oneUIControl.id}"`;
+				if ( oneUIControl.rows !== undefined && oneUIControl.rows !== null )
+					html3 += ` rows="${oneUIControl.rows}"`;
+				if ( oneUIControl.cols !== undefined && oneUIControl.cols !== null )
+					html3 += ` cols="${oneUIControl.cols}"`;
+				if ( oneUIControl.min !== undefined && oneUIControl.min !== null )
+					html3 += ` minlength="${oneUIControl.min}"`;
+				if ( oneUIControl.max !== undefined && oneUIControl.max !== null )
+					html3 += ` maxlength="${oneUIControl.max}"`;
+				html3 += `></textarea>`;
+				const textInputEl = $(html3);
+				textInputEl.appendTo(inputContainerEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					textInputEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				if ( itsFlagRenderWithKui )
+					textInputEl.kendoTextArea();
+				addValidationMsgFromDecisionService(oneUIControl, inputContainerEl);
+			}
+			function createOneDateTimeInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, addBreak=false) {
+				let controlType;
+				if ( oneUIControl.showTime !== undefined && oneUIControl.showTime !== null && oneUIControl.showTime )
+					controlType = 'datetime-local';
+				else
+					controlType = 'date';
+				const theAttributes = { "type": controlType, "id": oneUIControl.id + getNextUniqueId()};
+				if ( oneUIControl.minDT !== undefined && oneUIControl.minDT !== null )
+					theAttributes['min'] = oneUIControl.minDT;
+				if ( oneUIControl.maxDT !== undefined && oneUIControl.maxDT !== null )
+					theAttributes['max'] = oneUIControl.maxDT;
+				if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
+					const x = new Date(Number(oneUIControl.value));
+					let month = (x.getMonth() + 1);
+					let day = x.getDate();
+					if (month < 10)
+						month = "0" + month;
+					if (day < 10)
+						day = "0" + day;
+					theAttributes['value'] = x.getFullYear() + '-' + month + '-' + day;
+				}
+				const textInputEl = $('<input/>').attr(theAttributes);
+				textInputEl.appendTo(inputContainerEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					textInputEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				if ( addBreak ) {
+					const breakEl = $('<div>');
+					breakEl.append(textInputEl);
+					inputContainerEl.append(breakEl);
+				}
+				else {
+					inputContainerEl.append(textInputEl);
+				}
+				if ( itsFlagRenderWithKui ) {
+					if ( oneUIControl.showTime !== undefined && oneUIControl.showTime !== null && oneUIControl.showTime )
+						textInputEl.kendoDateTimePicker({...theAttributes, format: 'u'});
+					else
+						textInputEl.kendoDatePicker({...theAttributes, format: 'yyyy-MM-dd'});
+				}
+				if ( oneUIControl.minDT !== undefined && oneUIControl.minDT !== null && oneUIControl.maxDT !== undefined && oneUIControl.maxDT !== null ) {
+					const html3 = '<span  class="fieldValidationLabel">Enter a date between ' + oneUIControl.minDT.substr(0,10) + ' and ' + oneUIControl.maxDT.substr(0,10) +'</span>';
+					const validationEl = $(html3);
+					inputContainerEl.append(validationEl);
+				}
+				else if ( oneUIControl.minDT !== undefined && oneUIControl.minDT !== null ) {
+					const html3 = '<span  class="fieldValidationLabel">Enter a date greater than ' + oneUIControl.minDT.substr(0,10) +'</span>';
+					const validationEl = $(html3);
+					inputContainerEl.append(validationEl);
+				}
+				else if ( oneUIControl.maxDT !== undefined && oneUIControl.maxDT !== null ) {
+					const html3 = '<span  class="fieldValidationLabel">Enter a date less than ' + oneUIControl.maxDT.substr(0,10) +'</span>';
+					const validationEl = $(html3);
+					inputContainerEl.append(validationEl);
+				}
+			}
+			function createAddTextInput( baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel ) {
+				const addContainerEl = createPlusButton(baseEl);
+				addContainerEl.click(function() {
+					createOneTextInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, true);
+				});
+			}
+			function createAddNumberInput( baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel ) {
+				const addContainerEl = createPlusButton(baseEl);
+				addContainerEl.click(function() {
+					createOneNumberInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, true);
+				});
+			}
+			function createAddDateTimeInput( baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel ) {
+				const addContainerEl = createPlusButton(baseEl);
+				addContainerEl.click(function() {
+					createOneDateTimeInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, true);
+				});
+			}
+			function createPlusButton(baseEl) {
+				const html = '<div title="Add another one" class="addTextContainer">&nbsp;+&nbsp;</div>';
+				const addContainerEl = $(html);
+				baseEl.append(addContainerEl);
+				return addContainerEl;
+			}
+			function renderDateTimeInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel);
+			}
+			function renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel ) {
+				const arrayTypeControl = isArrayType(oneUIControl);
+				const inputContainerEl = createInputContainer(baseEl, arrayTypeControl, false);
+				inputContainerEl.data("uicontroltype", oneUIControl.type );
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+				if ( oneUIControl.type === 'Text' ) {
+					createOneTextInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+					if ( arrayTypeControl )
+						createAddTextInput(baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel)
+				}
+				else if ( oneUIControl.type === 'Number' ) {
+					createOneNumberInput(oneUIControl,labelPositionAtContainerLevel,inputContainerEl);
+					if ( arrayTypeControl )
+						createAddNumberInput(baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel)
+				}
+				else if ( oneUIControl.type === 'DateTime' ) {
+					createOneDateTimeInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+					if ( arrayTypeControl )
+						createAddDateTimeInput(baseEl, oneUIControl, inputContainerEl, labelPositionAtContainerLevel)
+				}
+				else {
+					alert('Unsupported ui control type as an array type controls ' + oneUIControl.type);
+					return;
+				}
+				addValidationMsgFromDecisionService(oneUIControl, inputContainerEl);
+			}
+			function createOneNumberInput(oneUIControl, labelPositionAtContainerLevel, inputContainerEl, addBreak=false) {
+				const html3 = '<span style="display: none;" class="fieldValidationLabel">Enter a number between ' + oneUIControl.min + ' and ' + oneUIControl.max +'</span>';
+				const validationEl = $(html3);
+				const theAttributes = { "type": "text", "id": oneUIControl.id + getNextUniqueId() };
+				const textInputEl = $('<input/>').attr(theAttributes);
+				textInputEl.appendTo(inputContainerEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null ) {
+					textInputEl.data("fieldName", oneUIControl.fieldName );
+					textInputEl.data("type", "decimal" );
+				}
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				if ( oneUIControl.value !== undefined && oneUIControl.value !== null ) {
+					textInputEl.val(oneUIControl.value);
+				}
+				textInputEl.on("input", function() {
+					const input = $(this).val();
+					const converted = Number(input);
+					if ( isNaN(converted) )
+						alert("Please enter a number");
+					else {
+						if ( converted < oneUIControl.min || converted > oneUIControl.max )
+							validationEl.fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+					}
+				});
+				if( oneUIControl.min !== undefined )
+					validationEl.show();
+				if ( addBreak ) {
+					const breakEl = $('<div>');
+					breakEl.append(textInputEl);
+					inputContainerEl.append(breakEl);
+				}
+				else {
+					inputContainerEl.append(textInputEl);
+				}
+				if ( itsFlagRenderWithKui ) {
+					textInputEl.kendoNumericTextBox({
+						min: oneUIControl.min,
+						max: oneUIControl.max,
+						required: true,
+						value: typeof oneUIControl.value === 'number' ? oneUIControl.value : undefined
+					});
+				}
+			}
+			function renderNumberInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel);
+			}
+			function renderReadOnlyText(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const inputContainerEl = createInputContainer(baseEl);
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+				if ( oneUIControl.value !== undefined && oneUIControl.value !== null && oneUIControl.value.length !== 0 ) {
+					const html3 = '<div class="readOnlyText">' + oneUIControl.value + '</div>';
+					inputContainerEl.append($(html3));
+				}
+				else
+					alert("missing value attribute for renderReadOnlyText id: "+oneUIControl.id);
+			}
+			function renderYesNoInput(oneUIControl, baseEl, labelPositionAtContainerLevel, language, type) {
+				const inputContainerEl = createInputContainer(baseEl);
+				let yes = 'Yes'; let no = 'No';
+				if ( language !== undefined && language !== null ) {
+					if ( language.toLowerCase() === 'italian' ) {
+						yes = 'Si';
+					}
+				}
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+				let yesValue; let noValue;
+				if ( type === 'YesNo' ) {
+					yesValue = 'yes';
+					noValue = 'no';
+				}
+				else if ( type === 'YesNoBoolean' ) {
+					yesValue = 'T';
+					noValue = 'F';
+				}
+				const html3 = `<select "id": ${oneUIControl.id}>
+								<option value="${yesValue}">${yes}</option>
+								<option value="${noValue}">${no}</option>
+						</select>`;
+				const yesNoEl = $(html3);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					yesNoEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				inputContainerEl.append(yesNoEl);
+				if ( itsFlagRenderWithKui )
+					yesNoEl.kendoDropDownList();
+			}
+			function renderMultipleChoicesInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
+				const inputContainerEl = createInputContainer(baseEl);
+				appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl);
+				let html3 = `<select "id": ${oneUIControl.id}`;
+				if ( oneUIControl.type === 'MultipleChoicesMultiSelect' )
+					html3 += ' multiple';
+				html3 += '></select>';
+				const multipleChoicesEl = $(html3);
+				inputContainerEl.append(multipleChoicesEl);
+				if ( oneUIControl.fieldName !== undefined && oneUIControl.fieldName !== null )
+					multipleChoicesEl.data("fieldName", oneUIControl.fieldName );
+				else
+					alert('Missing field name for '+oneUIControl.id);
+				const theOptions = oneUIControl.option;
+				const dataSource = oneUIControl.dataSource;
+				const weDontHaveOptions = theOptions === undefined || theOptions === null;
+				const weDontHaveDataSource = dataSource === undefined || dataSource === null;
+				if ( weDontHaveOptions && weDontHaveDataSource ) {
+					alert("Missing datasource or options for "+oneUIControl.id + " - you need to specify at least one of the 2");
+				}
+				else {
+					if ( itsFlagRenderWithKui ) {
+						addOptions(theOptions, dataSource, multipleChoicesEl,
+							inputContainerEl, oneUIControl, () => { multipleChoicesEl.kendoDropDownList(); });
+					}
+					else
+						addOptions(theOptions, dataSource, multipleChoicesEl, inputContainerEl, oneUIControl);
+				}
+				addValidationMsgFromDecisionService(oneUIControl, inputContainerEl);
+			}
+			function addOptions(theOptions, dataSource, multipleChoicesEl, inputContainerEl, oneUIControl, completionFct) {
+				if ( theOptions !== undefined && theOptions !== null ) {
+					if (theOptions.length > 0) {
+						for (var i = 0; i < theOptions.length; i++) {
+							multipleChoicesEl.append($('<option>', {
+								value: theOptions[i].value,
+								text: theOptions[i].displayName
+							}));
+						}
+						if ( itsFlagRenderWithKui && completionFct !== undefined )
+							completionFct();
+					} else
+						alert('List of options is empty - are you sure you this is intentional? - for multiple choices control  ' + oneUIControl.id);
+				}
+				if ( dataSource !== undefined && dataSource !== null ) {
+					inputContainerEl.hide();
+					const jqxhr = $.get( dataSource, function(data) {
+							addOptionsFromDataSource( multipleChoicesEl, data, oneUIControl );
+							if ( itsFlagRenderWithKui && completionFct !== undefined )
+								completionFct();
+							inputContainerEl.show();
+						}, "json")
+						.done(function() {
+							console.log( "success getting list of options on " + dataSource  );
+						})
+						.fail(function( jqXHR, exception ) {
+							let msg = '';
+							if (jqXHR.status === 0) {
+								msg = 'Not connected. Verify Network.';
+							} else if (jqXHR.status === 404) {
+								msg = 'Requested page not found. [404]';
+							} else if (jqXHR.status === 500) {
+								msg = 'Internal Server Error [500].';
+							} else if (exception === 'parsererror') {
+								msg = 'Requested JSON parse failed.';
+							} else if (exception === 'timeout') {
+								msg = 'Time out error.';
+							} else if (exception === 'abort') {
+								msg = 'Ajax request aborted.';
+							} else {
+								msg = 'Unknown Error.\n' + jqXHR.responseText;
+							}
+							console.log( "Could not get error getting list of options from " + dataSource + " - " + msg );
+							console.log( `Got Http Status: ${jqXHR.status} and exception: ${exception}` );
+						})
+				}
+			}
+			function addOptionsFromDataSource( multipleChoicesEl, data, oneUIControl ) {
+				let dataValueField = "value";
+				let dataTextField = "displayName";
+				let optionsArray = data;
+				let sortData = true;
+				let sortDir = 'a';
+				if ( oneUIControl.dataSourceOptions !== undefined && oneUIControl.dataSourceOptions !== null ) {
+					const dsOptions = oneUIControl.dataSourceOptions[0];
+					if ( dsOptions.dataValueField  !== undefined && dsOptions.dataValueField !== null && dsOptions.dataValueField !== "" )
+						dataValueField = dsOptions.dataValueField;
+					if ( dsOptions.dataTextField  !== undefined && dsOptions.dataTextField !== null && dsOptions.dataTextField !== "" )
+						dataTextField = dsOptions.dataTextField;
+					if ( dsOptions.pathToOptionsArray !== undefined && dsOptions.pathToOptionsArray !== null ) {
+						optionsArray = data[dsOptions.pathToOptionsArray];
+					}
+					if ( dsOptions.pathToOptionsArray !== undefined && dsOptions.pathToOptionsArray !== null ) {
+						const result = JSONPath.JSONPath(dsOptions.pathToOptionsArray, data);
+						if ( result.length === 0 )
+							alert("There are no results with the JSON Path expression "+dsOptions.pathToOptionsArray);
+						optionsArray = result;
+					}
+				}
+				if ( sortData ) {
+					optionsArray = optionsArray.sort(function (e1, e2) {
+						const a = e1[dataTextField];
+						const b = e2[dataTextField];
+						if (a === b) {
+							return 0;
+						} else if (a === null || a === undefined) {
+							return 1;
+						} else if (b === null || b === undefined) {
+							return -1;
+						} else {
+							if ( sortDir === 'a' )
+								return a < b ? -1 : 1;
+							else
+								return a < b ? 1 : -1;
+						}
+					});
+				}
+				for ( let i=0 ; i<optionsArray.length; i++ ) {
+					multipleChoicesEl.append($('<option>', {
+						value: optionsArray[i][dataValueField],
+						text: optionsArray[i][dataTextField]
+					}));
+				}
+			}
+			function renderContainerValidationMessage(validationMessage, baseEl) {
+				if ( validationMessage !== undefined && validationMessage !== null ) {
+					const html = `<div class="containerValidationMessage">${validationMessage}</div>`;
+					const msgEl = $(html);
+					baseEl.append(msgEl);
+				}
+			}
+			function createInputContainer(baseEl, arrayTypeControl=false, complexArrayType=false ) {
+				let html;
+				if ( arrayTypeControl ) {
+					let markerClass;
+					if ( complexArrayType )
+						markerClass = 'complexArrayTypeControl';
+					else
+						markerClass = 'simpleArrayTypeControl';
+					html = `<div class="${markerClass} inputContainer"></div>`;
+				}
+				else
+					html = '<div class="nonarrayTypeControl inputContainer"></div>';
+				const inputContainerEl = $(html);
+				baseEl.append(inputContainerEl);
+				return inputContainerEl;
+			}
+			function addValidationMsgFromDecisionService(oneUIControl, inputContainerEl) {
+				if (oneUIControl.validationErrorMsg !== undefined && oneUIControl.validationErrorMsg !== null) {
+					const decisionServiceSideValidationEl = $(`<span class="controlValidationMessage">${oneUIControl.validationErrorMsg}</span>`);
+					decisionServiceSideValidationEl.appendTo(inputContainerEl);
+				}
+			}
+			function getLabelPositionForControl(oneUIControl, labelPositionAtContainerLevel) {
+				let labelPosition;
+				if ( oneUIControl.labelPosition !== undefined && oneUIControl.labelPosition !== null )
+					labelPosition = oneUIControl.labelPosition;
+				else
+					labelPosition = labelPositionAtContainerLevel;
+				return labelPosition;
+			}
+			function appendLabel(oneUIControl, labelPositionAtContainerLevel, inputContainerEl) {
+				if (oneUIControl.label !== undefined && oneUIControl.label !== null) {
+					let html2;
+					const labelPosition = getLabelPositionForControl(oneUIControl, labelPositionAtContainerLevel);
+					if (labelPosition === 'Above')
+						html2 = '<div class="inputLabelAbove">' + oneUIControl.label + '</div>';
+					else
+						html2 = '<span class="inputLabelSide">' + oneUIControl.label + '</span>';
+					inputContainerEl.append($(html2));
+				}
+			}
+			function isArrayType(oneUIControl) {
+				if (oneUIControl.multiple !== undefined && oneUIControl.multiple !== null && oneUIControl.multiple)
+					return true;
+				else
+					return false;
+			}
+			let nextUniqueInputId = 0;
+			function getNextUniqueId() {
+				nextUniqueInputId++;
+				return "_" + nextUniqueInputId;
+			}
+			return {
+				renderUI: renderUI,
+			}
+		}
+		</script>
+	<script type="text/javascript">corticon.util.namespace( "corticon.dynForm" );
+		corticon.dynForm.StepsController = function () {
+			let itsDecisionServiceInput = [{},{}];
+			let itsPathToData;
+			let itsFormData;
+			let itsFlagAllDone;
+			let itsLabelPositionAtUILevel;
+			let itsQuestionnaireName;
+			let itsInitialLanguage;
+			let itsFlagRenderWithKui;
+			const itsHistory = new corticon.dynForm.History();
+			const itsUIControlsRenderer = new corticon.dynForm.UIControlsRenderer();
+			async function startDynUI( baseDynamicUIEl, decisionServiceEngine, externalData, language, questionnaireName, useKui ) {
+				itsFlagRenderWithKui = useKui;
+				itsQuestionnaireName = questionnaireName;
+				itsInitialLanguage = language;
+				itsHistory.setupHistory();
+				const restartData = getRestartData (questionnaireName);
+				if ( restartData === null ) {
+					setStateForStartFromBeginning(language, externalData);
+				}
+				else {
+					const dialog = confirm("Do you want to start from where you left last time?");
+					if (dialog) {
+						setStateFromRestartData(questionnaireName, restartData);
+					}
+					else {
+						clearRestartData(questionnaireName);
+						setStateForStartFromBeginning(language, externalData);
+					}
+				}
+				corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.BEFORE_START);
+				await _askDecisionServiceForNextUIElementsAndRender( decisionServiceEngine, itsDecisionServiceInput, baseDynamicUIEl );
+				corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.AFTER_START, { historyEmpty: itsHistory.isHistoryEmpty() });
+			}
+			function setStateForStartFromBeginning(language, externalData) {
+				_resetDecisionServiceInput(language);
+				itsFormData = null;
+				itsFlagAllDone = false;
+				itsPathToData = null;
+				itsLabelPositionAtUILevel = "Above";
+				itsDecisionServiceInput[1] = JSON.parse(JSON.stringify(externalData));
+			}
+			function setStateFromRestartData(questionnaireName, restartData) {
+				itsLabelPositionAtUILevel = "Above";
+				itsPathToData = getPathToData(questionnaireName);
+				setStateFromStepData(restartData);
+				itsHistory.setRestartHistory(getRestartHistory(questionnaireName));
+				itsHistory.getPreviousStageData();
+			}
+			function getRestartHistory(decisionServiceName) {
+				return window.localStorage.getItem('CorticonRestartHistory_'+decisionServiceName);
+			}
+			function setStateFromStepData(data) {
+				itsDecisionServiceInput = data;
+				itsFormData = itsDecisionServiceInput[1];
+			}
+			async function processPrevStep(baseDynamicUIEl, decisionServiceEngine, language) {
+				if ( itsFlagAllDone )
+					return;
+				const allData = itsHistory.getPreviousStageData();
+				if ( allData === undefined )
+					return;
+				const prevStageNbr = allData['stage'];
+				itsDecisionServiceInput = allData['input'];
+				itsDecisionServiceInput[0].nextStageNumber = prevStageNbr;
+				await processNextStep(baseDynamicUIEl, decisionServiceEngine, language, false);
+				if ( prevStageNbr === 0 )
+					corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.BACK_AT_FORM_BEGINNING);
+			}
+			async function processNextStep(baseDynamicUIEl, decisionServiceEngine, language, saveInputToFormData=true) {
+				if ( saveInputToFormData ) {
+					_saveEnteredInputsToFormData(baseDynamicUIEl);
+				}
+				corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.NEW_STEP);
+				if ( itsFlagAllDone ) {
+					clearRestartData(itsQuestionnaireName);
+					corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.AFTER_DONE);
+				}
+				else {
+					_preparePayloadForNextStage (itsDecisionServiceInput[0].nextStageNumber);
+					const restartData = JSON.stringify(itsDecisionServiceInput);
+					let nextUI = await _askDecisionServiceForNextUIElementsAndRender ( decisionServiceEngine, itsDecisionServiceInput, baseDynamicUIEl );
+					while ( nextUI.noUiToRenderContinue !== undefined && nextUI.noUiToRenderContinue ) {
+						_preparePayloadForNextStage (nextUI.nextStageNumber);
+						nextUI = await _askDecisionServiceForNextUIElementsAndRender( decisionServiceEngine, itsDecisionServiceInput, baseDynamicUIEl );
+						corticon.dynForm.raiseEvent( corticon.dynForm.customEvents.NEW_FORM_DATA_SAVED, itsFormData );
+						if ( nextUI.done )
+							break;
+					}
+					saveRestartData(itsQuestionnaireName, restartData);
+					if ( nextUI.done ) {
+						itsFlagAllDone = nextUI.done;
+						corticon.dynForm.raiseEvent(corticon.dynForm.customEvents.FORM_DONE);
+					}
+				}
+			}
+			function clearRestartData( decisionServiceName ) {
+				window.localStorage.removeItem('CorticonRestartPayload_'+decisionServiceName);
+				window.localStorage.removeItem('CorticonRestartPathToData_'+decisionServiceName);
+				window.localStorage.removeItem('CorticonRestartHistory_'+decisionServiceName);
+			}
+			function saveRestartData( decisionServiceName, payload ) {
+				try {
+					window.localStorage.setItem('CorticonRestartPayload_'+decisionServiceName, payload);
+					window.localStorage.setItem('CorticonRestartPathToData_'+decisionServiceName, itsPathToData);
+					window.localStorage.setItem('CorticonRestartHistory_'+decisionServiceName, itsHistory.getRestartHistory());
+				} catch (e) {
+				}
+			}
+			function getRestartData(decisionServiceName) {
+				const payload = window.localStorage.getItem('CorticonRestartPayload_'+decisionServiceName);
+				if ( payload !== null )
+					return JSON.parse(payload);
+				else
+					return null;
+			}
+			function getPathToData(decisionServiceName) {
+				return window.localStorage.getItem('CorticonRestartPathToData_'+decisionServiceName);
+			}
+			function _resetDecisionServiceInput(language) {
+				_preparePayloadForNextStage( 0, language );
+				for (const property in itsDecisionServiceInput[1])
+					delete itsDecisionServiceInput[1][property];
+			}
+			function _preparePayloadForNextStage( nextStage, language ) {
+				const nextPayload = {};
+				const stateProperties = ['stageOnExit', 'language', 'labelPosition', 'pathToData'];
+				for ( let i=0; i<stateProperties.length; i++ ) {
+					const prop = stateProperties[i];
+					if ( itsDecisionServiceInput[0][prop] !== undefined )
+						nextPayload[prop] = itsDecisionServiceInput[0][prop];
+				}
+				nextPayload.currentStageNumber = nextStage;
+				if ( language !== undefined ) {
+					nextPayload['language'] = language;
+				}
+				itsDecisionServiceInput[0] = nextPayload;
+			}
+			function _processLabelPositionSetting ( newLabelPosition ) {
+				if ( newLabelPosition !== undefined && newLabelPosition !== null)
+					itsLabelPositionAtUILevel = newLabelPosition;
+			}
+			async function _askDecisionServiceForNextUIElementsAndRender ( decisionServiceEngine, payload, baseEl ) {
+				const result = await _runDecisionService( decisionServiceEngine, payload );
+				if ( result.corticon.status !== 'success' )
+					return;
+				const nextUI = result.payload[0];
+				if ( nextUI.pathToData !== undefined && nextUI.pathToData !== null && nextUI.pathToData.length !== 0 )
+					itsPathToData = nextUI.pathToData;
+				_processLabelPositionSetting ( nextUI.labelPosition );
+				itsFormData = itsDecisionServiceInput[1];
+				if ( nextUI.noUiToRenderContinue !== undefined && nextUI.noUiToRenderContinue )
+					return nextUI;
+				const containers = nextUI.containers;
+				if ( containers === undefined ) {
+					alert('Error: missing container');
+					return nextUI;
+				}
+				itsUIControlsRenderer.renderUI ( containers, baseEl, itsLabelPositionAtUILevel, nextUI.language, itsFlagRenderWithKui );
+				const event = { "input": payload, "stage": payload[0].currentStageNumber };
+				corticon.dynForm.raiseEvent( corticon.dynForm.customEvents.AFTER_UI_STEP_RENDERED,event);
+				return nextUI;
+			}
+			function _saveOneFormData(formDataFieldName, val) {
+				if ( val === undefined )
+					return;
+				if (itsPathToData === undefined || itsPathToData === null)
+					itsFormData[formDataFieldName] = val;
+				else {
+					if (itsFormData[itsPathToData] === undefined)
+						itsFormData[itsPathToData] = {};
+					itsFormData[itsPathToData][formDataFieldName] = val;
+				}
+			}
+			function _saveNonArrayInputsToFormData(baseEl) {
+				let allFormEls = baseEl.find('.nonarrayTypeControl :input').not(':checkbox').not('.markerFileUploadExpense');
+				allFormEls.each(function (index, item) {
+					const oneInputEl = $(item);
+					const formDataFieldName = oneInputEl.data("fieldName");
+					const val = oneInputEl.val();
+					const type = oneInputEl.data("type");
+					if (type !== undefined && type !== null && type === "decimal") {
+						const converted = Number(val);
+						if (isNaN(converted))
+							alert("you didn't enter a number in the field");
+						else
+							_saveOneFormData(formDataFieldName, converted);
+					}
+					else {
+						if ( val !== undefined && val !== null && val !== "" )
+							_saveOneFormData(formDataFieldName, val);
+					}
+				});
+				allFormEls = baseEl.find('.nonarrayTypeControl :checkbox');
+				allFormEls.each(function (index, item) {
+					const oneInputEl = $(item);
+					const formDataFieldName = oneInputEl.data("fieldName");
+					const val = oneInputEl.is(':checked');
+					_saveOneFormData(formDataFieldName, val);
+				});
+				_saveFileUploadExpenses(baseEl);
+			}
+			function _saveFileUploadExpenses(baseEl) {
+				let allFormEls = baseEl.find('.nonarrayTypeControl .markerFileUploadExpense');
+				allFormEls.each(function (index, item) {
+					const oneInputEl = $(item);
+					const formDataFieldName = oneInputEl.data("fieldName");
+					const id = oneInputEl.attr('id')
+					const val = oneInputEl.val();
+					_saveOneFileUploadExpenseData(formDataFieldName, val, id);
+				});
+			}
+			function _saveOneFileUploadExpenseData(formDataFieldName, val, id) {
+				if ( val === undefined )
+					return;
+				let theExpenses;
+				if (itsPathToData === undefined || itsPathToData === null)
+					theExpenses = itsFormData[formDataFieldName];
+				else {
+					if (itsFormData[itsPathToData] === undefined) {
+						alert('Error: There should already be form data');
+						return;
+					}
+					else
+						theExpenses = itsFormData[itsPathToData][formDataFieldName];
+				}
+				for ( let i=0; i<theExpenses.length; i++ ) {
+					const oneExpense = theExpenses[i];
+					if ( oneExpense.id === id )
+						oneExpense['fileUpload'] = val;
+				}
+			}
+			function _saveEnteredInputsToFormData (baseEl) {
+				_saveNonArrayInputsToFormData(baseEl);
+				_saveArrayTypeInputsToFormData(baseEl);
+				corticon.dynForm.raiseEvent( corticon.dynForm.customEvents.NEW_FORM_DATA_SAVED, itsFormData );
+			}
+			function _saveArrayTypeInputsToFormData (baseEl) {
+				_processAllSimpleArrayControls(baseEl);
+				_processAllComplexArrayControls(baseEl);
+			}
+			function _processAllComplexArrayControls (baseEl) {
+				let outerArray = [];
+				let formDataFieldName;
+				let uiControlType;
+				let allArrayEls = baseEl.find('.complexArrayTypeControl');
+				allArrayEls.each(function(index,item){
+					const oneArrayEl = $(item);
+					uiControlType = oneArrayEl.data("uicontroltype");
+					let allFormEls = oneArrayEl.find(':input').not(':checkbox');
+					let innerArray = [];
+					for ( var i=0; i<allFormEls.length; i++ ) {
+						const oneFormEl = allFormEls[i];
+						const oneInputEl = $(oneFormEl);
+						formDataFieldName = oneInputEl.data("fieldName");
+						const val = oneInputEl.val();
+						innerArray.push( val );
+					}
+					outerArray.push(innerArray);
+				});
+				if ( outerArray.length !== 0 ) {
+					if ( uiControlType === 'MultiExpenses' ) {
+						const expenseFieldArray = ['expenseCode', 'amount', 'currency' ];
+						const convertedArray = _createEachExpenseEntity(outerArray, expenseFieldArray);
+						_saveArrayElFormData(formDataFieldName, convertedArray);
+					}
+					else
+						alert('This complex array type is not yet supported ' + uiControlType );
+				}
+			}
+			function _processAllSimpleArrayControls(baseEl) {
+				const allSimpleUiControlsOfArrayType = _getAllSimpleArrayTypeInputsToFormData(baseEl);
+				for (let j = 0; j < allSimpleUiControlsOfArrayType.length; j++) {
+					const oneControlData = allSimpleUiControlsOfArrayType[j];
+					const uiControlType = oneControlData['type'];
+					const formDataFieldName = oneControlData['fieldName'];
+					const valuesForOneControl = oneControlData['values'];
+					if (uiControlType === 'Text' || uiControlType === 'Number' || uiControlType === 'DateTime' ) {
+						const convertedArray = _createEachItemEntity(valuesForOneControl, uiControlType);
+						_saveArrayElFormData(formDataFieldName, convertedArray);
+					} else
+						alert('This simple array type is not yet supported ' + uiControlType);
+				}
+			}
+			function _getAllSimpleArrayTypeInputsToFormData(baseEl) {
+				let allUiControlsOfArrayType = [];
+				let allArrayEls = baseEl.find('.simpleArrayTypeControl');
+				allArrayEls.each(function(index,item){
+					let formDataFieldName;
+					const oneArrayEl = $(item);
+					const uiControlType = oneArrayEl.data("uicontroltype");
+					const allFormEls = oneArrayEl.find(':input').not(':checkbox');
+					let allValuesForOneControl = [];
+					for ( let i=0; i<allFormEls.length; i++ ) {
+						const oneFormEl = allFormEls[i];
+						const oneInputEl = $(oneFormEl);
+						formDataFieldName = oneInputEl.data("fieldName");
+						const val = oneInputEl.val();
+						allValuesForOneControl.push( val );
+					}
+					const allDataForOneControl = {};
+					allDataForOneControl['fieldName'] = formDataFieldName;
+					allDataForOneControl['type'] = uiControlType;
+					allDataForOneControl['values'] = allValuesForOneControl;
+					allUiControlsOfArrayType.push(allDataForOneControl);
+				});
+				return allUiControlsOfArrayType;
+			}
+			function _createEachItemEntity(valuesForOneControl, uiControlType) {
+				const convertedArray = [];
+				let fieldName;
+				if (uiControlType === 'Text' )
+					fieldName = 'itemText';
+				else if ( uiControlType === 'Number' )
+					fieldName = 'itemNumber';
+				else if ( uiControlType === 'DateTime' )
+					fieldName = 'itemDateTime';
+				else {
+					alert('This uicontrol type for simple array type is not yet supported ' + uiControlType);
+					return convertedArray;
+				}
+				for ( let i=0; i<valuesForOneControl.length; i++ ) {
+					const val = valuesForOneControl[i];
+					if ( val !== undefined && val !== null && val !== "" ) {
+						const oneItemAsObjLit = {};
+						oneItemAsObjLit[fieldName] = val;
+						convertedArray.push( oneItemAsObjLit );
+					}
+				}
+				return convertedArray;
+			}
+			function _createEachExpenseEntity(outerArray, expenseFieldArray) {
+				const convertedArray = [];
+				for ( let i=0; i<outerArray.length; i++ ) {
+					const oneItemAsAnArray = outerArray[i];
+					const oneItemAsObjLit = {};
+					for ( let j=0; j<oneItemAsAnArray.length; j++ ) {
+						oneItemAsObjLit[expenseFieldArray[j]] = oneItemAsAnArray[j];
+					}
+					const converted = Number(oneItemAsObjLit['amount']);
+					if ( $.isNumeric(converted) )
+						oneItemAsObjLit['amount'] = converted;
+					else
+						oneItemAsObjLit['amount'] = 0;
+					oneItemAsObjLit['id'] = '' + i;
+					convertedArray.push( oneItemAsObjLit );
+				}
+				return convertedArray;
+			}
+			function _saveArrayElFormData(formDataFieldName, outerArray) {
+				if ( outerArray === undefined )
+					return;
+				if (itsPathToData === undefined || itsPathToData === null)
+					itsFormData[formDataFieldName] = outerArray;
+				else {
+					if (itsFormData[itsPathToData] === undefined)
+						itsFormData[itsPathToData] = {};
+					itsFormData[itsPathToData][formDataFieldName] = outerArray;
+				}
+			}
+			async function _runDecisionService(decisionServiceEngine, payload ) {
+				try {
+					const event = { "input": payload, "stage": payload[0].currentStageNumber };
+					corticon.dynForm.raiseEvent( corticon.dynForm.customEvents.BEFORE_DS_EXECUTION,event);
+					const configuration = { logLevel: 0 };
+					const t1 = performance.now();
+					const result = await decisionServiceEngine.execute(payload, configuration);
+					const t2 = performance.now();
+					const event2 = { "output": result,
+						"execTimeMs": t2-t1,
+						"stage": payload[0].currentStageNumber
+					};
+					if(result.corticon !== undefined) {
+						if ( result.corticon.status === 'success' ) {
+							const newStepUI = result.payload[0];
+							if ( newStepUI.currentStageDescription !== undefined && newStepUI.currentStageDescription !== null )
+								event2["stageDescription"] = newStepUI.currentStageDescription;
+						}
+						else
+							alert('There was an error executing the rules.\n' + JSON.stringify(result, null, 2));
+						corticon.dynForm.raiseEvent( corticon.dynForm.customEvents.NEW_DS_EXECUTION, event2 );
+						return result;
+					}
+					else
+						alert('There was an error executing the rules.\n' + JSON.stringify(result, null, 2));
+				}
+				catch ( e ) {
+					alert('There was an exception executing the rules ' + e);
+				}
+			}
+			return {
+				startDynUI: startDynUI,
+				processNextStep: processNextStep,
+				processPrevStep: processPrevStep
+			}
+		}
+		</script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="client.css">
-	<link rel="stylesheet" href="clientSideComponent/dynForm/UIControlsStyles.css">
-	<link rel="stylesheet" href="trace/TraceStyles.css">
 	<script type="text/javascript"
 		src="decisionServices/Country-State-City-Selector/browser/decisionServiceBundle.js"></script>
 	<script type="text/javascript"
 		src="decisionServices/Select-Vehicle-Model-Make-Year/browser/decisionServiceBundle.js"></script>
 	<script type="text/javascript" src="decisionServices/PropertyCasualty/browser/decisionServiceBundle.js"></script>
-	<script type="text/javascript" src="clientSetup.js"></script>
+	<script type="text/javascript">let currentDecisionServiceEngine;
+		let allInputData = [];
+		let inputData;
+		let itsCurrentLanguage = 'english';
+		let itsQuestionnaireKey = '0';
+		let itsFlagRenderWithKui = false;
+		const itsTracer = new Tracer();
+		const itsStepsController = new corticon.dynForm.StepsController();
+		function processSwitchSample(selectObject) {
+			const index = selectObject.value;
+			setDataForCurrentSample(index);
+			saveStateToLocalStorage('CorticonSelectedSample', index);
+		}
+		function setDataForCurrentSample(index) {
+			currentDecisionServiceEngine = window.corticonEngines[index];
+			inputData = allInputData[index];
+			itsQuestionnaireKey = index;
+			if ( index === "5" || index === "7" ) {
+				$('#languageSelectId').html('');
+				$('#languageSelectId').append('<option value="english">English</option>');
+				if ( index === "5" )
+					$('#languageSelectId').append('<option value="italian">Italiano</option>');
+				else
+					$('#languageSelectId').append('<option value="french">French</option>');
+				$("#languageContainerId").show();
+			}
+			else
+				$("#languageContainerId").hide();
+		}
+		function processSwitchLanguage(selectObject) {
+			itsCurrentLanguage = selectObject.value;
+		}
+		function processClickStart() {
+			const baseDynamicUIEl = $('#dynUIContainerId');
+			itsStepsController.startDynUI(baseDynamicUIEl, currentDecisionServiceEngine, inputData, itsCurrentLanguage, itsQuestionnaireKey, itsFlagRenderWithKui);
+		}
+		function processClickNext() {
+			const baseDynamicUIEl = $('#dynUIContainerId');
+			itsStepsController.processNextStep(baseDynamicUIEl, currentDecisionServiceEngine, itsCurrentLanguage);
+		}
+		function processClickPrev() {
+			const baseDynamicUIEl = $('#dynUIContainerId');
+			itsStepsController.processPrevStep(baseDynamicUIEl, currentDecisionServiceEngine, itsCurrentLanguage);
+		}
+		function saveStateToLocalStorage(key, value) {
+			try {
+				window.localStorage.setItem(key, value);
+			} catch (e) {
+			}
+		}
+		function processShowTrace() {
+			const traceEl = $('.allTracesContainer');
+			traceEl.show();
+			$("#hideTraceId").show();
+			$("#showTraceId").hide();
+			saveStateToLocalStorage('CorticonShowDSTrace', true);
+		}
+		function processHideTrace() {
+			const traceEl = $('.allTracesContainer');
+			traceEl.hide();
+			$("#showTraceId").show();
+			$("#hideTraceId").hide();
+			saveStateToLocalStorage('CorticonShowDSTrace', false);
+		}
+		function processUseHtml() {
+			$("#useHtmlId").hide();
+			$("#useKuiId").show();
+			saveStateToLocalStorage('CorticonUseKui', false);
+			itsFlagRenderWithKui = false;
+		}
+		function processUseKui() {
+			$("#useHtmlId").show();
+			$("#useKuiId").hide();
+			saveStateToLocalStorage('CorticonUseKui', true);
+			itsFlagRenderWithKui = true;
+		}
+		function setupInitialInputData() {
+			const inDataEmpty = {};
+			const inDataCanonical = inDataEmpty;
+			const inDataTaxes = inDataEmpty;
+			const inDataValidation = inDataEmpty;
+			const inJobApplication = inDataEmpty;
+			const inMulticontainer = inDataEmpty;
+			const inI18N = inDataEmpty;
+			const inDataReuseSubflow = {};
+			inDataReuseSubflow.reusingSubflows = {};
+			inDataReuseSubflow.reusingSubflows.SubflowField2 = '0';
+			const inDataClaim = {};
+			inDataClaim.claim = {};
+			inDataClaim.claim.policyType = 'Individual';
+			allInputData.push(inDataCanonical);
+			allInputData.push(inDataValidation);
+			allInputData.push(inDataTaxes);
+			allInputData.push(inDataClaim);
+			allInputData.push(inDataReuseSubflow);
+			allInputData.push(inJobApplication);
+			allInputData.push(inMulticontainer);
+			allInputData.push(inI18N);
+			inputData = allInputData[0];
+		}
+		function restoreUIState() {
+			const show = window.localStorage.getItem('CorticonShowDSTrace');
+			if ( show !== null  ) {
+				if ( show === 'true' )
+					processShowTrace();
+				else if ( show === 'false' )
+					processHideTrace();
+			}
+			const useKui = window.localStorage.getItem('CorticonUseKui');
+			if ( useKui !== null  ) {
+				if ( useKui === 'true' )
+					processUseKui();
+				else if ( useKui === 'false' )
+					processUseHtml();
+			}
+			const selectedSample = window.localStorage.getItem('CorticonSelectedSample');
+			if ( selectedSample !== null ) {
+				const selector = `#sampleSelectId option[value='${selectedSample}']`
+				$(selector).prop('selected', true);
+				setDataForCurrentSample(selectedSample);
+			}
+		}
+		$( document ).ready(function() {
+			currentDecisionServiceEngine = window.corticonEngines[0];
+			setupInitialInputData();
+			itsTracer.setupTracing();
+			restoreUIState();
+			corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.AFTER_START, ( event ) => {
+				$("#nextActionId").show();
+				$("#startActionId").hide();
+				$("#sampleSelectId").attr('disabled', true);
+				$("#useHtmlId").hide();
+				$("#useKuiId").hide();
+				if ( event !== undefined && event !== null ) {
+					if ( event.theData['historyEmpty'] )
+						$("#prevActionId").hide();
+					else
+						$("#prevActionId").show();
+				}
+			});
+			corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.NEW_STEP, () => {
+				$("#prevActionId").show();
+			});
+			corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.FORM_DONE, () => {
+				$("#prevActionId").hide();
+			});
+			corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.BACK_AT_FORM_BEGINNING, () => {
+				$("#prevActionId").hide();
+			});
+			corticon.dynForm.addCustomEventHandler( corticon.dynForm.customEvents.AFTER_DONE, () => {
+				$("#nextActionId").hide();
+				$("#prevActionId").hide();
+				$("#startActionId").show();
+				$('#dynUIContainerId').html('<div style="margin: 2em; font-size: larger;">&nbsp;<i class="bi bi-check-circle"></i>All Done</div>');
+				$("#sampleSelectId").attr('disabled', false);
+				if ( itsFlagRenderWithKui )
+					$("#useHtmlId").show();
+				else
+					$("#useKuiId").show();
+			});
+		});
+		</script>
 </head>
+
 <body>
 	<div class="sampleTitle"><i class="bi bi-file-earmark-ruled"></i>&nbsp;Test Driver for Rules Driven Dynamic Forms
 	</div>
@@ -164,4 +1564,5 @@
 		</table>
 	</div>
 </body>
+
 </html>
