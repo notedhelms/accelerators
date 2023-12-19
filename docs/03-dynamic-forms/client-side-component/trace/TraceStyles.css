@@ -12,17 +12,18 @@
 }
 
 .allTracesContainer textarea {
-    background-color: #535151;
-    color: white;
+    background-color: #53515170;
+    color: rgb(0, 0, 0);
+    font-family: 'Nunito', sans-serif;
 }
 
 .allTracesContainer tr {
-    color: white;
+    color: rgb(78, 19, 19);
 }
 
 .stageTraceHistory {
     font-size: 1.1rem;
-    color: lightskyblue;
+    color:rgb(78, 19, 19);
 }
 
 .stageInTrace {
