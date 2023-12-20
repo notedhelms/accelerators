@@ -25,7 +25,7 @@ To start, we’ll look at each component individually; we will combine them at t
 
 We start with the first rulesheet to tackle the first piece related to the month of harvest. To make our lives more straightforward as rule modelers, we start with our rule messages. Notice the TestDate which we inserted from the vocabulary in the statement to contextualize the produced rule messages once we start testing this with some real data.
 
-![Alt text](<images/oyster rule msg.png)
+![Alt text](<images/oyster rule msg.png>)
 
 We can even take this one step further, by starting with natural language text for our conditions and actions. We can open the Natural Language view as follows and drag the pane next to our rule statement pane.
 

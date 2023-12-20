@@ -132,7 +132,7 @@ Let’s now define the conditions and actions for our initial set of rules. We w
 
 1.	Copy and paste the five rows above into your Rule Statements underneath the one we’ve just defined:
  ![Alt text](<images/solar workshop/Solar Workshop_image054.png>)
-2.	Drag Site.slopeDegrees onto the first Condition row. In the first row of the ‘1’ column, type <45
+2.	Drag Site.slopeDegrees onto the first Condition row. In the first row of the ‘1’ column, type \< 45
 3.	Drag Site.isSuitable to the second Action row, then ‘T’ from the dropdown. 
 4.	Drag Site.annualRadiation_kWh to the second Condition row. In the second row of the ‘2’ column, type >=800. Set the corresponding action to also be Site.isSuitable = T
 ![Alt text](<images/solar workshop/Solar Workshop_image056.png>)

@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 
@@ -113,26 +113,13 @@ module.exports = {
         copyright: `Copyright © ${new Date().getFullYear()} Progress Software, Built with Docusaurus.`,
       },
       themeConfig: {
-        imageZoom: {
-          // CSS selector to apply the plugin to, defaults to '.markdown img'
-          selector: '.markdown img',
-          // Optional medium-zoom options
-          // see: https://www.npmjs.com/package/medium-zoom#options
-          options: {
-            margin: 24,
-            background: '#BADA55',
-            scrollOffset: 0,
-            container: '#zoom-container',
-            template: '#zoom-template',
-          },
-        },        metadata: [{ name: 'keywords', content: 'corticon, rules engine, brms, bre, dynamic forms, business rules' }],
+           metadata: [{ name: 'keywords', content: 'corticon, rules engine, brms, bre, dynamic forms, business rules' }],
         prism: {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
         }
       },
       plugins: [
-        'plugin-image-zoom'
       ],
     }
   )
