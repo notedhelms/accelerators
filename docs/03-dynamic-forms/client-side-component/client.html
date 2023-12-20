@@ -418,8 +418,35 @@
 				alert('Error rendering GeoCoord not yet supported');
 			}
 			function renderRating(oneUIControl, baseEl, labelPositionAtUILevel) {
-				alert('Error rendering Rating not yet supported');
-			}
+    const inputContainerEl = createInputContainer(baseEl);
+    appendLabel(oneUIControl, labelPositionAtUILevel, inputContainerEl);
+
+    for (let i = 1; i <= 5; i++) {
+        const starInputEl = $('<input/>').attr({
+            "type": "radio",
+            "id": `${oneUIControl.id}_star${i}`,
+            "name": oneUIControl.id,
+            "value": i
+        });
+        starInputEl.appendTo(inputContainerEl);
+
+        const starLabelEl = $(`<label for="${oneUIControl.id}_star${i}">&#9733;</label>`); // Unicode for star symbol
+        starLabelEl.appendTo(inputContainerEl);
+    }
+
+    // Add a span to display the selected value
+    const valueDisplayEl = $('<span/>').text("0"); // Display the initial value
+    valueDisplayEl.appendTo(inputContainerEl);
+
+    // Update the displayed value as the user rates
+    inputContainerEl.on('change', 'input', function() {
+        valueDisplayEl.text($(this).val());
+    });
+
+    addValidationMsgFromDecisionService(oneUIControl, inputContainerEl);
+}
+
+
 			function renderTextInput(oneUIControl, baseEl, labelPositionAtContainerLevel) {
 				renderInputThatSupportsArrayType(oneUIControl, baseEl, labelPositionAtContainerLevel);
 			}

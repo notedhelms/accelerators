@@ -12,7 +12,6 @@
 'YesNoBoolean'
 'Time'
 'RangeSlider'
-'QRCode'
 'GeoCoordinates'
 'Rating'
 'FileUploadExpenses'
