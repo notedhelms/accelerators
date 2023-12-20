@@ -8,9 +8,4 @@ But with Corticon.js, dynamic forms can be created in a fraction of the time, wi
 
 Access the complete documentation set covering Corticon.js Dynamic Forms [here](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/README.md). 
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="yLwBKpm" data-user="SethMeldon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/SethMeldon/pen/yLwBKpm">
-  Test Driver</a> by Seth Meldon (<a href="https://codepen.io/SethMeldon">@SethMeldon</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<iframe width="200%" height="600" src="https://codepen.io/SethMeldon/embed/yLwBKpm?default-tab=result" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
